@@ -36,16 +36,19 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
   if (!url || !anon || !service) { res.status(503).json({ error: 'analytics_not_configured' }); return; }
   const token = bearer(req);
   if (!token) { res.status(401).json({ error: 'unauthenticated' }); return; }
+  let phase = 'auth';
   try {
     const authResponse = await fetch(`${url}/auth/v1/user`, { headers: { apikey: anon, Authorization: `Bearer ${token}` } });
     if (!authResponse.ok) { res.status(401).json({ error: 'invalid_session' }); return; }
     const user = await authResponse.json() as { id?: string };
     if (!user.id) { res.status(401).json({ error: 'invalid_session' }); return; }
+    phase = 'admin_lookup';
     const admins = await rest(url, service, `/rest/v1/admin_users?select=user_id&user_id=eq.${encodeURIComponent(user.id)}&limit=1`) as Array<{ user_id: string }>;
     if (!admins.length) { res.status(403).json({ error: 'forbidden' }); return; }
     const range = first(req.query?.range) || 'all';
     const start = rangeStart(range);
     const filter = start ? `&created_at=gte.${encodeURIComponent(start)}` : '';
+    phase = 'events_query';
     const rows = await rest(url, service, `/rest/v1/analytics_events?select=event_id,event_name,anonymous_player_id,session_id,occurred_at,payload,is_test&is_test=eq.false${filter}&order=occurred_at.asc&limit=10000`) as EventRow[];
     const events = Array.isArray(rows) ? rows : [];
     const sessions = new Set(events.filter(e => e.event_name === 'session_start').map(e => e.session_id));
@@ -68,5 +71,9 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
     const questionFunnel = [1, 2, 3, 4, 5].map(n => ({ question: n, completes: questionComplete.filter(e => Number(e.payload.questionNumber ?? e.payload.questionIndex) === n).length }));
     const rankDistribution = Object.fromEntries(['S', 'A', 'B', 'C', 'D', 'E'].map(rank => [rank, tests.filter(e => e.payload.rank === rank).length]));
     res.status(200).json({ overview: { players: players.size, sessions: sessions.size, gameStarts, completedStages: completed.length, averageActiveSeconds: active.length ? Math.round(active.reduce((a, b) => a + b, 0) / active.length) : 0, medianActiveSeconds: Math.round(median(active)), totalActiveSeconds: active.reduce((a, b) => a + b, 0), testStarts, testCompletes: tests.length }, stages, cubeTest: { starts: testStarts, completes: tests.length, completionRate: testStarts ? Math.round(tests.length / testStarts * 1000) / 10 : 0, averageScore: scoreValues.length ? Math.round(scoreValues.reduce((a, b) => a + b, 0) / scoreValues.length) : 0, medianScore: Math.round(median(scoreValues)), averageTotalTime: tests.length ? Math.round(tests.reduce((a, e) => a + jsonNumber(e.payload.totalEffectiveTime), 0) / tests.length) : 0, rankDistribution, questionFunnel } });
-  } catch { res.status(500).json({ error: 'analytics_backend_failure' }); }
+  } catch (error) {
+    // Keep diagnostics useful without ever logging credentials or response bodies.
+    console.error('[admin-analytics] backend failure', { phase, errorType: error instanceof Error ? error.name : 'unknown' });
+    res.status(500).json({ error: 'analytics_backend_failure', phase });
+  }
 }
