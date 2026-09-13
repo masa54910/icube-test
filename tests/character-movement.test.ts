@@ -1,0 +1,15 @@
+import {it,expect} from 'vitest';
+import * as THREE from 'three';
+import {PlayerController} from '../src/game/PlayerController';
+import {WorldBuilder} from '../src/game/WorldBuilder';
+import {CameraController} from '../src/game/CameraController';
+import {Character} from '../src/game/Character';
+import {STAGES} from '../src/stages/stage-data';
+const world=()=>{const w=new WorldBuilder();w.build({...STAGES[0]!,rooms:Array.from({length:49},(_,i)=>[i%7-3,0,Math.floor(i/7)-3] as const),ladders:[]});return w;};
+const run=(p:PlayerController,w:WorldBuilder,seconds:number,x:number,forward:number,hz=60)=>{for(let i=0;i<Math.round(seconds*hz);i++)p.update(1/hz,w,{x,forward,turn:0,jump:false},0,'third-person');};
+it.each([60,120,144])('continuous turning is frame independent at %i Hz',hz=>{const p=new PlayerController(),w=world();p.reset(new THREE.Vector3(0,-2.939,0));run(p,w,4,1,0,hz);expect(p.yaw).toBeCloseTo(7.2,8);expect(p.position.x).toBe(0);expect(p.position.z).toBe(0);run(p,w,8,-1,0,hz);expect(p.yaw).toBeCloseTo(-7.2,8);});
+it.each([-1,1])('forward curves toward turn %i',x=>{const p=new PlayerController(),w=world();p.reset(new THREE.Vector3(0,-2.939,0));run(p,w,.5,x,1);expect(p.position.x*x).toBeGreaterThan(.5);expect(p.position.z).toBeLessThan(-1);expect(p.yaw*x).toBeCloseTo(.9);});
+it('S turns before translating and held S does not repeatedly reverse',()=>{const p=new PlayerController(),w=world();p.reset(new THREE.Vector3(0,-2.939,0));run(p,w,.25,0,-1);expect(p.position.z).toBe(0);expect(p.turningAround).toBe(true);run(p,w,.75,0,-1);expect(p.yaw).toBeCloseTo(Math.PI);expect(p.position.z).toBeGreaterThan(1);const z=p.position.z;run(p,w,1,0,-1);expect(p.yaw).toBeCloseTo(Math.PI);expect(p.position.z-z).toBeCloseTo(3.75);});
+it.each([-1,1])('S plus turn %i moves in the facing direction',x=>{const p=new PlayerController(),w=world();p.reset(new THREE.Vector3(0,-2.939,0));run(p,w,.8,x,-1);const before=p.position.clone();run(p,w,1/60,x,-1);expect(p.position.clone().sub(before).dot(new THREE.Vector3(Math.sin(p.yaw),0,-Math.cos(p.yaw)))).toBeGreaterThan(.049);});
+it('camera follows continuous rotation with less than .1 radians lag',()=>{const c=new CameraController(new THREE.PerspectiveCamera());c.yaw=0;for(let i=1;i<=240;i++)c.followYaw(i/60*1.8,1/60);expect(Math.abs(c.yaw-7.2)).toBeLessThan(.1);});
+it('character is smooth procedural geometry with articulated whole-body animation',()=>{const c=new Character();let triangles=0; c.root.traverse(o=>{if(o instanceof THREE.Mesh){expect(o.geometry.type).not.toBe('BoxGeometry');triangles+=(o.geometry.index?.count??o.geometry.attributes.position!.count)/3*(o instanceof THREE.InstancedMesh?o.count:1);}});expect(triangles).toBeLessThan(30000);c.update(new THREE.Vector3(),0,1,.1,false,1.8);expect(c.state).toBe('WALK_TURN_RIGHT');expect(Math.abs(c.torso.rotation.y)).toBeGreaterThan(0);expect(c.legs.some(leg=>Math.abs(leg.lower.rotation.x)>0)).toBe(true);console.log('Character triangles:',triangles);});

@@ -1,0 +1,36 @@
+{
+  "normal": {
+    "durationMs": 3006.2999999880794,
+    "rafFrames": 180,
+    "meanFrameMs": 16.701666666600445,
+    "p95FrameMs": 17,
+    "homeDraws": 1300,
+    "homeCanvasSize": [
+      847,
+      730
+    ]
+  },
+  "reduced": {
+    "durationMs": 3012.0000000119207,
+    "rafFrames": 181,
+    "meanFrameMs": 16.640883977966414,
+    "p95FrameMs": 17,
+    "homeDraws": 0,
+    "homeCanvasSize": [
+      847,
+      730
+    ]
+  },
+  "gameplay": {
+    "durationMs": 3005.7999999940403,
+    "rafFrames": 181,
+    "meanFrameMs": 16.606629834221216,
+    "p95FrameMs": 17,
+    "homeDraws": 0,
+    "homeCanvasSize": [
+      847,
+      730
+    ]
+  },
+  "environment": "Headless Edge desktop, 1366x768; not a guarantee for low-end physical devices"
+}

@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "layout": "portrait",
+      "touchUnlock": true,
+      "footstep": true,
+      "touchAnswer": true,
+      "memo": true,
+      "toggles": true,
+      "reload": true,
+      "stackedPause": true,
+      "errors": []
+    },
+    {
+      "layout": "landscape",
+      "touchUnlock": true,
+      "footstep": true,
+      "touchAnswer": true,
+      "memo": true,
+      "toggles": true,
+      "reload": true,
+      "stackedPause": true,
+      "errors": []
+    }
+  ],
+  "physicalDevice": "NOT TESTED",
+  "visibility": "manager pause reason exercised; actual hidden-tab event pending"
+}

@@ -1,0 +1,42 @@
+{
+  "prompts": [
+    {
+      "locale": "en",
+      "text": "回答：Eを押す"
+    },
+    {
+      "locale": "ja",
+      "text": "回答：Eを押す"
+    },
+    {
+      "locale": "ko",
+      "text": "回答：Eを押す"
+    },
+    {
+      "locale": "zh-CN",
+      "text": "回答：Eを押す"
+    },
+    {
+      "locale": "zh-TW",
+      "text": "回答：Eを押す"
+    },
+    {
+      "locale": "es",
+      "text": "回答：Eを押す"
+    },
+    {
+      "locale": "pt",
+      "text": "回答：Eを押す"
+    },
+    {
+      "locale": "de",
+      "text": "回答：Eを押す"
+    },
+    {
+      "locale": "fr",
+      "text": "回答：Eを押す"
+    }
+  ],
+  "mobile": true,
+  "errors": []
+}

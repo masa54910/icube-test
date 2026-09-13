@@ -1,0 +1,47 @@
+[
+  {
+    "name": "desktop",
+    "width": 1920,
+    "height": 1080,
+    "touch": false,
+    "locales": 9,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "laptop",
+    "width": 1366,
+    "height": 768,
+    "touch": false,
+    "locales": 9,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "tablet",
+    "width": 1024,
+    "height": 768,
+    "touch": true,
+    "locales": 9,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "portrait",
+    "width": 390,
+    "height": 844,
+    "touch": true,
+    "locales": 9,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "landscape",
+    "width": 844,
+    "height": 390,
+    "touch": true,
+    "locales": 9,
+    "overflow": false,
+    "errors": []
+  }
+]

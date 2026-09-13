@@ -1,0 +1,110 @@
+[
+  {
+    "viewport": "desktop",
+    "id": 101,
+    "fps": 60.15710450414708,
+    "drawCalls": 378,
+    "triangles": 34976,
+    "memory": {
+      "geometries": 282,
+      "textures": 2
+    },
+    "heap": 12581746
+  },
+  {
+    "viewport": "desktop",
+    "id": 105,
+    "fps": 60.21398357800448,
+    "drawCalls": 521,
+    "triangles": 39380,
+    "memory": {
+      "geometries": 397,
+      "textures": 2
+    },
+    "heap": 16136816
+  },
+  {
+    "viewport": "desktop",
+    "id": 110,
+    "fps": 59.997000150171296,
+    "drawCalls": 472,
+    "triangles": 37640,
+    "memory": {
+      "geometries": 360,
+      "textures": 2
+    },
+    "heap": 28134621
+  },
+  {
+    "viewport": "mobile-portrait",
+    "id": 101,
+    "fps": 60.1361761345651,
+    "drawCalls": 244,
+    "triangles": 28204,
+    "memory": {
+      "geometries": 198,
+      "textures": 2
+    },
+    "heap": 16890982
+  },
+  {
+    "viewport": "mobile-portrait",
+    "id": 105,
+    "fps": 59.98116294020967,
+    "drawCalls": 310,
+    "triangles": 30138,
+    "memory": {
+      "geometries": 253,
+      "textures": 2
+    },
+    "heap": 13307424
+  },
+  {
+    "viewport": "mobile-portrait",
+    "id": 110,
+    "fps": 60.12422360248447,
+    "drawCalls": 310,
+    "triangles": 30138,
+    "memory": {
+      "geometries": 253,
+      "textures": 2
+    },
+    "heap": 23999125
+  },
+  {
+    "viewport": "mobile-landscape",
+    "id": 101,
+    "fps": 60.09436304941644,
+    "drawCalls": 383,
+    "triangles": 35132,
+    "memory": {
+      "geometries": 286,
+      "textures": 2
+    },
+    "heap": 19536678
+  },
+  {
+    "viewport": "mobile-landscape",
+    "id": 105,
+    "fps": 60.193015620693245,
+    "drawCalls": 613,
+    "triangles": 43138,
+    "memory": {
+      "geometries": 461,
+      "textures": 2
+    },
+    "heap": 18862160
+  },
+  {
+    "viewport": "mobile-landscape",
+    "id": 110,
+    "fps": 60.112275820776844,
+    "drawCalls": 503,
+    "triangles": 38962,
+    "memory": {
+      "geometries": 381,
+      "textures": 2
+    },
+    "heap": 20205665
+  }
+]

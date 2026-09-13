@@ -1,0 +1,12 @@
+/* Answer UI only. Shape geometry and choice validation remain unchanged. */
+.choice-card{transition:border-color .18s,box-shadow .18s,transform .18s}
+.choice-card canvas{transition:transform .2s ease,filter .2s ease;transform-origin:50% 55%;pointer-events:none}
+@media(hover:hover){.choice-card:not(:disabled):not(.selected):hover{border-color:#76c7dc;box-shadow:0 5px 12px #07364a50}.choice-card:not(:disabled):not(.selected):hover canvas{transform:translateY(-3px) rotate(6deg) scale(1.025);filter:drop-shadow(0 3px 3px #69d5e544)}}
+.choice-card.selected{border-color:#5be5fa;box-shadow:0 0 0 2px #5be5fa66,0 6px 14px #103c6a55}
+.choice-card.selected canvas{transform:translateY(-4px) rotate(-4deg) scale(1.035);filter:drop-shadow(0 0 5px #79e5f066)}
+.choice-card:focus-visible{outline:3px solid #a5f6ff;outline-offset:3px}
+.choice-card.just-incorrect{animation:answer-miss .3s ease-out}
+.choice-card.correct{border-color:#e6ffff;box-shadow:0 0 20px #9cf2ff;animation:answer-confirm .65s ease-out}
+@keyframes answer-miss{0%{opacity:.7;border-color:#dc9276;transform:translateX(0)}25%{transform:translateX(-3px)}55%{transform:translateX(3px)}100%{opacity:.22;transform:none}}
+@keyframes answer-confirm{0%{border-color:#5be5fa;filter:brightness(1)}60%{border-color:#fff;filter:brightness(1.15)}100%{filter:brightness(1)}}
+@media(prefers-reduced-motion:reduce){.choice-card,.choice-card canvas{transition:none}.choice-card:not(:disabled):not(.selected):hover canvas,.choice-card.selected canvas{transform:none}.choice-card.just-incorrect,.choice-card.correct{animation:none}}

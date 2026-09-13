@@ -1,0 +1,40 @@
+{
+  "results": [
+    {
+      "viewport": "portrait",
+      "points": 2,
+      "touchSelectSubmitResultNext": true
+    },
+    {
+      "viewport": "landscape",
+      "points": 2,
+      "touchSelectSubmitResultNext": true
+    }
+  ],
+  "repeatedStageMemory": [
+    {
+      "geometries": 285,
+      "textures": 2
+    },
+    {
+      "geometries": 360,
+      "textures": 2
+    },
+    {
+      "geometries": 360,
+      "textures": 2
+    },
+    {
+      "geometries": 360,
+      "textures": 2
+    },
+    {
+      "geometries": 360,
+      "textures": 2
+    },
+    {
+      "geometries": 360,
+      "textures": 2
+    }
+  ]
+}

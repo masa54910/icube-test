@@ -1,0 +1,73 @@
+[
+  {
+    "device": "desktop",
+    "checks": [
+      "no horizontal overflow",
+      "footer close / gameplay resume"
+    ],
+    "errors": []
+  },
+  {
+    "device": "laptop",
+    "checks": [
+      "no horizontal overflow",
+      "footer close / gameplay resume"
+    ],
+    "errors": []
+  },
+  {
+    "device": "tablet-landscape",
+    "checks": [
+      "no horizontal overflow",
+      "touch stock drag / place",
+      "empty touch orbit",
+      "pinch zoom",
+      "footer close / gameplay resume"
+    ],
+    "errors": []
+  },
+  {
+    "device": "tablet-portrait",
+    "checks": [
+      "no horizontal overflow",
+      "touch stock drag / place",
+      "empty touch orbit",
+      "pinch zoom",
+      "footer close / gameplay resume"
+    ],
+    "errors": []
+  },
+  {
+    "device": "mobile-portrait",
+    "checks": [
+      "no horizontal overflow",
+      "touch stock drag / place",
+      "empty touch orbit",
+      "pinch zoom",
+      "footer close / gameplay resume"
+    ],
+    "errors": []
+  },
+  {
+    "device": "mobile-landscape",
+    "checks": [
+      "no horizontal overflow",
+      "touch stock drag / place",
+      "empty touch orbit",
+      "pinch zoom",
+      "footer close / gameplay resume"
+    ],
+    "errors": []
+  },
+  {
+    "device": "small-mobile",
+    "checks": [
+      "no horizontal overflow",
+      "touch stock drag / place",
+      "empty touch orbit",
+      "pinch zoom",
+      "footer close / gameplay resume"
+    ],
+    "errors": []
+  }
+]

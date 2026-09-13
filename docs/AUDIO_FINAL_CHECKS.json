@@ -1,0 +1,20 @@
+{
+  "rows": [
+    {
+      "mobileBoost": true,
+      "mobileDirectCorrect": true,
+      "settingsDom": true
+    },
+    {
+      "correctToHome": true
+    },
+    {
+      "missingAudioNonFatal": true
+    },
+    {
+      "productionPreview15": true,
+      "responsive": true
+    }
+  ],
+  "errors": []
+}

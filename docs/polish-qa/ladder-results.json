@@ -1,0 +1,195 @@
+{
+  "pass": true,
+  "up": {
+    "state": "EXPLORATION",
+    "position": [
+      -11.96493750000001,
+      4.0380799986589,
+      -1.35
+    ],
+    "yaw": 1.5707963267948966,
+    "playerYaw": 0,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "CLIMB",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "pov",
+    "lookingUp": false,
+    "characterVisible": false,
+    "elapsed": 7031.2,
+    "attempts": 0,
+    "ladder": "AlphabetLadder--2-0-0-4",
+    "camera": [
+      -11.96493750000001,
+      5.2880799986589,
+      -1.35
+    ],
+    "quaternion": [
+      -0.06355373162112225,
+      -0.7042449312540563,
+      -0.06355373162112225,
+      0.7042449312540562
+    ]
+  },
+  "down": {
+    "state": "EXPLORATION",
+    "position": [
+      -11.96493750000001,
+      0.39919999865890976,
+      -1.35
+    ],
+    "yaw": 1.5707963267948966,
+    "playerYaw": 0,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "CLIMB",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "pov",
+    "lookingUp": false,
+    "characterVisible": false,
+    "elapsed": 8880.699999999999,
+    "attempts": 0,
+    "ladder": "AlphabetLadder--2-0-0-4",
+    "camera": [
+      -11.96493750000001,
+      1.6491999986589096,
+      -1.35
+    ],
+    "quaternion": [
+      -0.06355373162112232,
+      -0.7042449312540562,
+      -0.06355373162112232,
+      0.7042449312540562
+    ]
+  },
+  "right": {
+    "state": "EXPLORATION",
+    "position": [
+      -11.381812500000013,
+      0.39919999865890976,
+      -1.35
+    ],
+    "yaw": 0.006110074881072688,
+    "playerYaw": 0.005820219549255338,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "CLIMB",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "third-person",
+    "lookingUp": false,
+    "characterVisible": true,
+    "elapsed": 9513.599999999999,
+    "attempts": 0,
+    "ladder": "AlphabetLadder--2-0-0-4",
+    "camera": [
+      -11.398644199445654,
+      2.1504828042512174,
+      1.4047109181747683
+    ],
+    "quaternion": [
+      -0.08987812976868355,
+      -0.003042668155352086,
+      -0.0002745819057767882,
+      0.9959480852758125
+    ]
+  },
+  "left": {
+    "state": "EXPLORATION",
+    "position": [
+      -12.62,
+      0.39919999865890976,
+      -1.35
+    ],
+    "yaw": -1.3164142593184818,
+    "playerYaw": -1.3201199602325604,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "CLIMB",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "third-person",
+    "lookingUp": false,
+    "characterVisible": true,
+    "elapsed": 11546.499999999998,
+    "attempts": 0,
+    "ladder": "AlphabetLadder--2-0-0-4",
+    "camera": [
+      -9.953888717809793,
+      2.1504828042512174,
+      -0.6567711923213215
+    ],
+    "quaternion": [
+      -0.07110203948403533,
+      0.6092238024463267,
+      0.054978664836007,
+      0.7878884470068714
+    ]
+  },
+  "off": {
+    "state": "EXPLORATION",
+    "position": [
+      -12.62,
+      1.3918315486589083,
+      -1.35
+    ],
+    "yaw": -2.7892799448990444,
+    "playerYaw": -2.7892799602325646,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "IDLE",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "third-person",
+    "lookingUp": false,
+    "characterVisible": true,
+    "elapsed": 13012.499999999998,
+    "attempts": 0,
+    "ladder": null,
+    "camera": [
+      -12.371570506880078,
+      2.7728388184040713,
+      -2.025719909083155
+    ],
+    "quaternion": [
+      -0.015750920383325845,
+      0.9805399161725936,
+      0.0884876381932381,
+      0.17453744350798736
+    ]
+  },
+  "jump": {
+    "state": "EXPLORATION",
+    "position": [
+      0,
+      -2.0093881838411067,
+      0
+    ],
+    "yaw": 1.5707963267948966,
+    "playerYaw": 1.5707963267948966,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "IDLE",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "third-person",
+    "lookingUp": false,
+    "characterVisible": true,
+    "elapsed": 333.39999999999964,
+    "attempts": 0,
+    "ladder": null,
+    "camera": [
+      -2.75476233980674,
+      -0.2581053782487991,
+      1.6868054409279986e-16
+    ],
+    "quaternion": [
+      -0.06355373162112234,
+      -0.7042449312540562,
+      -0.06355373162112234,
+      0.7042449312540563
+    ]
+  }
+}

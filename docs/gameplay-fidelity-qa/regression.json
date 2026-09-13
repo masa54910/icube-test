@@ -1,0 +1,17 @@
+{
+  "movement": true,
+  "turn": true,
+  "jump": true,
+  "landing": true,
+  "ladderCatch": true,
+  "ladderEdge": true,
+  "pov": true,
+  "lookUp": true,
+  "noClipping": true,
+  "quiz": true,
+  "correct": true,
+  "retry": true,
+  "nextStage": true,
+  "homeRestore": true,
+  "errors": []
+}

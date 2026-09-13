@@ -1,0 +1,20 @@
+{
+  "base": {
+    "geometries": 252,
+    "textures": 0,
+    "triangles": 24296,
+    "calls": 227
+  },
+  "metrics": {
+    "geometries": 407,
+    "textures": 0,
+    "calls": 160,
+    "triangles": 21920,
+    "counters": {
+      "voxel": 1,
+      "land": 1,
+      "catch": 1
+    }
+  },
+  "errors": []
+}

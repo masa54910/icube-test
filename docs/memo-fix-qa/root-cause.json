@@ -1,0 +1,79 @@
+{
+  "results": [
+    {
+      "text": "×",
+      "pointer": "none",
+      "hit": "<canvas id=\"game-canvas\" class=\"game-canvas\" aria-label=\"i CUBE TEST game canvas\" data-engine=\"three.js r180\" width=\"1440\" height=\"1000\"></canvas>"
+    },
+    {
+      "text": "1個配置",
+      "pointer": "none",
+      "hit": "<canvas id=\"game-canvas\" class=\"game-canvas\" aria-label=\"i CUBE TEST game canvas\" data-engine=\"three.js r180\" width=\"1440\" height=\"1000\"></canvas>"
+    },
+    {
+      "text": "↶ 元に戻す",
+      "pointer": "none",
+      "hit": "<canvas id=\"game-canvas\" class=\"game-canvas\" aria-label=\"i CUBE TEST game canvas\" data-engine=\"three.js r180\" width=\"1440\" height=\"1000\"></canvas>"
+    },
+    {
+      "text": "↷ やり直す",
+      "pointer": "none",
+      "hit": "<canvas id=\"game-canvas\" class=\"game-canvas\" aria-label=\"i CUBE TEST game canvas\" data-engine=\"three.js r180\" width=\"1440\" height=\"1000\"></canvas>"
+    },
+    {
+      "text": "▣ すべて削除",
+      "pointer": "none",
+      "hit": "<canvas id=\"game-canvas\" class=\"game-canvas\" aria-label=\"i CUBE TEST game canvas\" data-engine=\"three.js r180\" width=\"1440\" height=\"1000\"></canvas>"
+    },
+    {
+      "text": "",
+      "pointer": "none",
+      "hit": "<canvas id=\"game-canvas\" class=\"game-canvas\" aria-label=\"i CUBE TEST game canvas\" data-engine=\"three.js r180\" width=\"1440\" height=\"1000\"></canvas>"
+    },
+    {
+      "text": "通常",
+      "pointer": "none",
+      "hit": "<canvas id=\"game-canvas\" class=\"game-canvas\" aria-label=\"i CUBE TEST game canvas\" data-engine=\"three.js r180\" width=\"1440\" height=\"1000\"></canvas>"
+    },
+    {
+      "text": "ヒント",
+      "pointer": "none",
+      "hit": "<canvas id=\"game-canvas\" class=\"game-canvas\" aria-label=\"i CUBE TEST game canvas\" data-engine=\"three.js r180\" width=\"1440\" height=\"1000\"></canvas>"
+    }
+  ],
+  "events": [
+    {
+      "type": "pointerdown",
+      "target": "game-canvas"
+    },
+    {
+      "type": "pointerdown",
+      "target": "game-canvas"
+    },
+    {
+      "type": "pointerdown",
+      "target": "game-canvas"
+    },
+    {
+      "type": "pointerdown",
+      "target": "game-canvas"
+    },
+    {
+      "type": "pointerdown",
+      "target": "game-canvas"
+    },
+    {
+      "type": "pointerdown",
+      "target": "game-canvas"
+    },
+    {
+      "type": "pointerdown",
+      "target": "game-canvas"
+    },
+    {
+      "type": "pointerdown",
+      "target": "game-canvas"
+    }
+  ],
+  "stillOpen": true
+}

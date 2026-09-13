@@ -1,0 +1,47 @@
+{
+  "mode": "Headed Edge; actual tab switch, no visibility mocks",
+  "hidden": {
+    "hidden": true,
+    "audio": {
+      "unlocked": true,
+      "bgm": "GAMEPLAY",
+      "bgmEnabled": true,
+      "seEnabled": true,
+      "paused": [
+        "visibility"
+      ],
+      "hostEnabled": true,
+      "bgmVoices": 1,
+      "seVoices": 0,
+      "loaded": 13,
+      "approved": 13
+    },
+    "time": 1.52
+  },
+  "suspendedTime": 1.52,
+  "restored": {
+    "audio": {
+      "unlocked": true,
+      "bgm": "GAMEPLAY",
+      "bgmEnabled": true,
+      "seEnabled": true,
+      "paused": [],
+      "hostEnabled": true,
+      "bgmVoices": 1,
+      "seVoices": 0,
+      "loaded": 13,
+      "approved": 13
+    },
+    "events": [
+      {
+        "hidden": true,
+        "time": 3321.600000023842
+      },
+      {
+        "hidden": false,
+        "time": 4919.600000023842
+      }
+    ]
+  },
+  "errors": []
+}

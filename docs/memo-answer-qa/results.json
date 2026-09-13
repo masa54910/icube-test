@@ -1,0 +1,76 @@
+[
+  {
+    "stage": 1,
+    "entry": true,
+    "poseAndChoicesPreserved": true,
+    "undoRetained": true,
+    "correctResult": true
+  },
+  {
+    "stage": 16,
+    "entry": true,
+    "poseAndChoicesPreserved": true,
+    "undoRetained": true,
+    "correctResult": true
+  },
+  {
+    "stage": 31,
+    "entry": true,
+    "poseAndChoicesPreserved": true,
+    "undoRetained": true,
+    "correctResult": true
+  },
+  {
+    "stage": 101,
+    "entry": true,
+    "poseAndChoicesPreserved": true,
+    "undoRetained": true,
+    "correctResult": true
+  },
+  {
+    "stage": 105,
+    "entry": true,
+    "poseAndChoicesPreserved": true,
+    "undoRetained": true,
+    "correctResult": true
+  },
+  {
+    "stage": 110,
+    "entry": true,
+    "poseAndChoicesPreserved": true,
+    "undoRetained": true,
+    "correctResult": true
+  },
+  {
+    "mixed": "memo-point",
+    "pass": true
+  },
+  {
+    "mixed": "point-memo",
+    "pass": true
+  },
+  {
+    "layout": "desktop",
+    "nineLocales": true,
+    "touch44": true,
+    "answerEntry": true
+  },
+  {
+    "layout": "laptop",
+    "nineLocales": true,
+    "touch44": true,
+    "answerEntry": true
+  },
+  {
+    "layout": "portrait",
+    "nineLocales": true,
+    "touch44": true,
+    "answerEntry": true
+  },
+  {
+    "layout": "landscape",
+    "nineLocales": true,
+    "touch44": true,
+    "answerEntry": true
+  }
+]

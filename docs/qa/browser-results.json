@@ -1,0 +1,53 @@
+{
+  "results": [
+    {
+      "name": "third-person keyboard movement, 180/360 turn, stop, LOOK UP",
+      "pass": true,
+      "forward": [
+        14.599800001341105,
+        -2.9398000013411045,
+        -1.8425178487211794e-15
+      ],
+      "restored": "third-person"
+    },
+    {
+      "name": "pov keyboard movement, 180/360 turn, stop, LOOK UP",
+      "pass": true,
+      "forward": [
+        14.599800001341105,
+        -2.9398000013411045,
+        -1.84249947901919e-15
+      ],
+      "restored": "pov"
+    },
+    {
+      "name": "mouse camera drag",
+      "pass": true
+    },
+    {
+      "name": "ten choices, two attempts, used choice preserved across exploration",
+      "pass": true
+    },
+    {
+      "name": "correct flash clears, result, next stage",
+      "pass": true
+    },
+    {
+      "name": "31 stage tiles",
+      "pass": true
+    },
+    {
+      "name": "touch stick + simultaneous camera drag, POV toggle, portrait/landscape state",
+      "pass": true
+    },
+    {
+      "name": "SDK pause/resume freezes physics and game clock",
+      "pass": true
+    },
+    {
+      "name": "no browser runtime errors",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

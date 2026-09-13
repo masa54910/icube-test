@@ -1,0 +1,20 @@
+{
+  "ghostCancelled": true,
+  "startOnlyEntry": true,
+  "memoTimerPaused": true,
+  "quizTimerRuns": true,
+  "reload": true,
+  "retry": true,
+  "revealResult": true,
+  "tutorial": {
+    "en": "When you think the shape is complete, choose ANSWER in CUBE MEMO to go straight to the answer screen.",
+    "ja": "形が完成したと思ったら、CUBE MEMOの「回答する」からそのまま回答できます。",
+    "ko": "모양을 완성했다고 생각하면 CUBE MEMO의 「답하기」를 눌러 바로 답변 화면으로 이동할 수 있습니다.",
+    "zh-CN": "觉得形状已经完成时，点击CUBE MEMO中的“回答”，即可直接进入答题界面。",
+    "zh-TW": "覺得形狀已經完成時，點擊CUBE MEMO中的「回答」，即可直接進入作答畫面。",
+    "es": "Cuando creas que la forma está completa, elige RESPONDER en CUBE MEMO para ir directamente a la pantalla de respuestas.",
+    "pt": "Quando achar que a forma está completa, escolha RESPONDER no CUBE MEMO para ir diretamente ao ecrã de resposta.",
+    "de": "Wenn deine Form fertig ist, wähle ANTWORTEN in CUBE MEMO, um direkt zur Antwortauswahl zu gelangen.",
+    "fr": "Quand tu penses avoir terminé la forme, choisis RÉPONDRE dans CUBE MEMO pour accéder directement aux réponses."
+  }
+}

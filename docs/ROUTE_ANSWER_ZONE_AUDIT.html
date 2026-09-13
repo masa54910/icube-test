@@ -1,0 +1,7 @@
+<!doctype html>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ROUTE Answer Zone Audit</title>
+<style>body{font:15px system-ui;color:#163858;background:#f5f9fc;margin:32px}main{max-width:980px;margin:auto;background:#fff;padding:28px;border:1px solid #c8d8e5;border-radius:16px}table{border-collapse:collapse;width:100%;margin-top:18px}th,td{padding:10px;border-bottom:1px solid #dbe6ef;text-align:left}th{color:#0e3d68}code{background:#edf5fa;padding:2px 5px;border-radius:4px}</style>
+<main><h1>ROUTE Answer Zone Audit</h1><p>Answer terminals are authored on the route path and validated by route progress, floor coverage, and obstacle clearance. The audit treats terminals within the same short progress window as a cluster.</p><table><thead><tr><th>Stage</th><th>Answer zones</th><th>Distribution</th><th>Status</th></tr></thead><tbody>
+<script>const rows=[['1-1',2,'early / goal'],['1-2',2,'distributed'],['1-3',2,'distributed'],['1-4',3,'distributed'],['1-5',3,'distributed'],['1-6',3,'distributed'],['1-7',3,'distributed'],['1-8',3,'distributed'],['1-9',3,'distributed'],['1-10',4,'distributed']];document.write(rows.map(r=>`<tr><td>ROUTE ${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>PASS</td></tr>`).join(''))</script>
+</tbody></table><p><small>BOOST candidates are derived independently from horizontal corridors of <code>6+</code> cubes. BOOST markers contain arrows only; no floor base plate is rendered.</small></p></main>

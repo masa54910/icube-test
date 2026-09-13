@@ -1,0 +1,75 @@
+/* The root UI is pointer-events:none; this modal explicitly owns its inputs. */
+.cube-memo{position:absolute;inset:12px;z-index:40;pointer-events:auto;display:flex;flex-direction:column;gap:16px;padding:20px;overflow:auto;overscroll-behavior:contain;background:linear-gradient(125deg,#fff,#eff8ff 62%,#fff);color:#082744;border:1px solid #c3e5f8;border-radius:20px;box-shadow:0 15px 70px #05264740;font-family:inherit}
+.cube-memo.hidden{display:none!important}
+.cube-memo *{box-sizing:border-box}
+.memo-header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex:none}
+.memo-brand{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.memo-brand h2{font-size:clamp(24px,2.8vw,44px);letter-spacing:.015em;margin:0;color:#072744}
+.memo-brand p{margin:0;max-width:470px;font-size:clamp(13px,1.1vw,17px);line-height:1.6}
+.memo-logo{font-size:48px;line-height:1;color:#00aeec;text-shadow:2px 3px 0 #c8efff}
+.memo-header-end{display:flex;gap:10px;align-items:center}
+.cube-memo button,.memo-language{font:inherit;color:#0b3156;border:1px solid #c4ddf0;background:linear-gradient(160deg,#fff,#eaf3ff);box-shadow:inset 0 1px 1px white,0 2px 5px #1e54800a;border-radius:11px;min-height:44px;padding:11px 12px;cursor:pointer;transition:background .15s,box-shadow .15s,transform .15s;text-align:left}
+.cube-memo button:hover:not(:disabled){background:linear-gradient(150deg,#fff,#d8f5ff);border-color:#4dc6ed;box-shadow:0 4px 12px #259fc824}
+.cube-memo button:active:not(:disabled){transform:translateY(1px)}
+.cube-memo button:focus-visible,.memo-language:focus-visible{outline:3px solid #168dda;outline-offset:2px}
+.cube-memo button:disabled{opacity:.42;cursor:default;box-shadow:none}
+.cube-memo button.active{border-color:#00b9ec;background:linear-gradient(130deg,#e7fdff,#d6f1ff);box-shadow:inset 0 0 0 1px #78ddf8}
+.cube-memo .memo-close{font-size:35px;padding:0;width:54px;height:54px;text-align:center}
+.memo-language{max-width:150px}
+.memo-layout{display:grid;grid-template-columns:minmax(190px,.75fr) minmax(280px,2.8fr) minmax(230px,.88fr);gap:16px;flex:1;min-height:530px}
+.memo-panel{padding:18px;background:linear-gradient(150deg,#fff,#f4faff);border:1px solid #d1e6f5;border-radius:15px;box-shadow:inset 0 2px 0 #fff,0 5px 16px #4683aa08}
+.cube-memo h3{font-size:clamp(16px,1.2vw,21px);margin:0 0 14px;line-height:1.4}
+.memo-stock p{font-size:14px;line-height:1.7;text-align:center}
+.cube-memo .memo-stock-cube{display:block;width:100%;height:165px;border:0;background:transparent;padding:0;touch-action:none;cursor:grab;box-shadow:none}
+.memo-stock-cube img{width:100%;height:100%;object-fit:contain;pointer-events:none;user-select:none;mix-blend-mode:multiply}
+.memo-mode{display:grid;gap:8px}
+.memo-plus{display:flex;gap:8px;margin-top:8px}.memo-plus button{flex:1;text-align:center;font-size:22px}
+.memo-palette{margin-top:22px;padding-top:16px;border-top:1px solid #d8e6f2}
+.memo-swatches{display:flex;gap:6px;margin-bottom:12px}
+.cube-memo .memo-swatch{flex:1;min-width:0;min-height:44px;padding:0;border:4px solid #eaf6fd;box-shadow:inset 0 2px 3px #ffffff88,0 2px 5px #07274422}
+.cube-memo .memo-swatch.white{background:#f8fbff}.cube-memo .memo-swatch.navy{background:#123653}.cube-memo .memo-swatch.blue{background:#3166ec}.cube-memo .memo-swatch.cyan{background:#20c1e9}.cube-memo .memo-swatch.lightblue{background:#9cecff}.cube-memo .memo-swatch.active{border-color:#13b8ed}
+.memo-palette small{display:block;line-height:1.7;font-size:12px}
+.memo-canvas{position:relative;isolation:isolate;min-width:0;overflow:hidden;border:1px solid #c2e0f4;border-radius:18px;background:#f5fbff;box-shadow:inset 0 0 25px #abd9f329}
+.memo-webgl{display:block;width:100%;height:100%;position:absolute;inset:0;touch-action:none}
+.memo-intro{position:absolute;top:14px;left:18px;right:115px;pointer-events:none;margin:0;font-size:13px;line-height:1.6;color:#385e7c}
+.memo-grid-label,.memo-count{position:absolute;bottom:15px;pointer-events:none;font-size:12px;font-weight:600;color:#799ab5}.memo-grid-label{left:18px}.memo-count{right:18px}
+.memo-tools,.memo-display{display:grid;gap:8px}.memo-tools button{display:flex;align-items:center;gap:9px;font-size:14px}.memo-tools button>span:first-child{font-size:22px}.memo-tools button>span:nth-child(2){flex:1}
+.cube-memo kbd{font-family:inherit;white-space:nowrap;font-size:10px;background:#ddebf7;border-radius:5px;padding:4px}
+.memo-edit fieldset{border:0;border-top:1px solid #cce0ee;padding:14px 0 0;margin:18px 0}.memo-edit legend{padding:0 0 8px;font-size:18px;color:#087dc8;font-weight:700}.memo-display button{font-size:14px}
+.memo-help{border-top:1px solid #d4e7f2;padding-top:12px}.memo-help h3{font-size:15px;margin-bottom:8px}.memo-help p{font-size:11px;margin:5px 0;line-height:1.55}
+.memo-footer{display:flex;align-items:stretch;gap:16px;flex:none}.memo-hint-info{display:flex;align-items:center;gap:20px;flex:1;border:1px solid #d1e5f2;border-radius:13px;padding:14px 18px;background:#ffffffb0}.memo-hint-info h3{font-size:16px;min-width:125px;margin:0}.memo-hint-info p{font-size:12px;line-height:1.65;margin:0;max-width:650px}
+.memo-footer button{min-width:150px;text-align:center;font-weight:700}.cube-memo .memo-primary{background:linear-gradient(145deg,#9ff0ff,#32bde8);border-color:#24bbdf;min-width:190px;box-shadow:inset 0 2px 2px #d7faff,0 4px 12px #209cc22b}.memo-hint:not(:disabled){border-color:#28b9e4;background:#e0f9ff}
+.memo-error{position:absolute;top:40%;left:20px;right:20px;background:white;padding:20px}
+@media(max-width:1150px){.cube-memo{padding:14px;gap:12px}.memo-layout{grid-template-columns:185px minmax(240px,1fr) 210px;gap:10px;min-height:580px}.memo-panel{padding:12px}.memo-brand p{font-size:12px;max-width:300px}.memo-hint-info{display:block}.memo-hint-info h3{margin-bottom:5px}.memo-footer{gap:10px}.memo-footer button{min-width:125px;font-size:13px}.cube-memo .memo-primary{min-width:145px}}
+@media(max-width:800px){.cube-memo{inset:5px;padding:12px;border-radius:14px;gap:12px}.memo-brand{gap:6px}.memo-logo{font-size:29px}.memo-brand h2{font-size:24px}.memo-brand p{flex-basis:100%;max-width:none}.memo-header{align-items:flex-start}.memo-header-end{gap:5px}.memo-language{max-width:100px;padding:8px;font-size:12px}.cube-memo .memo-close{width:44px;height:44px;font-size:30px}.memo-layout{display:flex;flex-direction:column;min-height:auto;flex:none}.memo-canvas{order:-1;height:clamp(330px,58vh,540px);flex:none}.memo-stock{display:grid;grid-template-columns:120px 1fr;gap:8px 14px}.memo-stock h3{grid-column:1/-1;margin:0}.cube-memo .memo-stock-cube{grid-row:2/4;height:140px}.memo-stock>p{font-size:12px;text-align:left;margin:0}.memo-mode{gap:5px}.memo-plus{grid-column:1/-1;margin:0}.memo-palette{grid-column:1/-1;margin:4px 0 0;padding-top:12px}.memo-swatches{max-width:360px}.memo-edit{display:grid;grid-template-columns:1fr 1fr;gap:14px}.memo-edit fieldset{margin:0;border-top:0;padding:0}.memo-help{grid-column:1/-1}.memo-help p{font-size:12px}.memo-footer{flex-wrap:wrap}.memo-hint-info{flex-basis:100%}.memo-footer button{flex:1;min-height:54px}.memo-tools button{font-size:12px}.memo-tools kbd{display:none}}
+@media(max-height:500px) and (max-width:950px){.memo-layout{display:flex;flex-direction:column}.memo-canvas{order:-1;height:340px;flex:none}.memo-header{flex:none}.memo-footer{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.cube-memo button{transition:none}}
+.cube-memo .memo-stock-dock{display:none;position:absolute;bottom:40px;left:14px;width:74px;height:74px;padding:0;touch-action:none;cursor:grab;background:#f5fbff;border-color:#72cbe6;box-shadow:0 4px 12px #2b7c9f22}
+.memo-stock-dock img{width:100%;height:100%;pointer-events:none;user-select:none}
+@media(max-height:500px) and (max-width:950px){.cube-memo .memo-stock-dock{display:block}}
+
+/* Content-sized rows keep panels and footer in separate layout tracks, even
+   when translated content exceeds the viewport height. The modal scrolls. */
+.cube-memo{display:grid;grid-template-rows:auto minmax(min-content,1fr) auto;align-content:start;background:linear-gradient(135deg,#fff,#f4f6f9 65%,#fff);border-color:#aabdd1;padding-bottom:52px;scroll-padding-bottom:52px}
+.memo-layout{flex:none;grid-template-rows:minmax(min-content,1fr)}
+.memo-panel{min-width:0;padding-bottom:24px;background:linear-gradient(155deg,#fff,#f6f8fb);border-color:#c4d0de}
+.memo-brand h2{font-weight:850;text-shadow:0 2px 0 #b7c8d830}
+.memo-logo path{stroke:#163858}.memo-logo path:first-child{fill:#f5f8fb}.memo-logo path:last-child{fill:#264e74}
+.memo-brand p,.memo-help,.memo-palette small{color:#334b62}
+.cube-memo h3,.memo-edit legend{color:#102e4d}
+.cube-memo button,.memo-language{color:#163858;border-color:#9eafc2;background:linear-gradient(150deg,#fff,#edf1f6)}
+.cube-memo button.active:not(.memo-swatch),.cube-memo .memo-primary,.memo-hint:not(:disabled){color:white;background:linear-gradient(135deg,#142f50,#28588b);border-color:#173d64;box-shadow:inset 0 1px 0 #ffffff30,0 0 0 1px #55cde630,0 3px 8px #122a461c}
+.cube-memo button.active:not(.memo-swatch):hover,.cube-memo .memo-primary:hover,.memo-hint:not(:disabled):hover{color:white;background:linear-gradient(135deg,#1c426b,#2b6399);border-color:#2cc6ed}
+.cube-memo .memo-stock-cube{background:transparent;border:0}
+.memo-stock-instructions{font-size:13px;line-height:1.75;white-space:pre-line;color:#334b62;text-align:left;margin:12px 0 16px}
+.memo-stock .memo-stock-instructions{text-align:left;font-size:13px}
+.memo-help p{line-height:1.7}.memo-help{padding-bottom:8px}
+.memo-canvas{border-color:#afc0d1;box-shadow:inset 0 0 20px #c4d1dd20}
+.memo-grid-label,.memo-count,.memo-intro{color:#4b657e}
+.memo-footer{display:grid;grid-template-columns:minmax(0,1fr) repeat(3,minmax(130px,auto));align-items:stretch;gap:14px;min-height:min-content;position:static}
+.memo-hint-info{display:grid;grid-template-columns:minmax(120px,auto) minmax(0,1fr);gap:18px;min-width:0;align-items:center;background:#fff;border-color:#c4d0de;padding:16px 18px}
+.memo-hint-info h3{min-width:0;overflow-wrap:anywhere}.memo-hint-info p{max-width:none;overflow-wrap:anywhere}
+.memo-footer{margin-bottom:52px;padding-bottom:24px}.memo-footer button{min-width:0;white-space:normal;overflow-wrap:anywhere;height:auto;min-height:56px}.cube-memo .memo-primary{min-width:0}
+@media(max-width:1150px){.memo-hint-info{grid-template-columns:1fr;gap:8px;grid-column:1/-1}.memo-footer{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.memo-layout{min-height:auto}.memo-stock-instructions{margin:0;font-size:12px}.memo-stock-cube{align-self:start}.memo-footer{grid-template-columns:1fr 1fr;margin-bottom:36px;padding-bottom:20px}.memo-hint-info{grid-column:1/-1}.memo-brand .memo-logo{width:30px;height:34px}.memo-panel{padding-bottom:20px}.cube-memo{padding-bottom:36px;scroll-padding-bottom:36px}}
+@media(max-height:500px) and (max-width:950px){.memo-layout{min-height:auto}.memo-footer{grid-template-columns:1fr 1fr;margin-bottom:32px;padding-bottom:16px}.memo-hint-info{grid-column:1/-1}.cube-memo{padding-bottom:32px;scroll-padding-bottom:32px}}

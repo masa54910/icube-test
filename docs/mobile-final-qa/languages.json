@@ -1,0 +1,434 @@
+[
+  {
+    "size": "desktop",
+    "locale": "en",
+    "helpTitle": "HOW TO PLAY",
+    "buttons": [
+      "THIRD PERSON · V",
+      "↑ LOOK UP",
+      "MENU"
+    ],
+    "result": "CORRECT!\nSTAGE 1-1 CLEAR\n\nTIME 00:01.2 · ATTEMPTS 1\n\nNEXT STAGE\nRETRY\nSTAGE SELECT",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "locale": "ja",
+    "helpTitle": "遊び方",
+    "buttons": [
+      "三人称 · V",
+      "↑ 見上げる",
+      "メニュー"
+    ],
+    "result": "正解！\nステージ 1-1 クリア\n\n時間 00:01.3 · 回答回数 1\n\n次のステージ\n再挑戦\nステージ選択",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "locale": "ko",
+    "helpTitle": "플레이 방법",
+    "buttons": [
+      "3인칭 · V",
+      "↑ 위 보기",
+      "메뉴"
+    ],
+    "result": "정답!\n스테이지 1-1 클리어\n\n시간 00:01.1 · 시도 횟수 1\n\n다음 스테이지\n다시 도전\n스테이지 선택",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "locale": "zh-CN",
+    "helpTitle": "玩法说明",
+    "buttons": [
+      "第三人称 · V",
+      "↑ 向上看",
+      "菜单"
+    ],
+    "result": "正确！\n关卡 1-1 完成\n\n时间 00:01.3 · 回答次数 1\n\n下一关\n重试\n选择关卡",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "locale": "zh-TW",
+    "helpTitle": "玩法說明",
+    "buttons": [
+      "第三人稱 · V",
+      "↑ 向上看",
+      "選單"
+    ],
+    "result": "正確！\n關卡 1-1 完成\n\n時間 00:01.3 · 回答次數 1\n\n下一關\n重試\n選擇關卡",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "locale": "es",
+    "helpTitle": "CÓMO JUGAR",
+    "buttons": [
+      "TERCERA PERSONA · V",
+      "↑ MIRAR ARRIBA",
+      "MENÚ"
+    ],
+    "result": "¡CORRECTO!\nFASE 1-1 COMPLETADA\n\nTIEMPO 00:01.1 · INTENTOS 1\n\nSIGUIENTE FASE\nREINTENTAR\nSELECCIONAR FASE",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "locale": "pt",
+    "helpTitle": "COMO JOGAR",
+    "buttons": [
+      "TERCEIRA PESSOA · V",
+      "↑ OLHAR ACIMA",
+      "MENU"
+    ],
+    "result": "CORRETO!\nFASE 1-1 CONCLUÍDA\n\nTEMPO 00:01.1 · TENTATIVAS 1\n\nPRÓXIMA FASE\nTENTAR NOVAMENTE\nSELECIONAR FASE",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "locale": "de",
+    "helpTitle": "SPIELANLEITUNG",
+    "buttons": [
+      "DRITTE PERSON · V",
+      "↑ HOCHSCHAUEN",
+      "MENÜ"
+    ],
+    "result": "RICHTIG!\nLEVEL 1-1 GESCHAFFT\n\nZEIT 00:01.2 · VERSUCHE 1\n\nNÄCHSTES LEVEL\nERNEUT VERSUCHEN\nLEVEL AUSWÄHLEN",
+    "overflow": false
+  },
+  {
+    "size": "desktop",
+    "locale": "fr",
+    "helpTitle": "COMMENT JOUER",
+    "buttons": [
+      "TROISIÈME PERSONNE · V",
+      "↑ REGARDER EN HAUT",
+      "MENU"
+    ],
+    "result": "CORRECT !\nNIVEAU 1-1 TERMINÉ\n\nTEMPS 00:01.3 · ESSAIS 1\n\nNIVEAU SUIVANT\nRÉESSAYER\nCHOISIR UN NIVEAU",
+    "overflow": false
+  },
+  {
+    "size": "mobile-portrait",
+    "locale": "en",
+    "helpTitle": "HOW TO PLAY",
+    "buttons": [
+      "THIRD PERSON",
+      "↑ LOOK UP",
+      "MENU"
+    ],
+    "result": "CORRECT!\nSTAGE 1-1 CLEAR\n\nTIME 00:00.9 · ATTEMPTS 1\n\nNEXT STAGE\nRETRY\nSTAGE SELECT",
+    "overflow": false
+  },
+  {
+    "size": "mobile-portrait",
+    "locale": "ja",
+    "helpTitle": "遊び方",
+    "buttons": [
+      "三人称",
+      "↑ 見上げる",
+      "メニュー"
+    ],
+    "result": "正解！\nステージ 1-1 クリア\n\n時間 00:00.9 · 回答回数 1\n\n次のステージ\n再挑戦\nステージ選択",
+    "overflow": false
+  },
+  {
+    "size": "mobile-portrait",
+    "locale": "ko",
+    "helpTitle": "플레이 방법",
+    "buttons": [
+      "3인칭",
+      "↑ 위 보기",
+      "메뉴"
+    ],
+    "result": "정답!\n스테이지 1-1 클리어\n\n시간 00:00.8 · 시도 횟수 1\n\n다음 스테이지\n다시 도전\n스테이지 선택",
+    "overflow": false
+  },
+  {
+    "size": "mobile-portrait",
+    "locale": "zh-CN",
+    "helpTitle": "玩法说明",
+    "buttons": [
+      "第三人称",
+      "↑ 向上看",
+      "菜单"
+    ],
+    "result": "正确！\n关卡 1-1 完成\n\n时间 00:00.9 · 回答次数 1\n\n下一关\n重试\n选择关卡",
+    "overflow": false
+  },
+  {
+    "size": "mobile-portrait",
+    "locale": "zh-TW",
+    "helpTitle": "玩法說明",
+    "buttons": [
+      "第三人稱",
+      "↑ 向上看",
+      "選單"
+    ],
+    "result": "正確！\n關卡 1-1 完成\n\n時間 00:00.9 · 回答次數 1\n\n下一關\n重試\n選擇關卡",
+    "overflow": false
+  },
+  {
+    "size": "mobile-portrait",
+    "locale": "es",
+    "helpTitle": "CÓMO JUGAR",
+    "buttons": [
+      "TERCERA PERSONA",
+      "↑ MIRAR ARRIBA",
+      "MENÚ"
+    ],
+    "result": "¡CORRECTO!\nFASE 1-1 COMPLETADA\n\nTIEMPO 00:00.6 · INTENTOS 1\n\nSIGUIENTE FASE\nREINTENTAR\nSELECCIONAR FASE",
+    "overflow": false
+  },
+  {
+    "size": "mobile-portrait",
+    "locale": "pt",
+    "helpTitle": "COMO JOGAR",
+    "buttons": [
+      "TERCEIRA PESSOA",
+      "↑ OLHAR ACIMA",
+      "MENU"
+    ],
+    "result": "CORRETO!\nFASE 1-1 CONCLUÍDA\n\nTEMPO 00:01.0 · TENTATIVAS 1\n\nPRÓXIMA FASE\nTENTAR NOVAMENTE\nSELECIONAR FASE",
+    "overflow": false
+  },
+  {
+    "size": "mobile-portrait",
+    "locale": "de",
+    "helpTitle": "SPIELANLEITUNG",
+    "buttons": [
+      "DRITTE PERSON",
+      "↑ HOCHSCHAUEN",
+      "MENÜ"
+    ],
+    "result": "RICHTIG!\nLEVEL 1-1 GESCHAFFT\n\nZEIT 00:00.9 · VERSUCHE 1\n\nNÄCHSTES LEVEL\nERNEUT VERSUCHEN\nLEVEL AUSWÄHLEN",
+    "overflow": false
+  },
+  {
+    "size": "mobile-portrait",
+    "locale": "fr",
+    "helpTitle": "COMMENT JOUER",
+    "buttons": [
+      "TROISIÈME PERSONNE",
+      "↑ REGARDER EN HAUT",
+      "MENU"
+    ],
+    "result": "CORRECT !\nNIVEAU 1-1 TERMINÉ\n\nTEMPS 00:00.9 · ESSAIS 1\n\nNIVEAU SUIVANT\nRÉESSAYER\nCHOISIR UN NIVEAU",
+    "overflow": false
+  },
+  {
+    "size": "mobile-landscape",
+    "locale": "en",
+    "helpTitle": "HOW TO PLAY",
+    "buttons": [
+      "THIRD PERSON",
+      "↑ LOOK UP",
+      "MENU"
+    ],
+    "result": "CORRECT!\nSTAGE 1-1 CLEAR\n\nTIME 00:00.8 · ATTEMPTS 1\n\nNEXT STAGE\nRETRY\nSTAGE SELECT",
+    "overflow": false
+  },
+  {
+    "size": "mobile-landscape",
+    "locale": "ja",
+    "helpTitle": "遊び方",
+    "buttons": [
+      "三人称",
+      "↑ 見上げる",
+      "メニュー"
+    ],
+    "result": "正解！\nステージ 1-1 クリア\n\n時間 00:00.9 · 回答回数 1\n\n次のステージ\n再挑戦\nステージ選択",
+    "overflow": false
+  },
+  {
+    "size": "mobile-landscape",
+    "locale": "ko",
+    "helpTitle": "플레이 방법",
+    "buttons": [
+      "3인칭",
+      "↑ 위 보기",
+      "메뉴"
+    ],
+    "result": "정답!\n스테이지 1-1 클리어\n\n시간 00:00.6 · 시도 횟수 1\n\n다음 스테이지\n다시 도전\n스테이지 선택",
+    "overflow": false
+  },
+  {
+    "size": "mobile-landscape",
+    "locale": "zh-CN",
+    "helpTitle": "玩法说明",
+    "buttons": [
+      "第三人称",
+      "↑ 向上看",
+      "菜单"
+    ],
+    "result": "正确！\n关卡 1-1 完成\n\n时间 00:00.9 · 回答次数 1\n\n下一关\n重试\n选择关卡",
+    "overflow": false
+  },
+  {
+    "size": "mobile-landscape",
+    "locale": "zh-TW",
+    "helpTitle": "玩法說明",
+    "buttons": [
+      "第三人稱",
+      "↑ 向上看",
+      "選單"
+    ],
+    "result": "正確！\n關卡 1-1 完成\n\n時間 00:00.8 · 回答次數 1\n\n下一關\n重試\n選擇關卡",
+    "overflow": false
+  },
+  {
+    "size": "mobile-landscape",
+    "locale": "es",
+    "helpTitle": "CÓMO JUGAR",
+    "buttons": [
+      "TERCERA PERSONA",
+      "↑ MIRAR ARRIBA",
+      "MENÚ"
+    ],
+    "result": "¡CORRECTO!\nFASE 1-1 COMPLETADA\n\nTIEMPO 00:00.7 · INTENTOS 1\n\nSIGUIENTE FASE\nREINTENTAR\nSELECCIONAR FASE",
+    "overflow": false
+  },
+  {
+    "size": "mobile-landscape",
+    "locale": "pt",
+    "helpTitle": "COMO JOGAR",
+    "buttons": [
+      "TERCEIRA PESSOA",
+      "↑ OLHAR ACIMA",
+      "MENU"
+    ],
+    "result": "CORRETO!\nFASE 1-1 CONCLUÍDA\n\nTEMPO 00:00.7 · TENTATIVAS 1\n\nPRÓXIMA FASE\nTENTAR NOVAMENTE\nSELECIONAR FASE",
+    "overflow": false
+  },
+  {
+    "size": "mobile-landscape",
+    "locale": "de",
+    "helpTitle": "SPIELANLEITUNG",
+    "buttons": [
+      "DRITTE PERSON",
+      "↑ HOCHSCHAUEN",
+      "MENÜ"
+    ],
+    "result": "RICHTIG!\nLEVEL 1-1 GESCHAFFT\n\nZEIT 00:00.8 · VERSUCHE 1\n\nNÄCHSTES LEVEL\nERNEUT VERSUCHEN\nLEVEL AUSWÄHLEN",
+    "overflow": false
+  },
+  {
+    "size": "mobile-landscape",
+    "locale": "fr",
+    "helpTitle": "COMMENT JOUER",
+    "buttons": [
+      "TROISIÈME PERSONNE",
+      "↑ REGARDER EN HAUT",
+      "MENU"
+    ],
+    "result": "CORRECT !\nNIVEAU 1-1 TERMINÉ\n\nTEMPS 00:00.9 · ESSAIS 1\n\nNIVEAU SUIVANT\nRÉESSAYER\nCHOISIR UN NIVEAU",
+    "overflow": false
+  },
+  {
+    "size": "small-mobile",
+    "locale": "en",
+    "helpTitle": "HOW TO PLAY",
+    "buttons": [
+      "THIRD PERSON",
+      "↑ LOOK UP",
+      "MENU"
+    ],
+    "result": "CORRECT!\nSTAGE 1-1 CLEAR\n\nTIME 00:00.7 · ATTEMPTS 1\n\nNEXT STAGE\nRETRY\nSTAGE SELECT",
+    "overflow": false
+  },
+  {
+    "size": "small-mobile",
+    "locale": "ja",
+    "helpTitle": "遊び方",
+    "buttons": [
+      "三人称",
+      "↑ 見上げる",
+      "メニュー"
+    ],
+    "result": "正解！\nステージ 1-1 クリア\n\n時間 00:00.8 · 回答回数 1\n\n次のステージ\n再挑戦\nステージ選択",
+    "overflow": false
+  },
+  {
+    "size": "small-mobile",
+    "locale": "ko",
+    "helpTitle": "플레이 방법",
+    "buttons": [
+      "3인칭",
+      "↑ 위 보기",
+      "메뉴"
+    ],
+    "result": "정답!\n스테이지 1-1 클리어\n\n시간 00:00.8 · 시도 횟수 1\n\n다음 스테이지\n다시 도전\n스테이지 선택",
+    "overflow": false
+  },
+  {
+    "size": "small-mobile",
+    "locale": "zh-CN",
+    "helpTitle": "玩法说明",
+    "buttons": [
+      "第三人称",
+      "↑ 向上看",
+      "菜单"
+    ],
+    "result": "正确！\n关卡 1-1 完成\n\n时间 00:00.9 · 回答次数 1\n\n下一关\n重试\n选择关卡",
+    "overflow": false
+  },
+  {
+    "size": "small-mobile",
+    "locale": "zh-TW",
+    "helpTitle": "玩法說明",
+    "buttons": [
+      "第三人稱",
+      "↑ 向上看",
+      "選單"
+    ],
+    "result": "正確！\n關卡 1-1 完成\n\n時間 00:00.7 · 回答次數 1\n\n下一關\n重試\n選擇關卡",
+    "overflow": false
+  },
+  {
+    "size": "small-mobile",
+    "locale": "es",
+    "helpTitle": "CÓMO JUGAR",
+    "buttons": [
+      "TERCERA PERSONA",
+      "↑ MIRAR ARRIBA",
+      "MENÚ"
+    ],
+    "result": "¡CORRECTO!\nFASE 1-1 COMPLETADA\n\nTIEMPO 00:00.7 · INTENTOS 1\n\nSIGUIENTE FASE\nREINTENTAR\nSELECCIONAR FASE",
+    "overflow": false
+  },
+  {
+    "size": "small-mobile",
+    "locale": "pt",
+    "helpTitle": "COMO JOGAR",
+    "buttons": [
+      "TERCEIRA PESSOA",
+      "↑ OLHAR ACIMA",
+      "MENU"
+    ],
+    "result": "CORRETO!\nFASE 1-1 CONCLUÍDA\n\nTEMPO 00:00.7 · TENTATIVAS 1\n\nPRÓXIMA FASE\nTENTAR NOVAMENTE\nSELECIONAR FASE",
+    "overflow": false
+  },
+  {
+    "size": "small-mobile",
+    "locale": "de",
+    "helpTitle": "SPIELANLEITUNG",
+    "buttons": [
+      "DRITTE PERSON",
+      "↑ HOCHSCHAUEN",
+      "MENÜ"
+    ],
+    "result": "RICHTIG!\nLEVEL 1-1 GESCHAFFT\n\nZEIT 00:00.8 · VERSUCHE 1\n\nNÄCHSTES LEVEL\nERNEUT VERSUCHEN\nLEVEL AUSWÄHLEN",
+    "overflow": false
+  },
+  {
+    "size": "small-mobile",
+    "locale": "fr",
+    "helpTitle": "COMMENT JOUER",
+    "buttons": [
+      "TROISIÈME PERSONNE",
+      "↑ REGARDER EN HAUT",
+      "MENU"
+    ],
+    "result": "CORRECT !\nNIVEAU 1-1 TERMINÉ\n\nTEMPS 00:00.8 · ESSAIS 1\n\nNIVEAU SUIVANT\nRÉESSAYER\nCHOISIR UN NIVEAU",
+    "overflow": false
+  }
+]

@@ -1,0 +1,19 @@
+.showcase-layer{position:absolute;inset:0;opacity:0;pointer-events:none;transition:opacity var(--showcase-transition) ease-in-out;overflow:hidden}
+.showcase-layer.is-current{opacity:1}
+.showcase-static{background:radial-gradient(ellipse at center,#233e57,#071526 80%)}
+.showcase-static img{display:block;width:100%;height:100%;object-fit:contain;animation:showcase-drift 10s ease-in-out both;animation-play-state:paused}
+.showcase-static.is-current img{animation-play-state:running}
+.showcase-brand:not(.is-current) .home-cubie img{animation-play-state:paused}
+.showcase-caption{position:absolute;z-index:4;top:24px;left:26px;color:#eafbff;font-size:12px;letter-spacing:.2em;text-shadow:0 2px 8px #001020;pointer-events:none}
+.showcase-navigation{position:absolute;z-index:5;bottom:9px;left:50%;transform:translateX(-50%);display:flex;padding:0 5px;border:1px solid #a4eaff33;border-radius:28px;background:#071526bd;backdrop-filter:blur(8px)}
+.showcase-navigation button{width:44px;height:44px;min-height:44px;padding:0;border:0;border-radius:50%;background:transparent;display:grid;place-items:center;box-shadow:none}
+.showcase-navigation button span{width:7px;height:7px;border-radius:50%;background:#bacddd88;transition:background .3s,box-shadow .3s}
+.showcase-navigation button[aria-current=true] span{background:#c8fbff;box-shadow:0 0 10px #45dfff,0 0 3px #fff}
+.showcase-navigation button:focus-visible{outline:2px solid #87eeff;outline-offset:-5px}
+.showcase-navigation button:disabled{opacity:.25}
+.showcase-static.is-current:after{content:'';position:absolute;inset:0;background:linear-gradient(110deg,transparent 35%,#71e9ff13 48%,transparent 61%);animation:showcase-sweep 1.1s ease-out both;pointer-events:none}
+.showcase-paused *,.showcase-paused *:after{animation-play-state:paused!important}
+@keyframes showcase-drift{from{transform:scale(1)}to{transform:scale(1.012)}}
+@keyframes showcase-sweep{from{transform:translateX(-80%)}to{transform:translateX(80%)}}
+@media(max-width:800px),(pointer:coarse){.showcase-static img{animation:none}.showcase-caption{top:15px;left:18px;font-size:10px}.showcase-navigation{bottom:7px}}
+@media(prefers-reduced-motion:reduce){.showcase-layer{transition-duration:160ms}.showcase-static img,.showcase-static.is-current:after{animation:none}.showcase-static.is-current:after{display:none}}

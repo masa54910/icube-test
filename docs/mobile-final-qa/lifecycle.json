@@ -1,0 +1,170 @@
+{
+  "orientation": "state and position preserved; timer continues",
+  "safe": [
+    {
+      "text": "DRITTE PERSON",
+      "x": 20,
+      "y": 80,
+      "right": 139.34375,
+      "bottom": 124,
+      "w": 119.34375,
+      "h": 44
+    },
+    {
+      "text": "↑ HOCHSCHAUEN",
+      "x": 144.34375,
+      "y": 80,
+      "right": 270.359375,
+      "bottom": 124,
+      "w": 126.015625,
+      "h": 44
+    },
+    {
+      "text": "MENÜ",
+      "x": 275.359375,
+      "y": 80,
+      "right": 332.703125,
+      "bottom": 124,
+      "w": 57.34375,
+      "h": 44
+    },
+    {
+      "text": "↑ SPRINGEN",
+      "x": 276,
+      "y": 680,
+      "right": 346,
+      "bottom": 750,
+      "w": 70,
+      "h": 70
+    }
+  ],
+  "multiTouch": {
+    "revealTime": 0,
+    "airborne": false,
+    "movementState": "NORMAL",
+    "legAngles": [
+      [
+        0.05565125428786774,
+        -0.10991367963200464
+      ],
+      [
+        -0.055651254287867574,
+        -0.20452081192137953
+      ]
+    ],
+    "state": "EXPLORATION",
+    "position": [
+      1.266387305808147,
+      -2.9398000013411045,
+      0.16041461452328762
+    ],
+    "yaw": 1.6967775309245001,
+    "playerYaw": 1.6967963267948964,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "WALK_FORWARD",
+    "speed": 0.9272727272727259,
+    "pitch": -0.18,
+    "mode": "third-person",
+    "lookingUp": false,
+    "characterVisible": true,
+    "elapsed": 1183.9,
+    "attempts": 0,
+    "ladder": null,
+    "camera": [
+      -1.4665431519979875,
+      -1.1885171957487968,
+      -0.18571637457340742
+    ],
+    "quaternion": [
+      -0.05942704759217335,
+      -0.7471797181470573,
+      -0.06742832950931578,
+      0.6585167539127192
+    ]
+  },
+  "save": {
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "NORMAL",
+      "legAngles": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        0,
+        -2.9398000013411045,
+        0
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 1.5707963267948966,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "IDLE",
+      "speed": 0,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": false,
+      "elapsed": 66.60000000000002,
+      "attempts": 0,
+      "ladder": null,
+      "camera": [
+        -2.75476233980674,
+        -1.1885171957487968,
+        1.6868054409279986e-16
+      ],
+      "quaternion": [
+        -0.06355373162112238,
+        -0.7042449312540562,
+        -0.06355373162112238,
+        0.7042449312540563
+      ]
+    },
+    "save": {
+      "version": 1,
+      "completed": [
+        "stage_1_1"
+      ],
+      "bestTimesMs": {
+        "stage_1_1": 1766.3999999999996
+      },
+      "bestAttempts": {
+        "stage_1_1": 1
+      },
+      "lastPlayed": "stage_1_2"
+    }
+  },
+  "persistence": "language de, clear and Continue stage 1-2 survive reload",
+  "manualShowcase": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4"
+  ],
+  "autoCycle": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    0,
+    1,
+    2,
+    3,
+    4,
+    0
+  ],
+  "showcaseCleanup": true,
+  "errors": [],
+  "assetFailure": "0"
+}

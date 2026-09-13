@@ -1,0 +1,13 @@
+import type {Locale} from '../types';
+/** Body, boost explanation, shared answer points. Brand headings remain untranslated. */
+export const pureRouteCopy:Record<Locale,readonly [string,string,string]>={
+ en:['Explore a single winding path and remember its turns, heights and distances. Use CUBE MEMO to rebuild the route you travelled in 3D. There are no cubes outside the route.','Step on the arrows along a long straight to dash a short distance in their direction.','ROUTE has several Answer Points. Every point asks you to identify the same whole-stage shape.'],
+ ja:['長く連なった一本道を探索し、曲がり方や高さ、距離を記憶します。CUBE MEMOを使って、通ってきたルートを立体的に組み立てましょう。進路外の突出キューブはありません。','長い直線にある矢印を踏むと、進行方向へ短距離ダッシュします。','ROUTEでは複数のAnswer Pointがあります。どこから回答しても同じStage全体の形を答えます。'],
+ ko:['하나로 이어진 길을 탐색하며 방향, 높이, 거리를 기억하세요. CUBE MEMO로 지나온 경로를 입체적으로 만들어 보세요. 경로 밖으로 튀어나온 큐브는 없습니다.','긴 직선 구간의 화살표를 밟으면 표시된 방향으로 짧게 질주합니다.','ROUTE에는 여러 답변 지점이 있습니다. 어느 지점에서든 같은 스테이지 전체의 형태를 답합니다.'],
+ 'zh-CN':['探索一条连续的路线，记住转弯、高度和距离。用CUBE MEMO搭建你走过的立体路线。路线外没有突出的立方体。','踩上长直道上的箭头，即可沿箭头方向短距离冲刺。','ROUTE设有多个回答点。无论在哪个回答点，都需要选出同一关卡的完整形状。'],
+ 'zh-TW':['探索一條連續的路線，記住轉彎、高度和距離。用CUBE MEMO搭建你走過的立體路線。路線外沒有突出的立方體。','踩上長直道上的箭頭，即可沿箭頭方向短距離衝刺。','ROUTE設有多個回答點。無論在哪個回答點，都需要選出同一關卡的完整形狀。'],
+ es:['Explora un único camino y recuerda los giros, las alturas y las distancias. Reconstruye en 3D la ruta recorrida con CUBE MEMO. No hay cubos fuera de la ruta.','Pisa las flechas de una recta larga para avanzar rápidamente una corta distancia en su dirección.','ROUTE tiene varios puntos de respuesta. En todos debes identificar la misma forma completa de la fase.'],
+ pt:['Explore um caminho único e memorize as curvas, alturas e distâncias. Reconstrua o percurso em 3D com o CUBE MEMO. Não há cubos fora do percurso.','Pise nas setas de uma reta longa para avançar rapidamente uma curta distância na direção indicada.','ROUTE tem vários pontos de resposta. Em qualquer um deles, a resposta é a mesma forma completa da fase.'],
+ de:['Erkunde einen durchgehenden Pfad und merke dir Richtungswechsel, Höhen und Entfernungen. Baue deinen Weg mit CUBE MEMO dreidimensional nach. Außerhalb des Weges gibt es keine Würfel.','Tritt auf die Pfeile einer langen Geraden, um ein kurzes Stück in Pfeilrichtung zu sprinten.','ROUTE bietet mehrere Antwortpunkte. An jedem wählst du dieselbe vollständige Form des Levels.'],
+ fr:['Explore un chemin unique et retiens les virages, les hauteurs et les distances. Reconstruis ton parcours en 3D avec CUBE MEMO. Aucun cube ne dépasse du chemin.','Marche sur les flèches d’une longue ligne droite pour accélérer sur une courte distance dans leur direction.','ROUTE propose plusieurs points de réponse. Chacun demande la même forme complète du niveau.']
+};

@@ -1,0 +1,87 @@
+[
+  {
+    "stage": 1,
+    "backPreserves": true,
+    "directCorrect": true,
+    "result": true
+  },
+  {
+    "stage": 16,
+    "backPreserves": true,
+    "directCorrect": true,
+    "result": true
+  },
+  {
+    "stage": 31,
+    "backPreserves": true,
+    "directCorrect": true,
+    "result": true
+  },
+  {
+    "stage": 101,
+    "backPreserves": true,
+    "directCorrect": true,
+    "result": true
+  },
+  {
+    "stage": 105,
+    "backPreserves": true,
+    "directCorrect": true,
+    "result": true
+  },
+  {
+    "stage": 110,
+    "backPreserves": true,
+    "directCorrect": true,
+    "result": true
+  },
+  {
+    "mode": "missing",
+    "incorrectReturn": true,
+    "hint": true,
+    "noDoubleAttempt": true,
+    "secondFailure": true
+  },
+  {
+    "mode": "extra",
+    "incorrectReturn": true,
+    "hint": true,
+    "noDoubleAttempt": true,
+    "secondFailure": true
+  },
+  {
+    "mode": "wrong",
+    "incorrectReturn": true,
+    "hint": true,
+    "noDoubleAttempt": true,
+    "secondFailure": true
+  },
+  {
+    "mixed": "direct-point",
+    "pass": true
+  },
+  {
+    "mixed": "point-direct",
+    "pass": true
+  },
+  {
+    "layout": "desktop",
+    "nineLocales": true,
+    "startOnlyIncorrect": true
+  },
+  {
+    "layout": "laptop",
+    "nineLocales": true,
+    "startOnlyIncorrect": true
+  },
+  {
+    "layout": "portrait",
+    "nineLocales": true,
+    "startOnlyIncorrect": true
+  },
+  {
+    "layout": "landscape",
+    "nineLocales": true,
+    "startOnlyIncorrect": true
+  }
+]

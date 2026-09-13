@@ -1,0 +1,202 @@
+[
+  {
+    "stage": "advanced-route1-1",
+    "cubes": 17,
+    "turns": 3,
+    "floors": 2,
+    "vertical": 1,
+    "longest": 5,
+    "span": [
+      5,
+      2,
+      8
+    ],
+    "verticalSpan": 2,
+    "horizontalSpan": 8,
+    "answers": 2,
+    "boosts": 0,
+    "correct": 5,
+    "exact": 1,
+    "pixelMatch": true
+  },
+  {
+    "stage": "advanced-route1-2",
+    "cubes": 22,
+    "turns": 4,
+    "floors": 5,
+    "vertical": 4,
+    "longest": 5,
+    "span": [
+      4,
+      5,
+      5
+    ],
+    "verticalSpan": 5,
+    "horizontalSpan": 5,
+    "answers": 2,
+    "boosts": 0,
+    "correct": 3,
+    "exact": 1,
+    "pixelMatch": true
+  },
+  {
+    "stage": "advanced-route1-3",
+    "cubes": 26,
+    "turns": 4,
+    "floors": 5,
+    "vertical": 4,
+    "longest": 8,
+    "span": [
+      9,
+      5,
+      8
+    ],
+    "verticalSpan": 5,
+    "horizontalSpan": 9,
+    "answers": 2,
+    "boosts": 1,
+    "correct": 6,
+    "exact": 1,
+    "pixelMatch": true
+  },
+  {
+    "stage": "advanced-route1-4",
+    "cubes": 23,
+    "turns": 5,
+    "floors": 2,
+    "vertical": 2,
+    "longest": 6,
+    "span": [
+      6,
+      2,
+      9
+    ],
+    "verticalSpan": 2,
+    "horizontalSpan": 9,
+    "answers": 3,
+    "boosts": 0,
+    "correct": 8,
+    "exact": 1,
+    "pixelMatch": true
+  },
+  {
+    "stage": "advanced-route1-5",
+    "cubes": 26,
+    "turns": 5,
+    "floors": 2,
+    "vertical": 1,
+    "longest": 7,
+    "span": [
+      7,
+      2,
+      7
+    ],
+    "verticalSpan": 2,
+    "horizontalSpan": 7,
+    "answers": 3,
+    "boosts": 0,
+    "correct": 5,
+    "exact": 1,
+    "pixelMatch": true
+  },
+  {
+    "stage": "advanced-route1-6",
+    "cubes": 28,
+    "turns": 4,
+    "floors": 3,
+    "vertical": 2,
+    "longest": 8,
+    "span": [
+      8,
+      3,
+      7
+    ],
+    "verticalSpan": 3,
+    "horizontalSpan": 8,
+    "answers": 3,
+    "boosts": 2,
+    "correct": 6,
+    "exact": 1,
+    "pixelMatch": true
+  },
+  {
+    "stage": "advanced-route1-7",
+    "cubes": 29,
+    "turns": 7,
+    "floors": 5,
+    "vertical": 4,
+    "longest": 5,
+    "span": [
+      5,
+      5,
+      9
+    ],
+    "verticalSpan": 5,
+    "horizontalSpan": 9,
+    "answers": 3,
+    "boosts": 0,
+    "correct": 8,
+    "exact": 1,
+    "pixelMatch": true
+  },
+  {
+    "stage": "advanced-route1-8",
+    "cubes": 29,
+    "turns": 5,
+    "floors": 6,
+    "vertical": 5,
+    "longest": 5,
+    "span": [
+      5,
+      6,
+      5
+    ],
+    "verticalSpan": 6,
+    "horizontalSpan": 5,
+    "answers": 3,
+    "boosts": 0,
+    "correct": 9,
+    "exact": 1,
+    "pixelMatch": true
+  },
+  {
+    "stage": "advanced-route1-9",
+    "cubes": 28,
+    "turns": 4,
+    "floors": 4,
+    "vertical": 3,
+    "longest": 8,
+    "span": [
+      8,
+      4,
+      7
+    ],
+    "verticalSpan": 4,
+    "horizontalSpan": 8,
+    "answers": 3,
+    "boosts": 2,
+    "correct": 6,
+    "exact": 1,
+    "pixelMatch": true
+  },
+  {
+    "stage": "advanced-route1-10",
+    "cubes": 36,
+    "turns": 8,
+    "floors": 5,
+    "vertical": 5,
+    "longest": 8,
+    "span": [
+      8,
+      5,
+      7
+    ],
+    "verticalSpan": 5,
+    "horizontalSpan": 8,
+    "answers": 4,
+    "boosts": 1,
+    "correct": 2,
+    "exact": 1,
+    "pixelMatch": true
+  }
+]

@@ -1,0 +1,77 @@
+[
+  {
+    "file": "src/game/CameraController.ts",
+    "hash": "C242508DC62C218352B503FCDBCF114CE248C59CA0C46B0C178693C55762DF05",
+    "unchanged": true
+  },
+  {
+    "file": "src/game/CelebrationScene.ts",
+    "hash": "102C337C84EB810CCD36C136A694814515799765217708555AA1AA83940FFC76",
+    "unchanged": true
+  },
+  {
+    "file": "src/game/Character.ts",
+    "hash": "81E603459C7DCE48AA671B07B9A5AC855EDAE336D56A1E8E48A586CFE6BCBEB0",
+    "unchanged": true
+  },
+  {
+    "file": "src/game/Game.ts",
+    "hash": "B7939875246B86E78C5937DF62435EF990BA92D412BD5DCA6534ECD740E05F4A",
+    "unchanged": true
+  },
+  {
+    "file": "src/game/GameState.ts",
+    "hash": "05FD23BCD7AB27CEB6BD5CDB3D76FE0665AFCA2B38AEF69B8B843A7F0F6E7F95",
+    "unchanged": true
+  },
+  {
+    "file": "src/game/InputController.ts",
+    "hash": "B12C3281662DB16E7E15FB46B7D4EE2D6B97DEF7A41CDB369FE6FDE0BF3CAB5F",
+    "unchanged": true
+  },
+  {
+    "file": "src/game/PlayerController.ts",
+    "hash": "B43B49DF27C8809F8A6438C05F8FE76283427736B18A18066F8A96AF1BE2E839",
+    "unchanged": true
+  },
+  {
+    "file": "src/game/WorldBuilder.ts",
+    "hash": "F6BD757D6B45C397700D6508B7E7A58EE0CD3E6E8631BE3DE00E9B5B9A00EAD0",
+    "unchanged": true
+  },
+  {
+    "file": "src/platform/PlayablesSDK.ts",
+    "hash": "8F67BD8B48A9B3AAD2F97515D4A33718E09E572F1CCD69A538ACDD5D28D16B44",
+    "unchanged": true
+  },
+  {
+    "file": "src/platform/ytgame.d.ts",
+    "hash": "82B9F1299413BFB29155CFC9E6A8C8572B4E7F797A1BE3AAD38544A6F390D1D3",
+    "unchanged": true
+  },
+  {
+    "file": "src/stages/stage-data.ts",
+    "hash": "5CDC0AF2CE8FA71B1EC5A6890AB4A3D94DA2754D5E6A6D8465FB83D890B49EF5",
+    "unchanged": true
+  },
+  {
+    "file": "src/stages/stage-utils.ts",
+    "hash": "9D2E4DCDED8BC6EFA9811447A9BD28C5BD641D9ED3759767AE0349F48918D6A6",
+    "unchanged": true
+  },
+  {
+    "file": "src/ui/CorrectPresentation.ts",
+    "hash": "B78A27C5EE177B2F4DF356AB4FC73AF8CE96C10532FD656C7EA026A7805A06A0",
+    "unchanged": true
+  },
+  {
+    "file": "src/ui/CorrectTimeline.ts",
+    "hash": "A2C4A4F4C2CB68CB6EABC5C7E2A0DA2C862EC61A52934F95264D8A19A9C3AB4D",
+    "unchanged": true
+  },
+  {
+    "file": "public/assets/cubie/cubie-correct.png",
+    "hash": "918C0D644FFE3D3F87A1CC5295AE15522A96063E14EA8A8071C8E90C5ADC6600",
+    "unchanged": true
+  }
+]

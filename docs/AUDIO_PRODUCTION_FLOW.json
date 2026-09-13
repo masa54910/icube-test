@@ -1,0 +1,76 @@
+{
+  "results": [
+    {
+      "actualBgmGraphEnergy": true,
+      "steps": true
+    },
+    {
+      "stage": 1,
+      "correct": 1,
+      "bgm": "CORRECT_SCENE",
+      "directNoEnter": true
+    },
+    {
+      "stage": 16,
+      "correct": 2,
+      "bgm": "CORRECT_SCENE",
+      "directNoEnter": true
+    },
+    {
+      "stage": 31,
+      "correct": 3,
+      "bgm": "CORRECT_SCENE",
+      "directNoEnter": true
+    },
+    {
+      "stage": 101,
+      "correct": 4,
+      "bgm": "CORRECT_SCENE",
+      "directNoEnter": true
+    },
+    {
+      "stage": 105,
+      "correct": 5,
+      "bgm": "CORRECT_SCENE",
+      "directNoEnter": true
+    },
+    {
+      "stage": 110,
+      "correct": 6,
+      "bgm": "CORRECT_SCENE",
+      "directNoEnter": true
+    },
+    {
+      "stage": 1,
+      "correct": 7,
+      "bgm": "CORRECT_SCENE",
+      "directNoEnter": true
+    },
+    {
+      "stage": 16,
+      "correct": 8,
+      "bgm": "CORRECT_SCENE",
+      "directNoEnter": true
+    },
+    {
+      "stage": 31,
+      "correct": 9,
+      "bgm": "CORRECT_SCENE",
+      "directNoEnter": true
+    },
+    {
+      "stage": 101,
+      "correct": 10,
+      "bgm": "CORRECT_SCENE",
+      "directNoEnter": true
+    },
+    {
+      "directIncorrectReturn": true
+    },
+    {
+      "terminalEnterSelectCorrect": true,
+      "mixedSharedAttempts": 2
+    }
+  ],
+  "errors": []
+}

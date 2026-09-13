@@ -1,0 +1,56 @@
+import type {TestSession,TestResult} from './TestSession';
+import './test.css';
+import {t,locale,LANGUAGE_NAMES,setLocale} from '../i18n';
+import type {Locale} from '../types';
+import {homeIcon} from '../ui/HomeContent';
+/** Test-only UI; never replaces the existing gameplay renderer or Home showcase. */
+export class TestUI {
+ readonly card=document.createElement('section');readonly overlay=document.createElement('section');readonly hud=document.createElement('div');
+ private animation=0;
+ private rerender:(()=>void)|null=null;
+ private priorFocus:HTMLElement|null=null;
+ private readonly primaryCTA=document.createElement('button');
+ constructor(private root:HTMLElement,private session:()=>TestSession,private begin:(fresh:boolean)=>void,private home:()=>void,private stageProgress:()=>{standard:number;advanced:number}=()=>({standard:0,advanced:0}),private language:(value:Locale)=>void=setLocale){
+  this.card.className='cube-score-card';this.overlay.className='cube-test-overlay hidden';this.hud.className='cube-test-hud hidden';
+  this.primaryCTA.className='menu-button test-primary-cta';root.querySelector('.menu-list')!.prepend(this.primaryCTA);
+  root.querySelector('.progress-panel')!.append(this.card);root.append(this.overlay,this.hud);this.refresh();
+  this.overlay.setAttribute('role','dialog');this.overlay.setAttribute('aria-modal','true');this.overlay.tabIndex=-1;
+  new MutationObserver(()=>{this.refresh();this.rerender?.();}).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
+  const hudTop=root.querySelector('.hud-top');if(hudTop)new ResizeObserver(()=>{const bottom=hudTop.getBoundingClientRect().bottom;if(bottom>0)this.hud.style.top=`${bottom+8}px`;}).observe(hudTop);
+  this.overlay.addEventListener('keydown',e=>{if(e.key!=='Tab')return;const controls=[...this.overlay.querySelectorAll<HTMLElement>('button,summary,select')].filter(v=>v.getClientRects().length);const first=controls[0],last=controls.at(-1);if(e.shiftKey&&(document.activeElement===first||document.activeElement===this.overlay)){e.preventDefault();last?.focus();}else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first?.focus();}});
+ }
+ private button(label:string,action:()=>void){const b=document.createElement('button');b.textContent=label;b.onclick=action;return b;}
+ refresh(){const data=this.session().data;this.card.replaceChildren();const h=document.createElement('h3');h.textContent='CUBE SCORE';this.card.append(h);
+  const label=t(data.session?'home.continueCubeTest':'home.takeCubeTest');
+  const icon=document.createElement('span');icon.className='menu-icon';icon.innerHTML=homeIcon('test');icon.setAttribute('aria-hidden','true');
+  const text=document.createElement('strong');text.textContent=label;this.primaryCTA.replaceChildren(icon,text);
+  this.primaryCTA.setAttribute('aria-label',label);this.primaryCTA.onclick=()=>this.session().run?this.begin(false):this.intro();
+  const best=data.best,p=document.createElement('p');p.textContent=best?`${best.score.total} / 1000 · ${best.score.rank} RANK · ${best.score.label}`:t('cubeScore.notMeasured');this.card.append(p);
+  if(best)this.card.append(this.button(t('cubeScore.details'),()=>this.result(best,false)));
+  this.card.append(this.button(data.session?`${t('test.continue')} · ${data.session.currentQuestion+1} / 5`:t('test.take'),()=>data.session?this.begin(false):this.intro()));
+ }
+ private panel(title:string){cancelAnimationFrame(this.animation);if(this.overlay.classList.contains('hidden'))this.priorFocus=document.activeElement as HTMLElement;this.overlay.replaceChildren();this.overlay.classList.remove('hidden');this.overlay.setAttribute('aria-label',title);const box=document.createElement('div');box.className='cube-test-card';const header=document.createElement('header');header.className='cube-test-header';const h=document.createElement('h2');h.textContent=title;const select=document.createElement('select');select.setAttribute('aria-label','Language');for(const [value,name] of Object.entries(LANGUAGE_NAMES)){const option=document.createElement('option');option.value=value;option.textContent=name;select.append(option);}select.value=locale();select.onchange=()=>this.language(select.value as Locale);header.append(h,select);box.append(header);this.overlay.append(box);this.overlay.focus();return box;}
+ intro(){this.rerender=()=>this.intro();const box=this.panel('CUBE TEST');const p=document.createElement('p');p.textContent=t('test.intro');box.append(p);this.disclaimer(box);box.append(this.button(t('test.start'),()=>{if(this.session().run){this.discard();return;}this.hide();this.begin(true);}),this.button(t('test.back'),()=>this.hide()));}
+ private discard(){this.rerender=()=>this.discard();const box=this.panel('CUBE TEST');const p=document.createElement('p');p.textContent=t('test.discard');box.append(p,this.button(t('test.start'),()=>{this.hide();this.begin(true);}),this.button(t('test.back'),()=>this.intro()));}
+ private confirmClear(result:TestResult){this.rerender=()=>this.confirmClear(result);const box=this.panel(t('cubeTest.clearConfirmTitle'));const p=document.createElement('p');p.textContent=t('cubeTest.clearConfirmBody');const clear=this.button(t('cubeTest.clearConfirm'),()=>{clear.disabled=true;this.session().clearResults();this.hide();this.home();this.refresh();});clear.className='test-clear-results';box.append(p,clear,this.button(t('test.back'),()=>this.result(result,false)));}
+ hide(){cancelAnimationFrame(this.animation);this.rerender=null;this.overlay.classList.add('hidden');if(this.priorFocus?.isConnected)this.priorFocus.focus();}
+ question(index:number,ms:number){if(this.session().run?.pendingOutcome!==undefined){this.hud.classList.add('hidden');return;}this.hud.classList.remove('hidden');const text=`CUBE TEST · ${t('test.question',{n:index+1})} · ${Math.floor(ms/60000).toString().padStart(2,'0')}:${Math.floor(ms/1000%60).toString().padStart(2,'0')}`;if(this.hud.textContent!==text)this.hud.textContent=text;}
+ leave(){this.hud.classList.add('hidden');this.hide();this.refresh();}
+ pause(resume:()=>void,restart:()=>void,home:()=>void){this.rerender=()=>this.pause(resume,restart,home);const box=this.panel(t('test.pause'));box.append(this.button(t('test.resume'),()=>{this.hide();resume();}),this.button(t('test.restart'),()=>{this.hide();restart();}),this.button(t('test.home'),()=>{this.hide();home();}));}
+ finalChallenge(done:()=>void){this.rerender=()=>this.finalChallenge(done);const box=this.panel(t('test.final'));const p=document.createElement('p');p.textContent=t('test.memoGuide');box.append(p,this.button(t('test.resume'),()=>{this.hide();this.root.querySelector('.test-memo-glow')?.classList.remove('test-memo-glow');done();}));this.root.querySelector('.mini-memo')?.classList.add('test-memo-glow');}
+ waitOnCorrect(render:()=>void){this.hide();this.hud.classList.add('hidden');this.rerender=render;render();}
+ between(completed:boolean,next:()=>void){this.rerender=()=>this.between(completed,next);this.hud.classList.add('hidden');const box=this.panel(completed?'CORRECT':t('test.finished'));box.append(this.button(t('test.next'),()=>{this.hide();next();}));}
+ analyze(result:TestResult){this.hud.classList.add('hidden');const box=this.panel(t('cubeScore.analyzing'));const p=document.createElement('p');p.textContent='SPATIAL PERFORMANCE · SPEED · ACCURACY';const progress=document.createElement('progress');progress.max=1;box.append(p,progress);let elapsed=0,last=performance.now();const step=(now:number)=>{if(!document.hidden)elapsed+=Math.min(now-last,100);last=now;progress.value=elapsed/2500;if(elapsed<2500)this.animation=requestAnimationFrame(step);else this.result(result,true);};this.animation=requestAnimationFrame(step);}
+ private disclaimer(box:HTMLElement){const p=document.createElement('small');p.textContent=t('cubeScore.disclaimer');box.append(p);}
+ result(result:TestResult,reveal:boolean){this.rerender=()=>this.result(result,false);const box=this.panel('CUBE SCORE');const primary=document.createElement('div');primary.className='cube-score-primary';primary.dataset.rank=result.score.rank;const number=document.createElement('strong');number.textContent=`${result.score.total} / 1000`;const rank=document.createElement('h3');rank.textContent=`${result.score.rank} RANK`;const label=document.createElement('h2');label.textContent=result.score.label;primary.append(number,rank,label);box.append(primary);this.disclaimer(box);
+  const actions=document.createElement('div');actions.className='cube-test-actions';actions.append(this.button(t('test.home'),()=>{this.hide();this.home();}),this.button(t('test.retake'),()=>this.intro()));box.append(actions);
+  const details=document.createElement('details');details.open=!reveal;const summary=document.createElement('summary');summary.textContent=t('cubeScore.details');details.append(summary);const date=document.createElement('p');date.textContent=new Date(result.date).toLocaleString()+' · '+result.score.badges.join(' · ');details.append(date);
+  const method=document.createElement('p');method.textContent=t('cubeScore.method');details.append(method);
+  const stats=document.createElement('p'),progress=this.stageProgress();stats.textContent=`${t('cubeScore.date')}: ${new Date(result.date).toLocaleDateString()} · ${t('cubeScore.firstTry')}: ${result.raw.filter(q=>q.completed&&q.answerAttempts===1).length}/5 · ${t('test.hint')}: ${result.raw.filter(q=>q.hintUsed).length} · ${t('cubeScore.averageTime')}: ${Math.round(result.raw.reduce((n,q)=>n+q.effectiveSolveTime,0)/5000)} s`;details.append(stats);
+  const stages=document.createElement('p');stages.textContent=`${t('cubeScore.progress')}: STANDARD ${progress.standard}/31 · ADVANCED ${progress.advanced}/10`;details.append(stages);
+  const components=document.createElement('p');components.textContent=t('cubeScore.components')+': '+['spatial','accuracy','time'].map(key=>Math.round(result.score.questions.reduce((n,q)=>n+q[key as keyof typeof q],0)/5*100)+'%').join(' / ');details.append(components);
+  if(reveal&&this.session().data.best?.id===result.id){const best=document.createElement('p');best.className='cube-score-best';best.textContent=t('cubeScore.newBest');primary.append(best);}
+  result.raw.forEach((q,i)=>{const p=document.createElement('p');p.textContent=`Q${i+1}: ${result.score.questions[i]!.score} / 1000 · ${Math.round(q.effectiveSolveTime/1000)} s · ${t('test.attempts')} ${q.answerAttempts} · ${t('test.hint')} ${q.hintUsed?'✓':'—'}`;details.append(p);});const repeat=document.createElement('p');repeat.textContent=t('test.repeat');details.append(repeat);const clear=this.button(t('cubeTest.clearResults'),()=>this.confirmClear(result));clear.className='test-clear-results';details.append(clear);box.append(details);
+  if(reveal&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const start=performance.now();rank.style.opacity='0';label.style.opacity='0';const step=(now:number)=>{const elapsed=now-start,p=Math.min(1,elapsed/1200);number.textContent=`${Math.round(result.score.total*p)} / 1000`;if(elapsed>=1200)rank.style.opacity='1';if(elapsed>=1600)label.style.opacity='1';if(elapsed<1600)this.animation=requestAnimationFrame(step);};this.animation=requestAnimationFrame(step);}
+ }
+}

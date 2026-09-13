@@ -1,0 +1,81 @@
+{
+  "results": [
+    {
+      "test": "w",
+      "pass": true
+    },
+    {
+      "test": "ArrowUp",
+      "pass": true
+    },
+    {
+      "test": "a",
+      "pass": true
+    },
+    {
+      "test": "ArrowLeft",
+      "pass": true
+    },
+    {
+      "test": "d",
+      "pass": true
+    },
+    {
+      "test": "ArrowRight",
+      "pass": true
+    },
+    {
+      "test": "a 360",
+      "pass": true
+    },
+    {
+      "test": "d 360",
+      "pass": true
+    },
+    {
+      "test": "W+a",
+      "pass": true
+    },
+    {
+      "test": "W+d",
+      "pass": true
+    },
+    {
+      "test": "180 then W",
+      "pass": true
+    },
+    {
+      "test": "s forward alignment",
+      "pass": true
+    },
+    {
+      "test": "ArrowDown forward alignment",
+      "pass": true
+    },
+    {
+      "test": "s+a forward alignment",
+      "pass": true
+    },
+    {
+      "test": "s+d forward alignment",
+      "pass": true
+    },
+    {
+      "test": "POV strafe and return",
+      "pass": true
+    },
+    {
+      "test": "third-person LOOK UP restoration",
+      "pass": true
+    },
+    {
+      "test": "pov LOOK UP restoration",
+      "pass": true
+    },
+    {
+      "test": "wall and reverse",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

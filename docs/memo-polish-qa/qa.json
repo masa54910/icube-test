@@ -1,0 +1,731 @@
+{
+  "memo": [
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "en",
+      "issues": [],
+      "width": 1894,
+      "scroll": 1894,
+      "footerTop": 990.609375,
+      "panelBottom": 974.609375
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "ja",
+      "issues": [],
+      "width": 1894,
+      "scroll": 1894,
+      "footerTop": 990.609375,
+      "panelBottom": 974.609375
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "ko",
+      "issues": [],
+      "width": 1894,
+      "scroll": 1894,
+      "footerTop": 990.609375,
+      "panelBottom": 974.609375
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "zh-CN",
+      "issues": [],
+      "width": 1894,
+      "scroll": 1894,
+      "footerTop": 990.609375,
+      "panelBottom": 974.609375
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "zh-TW",
+      "issues": [],
+      "width": 1894,
+      "scroll": 1894,
+      "footerTop": 990.609375,
+      "panelBottom": 974.609375
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "es",
+      "issues": [],
+      "width": 1894,
+      "scroll": 1894,
+      "footerTop": 990.609375,
+      "panelBottom": 974.609375
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "pt",
+      "issues": [],
+      "width": 1894,
+      "scroll": 1894,
+      "footerTop": 990.609375,
+      "panelBottom": 974.609375
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "de",
+      "issues": [],
+      "width": 1894,
+      "scroll": 1894,
+      "footerTop": 990.609375,
+      "panelBottom": 974.609375
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "fr",
+      "issues": [],
+      "width": 1894,
+      "scroll": 1894,
+      "footerTop": 990.609375,
+      "panelBottom": 974.609375
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "en",
+      "issues": [],
+      "width": 1340,
+      "scroll": 1340,
+      "footerTop": 872.125,
+      "panelBottom": 856.125
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "ja",
+      "issues": [],
+      "width": 1340,
+      "scroll": 1340,
+      "footerTop": 895.125,
+      "panelBottom": 879.125
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "ko",
+      "issues": [],
+      "width": 1340,
+      "scroll": 1340,
+      "footerTop": 876.125,
+      "panelBottom": 860.125
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "zh-CN",
+      "issues": [],
+      "width": 1340,
+      "scroll": 1340,
+      "footerTop": 877.125,
+      "panelBottom": 861.125
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "zh-TW",
+      "issues": [],
+      "width": 1340,
+      "scroll": 1340,
+      "footerTop": 877.125,
+      "panelBottom": 861.125
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "es",
+      "issues": [],
+      "width": 1340,
+      "scroll": 1340,
+      "footerTop": 872.125,
+      "panelBottom": 856.125
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "pt",
+      "issues": [],
+      "width": 1340,
+      "scroll": 1340,
+      "footerTop": 890.8125,
+      "panelBottom": 874.8125
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "de",
+      "issues": [],
+      "width": 1340,
+      "scroll": 1340,
+      "footerTop": 872.125,
+      "panelBottom": 856.125
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "fr",
+      "issues": [],
+      "width": 1340,
+      "scroll": 1340,
+      "footerTop": 881.15625,
+      "panelBottom": 865.15625
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "en",
+      "issues": [],
+      "width": 998,
+      "scroll": 998,
+      "footerTop": 854.125,
+      "panelBottom": 842.125
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "ja",
+      "issues": [],
+      "width": 998,
+      "scroll": 998,
+      "footerTop": 893.8125,
+      "panelBottom": 881.8125
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "ko",
+      "issues": [],
+      "width": 998,
+      "scroll": 998,
+      "footerTop": 856.125,
+      "panelBottom": 844.125
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "zh-CN",
+      "issues": [],
+      "width": 998,
+      "scroll": 998,
+      "footerTop": 857.125,
+      "panelBottom": 845.125
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "zh-TW",
+      "issues": [],
+      "width": 998,
+      "scroll": 998,
+      "footerTop": 857.125,
+      "panelBottom": 845.125
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "es",
+      "issues": [],
+      "width": 998,
+      "scroll": 998,
+      "footerTop": 920,
+      "panelBottom": 908
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "pt",
+      "issues": [],
+      "width": 998,
+      "scroll": 998,
+      "footerTop": 897.609375,
+      "panelBottom": 885.609375
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "de",
+      "issues": [],
+      "width": 998,
+      "scroll": 998,
+      "footerTop": 879.609375,
+      "panelBottom": 867.609375
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "fr",
+      "issues": [],
+      "width": 998,
+      "scroll": 998,
+      "footerTop": 902.296875,
+      "panelBottom": 890.296875
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "en",
+      "issues": [],
+      "width": 818,
+      "scroll": 818,
+      "footerTop": 1816.796875,
+      "panelBottom": 1804.796875
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "ja",
+      "issues": [],
+      "width": 818,
+      "scroll": 818,
+      "footerTop": 1847.796875,
+      "panelBottom": 1835.796875
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "ko",
+      "issues": [],
+      "width": 818,
+      "scroll": 818,
+      "footerTop": 1822.796875,
+      "panelBottom": 1810.796875
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "zh-CN",
+      "issues": [],
+      "width": 818,
+      "scroll": 818,
+      "footerTop": 1829.796875,
+      "panelBottom": 1817.796875
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "zh-TW",
+      "issues": [],
+      "width": 818,
+      "scroll": 818,
+      "footerTop": 1829.796875,
+      "panelBottom": 1817.796875
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "es",
+      "issues": [],
+      "width": 818,
+      "scroll": 818,
+      "footerTop": 1816.796875,
+      "panelBottom": 1804.796875
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "pt",
+      "issues": [],
+      "width": 818,
+      "scroll": 818,
+      "footerTop": 1816.796875,
+      "panelBottom": 1804.796875
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "de",
+      "issues": [],
+      "width": 818,
+      "scroll": 818,
+      "footerTop": 1816.796875,
+      "panelBottom": 1804.796875
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "fr",
+      "issues": [],
+      "width": 818,
+      "scroll": 818,
+      "footerTop": 1816.796875,
+      "panelBottom": 1804.796875
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "en",
+      "issues": [],
+      "width": 378,
+      "scroll": 378,
+      "footerTop": 1650.78125,
+      "panelBottom": 1638.78125
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "ja",
+      "issues": [],
+      "width": 378,
+      "scroll": 378,
+      "footerTop": 1698.875,
+      "panelBottom": 1686.875
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "ko",
+      "issues": [],
+      "width": 378,
+      "scroll": 378,
+      "footerTop": 1654.484375,
+      "panelBottom": 1642.484375
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "zh-CN",
+      "issues": [],
+      "width": 378,
+      "scroll": 378,
+      "footerTop": 1619.203125,
+      "panelBottom": 1607.203125
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "zh-TW",
+      "issues": [],
+      "width": 378,
+      "scroll": 378,
+      "footerTop": 1619.203125,
+      "panelBottom": 1607.203125
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "es",
+      "issues": [],
+      "width": 378,
+      "scroll": 378,
+      "footerTop": 1694.96875,
+      "panelBottom": 1682.96875
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "pt",
+      "issues": [],
+      "width": 378,
+      "scroll": 378,
+      "footerTop": 1694.96875,
+      "panelBottom": 1682.96875
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "de",
+      "issues": [],
+      "width": 378,
+      "scroll": 378,
+      "footerTop": 1695.96875,
+      "panelBottom": 1683.96875
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "fr",
+      "issues": [],
+      "width": 378,
+      "scroll": 378,
+      "footerTop": 1716.359375,
+      "panelBottom": 1704.359375
+    }
+  ],
+  "how": [
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "en",
+      "title": "CUBE MEMO",
+      "subtitle": "Keep a record of the shape you discover",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "ja",
+      "title": "CUBE MEMO",
+      "subtitle": "見つけた形を記録する",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "de",
+      "title": "CUBE MEMO",
+      "subtitle": "Halte die entdeckte Form fest",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "ko",
+      "title": "CUBE MEMO",
+      "subtitle": "발견한 모양을 기록하세요",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1920,
+      "h": 1080,
+      "locale": "zh-CN",
+      "title": "CUBE MEMO",
+      "subtitle": "记录发现的形状",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "en",
+      "title": "CUBE MEMO",
+      "subtitle": "Keep a record of the shape you discover",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "ja",
+      "title": "CUBE MEMO",
+      "subtitle": "見つけた形を記録する",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "de",
+      "title": "CUBE MEMO",
+      "subtitle": "Halte die entdeckte Form fest",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "ko",
+      "title": "CUBE MEMO",
+      "subtitle": "발견한 모양을 기록하세요",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1366,
+      "h": 768,
+      "locale": "zh-CN",
+      "title": "CUBE MEMO",
+      "subtitle": "记录发现的形状",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "en",
+      "title": "CUBE MEMO",
+      "subtitle": "Keep a record of the shape you discover",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "ja",
+      "title": "CUBE MEMO",
+      "subtitle": "見つけた形を記録する",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "de",
+      "title": "CUBE MEMO",
+      "subtitle": "Halte die entdeckte Form fest",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "ko",
+      "title": "CUBE MEMO",
+      "subtitle": "발견한 모양을 기록하세요",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 1024,
+      "h": 768,
+      "locale": "zh-CN",
+      "title": "CUBE MEMO",
+      "subtitle": "记录发现的形状",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "en",
+      "title": "CUBE MEMO",
+      "subtitle": "Keep a record of the shape you discover",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "ja",
+      "title": "CUBE MEMO",
+      "subtitle": "見つけた形を記録する",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "de",
+      "title": "CUBE MEMO",
+      "subtitle": "Halte die entdeckte Form fest",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "ko",
+      "title": "CUBE MEMO",
+      "subtitle": "발견한 모양을 기록하세요",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "locale": "zh-CN",
+      "title": "CUBE MEMO",
+      "subtitle": "记录发现的形状",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "en",
+      "title": "CUBE MEMO",
+      "subtitle": "Keep a record of the shape you discover",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "ja",
+      "title": "CUBE MEMO",
+      "subtitle": "見つけた形を記録する",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "de",
+      "title": "CUBE MEMO",
+      "subtitle": "Halte die entdeckte Form fest",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "ko",
+      "title": "CUBE MEMO",
+      "subtitle": "발견한 모양을 기록하세요",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    },
+    {
+      "w": 390,
+      "h": 844,
+      "locale": "zh-CN",
+      "title": "CUBE MEMO",
+      "subtitle": "记录发现的形状",
+      "img": 1896,
+      "overflow": [],
+      "scroll": true,
+      "afterAnswer": true
+    }
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "pass": true,
+  "up": {
+    "state": "EXPLORATION",
+    "position": [
+      -11.920949999999943,
+      4.037839998658896,
+      -1.35
+    ],
+    "yaw": 1.5707963267948966,
+    "playerYaw": 0,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "CLIMB",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "pov",
+    "lookingUp": false,
+    "characterVisible": false,
+    "elapsed": 7897.3,
+    "attempts": 0,
+    "ladder": "AlphabetLadder--2-0-0-4",
+    "camera": [
+      -11.920949999999943,
+      5.287839998658896,
+      -1.35
+    ],
+    "quaternion": [
+      -0.06355373162112225,
+      -0.7042449312540563,
+      -0.06355373162112225,
+      0.7042449312540562
+    ]
+  },
+  "down": {
+    "state": "EXPLORATION",
+    "position": [
+      -11.920949999999943,
+      0.39871999865890095,
+      -1.35
+    ],
+    "yaw": 1.5707963267948966,
+    "playerYaw": 0,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "CLIMB",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "pov",
+    "lookingUp": false,
+    "characterVisible": false,
+    "elapsed": 9630.199999999999,
+    "attempts": 0,
+    "ladder": "AlphabetLadder--2-0-0-4",
+    "camera": [
+      -11.920949999999943,
+      1.648719998658901,
+      -1.35
+    ],
+    "quaternion": [
+      -0.06355373162112232,
+      -0.7042449312540562,
+      -0.06355373162112232,
+      0.7042449312540562
+    ]
+  },
+  "right": {
+    "state": "EXPLORATION",
+    "position": [
+      -11.38,
+      0.39871999865890095,
+      -1.35
+    ],
+    "yaw": 0.0000013134972851431354,
+    "playerYaw": 0,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "CLIMB",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "third-person",
+    "lookingUp": false,
+    "characterVisible": true,
+    "elapsed": 10213.3,
+    "attempts": 0,
+    "ladder": "AlphabetLadder--2-0-0-4",
+    "camera": [
+      -11.380003618372855,
+      2.1500028042512085,
+      1.4047623398043636
+    ],
+    "quaternion": [
+      -0.08987854919799172,
+      -6.540906054936059e-7,
+      -5.902761518412935e-8,
+      0.9959527330117793
+    ]
+  },
+  "left": {
+    "state": "EXPLORATION",
+    "position": [
+      -12.62,
+      0.39871999865890095,
+      -1.35
+    ],
+    "yaw": 2.098441912945531e-26,
+    "playerYaw": 0,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "CLIMB",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "third-person",
+    "lookingUp": false,
+    "characterVisible": true,
+    "elapsed": 12112.599999999999,
+    "attempts": 0,
+    "ladder": "AlphabetLadder--2-0-0-4",
+    "camera": [
+      -12.62,
+      2.1500028042512085,
+      1.40476233980674
+    ],
+    "quaternion": [
+      -0.08987854919801108,
+      0,
+      0,
+      0.9959527330119943
+    ]
+  },
+  "off": {
+    "state": "EXPLORATION",
+    "position": [
+      -12.62,
+      1.3615657336588995,
+      -1.35
+    ],
+    "yaw": 2.1270488341253936e-30,
+    "playerYaw": 0,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "IDLE",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "third-person",
+    "lookingUp": false,
+    "characterVisible": true,
+    "elapsed": 12495.8,
+    "attempts": 0,
+    "ladder": null,
+    "camera": [
+      -12.62,
+      3.1128485392512073,
+      1.40476233980674
+    ],
+    "quaternion": [
+      -0.08987854919801097,
+      0,
+      0,
+      0.9959527330119943
+    ]
+  },
+  "jump": {
+    "state": "EXPLORATION",
+    "position": [
+      0,
+      -2.0461780613411045,
+      0
+    ],
+    "yaw": 1.5707963267948966,
+    "playerYaw": 1.5707963267948966,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "IDLE",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "third-person",
+    "lookingUp": false,
+    "characterVisible": true,
+    "elapsed": 300.10000000000036,
+    "attempts": 0,
+    "ladder": null,
+    "camera": [
+      -2.75476233980674,
+      -0.2948952557487968,
+      1.6868054409279986e-16
+    ],
+    "quaternion": [
+      -0.06355373162112234,
+      -0.7042449312540562,
+      -0.06355373162112234,
+      0.7042449312540563
+    ]
+  }
+}

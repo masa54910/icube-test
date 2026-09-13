@@ -1,0 +1,23 @@
+[
+  {
+    "id": 103,
+    "startToResult": "PASS",
+    "verticals": 4,
+    "boostObserved": true,
+    "correctChoice": 6
+  },
+  {
+    "id": 105,
+    "startToResult": "PASS",
+    "verticals": 1,
+    "boostObserved": false,
+    "correctChoice": 5
+  },
+  {
+    "id": 108,
+    "startToResult": "PASS",
+    "verticals": 5,
+    "boostObserved": false,
+    "correctChoice": 9
+  }
+]

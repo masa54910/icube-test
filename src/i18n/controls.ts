@@ -1,0 +1,13 @@
+import type {Locale} from '../types';
+export const controlsKeys=['title','body','movement','camera','forward','backward','turnLeft','turnRight','jump','switchView','lookUp','up','down','left','right','edge'].map(k=>'how.controls.'+k);
+export const controls:Record<Locale,readonly string[]>={
+en:['CONTROLS','Use the keyboard and mouse to control Cubie.','Movement','Camera','Forward','Turn around and move back','Turn left','Turn right','Jump','Switch view','Hold LOOK UP or Shift to look straight up','Climb up','Climb down','Move left','Move right','At either end, left/right turns the camera.'],
+ja:['操作方法','キーボードとマウスでキュービーを操作します。','移動','カメラ','前進','振り向いて後方へ移動','左旋回','右旋回','ジャンプ','視点切替','LOOK UPボタンまたはShiftを押している間、真上を見る','上へ','下へ','左へ','右へ','梯子端では左右キーで視点を旋回できます。'],
+ko:['조작 방법','키보드와 마우스로 큐비를 조작하세요.','이동','카메라','앞으로 이동','뒤돌아 이동','왼쪽으로 회전','오른쪽으로 회전','점프','시점 전환','LOOK UP 버튼이나 Shift를 누르는 동안 위 보기','위로','아래로','왼쪽으로','오른쪽으로','사다리 끝에서는 좌우 키로 시점을 돌릴 수 있어요.'],
+'zh-CN':['操作方法','使用键盘和鼠标控制Cubie。','移动','镜头','前进','转身向后移动','向左转','向右转','跳跃','切换视角','按住 LOOK UP 按钮或 Shift 查看正上方','向上','向下','向左','向右','在梯子边缘，左右键可旋转视角。'],
+'zh-TW':['操作方法','使用鍵盤和滑鼠控制Cubie。','移動','鏡頭','前進','轉身向後移動','向左轉','向右轉','跳躍','切換視角','按住 LOOK UP 按鈕或 Shift 查看正上方','向上','向下','向左','向右','在梯子邊緣，左右鍵可旋轉視角。'],
+es:['CONTROLES','Controla a Cubie con el teclado y el ratón.','Movimiento','Cámara','Avanzar','Darse la vuelta y regresar','Girar a la izquierda','Girar a la derecha','Saltar','Cambiar de vista','Mantén LOOK UP o Shift para mirar arriba','Subir','Bajar','Moverse a la izquierda','Moverse a la derecha','En los extremos, izquierda/derecha gira la cámara.'],
+pt:['CONTROLOS','Use o teclado e o rato para controlar Cubie.','Movimento','Câmara','Avançar','Virar e voltar','Virar à esquerda','Virar à direita','Saltar','Mudar de perspetiva','Mantenha LOOK UP ou Shift para olhar para cima','Subir','Descer','Mover à esquerda','Mover à direita','Nas extremidades, esquerda/direita roda a câmara.'],
+de:['STEUERUNG','Steuere Cubie mit Tastatur und Maus.','Bewegung','Kamera','Vorwärts','Umdrehen und zurückgehen','Nach links drehen','Nach rechts drehen','Springen','Ansicht wechseln','LOOK UP oder Shift gedrückt halten: nach oben schauen','Hochklettern','Herunterklettern','Nach links bewegen','Nach rechts bewegen','Am Leiterende drehen die Links-/Rechtstasten die Kamera.'],
+fr:['COMMANDES','Contrôle Cubie avec le clavier et la souris.','Déplacement','Caméra','Avancer','Se retourner et revenir','Tourner à gauche','Tourner à droite','Sauter','Changer de vue','Maintenez LOOK UP ou Shift pour regarder en haut','Monter','Descendre','Se déplacer à gauche','Se déplacer à droite','Aux extrémités, les touches gauche/droite tournent la caméra.']
+};

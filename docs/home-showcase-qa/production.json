@@ -1,0 +1,48 @@
+{
+  "visible": 804,
+  "requests": [
+    {
+      "url": "http://127.0.0.1:5173/dist/assets/home-showcase/explore.webp",
+      "ms": 1166
+    },
+    {
+      "url": "http://127.0.0.1:5173/dist/assets/home-showcase/climb.webp",
+      "ms": 1851
+    },
+    {
+      "url": "http://127.0.0.1:5173/dist/assets/home-showcase/solve.webp",
+      "ms": 2530
+    },
+    {
+      "url": "http://127.0.0.1:5173/dist/assets/home-showcase/correct.webp",
+      "ms": 3214
+    }
+  ],
+  "brand": {
+    "fps": 56.13498970304923,
+    "p95ms": 17
+  },
+  "still": {
+    "fps": 60.110922918415746,
+    "p95ms": 17.100000000000364
+  },
+  "transition": {
+    "fps": 60.261020108843546,
+    "p95ms": 16.899999999999636
+  },
+  "mobile": [
+    {
+      "w": 390,
+      "h": 844,
+      "fps": 60.30920964959335,
+      "p95ms": 16.899999999999636
+    },
+    {
+      "w": 844,
+      "h": 390,
+      "fps": 60.216913966331774,
+      "p95ms": 16.900000000001455
+    }
+  ],
+  "errors": []
+}

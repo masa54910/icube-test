@@ -1,0 +1,13 @@
+[
+  {
+    "name": "mobile-portrait",
+    "steps": [
+      "touch-only: walked from spawn to tower",
+      "touch-only: caught ladder",
+      "touch-only: climb / down / edge camera-only turn",
+      "touch-only: ladder jump / landing",
+      "touch-only: terminal / select / submit / correct / next"
+    ],
+    "pass": true
+  }
+]

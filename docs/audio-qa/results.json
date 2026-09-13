@@ -1,0 +1,68 @@
+{
+  "settingsReload": true,
+  "desktopUnlock": true,
+  "touchUnlock": true,
+  "events": [
+    {
+      "event": "JUMP_START",
+      "count": 1,
+      "strength": 0.5
+    },
+    {
+      "event": "FOOT_CONTACT",
+      "count": 1,
+      "strength": 0.41072142857142857
+    },
+    {
+      "event": "MEMO_CUBE_COMMIT",
+      "count": 3,
+      "strength": 0.5
+    },
+    {
+      "event": "MEMO_CUBE_COMMIT",
+      "count": 2,
+      "strength": 0.5
+    },
+    {
+      "event": "ANSWER_INCORRECT",
+      "count": 1,
+      "strength": 0.5
+    },
+    {
+      "event": "ANSWER_SELECT",
+      "count": 1,
+      "strength": 0.5
+    },
+    {
+      "event": "ANSWER_CORRECT",
+      "count": 1,
+      "strength": 0.5
+    },
+    {
+      "event": "BOOST_START",
+      "count": 1,
+      "strength": 0.5
+    }
+  ],
+  "visibilityReasons": true,
+  "emptyManifest": {
+    "unlocked": true,
+    "bgm": "GAMEPLAY",
+    "bgmEnabled": false,
+    "seEnabled": true,
+    "paused": [],
+    "hostEnabled": true,
+    "bgmVoices": 0,
+    "seVoices": 0,
+    "loaded": 0,
+    "approved": 0
+  },
+  "readyMs": 848,
+  "perf": {
+    "fps": 60.291992625442234,
+    "drawCalls": 532,
+    "heap": 25258713
+  },
+  "audibleQA": "BLOCKED: no approved assets",
+  "physicalDevice": "NOT TESTED"
+}

@@ -1,0 +1,444 @@
+{
+  "audit": [
+    {
+      "stage": "1-1",
+      "id": "stage_1_1",
+      "count": 13,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 13,
+      "valid": true
+    },
+    {
+      "stage": "1-2",
+      "id": "stage_1_2",
+      "count": 17,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 17,
+      "valid": true
+    },
+    {
+      "stage": "1-3",
+      "id": "stage_1_3",
+      "count": 13,
+      "origin": [
+        0,
+        2,
+        0
+      ],
+      "canonical": 13,
+      "valid": true
+    },
+    {
+      "stage": "1-4",
+      "id": "stage_1_4",
+      "count": 13,
+      "origin": [
+        0,
+        2,
+        0
+      ],
+      "canonical": 13,
+      "valid": true
+    },
+    {
+      "stage": "1-5",
+      "id": "stage_1_5",
+      "count": 13,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 13,
+      "valid": true
+    },
+    {
+      "stage": "1-6",
+      "id": "stage_1_6",
+      "count": 12,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 12,
+      "valid": true
+    },
+    {
+      "stage": "1-7",
+      "id": "stage_1_7",
+      "count": 16,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 16,
+      "valid": true
+    },
+    {
+      "stage": "1-8",
+      "id": "stage_1_8",
+      "count": 14,
+      "origin": [
+        0,
+        2,
+        0
+      ],
+      "canonical": 14,
+      "valid": true
+    },
+    {
+      "stage": "1-9",
+      "id": "stage_1_9",
+      "count": 13,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 13,
+      "valid": true
+    },
+    {
+      "stage": "1-10",
+      "id": "stage_1_10",
+      "count": 13,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 13,
+      "valid": true
+    },
+    {
+      "stage": "2-1",
+      "id": "stage_2_1",
+      "count": 12,
+      "origin": [
+        0,
+        -1,
+        0
+      ],
+      "canonical": 12,
+      "valid": true
+    },
+    {
+      "stage": "2-2",
+      "id": "stage_2_2",
+      "count": 4,
+      "origin": [
+        1,
+        0,
+        0
+      ],
+      "canonical": 4,
+      "valid": true
+    },
+    {
+      "stage": "2-3",
+      "id": "stage_2_3",
+      "count": 11,
+      "origin": [
+        0,
+        -1,
+        0
+      ],
+      "canonical": 11,
+      "valid": true
+    },
+    {
+      "stage": "2-4",
+      "id": "stage_2_4",
+      "count": 11,
+      "origin": [
+        0,
+        -1,
+        0
+      ],
+      "canonical": 11,
+      "valid": true
+    },
+    {
+      "stage": "2-5",
+      "id": "stage_2_5",
+      "count": 8,
+      "origin": [
+        0,
+        1,
+        0
+      ],
+      "canonical": 8,
+      "valid": true
+    },
+    {
+      "stage": "2-6",
+      "id": "stage_2_6",
+      "count": 11,
+      "origin": [
+        0,
+        -1,
+        0
+      ],
+      "canonical": 11,
+      "valid": true
+    },
+    {
+      "stage": "2-7",
+      "id": "stage_2_7",
+      "count": 12,
+      "origin": [
+        0,
+        -1,
+        0
+      ],
+      "canonical": 12,
+      "valid": true
+    },
+    {
+      "stage": "2-8",
+      "id": "stage_2_8",
+      "count": 6,
+      "origin": [
+        0,
+        3,
+        0
+      ],
+      "canonical": 6,
+      "valid": true
+    },
+    {
+      "stage": "2-9",
+      "id": "stage_2_9",
+      "count": 13,
+      "origin": [
+        0,
+        -1,
+        0
+      ],
+      "canonical": 13,
+      "valid": true
+    },
+    {
+      "stage": "2-10",
+      "id": "stage_2_10",
+      "count": 12,
+      "origin": [
+        0,
+        -1,
+        0
+      ],
+      "canonical": 12,
+      "valid": true
+    },
+    {
+      "stage": "3-1",
+      "id": "stage_3_1",
+      "count": 12,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 12,
+      "valid": true
+    },
+    {
+      "stage": "3-2",
+      "id": "stage_3_2",
+      "count": 8,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 8,
+      "valid": true
+    },
+    {
+      "stage": "3-3",
+      "id": "stage_3_3",
+      "count": 10,
+      "origin": [
+        0,
+        -2,
+        0
+      ],
+      "canonical": 10,
+      "valid": true
+    },
+    {
+      "stage": "3-4",
+      "id": "stage_3_4",
+      "count": 12,
+      "origin": [
+        0,
+        -1,
+        0
+      ],
+      "canonical": 12,
+      "valid": true
+    },
+    {
+      "stage": "3-5",
+      "id": "stage_3_5",
+      "count": 13,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 13,
+      "valid": true
+    },
+    {
+      "stage": "3-6",
+      "id": "stage_3_6",
+      "count": 14,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 14,
+      "valid": true
+    },
+    {
+      "stage": "3-7",
+      "id": "stage_3_7",
+      "count": 15,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 15,
+      "valid": true
+    },
+    {
+      "stage": "3-8",
+      "id": "stage_3_8",
+      "count": 18,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 18,
+      "valid": true
+    },
+    {
+      "stage": "3-9",
+      "id": "stage_3_9",
+      "count": 11,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 11,
+      "valid": true
+    },
+    {
+      "stage": "3-10",
+      "id": "stage_3_10",
+      "count": 19,
+      "origin": [
+        0,
+        0,
+        0
+      ],
+      "canonical": 19,
+      "valid": true
+    },
+    {
+      "stage": "3-11",
+      "id": "stage_3_11",
+      "count": 12,
+      "origin": [
+        0,
+        1,
+        0
+      ],
+      "canonical": 12,
+      "valid": true
+    }
+  ],
+  "flows": [
+    {
+      "id": 1,
+      "full": true,
+      "placement": true,
+      "incorrect": true,
+      "hint": true,
+      "retry": true,
+      "reload": true
+    },
+    {
+      "id": 2,
+      "full": true,
+      "placement": true,
+      "incorrect": true,
+      "hint": true,
+      "retry": true,
+      "reload": true
+    },
+    {
+      "id": 15,
+      "full": true,
+      "placement": true,
+      "incorrect": true,
+      "hint": true,
+      "retry": true,
+      "reload": true
+    },
+    {
+      "id": 21,
+      "full": true,
+      "placement": true,
+      "incorrect": true,
+      "hint": true,
+      "retry": true,
+      "reload": true
+    },
+    {
+      "id": 26,
+      "full": true,
+      "placement": true,
+      "incorrect": true,
+      "hint": true,
+      "retry": true,
+      "reload": true
+    },
+    {
+      "id": 30,
+      "full": true,
+      "placement": true,
+      "incorrect": true,
+      "hint": true,
+      "retry": true,
+      "reload": true
+    },
+    {
+      "id": 31,
+      "full": true,
+      "placement": true,
+      "incorrect": true,
+      "hint": true,
+      "retry": true,
+      "reload": true
+    }
+  ],
+  "isolation": true,
+  "lifecycle": "12 switches: one panel, one Full canvas, one Mini",
+  "errors": []
+}

@@ -1,0 +1,35 @@
+{
+  "before": {
+    "load": 548,
+    "audioRequests": 0
+  },
+  "rows": [
+    {
+      "enabled": false,
+      "fps": 60.0207725802656,
+      "heap": 13698567,
+      "decodedAudioBytes": 85792256
+    },
+    {
+      "enabled": true,
+      "fps": 60.03996003996004,
+      "heap": 14664335,
+      "decodedAudioBytes": 85792256
+    },
+    {
+      "enabled": false,
+      "fps": 60.0519584332534,
+      "heap": 12582743,
+      "decodedAudioBytes": 85792256
+    },
+    {
+      "enabled": true,
+      "fps": 60.05315853627012,
+      "heap": 17769815,
+      "decodedAudioBytes": 85792256
+    }
+  ],
+  "stressPeak": 0.9305092692375183,
+  "environment": "Headless Edge desktop; toggles compare audio overhead, not a pre-change build baseline",
+  "errors": []
+}

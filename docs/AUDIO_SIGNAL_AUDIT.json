@@ -1,0 +1,125 @@
+{
+  "method": "Uncompressed source PCM audit; not auditory assessment",
+  "assets": [
+    {
+      "file": "bgm-home.ogg",
+      "peak": 0.142486572265625,
+      "peakTime": 50.233979166666664,
+      "rms": 0.03299899413523995,
+      "lowUnder250Ratio": 2.3603532333315353e-08,
+      "seamDelta": 0.000885009765625
+    },
+    {
+      "file": "bgm-gameplay.ogg",
+      "peak": 0.166534423828125,
+      "peakTime": 20.036708333333333,
+      "rms": 0.03299899392606213,
+      "lowUnder250Ratio": 1.4152252934347818e-05,
+      "seamDelta": 0.00030517578125
+    },
+    {
+      "file": "bgm-correct-scene.ogg",
+      "peak": 0.181549072265625,
+      "peakTime": 0.22516666666666665,
+      "rms": 0.03299899837578723,
+      "lowUnder250Ratio": 3.001289332403108e-08,
+      "seamDelta": 0.019775390625
+    },
+    {
+      "file": "se-footstep-a.ogg",
+      "peak": 0.719970703125,
+      "peakTime": 0.014666666666666666,
+      "rms": 0.09908824849344693,
+      "lowUnder250Ratio": null,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "se-footstep-b.ogg",
+      "peak": 0.719970703125,
+      "peakTime": 0.012583333333333334,
+      "rms": 0.0904781397492114,
+      "lowUnder250Ratio": null,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "se-footstep-c.ogg",
+      "peak": 0.719970703125,
+      "peakTime": 0.008708333333333334,
+      "rms": 0.10412075583803773,
+      "lowUnder250Ratio": null,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "se-ladder-climb.ogg",
+      "peak": 0.719970703125,
+      "peakTime": 0.009333333333333334,
+      "rms": 0.10631177161406201,
+      "lowUnder250Ratio": null,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "se-jump.ogg",
+      "peak": 0.53460693359375,
+      "peakTime": 0.18016666666666667,
+      "rms": 0.11990470240542385,
+      "lowUnder250Ratio": null,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "se-land.ogg",
+      "peak": 0.58441162109375,
+      "peakTime": 0.16189583333333332,
+      "rms": 0.119942146041595,
+      "lowUnder250Ratio": null,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "se-boost.ogg",
+      "peak": 0.719970703125,
+      "peakTime": 0.5804166666666667,
+      "rms": 0.11915084355501958,
+      "lowUnder250Ratio": null,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "se-cube-place.ogg",
+      "peak": 0.27386474609375,
+      "peakTime": 0.0360625,
+      "rms": 0.11991055802319263,
+      "lowUnder250Ratio": null,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "se-answer-enter.ogg",
+      "peak": 0.2945556640625,
+      "peakTime": 0.032,
+      "rms": 0.1199251900851044,
+      "lowUnder250Ratio": null,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "se-answer-select.ogg",
+      "peak": 0.220062255859375,
+      "peakTime": 0.032,
+      "rms": 0.11997145749488175,
+      "lowUnder250Ratio": null,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "se-correct.ogg",
+      "peak": 0.719970703125,
+      "peakTime": 2.6506666666666665,
+      "rms": 0.07990104939922793,
+      "lowUnder250Ratio": 5.789116564679252e-08,
+      "seamDelta": 0.0
+    },
+    {
+      "file": "se-incorrect.ogg",
+      "peak": 0.34393310546875,
+      "peakTime": 0.213625,
+      "rms": 0.11990294340128423,
+      "lowUnder250Ratio": null,
+      "seamDelta": 0.0
+    }
+  ]
+}

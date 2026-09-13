@@ -1,0 +1,17 @@
+[
+  {
+    "viewport": "laptop",
+    "nineLocaleFooter": true,
+    "reducedMotion": true
+  },
+  {
+    "viewport": "portrait",
+    "nineLocaleFooter": true,
+    "reducedMotion": true
+  },
+  {
+    "viewport": "landscape",
+    "nineLocaleFooter": true,
+    "reducedMotion": true
+  }
+]

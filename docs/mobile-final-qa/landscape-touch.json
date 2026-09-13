@@ -1,0 +1,10 @@
+{
+  "steps": [
+    "Touch-only spawn → ladder",
+    "Left edge camera rotates, body fixed",
+    "Right edge stays attached",
+    "Jump → terminal → select → submit → correct → next"
+  ],
+  "pass": true,
+  "errors": []
+}

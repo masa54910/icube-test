@@ -1,0 +1,219 @@
+[
+  {
+    "name": "desktop",
+    "checks": [
+      "Home / Help / 31 stages / Start",
+      "native movement",
+      "POV turn / view switch / jump landing",
+      "LOOK UP hold / release",
+      "synthetic visibility event pauses/resumes timer",
+      "fixture-assisted terminal → 10 choices → incorrect → correct → result → next",
+      "no page overflow / HUD >=44px"
+    ],
+    "errors": [],
+    "overflow": false,
+    "touchBoxes": [
+      {
+        "text": "三人称 · V",
+        "w": 84.671875,
+        "h": 44
+      },
+      {
+        "text": "↑ 見上げる",
+        "w": 87.34375,
+        "h": 44
+      },
+      {
+        "text": "メニュー",
+        "w": 78,
+        "h": 44
+      }
+    ]
+  },
+  {
+    "name": "laptop",
+    "checks": [
+      "Home / Help / 31 stages / Start",
+      "native movement",
+      "POV turn / view switch / jump landing",
+      "LOOK UP hold / release",
+      "synthetic visibility event pauses/resumes timer",
+      "fixture-assisted terminal → 10 choices → incorrect → correct → result → next",
+      "no page overflow / HUD >=44px"
+    ],
+    "errors": [],
+    "overflow": false,
+    "touchBoxes": [
+      {
+        "text": "三人称 · V",
+        "w": 84.671875,
+        "h": 44
+      },
+      {
+        "text": "↑ 見上げる",
+        "w": 87.34375,
+        "h": 44
+      },
+      {
+        "text": "メニュー",
+        "w": 78,
+        "h": 44
+      }
+    ]
+  },
+  {
+    "name": "tablet-landscape",
+    "checks": [
+      "Home / Help / 31 stages / Start",
+      "native movement",
+      "POV turn / view switch / jump landing",
+      "LOOK UP hold / release",
+      "synthetic visibility event pauses/resumes timer",
+      "fixture-assisted terminal → 10 choices → incorrect → correct → result → next",
+      "no page overflow / HUD >=44px"
+    ],
+    "errors": [],
+    "overflow": false,
+    "touchBoxes": [
+      {
+        "text": "三人称",
+        "w": 58,
+        "h": 44
+      },
+      {
+        "text": "↑ 見上げる",
+        "w": 79.34375,
+        "h": 44
+      },
+      {
+        "text": "メニュー",
+        "w": 70,
+        "h": 44
+      }
+    ]
+  },
+  {
+    "name": "tablet-portrait",
+    "checks": [
+      "Home / Help / 31 stages / Start",
+      "native movement",
+      "POV turn / view switch / jump landing",
+      "LOOK UP hold / release",
+      "synthetic visibility event pauses/resumes timer",
+      "fixture-assisted terminal → 10 choices → incorrect → correct → result → next",
+      "no page overflow / HUD >=44px"
+    ],
+    "errors": [],
+    "overflow": false,
+    "touchBoxes": [
+      {
+        "text": "三人称",
+        "w": 58,
+        "h": 44
+      },
+      {
+        "text": "↑ 見上げる",
+        "w": 79.34375,
+        "h": 44
+      },
+      {
+        "text": "メニュー",
+        "w": 70,
+        "h": 44
+      }
+    ]
+  },
+  {
+    "name": "mobile-portrait",
+    "checks": [
+      "Home / Help / 31 stages / Start",
+      "native movement",
+      "POV turn / view switch / jump landing",
+      "LOOK UP hold / release",
+      "synthetic visibility event pauses/resumes timer",
+      "fixture-assisted terminal → 10 choices → incorrect → correct → result → next",
+      "no page overflow / HUD >=44px"
+    ],
+    "errors": [],
+    "overflow": false,
+    "touchBoxes": [
+      {
+        "text": "三人称",
+        "w": 58,
+        "h": 44
+      },
+      {
+        "text": "↑ 見上げる",
+        "w": 79.34375,
+        "h": 44
+      },
+      {
+        "text": "メニュー",
+        "w": 70,
+        "h": 44
+      }
+    ]
+  },
+  {
+    "name": "mobile-landscape",
+    "checks": [
+      "Home / Help / 31 stages / Start",
+      "native movement",
+      "POV turn / view switch / jump landing",
+      "LOOK UP hold / release",
+      "synthetic visibility event pauses/resumes timer",
+      "fixture-assisted terminal → 10 choices → incorrect → correct → result → next",
+      "no page overflow / HUD >=44px"
+    ],
+    "errors": [],
+    "overflow": false,
+    "touchBoxes": [
+      {
+        "text": "三人称",
+        "w": 58,
+        "h": 44
+      },
+      {
+        "text": "↑ 見上げる",
+        "w": 79.34375,
+        "h": 44
+      },
+      {
+        "text": "メニュー",
+        "w": 70,
+        "h": 44
+      }
+    ]
+  },
+  {
+    "name": "small-mobile",
+    "checks": [
+      "Home / Help / 31 stages / Start",
+      "native movement",
+      "POV turn / view switch / jump landing",
+      "LOOK UP hold / release",
+      "synthetic visibility event pauses/resumes timer",
+      "fixture-assisted terminal → 10 choices → incorrect → correct → result → next",
+      "no page overflow / HUD >=44px"
+    ],
+    "errors": [],
+    "overflow": false,
+    "touchBoxes": [
+      {
+        "text": "三人称",
+        "w": 58,
+        "h": 44
+      },
+      {
+        "text": "↑ 見上げる",
+        "w": 79.34375,
+        "h": 44
+      },
+      {
+        "text": "メニュー",
+        "w": 70,
+        "h": 44
+      }
+    ]
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "all31FullMini": true,
+  "landscape": [
+    1,
+    15,
+    26,
+    31
+  ],
+  "metrics": {
+    "fps": 60.4370060441791,
+    "mini": {
+      "geometries": 1,
+      "textures": 0
+    },
+    "panels": 1
+  },
+  "errors": []
+}

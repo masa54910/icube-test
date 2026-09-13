@@ -1,0 +1,6 @@
+import type {AnalyticsEvent} from './AnalyticsManager';
+export interface AnalyticsOverview{players:number;sessions:number;gameStarts:number;completedStages:number;averageActiveSeconds:number;medianActiveSeconds:number;totalActiveSeconds:number;testStarts:number;testCompletes:number;}
+const median=(v:number[])=>{const a=[...v].sort((x,y)=>x-y);return a.length?a[Math.floor(a.length/2)]!:0;};
+const payload=(e:AnalyticsEvent,k:string)=>e.payload[k];
+/** Pure aggregation for a protected admin route; excludes development fixtures. */
+export function aggregateOverview(events:readonly AnalyticsEvent[]):AnalyticsOverview{const rows=events.filter(e=>!e.isTest);const players=new Set(rows.map(e=>e.anonymousPlayerId));const sessions=new Set(rows.map(e=>e.sessionId));const active=rows.filter(e=>e.eventName==='session_end').map(e=>Number(payload(e,'activePlaySeconds'))||0);return {players:players.size,sessions:sessions.size,gameStarts:rows.filter(e=>e.eventName==='game_start').length,completedStages:rows.filter(e=>e.eventName==='stage_complete').length,averageActiveSeconds:active.length?active.reduce((a,b)=>a+b,0)/active.length:0,medianActiveSeconds:median(active),totalActiveSeconds:active.reduce((a,b)=>a+b,0),testStarts:rows.filter(e=>e.eventName==='cube_test_start').length,testCompletes:rows.filter(e=>e.eventName==='cube_test_complete').length};}

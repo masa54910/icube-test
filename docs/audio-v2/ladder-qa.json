@@ -1,0 +1,54 @@
+{
+  "up": true,
+  "stop": true,
+  "down": true,
+  "restart": true,
+  "topExitSilent": true,
+  "events": [
+    {
+      "event": "LADDER_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "LADDER_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "LADDER_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "LADDER_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "LADDER_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "LADDER_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "LADDER_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "LADDER_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "LADDER_CONTACT",
+      "count": 1,
+      "strength": 1
+    }
+  ]
+}

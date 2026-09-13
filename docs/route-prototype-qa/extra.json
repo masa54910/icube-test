@@ -1,0 +1,36 @@
+{
+  "desktop": {
+    "fps": 60.573786859667116,
+    "draw": {
+      "frame": 253,
+      "calls": 489,
+      "triangles": 39318,
+      "points": 0,
+      "lines": 0
+    },
+    "memory": {
+      "geometries": 355,
+      "textures": 2
+    },
+    "colliders": 206,
+    "rooms": 33
+  },
+  "i18n": 9,
+  "errors": [],
+  "mobile": {
+    "fps": 60.181204947000005,
+    "draw": {
+      "frame": 258,
+      "calls": 591,
+      "triangles": 43868,
+      "points": 0,
+      "lines": 36
+    },
+    "memory": {
+      "geometries": 429,
+      "textures": 2
+    },
+    "colliders": 206,
+    "rooms": 33
+  }
+}

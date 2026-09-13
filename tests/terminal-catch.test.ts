@@ -1,0 +1,24 @@
+import {it,expect} from 'vitest';
+import * as THREE from 'three';
+import {WorldBuilder} from '../src/game/WorldBuilder';
+import {PlayerController} from '../src/game/PlayerController';
+import {CameraController} from '../src/game/CameraController';
+import {STAGES} from '../src/stages/stage-data';
+const idle={x:0,forward:0,turn:0,jump:false};
+const world=()=>{const w=new WorldBuilder();w.build({...STAGES[0]!,rooms:[[0,0,0],[0,1,0],[0,2,0],[0,3,0]],ladders:[{id:'grab',from:[0,0,0],to:[0,3,0]}]});return w;};
+it.each([1,2])('jumps from floor %s into ladder, holds safely, and climbs in both directions',floor=>{
+  const w=world(),p=new PlayerController();p.reset(new THREE.Vector3(0,floor*6-2.939,-2.59),Math.PI);
+  p.update(.03,w,idle,Math.PI,'third-person');expect(p.movementState).toBe('NORMAL');
+  p.update(1/60,w,{...idle,forward:1,jump:true},Math.PI,'third-person');expect(p.airborne).toBe(true);
+  for(let i=0;i<25&&!p.ladder;i++)p.update(1/60,w,idle,Math.PI,'third-person');
+  expect(p.ladder?.id).toBe('grab');const caught=p.position.clone();
+  for(let i=0;i<60;i++)p.update(1/60,w,idle,Math.PI,'third-person');
+  expect(p.position.y).toBeCloseTo(caught.y,8);expect(p.position.z).toBeCloseTo(-1.35,8);expect(p.airborne).toBe(false);
+  expect(p.position.distanceTo(caught)).toBeLessThan(.49);
+  for(let i=0;i<30;i++)p.update(1/60,w,{...idle,forward:floor===1?-1:1},0,'third-person');
+  expect((p.position.y-caught.y)*(floor===1?-1:1)).toBeGreaterThan(1.1);
+  for(let i=0;i<90;i++)p.update(1/60,w,{...idle,x:1},0,'third-person');expect(p.ladder).not.toBeNull();expect(p.ladderEdgeTurn).toBe(true);
+});
+it('grab volume rejects distance, invalid height and outward flight',()=>{const w=world();expect(w.ladderGrabAt(new THREE.Vector3(0,4,-1.7),new THREE.Vector3(0,0,4))).not.toBeNull();for(const pos of [[2,4,-1.7],[0,25,-1.7],[0,4,0]])expect(w.ladderGrabAt(new THREE.Vector3(...pos),new THREE.Vector3())).toBeNull();expect(w.ladderGrabAt(new THREE.Vector3(0,4,-1.7),new THREE.Vector3(0,0,-4))).toBeNull();});
+it.each(['pov','third-person'] as const)('LOOK UP in %s is above head, upward, and restores full snapshot',mode=>{const w=world(),c=new CameraController(new THREE.PerspectiveCamera(63));c.mode=mode;const p=new THREE.Vector3(0,-2.94,0);c.update(p,w);const pos=c.camera.position.clone(),q=c.camera.quaternion.clone();for(let i=0;i<20;i++){c.setLookUp(true);c.update(p,w);expect(c.camera.position.y-p.y).toBeGreaterThan(1.52);expect(c.camera.getWorldDirection(new THREE.Vector3()).y).toBeGreaterThan(.99);c.setLookUp(false);c.update(p,w);expect(c.camera.position.equals(pos)).toBe(true);expect(c.camera.quaternion.equals(q)).toBe(true);expect(c.camera.fov).toBe(63);expect(c.mode).toBe(mode);}});
+it('terminal has seven rotating cubes, preserves trigger and blocks terminal volume',()=>{const w=world(),built=w.world!;const cross=built.root.getObjectByName('seven-cube-cross')!;expect(cross.children).toHaveLength(7);expect(built.root.getObjectByName('answer-monitor')).toBeDefined();expect(built.answerPosition.toArray()).toEqual([1.7,-2.86,1.95]);const y=cross.rotation.y;w.update(1);expect(cross.rotation.y-y).toBeCloseTo(.025);expect(w.isNavigable(built.answerPosition.clone().setY(-2.939))).toBe(false);});

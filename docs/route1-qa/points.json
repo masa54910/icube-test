@@ -1,0 +1,86 @@
+{
+  "report": [
+    {
+      "id": 101,
+      "points": 2,
+      "sameAnswerSet": true,
+      "attemptsShared": true,
+      "hint": true,
+      "retryMemo": true
+    },
+    {
+      "id": 102,
+      "points": 2,
+      "sameAnswerSet": true,
+      "attemptsShared": true,
+      "hint": true,
+      "retryMemo": true
+    },
+    {
+      "id": 103,
+      "points": 2,
+      "sameAnswerSet": true,
+      "attemptsShared": true,
+      "hint": true,
+      "retryMemo": true
+    },
+    {
+      "id": 104,
+      "points": 3,
+      "sameAnswerSet": true,
+      "attemptsShared": true,
+      "hint": true,
+      "retryMemo": true
+    },
+    {
+      "id": 105,
+      "points": 3,
+      "sameAnswerSet": true,
+      "attemptsShared": true,
+      "hint": true,
+      "retryMemo": true
+    },
+    {
+      "id": 106,
+      "points": 3,
+      "sameAnswerSet": true,
+      "attemptsShared": true,
+      "hint": true,
+      "retryMemo": true
+    },
+    {
+      "id": 107,
+      "points": 3,
+      "sameAnswerSet": true,
+      "attemptsShared": true,
+      "hint": true,
+      "retryMemo": true
+    },
+    {
+      "id": 108,
+      "points": 3,
+      "sameAnswerSet": true,
+      "attemptsShared": true,
+      "hint": true,
+      "retryMemo": true
+    },
+    {
+      "id": 109,
+      "points": 4,
+      "sameAnswerSet": true,
+      "attemptsShared": true,
+      "hint": true,
+      "retryMemo": true
+    },
+    {
+      "id": 110,
+      "points": 4,
+      "sameAnswerSet": true,
+      "attemptsShared": true,
+      "hint": true,
+      "retryMemo": true
+    }
+  ],
+  "continue107": true,
+  "errors": []
+}

@@ -1,0 +1,5 @@
+import {it,expect} from 'vitest';
+import {Vector3} from 'three';
+import {Character} from '../src/game/Character';
+it('animation contacts alternate with cadence and stop for idle/airborne',()=>{const c=new Character(),events:string[]=[];c.onAudioContact=k=>events.push(k);const p=new Vector3();for(let i=0;i<120;i++)c.update(p,0,1,1/60,false,0,false);expect(events.length).toBeGreaterThan(4);const n=events.length;for(let i=0;i<60;i++)c.update(p,0,0,1/60,false,0,false);expect(events.length).toBe(n);for(let i=0;i<60;i++)c.update(p,0,1,1/60,false,0,true);expect(events.length).toBe(n);});
+it('climb animation contacts stop when the climb stops',()=>{const c=new Character(),events:string[]=[];c.onAudioContact=k=>events.push(k);const p=new Vector3();for(let i=0;i<120;i++)c.update(p,0,1,1/60,true,0,false);expect(events.length).toBeGreaterThan(3);expect(events.every(k=>k==='ladder')).toBe(true);const n=events.length;for(let i=0;i<120;i++)c.update(p,0,0,1/60,true,0,false);expect(events.length).toBe(n);});

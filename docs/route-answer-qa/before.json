@@ -1,0 +1,200 @@
+[
+  {
+    "stage": "A-1",
+    "exact": 1,
+    "choices": [
+      {
+        "number": 1,
+        "id": "route-decoy-3",
+        "count": 15,
+        "correct": false
+      },
+      {
+        "number": 2,
+        "id": "route-decoy-8",
+        "count": 17,
+        "correct": false
+      },
+      {
+        "number": 3,
+        "id": "route-decoy-6",
+        "count": 17,
+        "correct": false
+      },
+      {
+        "number": 4,
+        "id": "correct",
+        "count": 16,
+        "correct": true
+      },
+      {
+        "number": 5,
+        "id": "route-decoy-9",
+        "count": 17,
+        "correct": false
+      },
+      {
+        "number": 6,
+        "id": "route-decoy-4",
+        "count": 15,
+        "correct": false
+      },
+      {
+        "number": 7,
+        "id": "route-decoy-7",
+        "count": 17,
+        "correct": false
+      },
+      {
+        "number": 8,
+        "id": "route-decoy-5",
+        "count": 16,
+        "correct": false
+      },
+      {
+        "number": 9,
+        "id": "route-decoy-1",
+        "count": 15,
+        "correct": false
+      },
+      {
+        "number": 10,
+        "id": "route-decoy-2",
+        "count": 15,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "stage": "A-2",
+    "exact": 1,
+    "choices": [
+      {
+        "number": 1,
+        "id": "route-decoy-4",
+        "count": 23,
+        "correct": false
+      },
+      {
+        "number": 2,
+        "id": "correct",
+        "count": 24,
+        "correct": true
+      },
+      {
+        "number": 3,
+        "id": "route-decoy-7",
+        "count": 24,
+        "correct": false
+      },
+      {
+        "number": 4,
+        "id": "route-decoy-5",
+        "count": 23,
+        "correct": false
+      },
+      {
+        "number": 5,
+        "id": "route-decoy-1",
+        "count": 23,
+        "correct": false
+      },
+      {
+        "number": 6,
+        "id": "route-decoy-8",
+        "count": 25,
+        "correct": false
+      },
+      {
+        "number": 7,
+        "id": "route-decoy-6",
+        "count": 23,
+        "correct": false
+      },
+      {
+        "number": 8,
+        "id": "route-decoy-3",
+        "count": 23,
+        "correct": false
+      },
+      {
+        "number": 9,
+        "id": "route-decoy-9",
+        "count": 25,
+        "correct": false
+      },
+      {
+        "number": 10,
+        "id": "route-decoy-2",
+        "count": 23,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "stage": "A-3",
+    "exact": 1,
+    "choices": [
+      {
+        "number": 1,
+        "id": "route-decoy-4",
+        "count": 32,
+        "correct": false
+      },
+      {
+        "number": 2,
+        "id": "route-decoy-1",
+        "count": 32,
+        "correct": false
+      },
+      {
+        "number": 3,
+        "id": "route-decoy-9",
+        "count": 33,
+        "correct": false
+      },
+      {
+        "number": 4,
+        "id": "route-decoy-8",
+        "count": 32,
+        "correct": false
+      },
+      {
+        "number": 5,
+        "id": "route-decoy-5",
+        "count": 32,
+        "correct": false
+      },
+      {
+        "number": 6,
+        "id": "route-decoy-7",
+        "count": 32,
+        "correct": false
+      },
+      {
+        "number": 7,
+        "id": "route-decoy-6",
+        "count": 32,
+        "correct": false
+      },
+      {
+        "number": 8,
+        "id": "correct",
+        "count": 33,
+        "correct": true
+      },
+      {
+        "number": 9,
+        "id": "route-decoy-3",
+        "count": 32,
+        "correct": false
+      },
+      {
+        "number": 10,
+        "id": "route-decoy-2",
+        "count": 32,
+        "correct": false
+      }
+    ]
+  }
+]

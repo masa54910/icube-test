@@ -1,0 +1,26 @@
+[
+  {
+    "id": 101,
+    "jumpCatch": true,
+    "holds": true,
+    "down": true
+  },
+  {
+    "id": 105,
+    "jumpCatch": true,
+    "holds": true,
+    "down": true
+  },
+  {
+    "id": 110,
+    "jumpCatch": true,
+    "holds": true,
+    "down": true
+  },
+  {
+    "id": 2,
+    "jumpCatch": true,
+    "holds": true,
+    "down": true
+  }
+]

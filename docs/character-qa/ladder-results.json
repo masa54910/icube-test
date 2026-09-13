@@ -1,0 +1,131 @@
+{
+  "pass": true,
+  "up": {
+    "state": "EXPLORATION",
+    "position": [
+      -12,
+      4.037719998658895,
+      -1.65
+    ],
+    "yaw": 1.5707963267948966,
+    "playerYaw": 1.5707963267948966,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "CLIMB",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "pov",
+    "lookingUp": false,
+    "characterVisible": false,
+    "elapsed": 7914.3,
+    "attempts": 0,
+    "ladder": "AlphabetLadder--2-0-0-4",
+    "camera": [
+      -12,
+      5.287719998658895,
+      -1.65
+    ],
+    "quaternion": [
+      -0.06355373162112225,
+      -0.7042449312540563,
+      -0.06355373162112225,
+      0.7042449312540562
+    ]
+  },
+  "down": {
+    "state": "EXPLORATION",
+    "position": [
+      -12,
+      0.3985999986589013,
+      -1.65
+    ],
+    "yaw": 1.5707963267948966,
+    "playerYaw": -1.5707963267948968,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "CLIMB",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "pov",
+    "lookingUp": false,
+    "characterVisible": false,
+    "elapsed": 9730.5,
+    "attempts": 0,
+    "ladder": "AlphabetLadder--2-0-0-4",
+    "camera": [
+      -12,
+      1.6485999986589013,
+      -1.65
+    ],
+    "quaternion": [
+      -0.06355373162112232,
+      -0.7042449312540562,
+      -0.06355373162112232,
+      0.7042449312540562
+    ]
+  },
+  "off": {
+    "state": "EXPLORATION",
+    "position": [
+      -12,
+      -2.2409982288410877,
+      -2.5998000013411047
+    ],
+    "yaw": 1.5707963267948966,
+    "playerYaw": -6.123233995736766e-17,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "IDLE",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "pov",
+    "lookingUp": false,
+    "characterVisible": false,
+    "elapsed": 10363.599999999999,
+    "attempts": 0,
+    "ladder": null,
+    "camera": [
+      -12,
+      -0.9909982288410877,
+      -2.5998000013411047
+    ],
+    "quaternion": [
+      -0.06355373162112232,
+      -0.7042449312540562,
+      -0.06355373162112232,
+      0.7042449312540562
+    ]
+  },
+  "jump": {
+    "state": "EXPLORATION",
+    "position": [
+      0,
+      -2.0466295763411027,
+      0
+    ],
+    "yaw": 1.5707963267948966,
+    "playerYaw": 1.5707963267948966,
+    "turnRate": 0,
+    "turningAround": false,
+    "animation": "IDLE",
+    "speed": 0,
+    "pitch": -0.18,
+    "mode": "third-person",
+    "lookingUp": false,
+    "characterVisible": true,
+    "elapsed": 316.5000000000018,
+    "attempts": 0,
+    "ladder": null,
+    "camera": [
+      -2.75476233980674,
+      -0.295346770748795,
+      1.6868054409279986e-16
+    ],
+    "quaternion": [
+      -0.06355373162112234,
+      -0.7042449312540562,
+      -0.06355373162112234,
+      0.7042449312540563
+    ]
+  }
+}

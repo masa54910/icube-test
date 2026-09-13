@@ -1,0 +1,140 @@
+{
+  "events": [
+    {
+      "event": "JOG_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "JOG_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "JOG_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "JOG_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "JOG_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "JOG_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "JOG_CONTACT",
+      "count": 1,
+      "strength": 1
+    },
+    {
+      "event": "ANSWER_ENTER",
+      "count": 1,
+      "strength": 0.5
+    },
+    {
+      "event": "ANSWER_SELECT",
+      "count": 1,
+      "strength": 0.5
+    },
+    {
+      "event": "ANSWER_CORRECT",
+      "count": 1,
+      "strength": 0.5
+    }
+  ],
+  "playback": [
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/home-D.ogg",
+      "time": 0.000946
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/home-E.ogg",
+      "time": 0.014602
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/home-F.ogg",
+      "time": 0.017167
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/gameplay-D.ogg",
+      "time": 0.01443
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/gameplay-E.ogg",
+      "time": 0.011807
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/gameplay-F.ogg",
+      "time": 0.007981
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/correct-scene.ogg",
+      "time": 0.001467
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/se-jump-A.ogg",
+      "time": 0.001982
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/se-land-A.ogg",
+      "time": 0.000414
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/se-footstep-A.ogg",
+      "time": 0.003611
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/se-footstep-B.ogg",
+      "time": 0.008715
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/se-footstep-C.ogg",
+      "time": 0.009677
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/se-ladder-climb-A.ogg",
+      "time": 0.012025
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/se-boost-A.ogg",
+      "time": 0.013749
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/se-cube-place-A.ogg",
+      "time": 0.018811
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/se-correct-A.ogg",
+      "time": 0.019331
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/se-answer-select-A.ogg",
+      "time": 0.009724
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/se-incorrect-A.ogg",
+      "time": 0.009431
+    },
+    {
+      "src": "http://127.0.0.1:5173/docs/audio-v2/se-answer-enter-A.ogg",
+      "time": 0.015797
+    }
+  ],
+  "errors": [],
+  "footstepStop": true,
+  "memoSilence": true,
+  "answerEnter": true,
+  "correctState": true,
+  "ladderRealTraversal": "PENDING",
+  "physicalDevice": "NOT TESTED",
+  "fatigue": "USER QA PENDING"
+}

@@ -1,0 +1,6 @@
+.cubie-anchor{--pose-scale:1;--pose-x:0px;--pose-y:0px;position:absolute;z-index:5;pointer-events:none;height:calc(min(48vh,376px)*var(--pose-scale));aspect-ratio:192/358;left:calc(50% - 300px + var(--pose-x));bottom:max(calc(32vh + var(--pose-y)),var(--result-clearance,0px));}
+.cubie-anchor .cubie-correct{position:relative;inset:auto;display:block;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 0 4px #c8efff44);transform-origin:50% 97%;}
+.cubie-contact{position:absolute;left:50%;transform:translate(-50%,50%);height:4%;background:radial-gradient(ellipse,#27466066,transparent 70%);border-radius:50%;filter:blur(3px);}
+@media(max-aspect-ratio:4/5){.cubie-anchor{left:calc(4vw + var(--pose-x));bottom:max(calc(36vh + var(--pose-y)),var(--result-clearance,0px));height:calc(min(34vh,300px)*var(--pose-scale));}}
+@media(max-height:500px) and (min-aspect-ratio:1/1){.cubie-anchor{left:calc(7vw + var(--pose-x));bottom:calc(12vh + var(--pose-y));height:calc(66vh*var(--pose-scale));}}
+@media(max-height:500px) and (min-aspect-ratio:1/1){:root .result-panel::before{font-size:12px;top:2vh;right:3vw;}}

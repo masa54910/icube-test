@@ -1,0 +1,23 @@
+{
+  "source": "codex-clipboard-95056b3c-4d1b-41e0-818b-4d55f1999f34.png",
+  "source_sha256": "9228fb604603ce31cfa100dfab8060f68ead17c6444a9821d7cf746b83251868",
+  "crop_xyxy": [
+    8,
+    257,
+    176,
+    633
+  ],
+  "output_size": [
+    168,
+    376
+  ],
+  "method": "manually traced alpha mask; no AI, no RGB edits, no upscale",
+  "rgb_changed_pixels": 0,
+  "file_bytes": 99389,
+  "face_source_xyxy": [
+    52,
+    280,
+    101,
+    334
+  ]
+}

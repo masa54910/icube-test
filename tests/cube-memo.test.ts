@@ -1,0 +1,21 @@
+import {beforeEach,describe,it,expect,vi} from 'vitest';
+import {CubeMemoStore,memoCoordinates,MEMO_LIMIT} from '../src/game/CubeMemo';
+import {memoKeys,memoValues,memoTranslation} from '../src/i18n/memo';
+import {STAGES} from '../src/stages/stage-data';
+const canonical=memoCoordinates(STAGES[0]!.rooms,STAGES[0]!.start);
+beforeEach(()=>{const data=new Map<string,string>();vi.stubGlobal('localStorage',{getItem:(k:string)=>data.get(k)??null,setItem:(k:string,v:string)=>data.set(k,v)});});
+const create=()=>new CubeMemoStore('stage_1_1',canonical);
+describe('Stage 1-1 memo model',()=>{
+ it('protects origin and rejects duplicates, fractions, invalid bounds',()=>{const s=create();expect(s.remove('origin')).toBe(false);expect(s.color('origin','blue')).toBe(false);expect(s.add(0,0,0)).toBe(false);expect(s.add(.5,0,0)).toBe(false);expect(s.add(25,0,0)).toBe(false);expect(s.cubes).toHaveLength(1);});
+ it.each(['x','y','z'] as const)('extends signed %s face atomically',axis=>{const s=create();expect(s.addLine(0,0,0,axis,3,'blue',-1)).toBe(3);expect(s.cubes.at(-1)![axis]).toBe(-3);s.undoOnce();expect(s.cubes).toHaveLength(1);s.redoOnce();expect(s.cubes).toHaveLength(4);});
+ it('supports +5, skips occupied cells and clears redo after edit',()=>{const s=create();s.addLine(0,0,0,'y',5);expect(s.addLine(0,0,0,'y',5)).toBe(0);s.undoOnce();s.add(1,0,0);expect(s.canRedo).toBe(false);});
+ it('makes clear/delete/color undoable without deleting origin',()=>{const s=create();s.add(1,0,0);const id=s.cubes[1]!.id;s.color(id,'navy');s.undoOnce();expect(s.cubes[1]!.color).toBe('white');s.remove(id);s.undoOnce();expect(s.cubes).toHaveLength(2);s.clear();expect(s.cubes).toHaveLength(1);s.undoOnce();expect(s.cubes).toHaveLength(2);});
+ it('locks hint until incorrect, lights existing correct notes only',()=>{const s=create();s.add(1,0,0,'blue');s.add(8,0,0,'navy');expect(s.useHint()).toBe(false);s.unlockHint();expect(s.useHint()).toBe(true);expect(s.cubes[1]!.hintState).toBe('correct');expect(s.cubes[2]!.hintState).toBe('unknown');expect(s.cubes[2]!.color).toBe('navy');expect(s.cubes).toHaveLength(3);});
+ it('never refunds hint through undo, clear or reload',()=>{const s=create();s.add(1,0,0);s.unlockHint();s.useHint();s.undoOnce();expect(s.hintUsed).toBe(true);s.redoOnce();expect(s.cubes[1]!.hintState).toBe('correct');s.clear();s.undoOnce();const re=create();expect(re.hintUsed).toBe(true);expect(re.useHint()).toBe(false);expect(re.cubes[1]!.hintState).toBe('correct');});
+ it('does not reveal newly placed missing answers after hint',()=>{const s=create();s.unlockHint();s.useHint();s.add(1,0,0);expect(s.cubes[1]!.hintState).toBe('unknown');});
+ it('preserves colors and isolates stages',()=>{const s=create();s.add(2,0,0,'cyan');expect(create().cubes[1]!.color).toBe('cyan');expect(new CubeMemoStore('stage_1_2',canonical).cubes).toHaveLength(1);});
+ it('validates old notes and resets unguarded legacy hints',()=>{localStorage.setItem('icube-memo:stage_1_1',JSON.stringify({version:1,stageId:'stage_1_1',hintUsed:true,cubes:[{id:'old',x:1,y:0,z:0,color:'blue'},{id:'bad',x:100,y:0,z:0,color:'blue'}]}));const s=create();expect(s.cubes).toHaveLength(2);expect(s.hintUsed).toBe(false);});
+ it('tolerates broken or inaccessible storage',()=>{localStorage.setItem('icube-memo:stage_1_1','{');expect(create().cubes).toHaveLength(1);vi.stubGlobal('localStorage',{getItem:()=>{throw Error()},setItem:()=>{throw Error()}});expect(create().add(1,0,0)).toBe(true);});
+ it('caps notes and maps world origin without camera transforms',()=>{const s=create();s.addBatch(Array.from({length:600},(_,i)=>({x:i%24,y:Math.floor(i/24),z:1})));expect(s.cubes).toHaveLength(MEMO_LIMIT);expect(memoCoordinates([[3,4,5],[4,5,6]],[3,4,5])).toEqual([[0,0,0],[1,1,1]]);});
+});
+describe('memo translations',()=>{it.each(Object.keys(memoValues) as (keyof typeof memoValues)[])('%s complete with no empty values',l=>{expect(memoValues[l]).toHaveLength(memoKeys.length);for(const key of memoKeys)expect(memoTranslation(l,'memo.'+key)?.length).toBeGreaterThan(0);if(l!=='en')expect(memoValues[l]).not.toEqual(memoValues.en);});});

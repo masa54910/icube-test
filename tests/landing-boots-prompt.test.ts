@@ -1,0 +1,10 @@
+import {it,expect} from 'vitest';
+import * as THREE from 'three';
+import {Character} from '../src/game/Character';
+import {landingCompression,LANDING_DURATION} from '../src/game/LandingPose';
+import {answerPrompts} from '../src/i18n/answerPrompt';
+import {upgradeExplorerMaterials} from '../src/game/GameplayMaterials';
+it('landing compresses then recovers over 580ms',()=>{expect(landingCompression(LANDING_DURATION)).toBe(0);expect(landingCompression(.34)).toBeCloseTo(1);expect(landingCompression(0)).toBe(0);const c=new Character(),p=new THREE.Vector3();c.update(p.clone().setY(.6),0,0,.1,false,0,true);c.update(p,0,0,.1,false,0,true);for(let i=0;i<14;i++)c.update(p,0,0,1/60);expect(c.state).toBe('LANDING');expect(c.pelvis.position.y).toBeLessThan(.85);expect(c.legs[0]!.lower.rotation.x).toBeLessThan(-.6);for(let i=0;i<36;i++)c.update(p,0,1,1/60);expect(c.state).toBe('WALK_FORWARD');expect(c.root.position.equals(p)).toBe(true);});
+it('boots stay attached to each ankle with distinct sole and cuff',()=>{const c=new Character();for(const leg of c.legs){expect(leg.end.name).toBe('astronaut-boot');for(const name of ['boot-sole','boot-heel','boot-toe','boot-upper-shell','boot-flex-cuff'])expect(leg.end.getObjectByName(name)).toBeTruthy();expect(leg.end.parent).toBe(leg.lower);}});
+it('suit fabric is white and boot sole remains distinct',()=>{const c=new Character();upgradeExplorerMaterials(c.root);const mats:THREE.MeshStandardMaterial[]=[];c.root.traverse(o=>{if(o instanceof THREE.Mesh)mats.push(o.material as THREE.MeshStandardMaterial);});expect(mats.find(m=>m.name==='suit-fabric')!.color.getHex()).toBe(0xf4f7f8);expect(mats.find(m=>m.name==='boot-sole-heel')!.roughness).toBeGreaterThan(.8);});
+it('all nine prompt dictionaries have desktop and touch variants',()=>{expect(Object.keys(answerPrompts)).toHaveLength(9);for(const value of Object.values(answerPrompts)){expect(value.desktop).toContain('{key}');expect(value.touch).not.toContain('{key}');expect(value.touch.length).toBeGreaterThan(0);}expect(answerPrompts.ja.desktop.replace('{key}','E')).toBe('回答：Eを押す');});

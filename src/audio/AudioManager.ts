@@ -1,0 +1,42 @@
+import {AUDIO_MANIFEST,AUDIO_EVENTS,isApproved,type AudioSlot,type AudioEvent,type AudioAsset} from './manifest';
+export type BGMState='HOME'|'GAMEPLAY'|'CORRECT_SCENE'|'NONE';
+type Voice={source:AudioBufferSourceNode;gain:GainNode;slot:AudioSlot};
+export class AudioManager {
+ bgmEnabled=true;seEnabled=true;
+ private context:AudioContext|null=null;private buffers=new Map<AudioSlot,AudioBuffer>();private loading=new Map<AudioSlot,Promise<void>>();
+ private music=new Map<AudioSlot,Voice>();private voices=new Set<Voice>();private blocked=new Set<string>();private abort:AbortController|null=null;
+ private desired:BGMState='NONE';private hostEnabled=true;private duck=1;private disposed=false;
+ private retiring:Voice|null=null;
+ private variants=new Map<AudioSlot,AudioBuffer[]>();private variantIndex=0;
+ private output:WaveShaperNode|null=null;
+ private unlockPhase='not requested';private unlockAttempts=0;private lastError='';
+ readonly events:{event:AudioEvent;count:number;strength:number}[]=[];
+ constructor(private manifest:Record<AudioSlot,AudioAsset>=AUDIO_MANIFEST){try{const p=JSON.parse(localStorage.getItem('icube-audio-preferences')??'null');this.bgmEnabled=p?.bgm!==false;this.seEnabled=p?.se!==false;}catch{/* Optional preference. */}}
+ initialize(target:Document=document){if(this.abort)return;this.abort=new AbortController();const signal=this.abort.signal;const unlock=(e:Event)=>{if(e.isTrusted)void this.unlock();};target.addEventListener('pointerdown',unlock,{capture:true,signal});target.addEventListener('keydown',unlock,{capture:true,signal});target.addEventListener('visibilitychange',()=>target.hidden?this.pause('visibility'):this.resume('visibility'),{signal});if(target.hidden)this.pause('visibility');}
+ async unlock(){if(this.disposed)return;this.unlockAttempts++;this.unlockPhase='creating context';try{this.context??=new AudioContext();if(this.blocked.size||!this.hostEnabled){this.unlockPhase='blocked';return;}this.unlockPhase='awaiting resume';await this.context.resume();this.unlockPhase='loading';await Promise.all((Object.keys(this.manifest) as AudioSlot[]).map(s=>this.load(s)));this.syncBGM();this.unlockPhase='ready';}catch(error){this.lastError=String(error);this.unlockPhase='error';console.warn('Audio unavailable; gameplay continues',error);}}
+ private async load(slot:AudioSlot){if(this.buffers.has(slot)||!isApproved(this.manifest[slot])||!this.context)return;if(this.loading.has(slot))return this.loading.get(slot);
+  const task=(async()=>{try{const a=this.manifest[slot];const decoded:AudioBuffer[]=[];for(const file of [a.url!,...(a.variants??[])]){const url=new URL(file,location.href);if(url.origin!==location.origin)throw Error('Audio must be bundled, same-origin');const r=await fetch(url);if(!r.ok)throw Error('Audio load '+r.status);decoded.push(await this.context!.decodeAudioData(await r.arrayBuffer()));}if(!this.disposed){this.buffers.set(slot,decoded[0]!);this.variants.set(slot,decoded);}}catch(error){console.warn('Audio slot unavailable: '+slot,error);}})();this.loading.set(slot,task);return task;}
+ private get audible(){return !this.disposed&&this.context?.state==='running'&&!this.blocked.size&&this.hostEnabled;}
+ playBGM(state:BGMState){this.desired=state;this.syncBGM();}
+ stopBGM(){this.playBGM('NONE');}
+ fadeBGM(level:number){this.duck=Math.min(1,Math.max(0,level));this.syncBGM();}
+ private voice(slot:AudioSlot,volume:number,pitch=1):Voice|null {const choices=this.variants.get(slot);const buffer=slot==='footstep'&&choices?.length?choices[this.variantIndex++%choices.length]:this.buffers.get(slot),ctx=this.context;if(!buffer||!ctx)return null;if(!this.output){this.output=ctx.createWaveShaper();const curve=new Float32Array(4097);for(let i=0;i<curve.length;i++){const x=2*i/(curve.length-1)-1;curve[i]=Math.abs(x)<=.8?x:Math.sign(x)*(.8+.15*Math.tanh((Math.abs(x)-.8)/.15));}this.output.curve=curve;this.output.connect(ctx.destination);}const source=ctx.createBufferSource(),gain=ctx.createGain();source.buffer=buffer;source.playbackRate.value=pitch;gain.gain.value=volume;source.connect(gain).connect(this.output);return {source,gain,slot};}
+ private syncBGM(){if(!this.audible)return;const wanted=this.bgmEnabled?(this.desired==='HOME'?'homeBgm':this.desired==='GAMEPLAY'?'gameplayBgm':this.desired==='CORRECT_SCENE'?'correctBgm':null):null;const ctx=this.context!;
+  for(const [slot,v] of this.music){if(slot!==wanted){if(this.retiring)this.stopVoice(this.retiring);this.retiring=v;v.gain.gain.cancelScheduledValues(ctx.currentTime);v.gain.gain.setTargetAtTime(0,ctx.currentTime,.2);v.source.stop(ctx.currentTime+.8);this.music.delete(slot);}}
+  if(!wanted)return;let v=this.music.get(wanted);if(!v){v=this.voice(wanted,0)??undefined;if(!v)return;v.source.loop=true;v.source.onended=()=>{if(this.retiring===v)this.retiring=null;v!.source.disconnect();v!.gain.disconnect();};v.source.start();this.music.set(wanted,v);}v.gain.gain.cancelScheduledValues(ctx.currentTime);v.gain.gain.setTargetAtTime(this.manifest[wanted].volume*this.duck,ctx.currentTime,.25);
+ }
+ playSE(slot:AudioSlot,volume=1,pitch=1,delay=0){if(!this.audible||!this.seEnabled)return;const v=this.voice(slot,this.manifest[slot].volume*Math.min(1,Math.max(0,volume)),Math.min(1.2,Math.max(.8,pitch)));if(!v)return;if(this.voices.size>=8){const expendable=[...this.voices].find(v=>v.slot!=='correct');if(!expendable)return;this.stopVoice(expendable);}this.voices.add(v);v.source.onended=()=>{this.voices.delete(v);v.source.disconnect();v.gain.disconnect();};v.source.start(this.context!.currentTime+delay);}
+ private contactIndex=0;
+ emit(event:AudioEvent,meta:{count?:number;strength?:number}={}){const count=meta.count??1,strength=meta.strength??.5;if(count<1)return;this.events.push({event,count,strength});if(this.events.length>128)this.events.shift();if(event==='MEMO_CUBE_COMMIT'){for(let i=0;i<Math.min(5,count);i++)this.playSE('cubePlace',.85,1+Math.min(.1,i*.025),i*.075);return;}const contact=event==='JOG_CONTACT'||event==='LADDER_CONTACT';const variation=contact?[-.035,0,.035][this.contactIndex++%3]!:0;this.playSE(AUDIO_EVENTS[event],event==='FOOT_CONTACT'?.45+.55*strength:contact?strength:1,event==='FOOT_CONTACT'?1.08-.16*strength:1+variation);}
+ stopSE(slot?:AudioSlot){for(const v of [...this.voices])if(!slot||slot===v.slot)this.stopVoice(v);}
+ private stopVoice(v:Voice){this.voices.delete(v);try{v.source.stop();}catch{}v.source.disconnect();v.gain.disconnect();}
+ setBGMEnabled(value:boolean){this.bgmEnabled=value;this.persist();if(!value){if(this.retiring)this.stopVoice(this.retiring);this.retiring=null;for(const v of this.music.values())this.stopVoice(v);this.music.clear();}this.syncBGM();}
+ setSEEnabled(value:boolean){this.seEnabled=value;this.persist();if(!value)this.stopSE();}
+ private persist(){try{localStorage.setItem('icube-audio-preferences',JSON.stringify({bgm:this.bgmEnabled,se:this.seEnabled}));}catch{/* In-memory preferences still work. */}}
+ pause(reason='game'){this.blocked.add(reason);this.stopSE();void this.context?.suspend().catch(()=>{});}
+ resume(reason='game'){this.blocked.delete(reason);if(!this.blocked.size&&this.hostEnabled&&this.context)void this.unlock();}
+ setHostEnabled(value:boolean){this.hostEnabled=value;if(value)this.resume('host');else this.pause('host');}
+ snapshot(){return {unlocked:!!this.context,bgm:this.desired,bgmEnabled:this.bgmEnabled,seEnabled:this.seEnabled,paused:[...this.blocked],hostEnabled:this.hostEnabled,bgmVoices:this.music.size,seVoices:this.voices.size,loaded:this.buffers.size,approved:Object.values(this.manifest).filter(isApproved).length};}
+ diagnostics(){return {...this.snapshot(),context:this.context?.state??'not created',contextTime:this.context?.currentTime??0,unlockPhase:this.unlockPhase,unlockAttempts:this.unlockAttempts,lastError:this.lastError,masterGain:1,outputConnected:!!this.output,gains:[...this.music].map(([slot,v])=>({slot,gain:v.gain.gain.value})),buffers:(Object.keys(this.manifest) as AudioSlot[]).map(slot=>({slot,loaded:this.buffers.has(slot),volume:this.manifest[slot].volume}))};}
+ dispose(){this.disposed=true;this.abort?.abort();this.stopSE();if(this.retiring)this.stopVoice(this.retiring);this.retiring=null;for(const v of this.music.values())this.stopVoice(v);this.music.clear();this.output?.disconnect();this.output=null;void this.context?.close().catch(()=>{});this.buffers.clear();this.variants.clear();this.loading.clear();}
+}

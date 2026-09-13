@@ -1,0 +1,43 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Home Showcase Asset Refresh QA</title>
+<style>
+  :root{font-family:Inter,system-ui,sans-serif;color:#eaf6ff;background:#071526}
+  body{max-width:1500px;margin:0 auto;padding:32px;background:linear-gradient(140deg,#071526,#0e2940);line-height:1.5}
+  h1{margin:0 0 8px;font-size:clamp(24px,4vw,42px)} h2{margin:36px 0 14px;color:#8feaff}
+  p{color:#b9d1de}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+  .pair,.tile{background:#10263a;border:1px solid #6bd8f344;border-radius:16px;padding:14px;box-shadow:0 12px 30px #0004}
+  .pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.tile{min-width:0}.pair h3,.tile h3{font-size:13px;letter-spacing:.12em;margin:0 0 10px;color:#c9f7ff}
+  figure{margin:0} img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#071526;border-radius:10px} figcaption{font-size:11px;color:#9eb8c8;margin-top:8px}
+  .notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.note{padding:14px;border:1px solid #6bd8f322;border-radius:12px;background:#0c2032;color:#cce2ec}
+  @media(max-width:800px){body{padding:18px}.grid,.notes{grid-template-columns:1fr}.pair{grid-template-columns:1fr}}
+</style>
+<main>
+  <h1>Gate: Home Showcase Asset Refresh</h1>
+  <p>02〜04のみを Visual Fidelity v2 の改善済みGameplay QAキャプチャへ更新。DOMラベル、5枚構成、順番、回転、クロスフェード、インジケーターは変更なし。</p>
+
+  <h2>Old vs New</h2>
+  <section class="grid">
+    <article class="pair"><div><h3>02 / EXPLORE · OLD</h3><img src="home-showcase-refresh-qa/before/explore.webp" alt="旧 Explore"></div><div><h3>02 / EXPLORE · NEW</h3><img src="../assets/home-showcase/explore.webp" alt="新 Explore"></div></article>
+    <article class="pair"><div><h3>03 / CLIMB · OLD</h3><img src="home-showcase-refresh-qa/before/climb.webp" alt="旧 Climb"></div><div><h3>03 / CLIMB · NEW</h3><img src="../assets/home-showcase/climb.webp" alt="新 Climb"></div></article>
+    <article class="pair"><div><h3>04 / SOLVE · OLD</h3><img src="home-showcase-refresh-qa/before/solve.webp" alt="旧 Solve"></div><div><h3>04 / SOLVE · NEW</h3><img src="../assets/home-showcase/solve.webp" alt="新 Solve"></div></article>
+  </section>
+
+  <h2>Final five-image lineup</h2>
+  <section class="grid">
+    <article class="tile"><h3>01 / BRAND · UNCHANGED</h3><img src="home-showcase-qa/desktop-brand.png" alt="Brand unchanged evidence"><figcaption>既存HomePreview / HomeWorld</figcaption></article>
+    <article class="tile"><h3>02 / EXPLORE · NEW</h3><img src="../assets/home-showcase/explore.webp" alt="Explore new asset"></article>
+    <article class="tile"><h3>03 / CLIMB · NEW</h3><img src="../assets/home-showcase/climb.webp" alt="Climb new asset"></article>
+    <article class="tile"><h3>04 / SOLVE · NEW</h3><img src="../assets/home-showcase/solve.webp" alt="Solve new asset"></article>
+    <article class="tile"><h3>05 / CORRECT · UNCHANGED</h3><img src="../assets/home-showcase/correct.webp" alt="Correct unchanged asset"></article>
+  </section>
+
+  <h2>QA notes</h2>
+  <section class="notes">
+    <div class="note">Source of truth: `docs/gameplay-fidelity-qa/after-corridor.png`, `after-ladder.png`, `after-terminal.png` — improved Gameplay pipeline, no HUD.</div>
+    <div class="note">Composition: Explore keeps Cubie low-left with corridor depth; Climb includes Cubie, ladder and upper opening; Solve keeps Cubie, terminal, monitor and answer zone visible.</div>
+    <div class="note">Responsive policy: 4:3 / 1200×900 assets; `object-fit: contain` preserves major subjects on desktop and mobile portrait/landscape.</div>
+    <div class="note">Active runtime assets are only the new WebP files. Old files are retained here solely for before/after comparison and are not referenced by the Home rotation.</div>
+  </section>
+</main>

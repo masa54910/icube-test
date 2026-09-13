@@ -1,0 +1,21 @@
+{
+  "checks": [
+    "ghost visible before commit, drop commits",
+    "+3 follows Y face",
+    "keyboard undo / redo / delete",
+    "orbit then negative X face extension",
+    "idle memo and gameplay renders paused",
+    "post-memo movement / POV switch / jump"
+  ],
+  "performance": {
+    "cubes": 11,
+    "cpuRenderMedianMs": 3.699999988079071,
+    "cpuRenderP95Ms": 5.4000000059604645,
+    "calls": 40,
+    "triangles": 3368,
+    "textures": 8,
+    "geometries": 21,
+    "jsHeapBytes": 14349241
+  },
+  "errors": []
+}

@@ -1,0 +1,85 @@
+{
+  "sdkCallbacks": "pause/resume + audio flag PASS (mock host callbacks, unchanged SDK)",
+  "browserLifecycle": {
+    "status": "UNVERIFIED",
+    "reason": "Headless Page.setWebLifecycleState emitted no lifecycle events; real OS background/screen-lock QA is required."
+  },
+  "latency": {
+    "perRequestMs": 200,
+    "readyMs": 1228,
+    "pass": true
+  },
+  "cycles": [
+    {
+      "geometry": 146,
+      "textures": 2,
+      "canvases": 2,
+      "stage": "EXPLORATION"
+    },
+    {
+      "geometry": 146,
+      "textures": 2,
+      "canvases": 2,
+      "stage": "EXPLORATION"
+    },
+    {
+      "geometry": 146,
+      "textures": 2,
+      "canvases": 2,
+      "stage": "EXPLORATION"
+    },
+    {
+      "geometry": 146,
+      "textures": 2,
+      "canvases": 2,
+      "stage": "EXPLORATION"
+    },
+    {
+      "geometry": 146,
+      "textures": 2,
+      "canvases": 2,
+      "stage": "EXPLORATION"
+    },
+    {
+      "geometry": 146,
+      "textures": 2,
+      "canvases": 2,
+      "stage": "EXPLORATION"
+    },
+    {
+      "geometry": 146,
+      "textures": 2,
+      "canvases": 2,
+      "stage": "EXPLORATION"
+    },
+    {
+      "geometry": 146,
+      "textures": 2,
+      "canvases": 2,
+      "stage": "EXPLORATION"
+    },
+    {
+      "geometry": 146,
+      "textures": 2,
+      "canvases": 2,
+      "stage": "EXPLORATION"
+    },
+    {
+      "geometry": 146,
+      "textures": 2,
+      "canvases": 2,
+      "stage": "EXPLORATION"
+    }
+  ],
+  "memoryStable": true,
+  "performance": {
+    "medianFrameMs": 16.699999999999818,
+    "p95FrameMs": 16.899999999999636,
+    "calls": 170,
+    "triangles": 25408,
+    "geometry": 146,
+    "textures": 2,
+    "heap": 33463793
+  },
+  "errors": []
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "id": 103,
+    "pad": 1,
+    "distanceMeasured": 23.58152451,
+    "nominal": 24,
+    "grounded": true
+  },
+  {
+    "id": 106,
+    "pad": 1,
+    "distanceMeasured": 23.931518309999998,
+    "nominal": 24,
+    "grounded": true
+  },
+  {
+    "id": 106,
+    "pad": 2,
+    "distanceMeasured": 23.93151831,
+    "nominal": 24,
+    "grounded": true
+  },
+  {
+    "id": 109,
+    "pad": 1,
+    "distanceMeasured": 23.93240775,
+    "nominal": 24,
+    "grounded": true
+  },
+  {
+    "id": 109,
+    "pad": 2,
+    "distanceMeasured": 23.93151831,
+    "nominal": 24,
+    "grounded": true
+  },
+  {
+    "id": 110,
+    "pad": 1,
+    "distanceMeasured": 23.93196323999999,
+    "nominal": 24,
+    "grounded": true
+  },
+  {
+    "viewport": "portrait",
+    "stage": 108,
+    "touchMove": true,
+    "miniFullMemo": true
+  },
+  {
+    "viewport": "landscape",
+    "stage": 108,
+    "touchMove": true,
+    "miniFullMemo": true
+  }
+]

@@ -1,0 +1,28 @@
+{
+  "rows": [
+    {
+      "ladderUpDownStopTop": true
+    },
+    {
+      "stage": 103,
+      "boostOnce": true,
+      "tailStopped": true
+    },
+    {
+      "stage": 106,
+      "boostOnce": true,
+      "tailStopped": true
+    },
+    {
+      "stage": 109,
+      "boostOnce": true,
+      "tailStopped": true
+    },
+    {
+      "stage": 110,
+      "boostOnce": true,
+      "tailStopped": true
+    }
+  ],
+  "errors": []
+}

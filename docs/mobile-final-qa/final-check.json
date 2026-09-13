@@ -1,0 +1,17 @@
+{
+  "helpSwitch": [
+    "遊び方",
+    "HOW TO PLAY",
+    "SPIELANLEITUNG",
+    "플레이 방법"
+  ],
+  "lastStageAccessible": true,
+  "jumpBox": {
+    "text": "↑ ジャンプ",
+    "width": 68,
+    "scrollWidth": 68,
+    "height": 68,
+    "scrollHeight": 68
+  },
+  "reportErrors": []
+}

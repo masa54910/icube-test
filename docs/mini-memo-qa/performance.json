@@ -1,0 +1,42 @@
+{
+  "metrics": [
+    {
+      "on": false,
+      "fps": 60.27288382519638,
+      "miniFrames": 0,
+      "main": {
+        "frame": 177,
+        "calls": 171,
+        "triangles": 25888,
+        "points": 0,
+        "lines": 36
+      },
+      "memory": {
+        "geometries": 1,
+        "textures": 0
+      },
+      "heap": 15159282
+    },
+    {
+      "on": true,
+      "fps": 59.96002664890073,
+      "miniFrames": 0,
+      "main": {
+        "frame": 274,
+        "calls": 171,
+        "triangles": 25888,
+        "points": 0,
+        "lines": 36
+      },
+      "memory": {
+        "geometries": 1,
+        "textures": 0
+      },
+      "heap": 14886898
+    }
+  ],
+  "hint": true,
+  "languages": 9,
+  "correctHidden": true,
+  "errors": []
+}

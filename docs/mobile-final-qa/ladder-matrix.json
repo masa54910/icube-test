@@ -1,0 +1,352 @@
+[
+  {
+    "size": "desktop",
+    "method": "fixture near ladder, real input to catch",
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "LADDER",
+      "legAngles": [
+        [
+          0.651563536050947,
+          -0.85
+        ],
+        [
+          0.6484364639490532,
+          -0.85
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        -12,
+        -0.5013,
+        -1.35
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 0,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "CLIMB",
+      "speed": 0,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 233.60000000000014,
+      "attempts": 0,
+      "ladder": "AlphabetLadder--2-0-0-4",
+      "camera": [
+        -14.74064625362958,
+        1.2474141080387589,
+        -1.3499999999999999
+      ],
+      "quaternion": [
+        -0.06355373162112232,
+        -0.7042449312540562,
+        -0.06355373162112232,
+        0.7042449312540562
+      ]
+    },
+    "pass": true
+  },
+  {
+    "size": "laptop",
+    "method": "fixture near ladder, real input to catch",
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "LADDER",
+      "legAngles": [
+        [
+          0.7619551114390829,
+          -0.85
+        ],
+        [
+          0.538044888560917,
+          -0.85
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        -12,
+        0.51592,
+        -1.35
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 0,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "CLIMB",
+      "speed": 0.9999999999999994,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 516.4,
+      "attempts": 0,
+      "ladder": "AlphabetLadder--2-0-0-4",
+      "camera": [
+        -14.74064625362958,
+        2.264634108038759,
+        -1.3499999999999999
+      ],
+      "quaternion": [
+        -0.06355373162112225,
+        -0.7042449312540563,
+        -0.06355373162112225,
+        0.7042449312540562
+      ]
+    },
+    "pass": true
+  },
+  {
+    "size": "tablet-landscape",
+    "method": "fixture near ladder, real input to catch",
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "LADDER",
+      "legAngles": [
+        [
+          0.7987411019412562,
+          -0.85
+        ],
+        [
+          0.5012588980587438,
+          -0.85
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        -12,
+        0.4985399999999998,
+        -1.35
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 0,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "CLIMB",
+      "speed": 0.9999999999999994,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 666.2,
+      "attempts": 0,
+      "ladder": "AlphabetLadder--2-0-0-4",
+      "camera": [
+        -14.74064625362958,
+        2.2472541080387587,
+        -1.3499999999999999
+      ],
+      "quaternion": [
+        -0.06355373162112225,
+        -0.7042449312540563,
+        -0.06355373162112225,
+        0.7042449312540562
+      ]
+    },
+    "pass": true
+  },
+  {
+    "size": "tablet-portrait",
+    "method": "fixture near ladder, real input to catch",
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "LADDER",
+      "legAngles": [
+        [
+          0.8439828596073948,
+          -0.85
+        ],
+        [
+          0.45601714039260505,
+          -0.85
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        -12,
+        0.45821999999999985,
+        -1.35
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 0,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "CLIMB",
+      "speed": 1,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 649.7999999999997,
+      "attempts": 0,
+      "ladder": "AlphabetLadder--2-0-0-4",
+      "camera": [
+        -14.74064625362958,
+        2.206934108038759,
+        -1.3499999999999999
+      ],
+      "quaternion": [
+        -0.06355373162112225,
+        -0.7042449312540563,
+        -0.06355373162112225,
+        0.7042449312540562
+      ]
+    },
+    "pass": true
+  },
+  {
+    "size": "mobile-portrait",
+    "method": "fixture near ladder, real input to catch",
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "LADDER",
+      "legAngles": [
+        [
+          0.8651248782555236,
+          -0.85
+        ],
+        [
+          0.43487512174447635,
+          -0.85
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        -12,
+        0.43817999999999985,
+        -1.35
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 0,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "CLIMB",
+      "speed": 1,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 616.3000000000001,
+      "attempts": 0,
+      "ladder": "AlphabetLadder--2-0-0-4",
+      "camera": [
+        -14.74064625362958,
+        2.186894108038759,
+        -1.3499999999999999
+      ],
+      "quaternion": [
+        -0.06355373162112225,
+        -0.7042449312540563,
+        -0.06355373162112225,
+        0.7042449312540562
+      ]
+    },
+    "pass": true
+  },
+  {
+    "size": "mobile-landscape",
+    "method": "fixture near ladder, real input to catch",
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "LADDER",
+      "legAngles": [
+        [
+          0.8582852398805116,
+          -0.85
+        ],
+        [
+          0.4417147601194882,
+          -0.85
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        -12,
+        0.4425117674999999,
+        -1.35
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 0,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "CLIMB",
+      "speed": 1,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 599.8,
+      "attempts": 0,
+      "ladder": "AlphabetLadder--2-0-0-4",
+      "camera": [
+        -14.74064625362958,
+        2.191225875538759,
+        -1.3499999999999999
+      ],
+      "quaternion": [
+        -0.06355373162112225,
+        -0.7042449312540563,
+        -0.06355373162112225,
+        0.7042449312540562
+      ]
+    },
+    "pass": true
+  },
+  {
+    "size": "small-mobile",
+    "method": "fixture near ladder, real input to catch",
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "LADDER",
+      "legAngles": [
+        [
+          1.0294621002330286,
+          -0.85
+        ],
+        [
+          0.2705378997669714,
+          -0.85
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        -12,
+        0.12286442999999982,
+        -1.35
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 0,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "CLIMB",
+      "speed": 1,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 466.49999999999983,
+      "attempts": 0,
+      "ladder": "AlphabetLadder--2-0-0-4",
+      "camera": [
+        -14.74064625362958,
+        1.8715785380387588,
+        -1.3499999999999999
+      ],
+      "quaternion": [
+        -0.06355373162112232,
+        -0.7042449312540562,
+        -0.06355373162112232,
+        0.7042449312540562
+      ]
+    },
+    "pass": true
+  }
+]

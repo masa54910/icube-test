@@ -1,0 +1,37 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Mobile + Responsive Final QA — i CUBE TEST</title>
+<style>body{margin:0;background:#071629;color:#e4f4ff;font:16px/1.65 system-ui,sans-serif}main{max-width:1500px;margin:auto;padding:28px}h1{font-size:clamp(24px,4vw,40px);line-height:1.2}h2{margin-top:36px}a{color:#75e1ff}.status{border-left:4px solid #46dcd3;padding:14px 20px;background:#102d43}.warn{border-left-color:#ffc471}table{border-collapse:collapse;width:100%;font-size:14px}td,th{padding:10px;border:1px solid #335168;text-align:left}th{background:#12344c}.scroll{overflow:auto}.matrix{display:grid;grid-template-columns:repeat(5,minmax(150px,1fr));gap:10px}.matrix figure{margin:0;background:#10293e;border-radius:10px;overflow:hidden}.matrix img{display:block;width:100%;height:220px;object-fit:contain;background:#030910}.matrix figcaption{padding:8px;font-size:12px}.note{color:#b9ccdc;font-size:14px}select{padding:10px;background:#fff;border-radius:8px;min-height:44px}pre{white-space:pre-wrap;background:#10293e;padding:18px;font-size:14px}.links{display:flex;gap:14px;flex-wrap:wrap}@media(max-width:800px){main{padding:16px}.matrix{grid-template-columns:repeat(2,minmax(0,1fr))}.matrix img{height:240px}}</style>
+<main><h1>i CUBE TEST<br>Mobile + Responsive Final QA</h1><p>2026-09-12 · Procedural v2 · Production build / Microsoft Edge（headless）</p>
+<div class="status"><b>READY FOR USER QA — Browser emulation</b><br>7サイズの操作・回答遷移、9言語×4サイズの主要画面、131自動テスト・Buildを確認。GLBへの交換は行っていません。</div>
+<p class="status warn"><b>Physical device: NOT TESTED</b><br>iPhone / iPad / Android実機、Safari、YouTubeアプリ実ホスト、OS画面ロック・バックグラウンド復帰、実機FPS・発熱は未確認です。エミュレーション結果を実機PASSとは扱いません。</p>
+<h2>Progress</h2><pre>[1/6] 現状調査・原因確認 — COMPLETE
+[2/6] 最小修正 — COMPLETE
+[3/6] 7サイズの基本操作QA — COMPLETE（エミュレーション）
+[4/6] 回帰テスト・Build — COMPLETE
+[5/6] 追加ブラウザQA — COMPLETE（下記範囲）
+[6/6] 比較ページ・最終報告 — COMPLETE
+実機受入確認 — PENDING</pre>
+<h2>Test Matrix</h2><div class="scroll"><table><thead><tr><th>環境</th><th>サイズ</th><th>結果 / 確認範囲</th></tr></thead><tbody>
+<tr><td>Desktop</td><td>1920×1080</td><td>PASS：キーボード移動、POV旋回、Jump、LOOK UP、回答→Result→Next</td></tr>
+<tr><td>Laptop</td><td>1366×768</td><td>PASS：同上</td></tr>
+<tr><td>Tablet Landscape</td><td>1024×768</td><td>PASS：タッチ基本操作、回答→Result→Next</td></tr>
+<tr><td>Tablet Portrait</td><td>768×1024</td><td>PASS：同上</td></tr>
+<tr><td>Mobile Portrait</td><td>390×844</td><td>PASS：配置補助なしタッチ通し操作も確認</td></tr>
+<tr><td>Mobile Landscape</td><td>844×390</td><td>PASS：配置補助なしタッチ通し操作も確認</td></tr>
+<tr><td>Small Mobile</td><td>360×640</td><td>PASS：タッチ基本操作、回答→Result→Next</td></tr>
+</tbody></table></div>
+<p class="note">7サイズの反復テストでは、回答端末付近へプレイヤーを配置してから実際のUIで回答しています。下の梯子画像も近傍配置後の入力によるキャッチです。390×844と844×390の通し操作は配置補助なし：開始→歩行→梯子→端でカメラ旋回→梯子Jump→端末へ歩行→回答→Correct→Next。</p>
+<h2>修正と確認した原因</h2><table><tr><th>原因</th><th>最小修正</th></tr><tr><td>非表示タブではLOOK UPのみ解除し、ゲームの更新条件がSDK pauseだけだった</td><td>document.hiddenでも更新停止、入力停止、復帰時に時間基準を再設定</td></tr><tr><td>HUDが42px、Safe Area未考慮。長い翻訳ラベルを1行へ詰めていた</td><td>44px以上・折り返し、四辺Safe Area、スクロール可能なModal、狭幅/横向き回答配置</td></tr><tr><td>画面回転後もドラッグ開始位置を保持</td><td>resize時に入力のみreset。位置・Stage・物理は保持</td></tr><tr><td>モバイルでV表示、説明がキーボード前提</td><td>モバイルのV表記除去、9言語のタッチ説明をキーボード説明と分離</td></tr><tr><td>HUD・結果・Home補助ラベルの英語固定</td><td>既存i18nへラベルを集約。進捗データには触れず表示のみ更新</td></tr><tr><td>保存言語の妥当性検証なし</td><td>対応9言語に含まれない値はブラウザ判定へフォールバック</td></tr></table>
+<h2>Lifecycle / Touch / UI</h2><ul><li>LOOK UPのタッチ押下・解除、POV切替と旋回、Jump・着地、タッチ回答、メニューが動作。</li><li>移動＋視点の2指入力を確認。回転後も位置・経過時間・Stageを保持。</li><li>Safe AreaはCSS変数で上30px・下24px・左右20pxを模擬し、HUD/Jumpの内側配置を確認。実OSのノッチは未確認。</li><li>非表示イベントの模擬試験で停止中の経過時間増分0。SDK pause/resume/audioコールバックの模擬ホスト試験もPASS。</li><li>OS凍結については、headlessのCDP操作でfreeze/visibilityイベントが届かなかったため未確認。PASSには含めない。</li><li>クリア情報・言語de・次ステージ1-2がreload後も維持され、Continueで再開。</li><li>Showcase手動5種、自動2周（0→1→2→3→4→0×2）、Home離脱停止、非BRANDでのBrand描画停止を確認。</li><li>Showcase画像の取得失敗時はBRANDを維持し、ゲーム開始可能。</li><li>31ステージのタイル表示、10択、1回不正解→2回目正解→次ステージを確認。</li></ul>
+<h2>i18n / Responsive</h2><p>en / ja / ko / zh-CN / zh-TW / es / pt / de / fr。Desktop、Mobile縦、Mobile横、Small Mobileの4サイズ×9言語でHome・How To Play・Stage Select・HUD・Answer・Resultを撮影・操作。横スクロールなし。長いラベルは折り返しを許可し、本文は縦スクロールで読む構成です。</p>
+<h2>Performance / Regression</h2><table><tr><th>項目</th><th>実測・結果</th></tr><tr><td>自動テスト / Build</td><td>131 / 131 PASS（18ファイル）、TypeScript / Production Build PASS</td></tr><tr><td>Home↔Gameplay 10往復</td><td>Geometry 146 / Texture 2 / Canvas 2で安定</td></tr><tr><td>このPCのモバイルエミュレーション</td><td>フレーム中央値16.7ms、p95 16.9ms、170 draw calls、25,408 triangles。実機性能の保証ではない</td></tr><tr><td>追加遅延200ms/リクエスト</td><td>Home操作可能まで約1,228ms。通信帯域/実モバイル回線の再現ではない</td></tr><tr><td>Console</td><td>最終基本操作マトリクス・繰り返し試験でpageerror / WebGL重大エラー0</td></tr><tr><td>保護対象</td><td>Stage・Quiz・物理・Jump距離・Ladder mechanics・Save schema・SDK・GLB基盤・Roblox版は変更なし</td></tr></table>
+<p class="note">Viteの500KBチャンク警告は残存。今回のJSは約634KB（gzip約172KB）。Phase A/Bの前後性能を同一条件で再比較したものではありません。</p>
+<h2>サイズ別スクリーンショット</h2><p>画像をクリックで原寸。Homeは最上部、縦長ページの下部はスクロール操作で確認しています。</p><label>表示サイズ <select id="size"></select></label><div id="matrix" class="matrix"></div>
+<h2>9言語の証跡</h2><label>言語 <select id="language"></select></label><div id="languages" class="matrix"></div>
+<h2>検証ログ</h2><div class="links"><a href="mobile-final-qa/runtime.json">7サイズ基本操作</a><a href="mobile-final-qa/ladder-matrix.json">梯子7サイズ</a><a href="mobile-final-qa/touch-flow.json">縦タッチ通し</a><a href="mobile-final-qa/landscape-touch.json">横タッチ通し</a><a href="mobile-final-qa/languages.json">9言語×4サイズ</a><a href="mobile-final-qa/lifecycle.json">回転・保存・Showcase</a><a href="mobile-final-qa/extended.json">SDK模擬・遅延・メモリ</a></div>
+<h2>Remaining / 実機受入チェック</h2><ol><li>iOS Safari / YouTubeアプリ、Android Chrome / YouTubeアプリで同じ通し操作。</li><li>本物のノッチ、ホームバー、アドレスバー伸縮、画面ロック・アプリ切替復帰。</li><li>低性能端末で30fps、発熱・バッテリー、長時間プレイ、低メモリ復帰。</li><li>実YouTube PlayablesホストのPause/Resume・音声制御・保存。現状は契約コールバックの模擬試験まで。</li></ol>
+</main><script>
+const sizes=['desktop','laptop','tablet-landscape','tablet-portrait','mobile-portrait','mobile-landscape','small-mobile'],locales=['en','ja','ko','zh-CN','zh-TW','es','pt','de','fr'];
+const size=document.querySelector('#size'),language=document.querySelector('#language');for(const x of sizes)size.add(new Option(x,x));for(const x of locales)language.add(new Option(x,x));size.value='mobile-portrait';language.value='ja';
+function gallery(target,entries){target.replaceChildren(...entries.map(([path,label])=>{const f=document.createElement('figure'),a=document.createElement('a'),img=new Image(),c=document.createElement('figcaption');a.href=path;a.target='_blank';img.src=path;img.alt=label;img.loading='lazy';a.append(img);c.textContent=label;f.append(a,c);return f;}));}
+function render(){gallery(document.querySelector('#matrix'),['home','gameplay','ladder-fixture','answer','correct'].map(x=>['mobile-final-qa/'+size.value+'/'+x+'.png',x]));const s=['desktop','mobile-portrait','mobile-landscape','small-mobile'].includes(size.value)?size.value:'mobile-portrait';gallery(document.querySelector('#languages'),['home','help','stages','hud','answer','result'].map(x=>['mobile-final-qa/'+s+'/'+language.value+'-'+x+'.png',language.value+' / '+s+' / '+x]));}size.onchange=render;language.onchange=render;render();
+</script></html>

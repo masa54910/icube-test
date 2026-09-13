@@ -1,0 +1,6536 @@
+{
+  "shift": true,
+  "translations": [
+    {
+      "locale": "ja",
+      "text": "遊び方\nEnglish\n日本語\n한국어\n简体中文\n繁體中文\nEspañol\nPortuguês\nDeutsch\nFrançais\n戻る\n◇\n1. 自由に探索\n\n自由に探索し、空間の形を記憶しよう。\n\n⌨\n2. 操作方法\n\nキーボードとマウスでキュービーを操作します。\n\n移動\nW\n↑\n前進\nS\n↓\n振り向いて後方へ移動\nA\n←\n左旋回\nD\n→\n右旋回\nSPACE\nジャンプ\nカメラ\nV\n視点切替\nLOOK UP\nShift\nLOOK UPボタンまたはShiftを押している間、真上を見る\n☷\n3. 梯子\n\n梯子を使って上下のフロアを移動できます。\n\nW\n↑\n上へ\nS\n↓\n下へ\nA\n←\n左へ\nD\n→\n右へ\n\n梯子端では左右キーで視点を旋回できます。\n\n✣\n4. 回答\n\nAnswer Pointで、探索した形と一致するものを選びます。 回答権は2回です。\n\n戻る"
+    },
+    {
+      "locale": "en",
+      "text": "HOW TO PLAY\nEnglish\n日本語\n한국어\n简体中文\n繁體中文\nEspañol\nPortuguês\nDeutsch\nFrançais\nBACK\n◇\n1. Explore freely\n\nExplore freely and remember the shape of the space.\n\n⌨\n2. CONTROLS\n\nUse the keyboard and mouse to control Cubie.\n\nMovement\nW\n↑\nForward\nS\n↓\nTurn around and move back\nA\n←\nTurn left\nD\n→\nTurn right\nSPACE\nJump\nCamera\nV\nSwitch view\nLOOK UP\nShift\nHold LOOK UP or Shift to look straight up\n☷\n3. Ladders\n\nUse ladders to move between floors.\n\nW\n↑\nClimb up\nS\n↓\nClimb down\nA\n←\nMove left\nD\n→\nMove right\n\nAt either end, left/right turns the camera.\n\n✣\n4. Answer\n\nAt the Answer Point, choose the shape that matches the space you explored. You have two attempts.\n\nBACK"
+    },
+    {
+      "locale": "ko",
+      "text": "플레이 방법\nEnglish\n日本語\n한국어\n简体中文\n繁體中文\nEspañol\nPortuguês\nDeutsch\nFrançais\n뒤로\n◇\n1. 자유롭게 탐색\n\n자유롭게 탐색하며 공간의 형태를 기억하세요.\n\n⌨\n2. 조작 방법\n\n키보드와 마우스로 큐비를 조작하세요.\n\n이동\nW\n↑\n앞으로 이동\nS\n↓\n뒤돌아 이동\nA\n←\n왼쪽으로 회전\nD\n→\n오른쪽으로 회전\nSPACE\n점프\n카메라\nV\n시점 전환\nLOOK UP\nShift\nLOOK UP 버튼이나 Shift를 누르는 동안 위 보기\n☷\n3. 사다리\n\n사다리를 이용해 위아래 층으로 이동하세요.\n\nW\n↑\n위로\nS\n↓\n아래로\nA\n←\n왼쪽으로\nD\n→\n오른쪽으로\n\n사다리 끝에서는 좌우 키로 시점을 돌릴 수 있어요.\n\n✣\n4. 정답 선택\n\nAnswer Point에서 탐색한 공간과 일치하는 형태를 선택하세요. 답변 기회는 두 번입니다.\n\n뒤로"
+    },
+    {
+      "locale": "de",
+      "text": "SPIELANLEITUNG\nEnglish\n日本語\n한국어\n简体中文\n繁體中文\nEspañol\nPortuguês\nDeutsch\nFrançais\nZURÜCK\n◇\n1. Frei erkunden\n\nErkunde frei und merke dir die Form des Raums.\n\n⌨\n2. STEUERUNG\n\nSteuere Cubie mit Tastatur und Maus.\n\nBewegung\nW\n↑\nVorwärts\nS\n↓\nUmdrehen und zurückgehen\nA\n←\nNach links drehen\nD\n→\nNach rechts drehen\nSPACE\nSpringen\nKamera\nV\nAnsicht wechseln\nLOOK UP\nShift\nLOOK UP oder Shift gedrückt halten: nach oben schauen\n☷\n3. Leitern\n\nBenutze Leitern, um zwischen den Stockwerken zu wechseln.\n\nW\n↑\nHochklettern\nS\n↓\nHerunterklettern\nA\n←\nNach links bewegen\nD\n→\nNach rechts bewegen\n\nAm Leiterende drehen die Links-/Rechtstasten die Kamera.\n\n✣\n4. Antworten\n\nWähle am Answer Point die Form, die dem erkundeten Raum entspricht. Du hast zwei Versuche.\n\nZURÜCK"
+    },
+    {
+      "locale": "zh-TW",
+      "text": "玩法說明\nEnglish\n日本語\n한국어\n简体中文\n繁體中文\nEspañol\nPortuguês\nDeutsch\nFrançais\n返回\n◇\n1. 自由探索\n\n自由探索，記住空間的形狀。\n\n⌨\n2. 操作方法\n\n使用鍵盤和滑鼠控制Cubie。\n\n移動\nW\n↑\n前進\nS\n↓\n轉身向後移動\nA\n←\n向左轉\nD\n→\n向右轉\nSPACE\n跳躍\n鏡頭\nV\n切換視角\nLOOK UP\nShift\n按住 LOOK UP 按鈕或 Shift 查看正上方\n☷\n3. 梯子\n\n使用梯子在上下樓層之間移動。\n\nW\n↑\n向上\nS\n↓\n向下\nA\n←\n向左\nD\n→\n向右\n\n在梯子邊緣，左右鍵可旋轉視角。\n\n✣\n4. 回答\n\n在Answer Point選擇與探索過的空間一致的形狀。 你有兩次回答機會。\n\n返回"
+    },
+    {
+      "locale": "zh-CN",
+      "text": "玩法说明\nEnglish\n日本語\n한국어\n简体中文\n繁體中文\nEspañol\nPortuguês\nDeutsch\nFrançais\n返回\n◇\n1. 自由探索\n\n自由探索，记住空间的形状。\n\n⌨\n2. 操作方法\n\n使用键盘和鼠标控制Cubie。\n\n移动\nW\n↑\n前进\nS\n↓\n转身向后移动\nA\n←\n向左转\nD\n→\n向右转\nSPACE\n跳跃\n镜头\nV\n切换视角\nLOOK UP\nShift\n按住 LOOK UP 按钮或 Shift 查看正上方\n☷\n3. 梯子\n\n使用梯子在上下楼层之间移动。\n\nW\n↑\n向上\nS\n↓\n向下\nA\n←\n向左\nD\n→\n向右\n\n在梯子边缘，左右键可旋转视角。\n\n✣\n4. 回答\n\n在Answer Point选择与探索过的空间一致的形状。 你有两次回答机会。\n\n返回"
+    },
+    {
+      "locale": "es",
+      "text": "CÓMO JUGAR\nEnglish\n日本語\n한국어\n简体中文\n繁體中文\nEspañol\nPortuguês\nDeutsch\nFrançais\nVOLVER\n◇\n1. Explora libremente\n\nExplora libremente y recuerda la forma del espacio.\n\n⌨\n2. CONTROLES\n\nControla a Cubie con el teclado y el ratón.\n\nMovimiento\nW\n↑\nAvanzar\nS\n↓\nDarse la vuelta y regresar\nA\n←\nGirar a la izquierda\nD\n→\nGirar a la derecha\nSPACE\nSaltar\nCámara\nV\nCambiar de vista\nLOOK UP\nShift\nMantén LOOK UP o Shift para mirar arriba\n☷\n3. Escaleras\n\nUsa las escaleras para moverte entre pisos.\n\nW\n↑\nSubir\nS\n↓\nBajar\nA\n←\nMoverse a la izquierda\nD\n→\nMoverse a la derecha\n\nEn los extremos, izquierda/derecha gira la cámara.\n\n✣\n4. Responde\n\nEn el Answer Point, elige la forma que coincide con el espacio que exploraste. Tienes dos intentos.\n\nVOLVER"
+    },
+    {
+      "locale": "pt",
+      "text": "COMO JOGAR\nEnglish\n日本語\n한국어\n简体中文\n繁體中文\nEspañol\nPortuguês\nDeutsch\nFrançais\nVOLTAR\n◇\n1. Explore livremente\n\nExplore livremente e memorize a forma do espaço.\n\n⌨\n2. CONTROLOS\n\nUse o teclado e o rato para controlar Cubie.\n\nMovimento\nW\n↑\nAvançar\nS\n↓\nVirar e voltar\nA\n←\nVirar à esquerda\nD\n→\nVirar à direita\nSPACE\nSaltar\nCâmara\nV\nMudar de perspetiva\nLOOK UP\nShift\nMantenha LOOK UP ou Shift para olhar para cima\n☷\n3. Escadas\n\nUse as escadas para se deslocar entre os pisos.\n\nW\n↑\nSubir\nS\n↓\nDescer\nA\n←\nMover à esquerda\nD\n→\nMover à direita\n\nNas extremidades, esquerda/direita roda a câmara.\n\n✣\n4. Responda\n\nNo Answer Point, escolha a forma que corresponde ao espaço explorado. Tem duas tentativas.\n\nVOLTAR"
+    },
+    {
+      "locale": "fr",
+      "text": "COMMENT JOUER\nEnglish\n日本語\n한국어\n简体中文\n繁體中文\nEspañol\nPortuguês\nDeutsch\nFrançais\nRETOUR\n◇\n1. Explore librement\n\nExplore librement et mémorise la forme de l’espace.\n\n⌨\n2. COMMANDES\n\nContrôle Cubie avec le clavier et la souris.\n\nDéplacement\nW\n↑\nAvancer\nS\n↓\nSe retourner et revenir\nA\n←\nTourner à gauche\nD\n→\nTourner à droite\nSPACE\nSauter\nCaméra\nV\nChanger de vue\nLOOK UP\nShift\nMaintenez LOOK UP ou Shift pour regarder en haut\n☷\n3. Échelles\n\nUtilise les échelles pour passer d’un étage à l’autre.\n\nW\n↑\nMonter\nS\n↓\nDescendre\nA\n←\nSe déplacer à gauche\nD\n→\nSe déplacer à droite\n\nAux extrémités, les touches gauche/droite tournent la caméra.\n\n✣\n4. Réponds\n\nAu Answer Point, choisis la forme qui correspond à l’espace exploré. Tu as droit à deux essais.\n\nRETOUR"
+    }
+  ],
+  "landings": {
+    "normal": [
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -7.336710285849283e-9,
+        "pelvis": 0.8987960140752316,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -6.004388164052168e-9,
+        "pelvis": 0.8987026668931061,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -4.919911640204285e-9,
+        "pelvis": 0.8986113852113582,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -4.0264720792777996e-9,
+        "pelvis": 0.8985211763325188,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.16382808656514433,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.8389791788411056,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.38941523016844903,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.5593341788411057,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.44040170366413134,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.3923104755077746,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.4539820653224234,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.3126986355077737,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.2358849855077736,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.165310865507771,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.0970550430077717,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.0324247905077724,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.971420108007773,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.9143683980077715,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.860593145507772,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.811011883007772,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.763919610507773,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.7215026480077729,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.6819672080077723,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.6464954980077715,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.614430245507772,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5862989830077718,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5613089830077715,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5400987305077718,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5226031605077714,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5086898705077718,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.4982215880077714,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.4915861480077715,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.4884386155077713,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.4889166530077713,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.4929795030077713,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.500686970507771,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.511852108007771,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5267672955077707,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5451808455077711,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5676236230077707,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5930959105077704,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.622491668007772,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.6555129955077714,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.6916888330077713,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.7326902830077713,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.7760518705077712,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.8232531405077694,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.8740366905077706,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.9287463080077698,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.986715998007771,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.0486550455077706,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.1146286455077714,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.18254924550777,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.255321583007769,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.3326673905077717,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.4117432280077717,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.4959095480077726,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.5832058755077716,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.6741277730077706,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.7680929030077728,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.866244230507772,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.016699999999999826,
+        "compression": 0.004129539046031165,
+        "impact": 0.411046428571431,
+        "knee": -0.3173926034890914,
+        "pelvis": 0.8981151828583713,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.04989999999999961,
+        "compression": 0.03498642241340572,
+        "impact": 0.411046428571431,
+        "knee": -0.155487023693426,
+        "pelvis": 0.8981957242312999,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.06630000000000014,
+        "compression": 0.060120305435531485,
+        "impact": 0.411046428571431,
+        "knee": -0.12070230504458292,
+        "pelvis": 0.8981157064028006,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.08330000000000015,
+        "compression": 0.10335624064619908,
+        "impact": 0.411046428571431,
+        "knee": -0.10990407933379685,
+        "pelvis": 0.8977206292984691,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.1166999999999998,
+        "compression": 0.3447538004430129,
+        "impact": 0.411046428571431,
+        "knee": -0.21671993626062988,
+        "pelvis": 0.8905111103463302,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.1333000000000002,
+        "compression": 0.48827952575698697,
+        "impact": 0.411046428571431,
+        "knee": -0.4228869518483005,
+        "pelvis": 0.8824648848263836,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.1498000000000002,
+        "compression": 0.6318410507741591,
+        "impact": 0.411046428571431,
+        "knee": -0.5472220765355079,
+        "pelvis": 0.8716603035508861,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.16639999999999966,
+        "compression": 0.7662041371555425,
+        "impact": 0.411046428571431,
+        "knee": -0.6635906585534895,
+        "pelvis": 0.8590948242524158,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.18300000000000005,
+        "compression": 0.8794607633411079,
+        "impact": 0.411046428571431,
+        "knee": -0.7616794517503459,
+        "pelvis": 0.8467030068606329,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.19980000000000026,
+        "compression": 0.961317580068619,
+        "impact": 0.411046428571431,
+        "knee": -0.8325736381494913,
+        "pelvis": 0.8367590968562421,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.21650000000000008,
+        "compression": 0.9987564802500001,
+        "impact": 0.411046428571431,
+        "knee": -0.8649985536806346,
+        "pelvis": 0.8319843580730643,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.23309999999999953,
+        "compression": 1,
+        "impact": 0.411046428571431,
+        "knee": -0.8660755357142871,
+        "pelvis": 0.8319183532529038,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.2665999999999995,
+        "compression": 1,
+        "impact": 0.411046428571431,
+        "knee": -0.8660755357142871,
+        "pelvis": 0.8321201959856286,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.28300000000000003,
+        "compression": 0.999702,
+        "impact": 0.411046428571431,
+        "knee": -0.8658174452046442,
+        "pelvis": 0.8322594477838272,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.29969999999999986,
+        "compression": 0.9876299905925928,
+        "impact": 0.411046428571431,
+        "knee": -0.8553621731899761,
+        "pelvis": 0.8339533326863761,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3164999999999991,
+        "compression": 0.959193675925928,
+        "impact": 0.411046428571431,
+        "knee": -0.8307341767313043,
+        "pelvis": 0.8377342350160439,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3333000000000002,
+        "compression": 0.9165199212592586,
+        "impact": 0.411046428571431,
+        "knee": -0.7937754817974286,
+        "pelvis": 0.8431666178923278,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3499999999999991,
+        "compression": 0.8620740740740774,
+        "impact": 0.411046428571431,
+        "knee": -0.7466212655291046,
+        "pelvis": 0.8497345988198302,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3665999999999995,
+        "compression": 0.7981229552592616,
+        "impact": 0.411046428571431,
+        "knee": -0.6912347660420349,
+        "pelvis": 0.8569478924640372,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3830999999999995,
+        "compression": 0.7268583919259283,
+        "impact": 0.411046428571431,
+        "knee": -0.6295142711756736,
+        "pelvis": 0.8643529431385953,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3998000000000002,
+        "compression": 0.6489597327407398,
+        "impact": 0.411046428571431,
+        "knee": -0.5620481481904368,
+        "pelvis": 0.8716824749123926,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.41659999999999947,
+        "compression": 0.5668217700740769,
+        "impact": 0.411046428571431,
+        "knee": -0.4909104681714266,
+        "pelvis": 0.8785410613169372,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.4498000000000002,
+        "compression": 0.40157499199999913,
+        "impact": 0.411046428571431,
+        "knee": -0.3477942763258598,
+        "pelvis": 0.8896126256321565,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.46619999999999984,
+        "compression": 0.3225139205925935,
+        "impact": 0.411046428571431,
+        "knee": -0.27932141655254544,
+        "pelvis": 0.8936130092323098,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.48290000000000055,
+        "compression": 0.24646562140740508,
+        "impact": 0.411046428571431,
+        "knee": -0.21345784509557303,
+        "pelvis": 0.8966662729680452,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.49990000000000057,
+        "compression": 0.17579867399999782,
+        "impact": 0.411046428571431,
+        "knee": -0.15225493076240942,
+        "pelvis": 0.8988058190784384,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5165999999999995,
+        "compression": 0.11510828859259431,
+        "impact": 0.411046428571431,
+        "knee": -0.09969247270798588,
+        "pelvis": 0.9001106037426588,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5330999999999995,
+        "compression": 0.06567872525926075,
+        "impact": 0.411046428571431,
+        "knee": -0.05688273716394573,
+        "pelvis": 0.9008169418373901,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5499000000000006,
+        "compression": 0.028180266592591537,
+        "impact": 0.411046428571431,
+        "knee": -0.024406239485750145,
+        "pelvis": 0.9011531001134209,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5664999999999991,
+        "compression": 0.005892750000000784,
+        "impact": 0.411046428571431,
+        "knee": -0.005103566613081045,
+        "pelvis": 0.9012978159024966,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.003370090609878485,
+        "pelvis": 0.901391425911148,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.0014658563797062085,
+        "pelvis": 0.9015694793278132,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.0009655471255836694,
+        "pelvis": 0.9016560713350426,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.0006344096682463019,
+        "pelvis": 0.9017412234049538,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.00041372227285139094,
+        "pelvis": 0.9018257747127498,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.0002759431621275353,
+        "pelvis": 0.901903808223097,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": 0,
+        "pelvis": 0.9019815898417887,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": 0,
+        "pelvis": 0.902057524529896,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      }
+    ],
+    "forward": [
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": 0,
+        "pelvis": 0.9026693625731991,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": 0,
+        "pelvis": 0.9027143994409855,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": 0,
+        "pelvis": 0.9027565359744505,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": 0,
+        "pelvis": 0.902795442066189,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.1630366652615967,
+        "pelvis": 0.9,
+        "position": [
+          -2.9601600000000037,
+          -2.839566711341113,
+          -2.439496423901314e-18
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.34247769750710877,
+        "pelvis": 0.9,
+        "position": [
+          -2.880000000000001,
+          -2.649362618007771,
+          -7.34788079488412e-18
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.3889611713564471,
+        "pelvis": 0.9,
+        "position": [
+          -2.8404000000000007,
+          -2.560442055507771,
+          -9.772681457195878e-18
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.42018322716006457,
+        "pelvis": 0.9,
+        "position": [
+          -2.800080000000002,
+          -2.4735574955077744,
+          -1.2241569404276837e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.4405992006605286,
+        "pelvis": 0.9,
+        "position": [
+          -2.7600000000000007,
+          -2.3908211030077706,
+          -1.469576158976824e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.45398206510417183,
+        "pelvis": 0.9,
+        "position": [
+          -2.7201600000000044,
+          -2.312167813007777,
+          -1.7135258013669552e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.6803200000000036,
+          -2.237096803007775,
+          -1.9574754437571135e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.640480000000003,
+          -2.1656080730077734,
+          -2.2014250861472718e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.6001600000000042,
+          -2.096916233007776,
+          -2.4483138808553673e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.560560000000004,
+          -2.033006370507776,
+          -2.6907939470865435e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.5207200000000034,
+          -1.9722860605077743,
+          -2.9347435894767015e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.4804000000000004,
+          -1.9144923805077705,
+          -3.1816323841848235e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.440560000000004,
+          -1.860979790507775,
+          -3.425582026574955e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.4004800000000026,
+          -1.8107649780077726,
+          -3.671001245124096e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.360160000000004,
+          -1.7639131380077744,
+          -3.917890039832192e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.3200800000000026,
+          -1.7209711755077723,
+          -4.1633092583813324e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.280240000000002,
+          -1.6818740255077713,
+          -4.40725890077149e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.240160000000005,
+          -1.6461614930077735,
+          -4.6526781193206035e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.2000800000000034,
+          -1.614074530507772,
+          -4.898097337869744e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.1604800000000033,
+          -1.5859218180077719,
+          -5.14057740410092e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.120400000000002,
+          -1.5610425755077706,
+          -5.3859966226500605e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.080320000000005,
+          -1.5397889030077718,
+          -5.631415841199174e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.0402400000000034,
+          -1.522160800507771,
+          -5.876835059748313e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -2.0004000000000026,
+          -1.5082259305077705,
+          -6.120784702138472e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.9603200000000052,
+          -1.4978272580077712,
+          -6.366203920687587e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.9200000000000026,
+          -1.4910299780077707,
+          -6.613092715395709e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.8801600000000063,
+          -1.4879066880077707,
+          -6.85704235778584e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.8403200000000055,
+          -1.4883656780077705,
+          -7.100992000176e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.8002400000000036,
+          -1.4924475755077706,
+          -7.346411218725139e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.7599200000000055,
+          -1.50021757550777,
+          -7.593300013433234e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.7198400000000036,
+          -1.5115723230077704,
+          -7.838719231982373e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.6797600000000061,
+          -1.5265526405077694,
+          -8.084138450531487e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.640160000000006,
+          -1.5449035280077692,
+          -8.326618516762664e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.6000800000000042,
+          -1.56709156550777,
+          -8.572037735311803e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.5600000000000023,
+          -1.592905173007771,
+          -8.817456953860942e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.5199200000000048,
+          -1.622344350507769,
+          -9.062876172410057e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.4803200000000047,
+          -1.6549809380077687,
+          -9.305356238641233e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.440480000000004,
+          -1.6913922080077692,
+          -9.549305881031392e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.4001600000000058,
+          -1.7319003680077674,
+          -9.796194675739487e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.360320000000005,
+          -1.775519358007768,
+          -1.0040144318129646e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.320720000000005,
+          -1.8224201955077677,
+          -1.0282624384360822e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.2801600000000057,
+          -1.8741489830077662,
+          -1.05309827552279e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.240320000000005,
+          -1.928557973007767,
+          -1.0774932397618058e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.200960000000006,
+          -1.9858185730077655,
+          -1.1015942887690252e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.1606400000000034,
+          -2.048123053007769,
+          -1.1262831682398375e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.1203200000000053,
+          -2.1140966530077665,
+          -1.1509720477106472e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.0804800000000045,
+          -2.182877923007768,
+          -1.1753670119496629e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.0404000000000027,
+          -2.2556936805077714,
+          -1.199908933804577e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -1.0008000000000026,
+          -2.3311873680077713,
+          -1.2241569404276947e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -0.9604800000000042,
+          -2.4117064080077677,
+          -1.2488458198985044e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -0.9208800000000041,
+          -2.4943429455077677,
+          -1.273093826521622e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -0.8805600000000058,
+          -2.5821347055077637,
+          -1.2977827059924318e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -0.8409600000000057,
+          -2.6719140930077634,
+          -1.3220307126155494e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -0.8004000000000022,
+          -2.7675609105077714,
+          -1.3468665497022596e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.411046428571431,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -0.7608000000000021,
+          -2.8645045980077715,
+          -1.3711145563253772e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.016699999999998938,
+        "compression": 0.004129539046030731,
+        "impact": 0.4107678571428575,
+        "knee": -0.33123808522482884,
+        "pelvis": 0.9009239910069475,
+        "position": [
+          -0.7207200000000047,
+          -2.9398000013411045,
+          -1.3956564781802884e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.050000000000000044,
+        "compression": 0.03512109375000006,
+        "impact": 0.4107678571428575,
+        "knee": -0.27190448043540644,
+        "pelvis": 0.9023550188464865,
+        "position": [
+          -0.5958450000000006,
+          -2.9398000013411045,
+          -1.4721203627020537e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.06669999999999898,
+        "compression": 0.0608073868116545,
+        "impact": 0.4107678571428575,
+        "knee": -0.29406507813293603,
+        "pelvis": 0.9021131333571449,
+        "position": [
+          -0.5332200000000047,
+          -2.9398000013411045,
+          -1.5104671156003529e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.083199999999999,
+        "compression": 0.10279599156542876,
+        "impact": 0.4107678571428575,
+        "knee": -0.34989217171644443,
+        "pelvis": 0.900945200112231,
+        "position": [
+          -0.47134500000000473,
+          -2.9398000013411045,
+          -1.5483546259489742e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.10000000000000009,
+        "compression": 0.21240984256559825,
+        "impact": 0.4107678571428575,
+        "knee": -0.436641359278043,
+        "pelvis": 0.8972507820416332,
+        "position": [
+          -0.4083450000000007,
+          -2.9398000013411045,
+          -1.5869310001221184e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.11669999999999903,
+        "compression": 0.34475380044300635,
+        "impact": 0.4107678571428575,
+        "knee": -0.5351385889041356,
+        "pelvis": 0.8903857162617898,
+        "position": [
+          -0.34572000000000475,
+          -2.9398000013411045,
+          -1.6252777530204176e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.13319999999999904,
+        "compression": 0.48740118540799154,
+        "impact": 0.4107678571428575,
+        "knee": -0.8131568006229235,
+        "pelvis": 0.8802052076222092,
+        "position": [
+          -0.28384500000000473,
+          -2.9398000013411045,
+          -1.663165263369039e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.15000000000000013,
+        "compression": 0.633542000000001,
+        "impact": 0.4107678571428575,
+        "knee": -0.8650869110388975,
+        "pelvis": 0.866952427914957,
+        "position": [
+          -0.22084500000000065,
+          -2.9398000013411045,
+          -1.7017416375421831e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.16669999999999907,
+        "compression": 0.7684714289940279,
+        "impact": 0.4107678571428575,
+        "knee": -0.884022019412597,
+        "pelvis": 0.8523776316869534,
+        "position": [
+          -0.15822000000000475,
+          -2.9398000013411045,
+          -1.7400883904404823e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.18329999999999946,
+        "compression": 0.8812451461447371,
+        "impact": 0.4107678571428575,
+        "knee": -0.8817665526186284,
+        "pelvis": 0.8387131964678193,
+        "position": [
+          -0.09597000000000339,
+          -2.9398000013411045,
+          -1.7782055220639442e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.20009999999999872,
+        "compression": 0.9624102872226135,
+        "impact": 0.4107678571428575,
+        "knee": -0.8719396863767475,
+        "pelvis": 0.828390142089778,
+        "position": [
+          -0.032970000000006106,
+          -2.9398000013411045,
+          -1.816781896237084e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.2170000000000002,
+        "compression": 0.9990845852303207,
+        "impact": 0.4107678571428575,
+        "knee": -0.8660637375566893,
+        "pelvis": 0.8242623528391435,
+        "position": [
+          0.03040499999999935,
+          -2.9398000013411045,
+          -1.8555878916850693e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.23329999999999945,
+        "compression": 1,
+        "impact": 0.4107678571428575,
+        "knee": -0.8659223214285716,
+        "pelvis": 0.8256988298271315,
+        "position": [
+          0.09152999999999663,
+          -2.9398000013411045,
+          -1.8930161594840084e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.2665999999999987,
+        "compression": 1,
+        "impact": 0.4107678571428575,
+        "knee": -0.8659223214285716,
+        "pelvis": 0.8309667993761762,
+        "position": [
+          0.2164049999999939,
+          -2.9398000013411045,
+          -1.9694800440057693e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.2831999999999991,
+        "compression": 0.9924663896805945,
+        "impact": 0.4107678571428575,
+        "knee": -0.8645576711071608,
+        "pelvis": 0.8349275016483652,
+        "position": [
+          0.27865499999999527,
+          -2.9398000013411045,
+          -2.0075971756292313e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3000000000000002,
+        "compression": 0.9425465807145569,
+        "impact": 0.4107678571428575,
+        "knee": -0.8468150083864472,
+        "pelvis": 0.8440323226295282,
+        "position": [
+          0.3416549999999993,
+          -2.9398000013411045,
+          -2.0461735498023755e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.31679999999999947,
+        "compression": 0.8782278990481812,
+        "impact": 0.4107678571428575,
+        "knee": -0.8048530559523572,
+        "pelvis": 0.8538163485764537,
+        "position": [
+          0.4046549999999966,
+          -2.9398000013411045,
+          -2.0847499239755152e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3331999999999991,
+        "compression": 0.8052595487731212,
+        "impact": 0.4107678571428575,
+        "knee": -0.7340187787605031,
+        "pelvis": 0.8629892579407468,
+        "position": [
+          0.46615499999999527,
+          -2.9398000013411045,
+          -2.1224078130492955e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3498999999999998,
+        "compression": 0.7240496140538986,
+        "impact": 0.4107678571428575,
+        "knee": -0.6595478948544501,
+        "pelvis": 0.871147835632467,
+        "position": [
+          0.528779999999998,
+          -2.9398000013411045,
+          -2.1607545659475986e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3665999999999987,
+        "compression": 0.63898880310135,
+        "impact": 0.4107678571428575,
+        "knee": -0.5960611945174292,
+        "pelvis": 0.8776125354766507,
+        "position": [
+          0.591404999999994,
+          -2.9398000013411045,
+          -2.1991013188458977e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3831999999999991,
+        "compression": 0.5533900688672102,
+        "impact": 0.4107678571428575,
+        "knee": -0.5322033306894727,
+        "pelvis": 0.8821734778723392,
+        "position": [
+          0.6536549999999954,
+          -2.9398000013411045,
+          -2.2372184504693597e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.40009999999999873,
+        "compression": 0.4676739621172044,
+        "impact": 0.4107678571428575,
+        "knee": -0.4682814251763281,
+        "pelvis": 0.8850111443422,
+        "position": [
+          0.7170299999999941,
+          -2.9398000013411045,
+          -2.276024445917341e-16
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.43329999999999946,
+        "compression": 0.31158446884335816,
+        "impact": 0.4107678571428575,
+        "knee": -0.3519254872569232,
+        "pelvis": 0.8867564231921803,
+        "position": [
+          0.8415299999999967,
+          -2.9398000013411045,
+          -2.352258709164265e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.4496999999999991,
+        "compression": 0.24364076324790926,
+        "impact": 0.4107678571428575,
+        "knee": -0.30129280195745306,
+        "pelvis": 0.8867494974707768,
+        "position": [
+          0.9030299999999952,
+          -2.9398000013411045,
+          -2.3899165982380458e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.46659999999999874,
+        "compression": 0.18158657189744085,
+        "impact": 0.4107678571428575,
+        "knee": -0.25505698761403395,
+        "pelvis": 0.8868414699566596,
+        "position": [
+          0.9664049999999939,
+          -2.9398000013411045,
+          -2.428722593686027e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.4831999999999991,
+        "compression": 0.12929854635207189,
+        "impact": 0.4107678571428575,
+        "knee": -0.21610452444323996,
+        "pelvis": 0.8874373433524135,
+        "position": [
+          1.0286549999999952,
+          -2.9398000013411045,
+          -2.466839725309489e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.49989999999999984,
+        "compression": 0.08583811393515989,
+        "impact": 0.4107678571428575,
+        "knee": -0.18373457391110504,
+        "pelvis": 0.8887908388703157,
+        "position": [
+          1.091279999999998,
+          -2.9398000013411045,
+          -2.505186478207792e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5165000000000002,
+        "compression": 0.0518770684895366,
+        "impact": 0.4107678571428575,
+        "knee": -0.15844642186635174,
+        "pelvis": 0.8909437620396635,
+        "position": [
+          1.1535299999999995,
+          -2.9398000013411045,
+          -2.543303609831254e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5330000000000001,
+        "compression": 0.027084670984590165,
+        "impact": 0.4107678571428575,
+        "knee": -0.13999273868169965,
+        "pelvis": 0.893756814163248,
+        "position": [
+          1.2154049999999996,
+          -2.9398000013411045,
+          -2.581191120179875e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5497999999999995,
+        "compression": 0.010533121142323586,
+        "impact": 0.4107678571428575,
+        "knee": -0.12768204361227295,
+        "pelvis": 0.8970250383316514,
+        "position": [
+          1.2784049999999967,
+          -2.9398000013411045,
+          -2.6197674943530153e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5665000000000002,
+        "compression": 0.001958194085981461,
+        "impact": 0.4107678571428575,
+        "knee": -0.12131632557912865,
+        "pelvis": 0.9002867697360647,
+        "position": [
+          1.3410299999999995,
+          -2.9398000013411045,
+          -2.6581142472513183e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.12082665651911757,
+        "pelvis": 0.9031322484261745,
+        "position": [
+          1.4036549999999952,
+          -2.9398000013411045,
+          -2.6964610001496175e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.21461527613793493,
+        "pelvis": 0.9058275580440024,
+        "position": [
+          1.5907799999999943,
+          -2.9398000013411045,
+          -2.811042016294841e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.29160492875079536,
+        "pelvis": 0.9043400528193228,
+        "position": [
+          1.6537799999999985,
+          -2.9398000013411045,
+          -2.8496183904679853e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.40764077772299834,
+        "pelvis": 0.901740064096072,
+        "position": [
+          1.719029999999997,
+          -2.9398000013411045,
+          -2.889572492290167e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.5256002102332226,
+        "pelvis": 0.8987641393223204,
+        "position": [
+          1.7782799999999943,
+          -2.9398000013411045,
+          -2.9258526537149063e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.9040477274572943,
+        "pelvis": 0.8954000705658945,
+        "position": [
+          1.8409049999999971,
+          -2.9398000013411045,
+          -2.9641994066132093e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -1.0105299076153234,
+        "pelvis": 0.8923003240136671,
+        "position": [
+          1.9027799999999973,
+          -2.9398000013411045,
+          -3.00208691696183e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.966148068078908,
+        "pelvis": 0.8914381294505379,
+        "position": [
+          1.9027799999999973,
+          -2.9398000013411045,
+          -3.00208691696183e-16
+        ],
+        "ripple": false
+      }
+    ],
+    "strong": [
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.2439425208732695,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.4973455625,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.4123683998954675,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.4671205625,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.43556287223231244,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.44984512250000086,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.45065637457616226,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.4291822725000005,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.46062322215072127,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.4049371425,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.37710973249999935,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.34528885250000074,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.3102537225,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.27113828250000177,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.2291659950000019,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.18307023749999995,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.13366282749999883,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.0803376400000024,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          0.023744090000001244,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -0.036431740000000074,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -0.10099077999999717,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -0.16837432999999857,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -0.23978394750000176,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -0.3148191349999968,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -0.3925056724999966,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -0.475257432500002,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -0.5611476199999963,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -0.6506633775000001,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -0.7432307875000023,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -0.840571667499998,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -0.9397296549999979,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.0449824324999955,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.150644352500005,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.260484440000005,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.3773823900000053,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.495133659999995,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.6164672099999975,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.7406144474999974,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.8722530974999974,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.003586084999997,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.139291915,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.2802909549999937,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.4399047924999935,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.570621352500003,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.720721042500007,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.4107678571428575,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.8744030124999935,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.016600000000000392,
+        "compression": 0.004080859319250191,
+        "impact": 0.8939928571428588,
+        "knee": -0.3185319826588553,
+        "pelvis": 0.9005223694066243,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.0499000000000015,
+        "compression": 0.034986422413408255,
+        "impact": 0.8939928571428588,
+        "knee": -0.16092100946618768,
+        "pelvis": 0.9005815343005322,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.0665,
+        "compression": 0.06046342041796873,
+        "impact": 0.8939928571428588,
+        "knee": -0.12950425366116525,
+        "pelvis": 0.9003960055203551,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.08320000000000072,
+        "compression": 0.10279599156543841,
+        "impact": 0.8939928571428588,
+        "knee": -0.1250090725328058,
+        "pelvis": 0.8996868817512341,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.09990000000000143,
+        "compression": 0.21167630553657601,
+        "impact": 0.8939928571428588,
+        "knee": -0.16410397260566761,
+        "pelvis": 0.8957884589256697,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.11660000000000037,
+        "compression": 0.3439142222681313,
+        "impact": 0.8939928571428588,
+        "knee": -0.24093333749206136,
+        "pelvis": 0.8873355105304728,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.1335,
+        "compression": 0.49003630055174924,
+        "impact": 0.8939928571428588,
+        "knee": -0.5545721561918058,
+        "pelvis": 0.873325836926869,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.15000000000000002,
+        "compression": 0.633542,
+        "impact": 0.8939928571428588,
+        "knee": -0.7169769924850007,
+        "pelvis": 0.8548951832797574,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.16660000000000041,
+        "compression": 0.7677164350144869,
+        "impact": 0.8939928571428588,
+        "knee": -0.8688216734770438,
+        "pelvis": 0.8335900367336326,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.18330000000000113,
+        "compression": 0.881245146144747,
+        "impact": 0.8939928571428588,
+        "knee": -0.9973016698575083,
+        "pelvis": 0.8125907587028128,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.2001000000000004,
+        "compression": 0.9624102872226193,
+        "impact": 0.8939928571428588,
+        "knee": -1.0891559411522824,
+        "pelvis": 0.7959753698433559,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.2166000000000004,
+        "compression": 0.9988260588395571,
+        "impact": 0.8939928571428588,
+        "knee": -1.1303675268292108,
+        "pelvis": 0.7881361270497341,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.2334000000000015,
+        "compression": 1,
+        "impact": 0.8939928571428588,
+        "knee": -1.1316960714285724,
+        "pelvis": 0.7879613828909231,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.2666000000000004,
+        "compression": 1,
+        "impact": 0.8939928571428588,
+        "knee": -1.1316960714285724,
+        "pelvis": 0.7881233825442187,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.2832000000000008,
+        "compression": 0.9996610939259258,
+        "impact": 0.8939928571428588,
+        "knee": -1.1313125327559594,
+        "pelvis": 0.7882761618406311,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.30000000000000004,
+        "compression": 0.9872592592592593,
+        "impact": 0.8939928571428588,
+        "knee": -1.1172774251851862,
+        "pelvis": 0.7910829739106677,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.31660000000000044,
+        "compression": 0.9589796959999992,
+        "impact": 0.8939928571428588,
+        "knee": -1.0852735545429657,
+        "pelvis": 0.7972680112818051,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.33360000000000045,
+        "compression": 0.9156413819259247,
+        "impact": 0.8939928571428588,
+        "knee": -1.036227754762998,
+        "pelvis": 0.8063957229281715,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3500000000000001,
+        "compression": 0.8620740740740739,
+        "impact": 0.8939928571428588,
+        "knee": -0.9756058429100536,
+        "pelvis": 0.8171281046271691,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.36690000000000156,
+        "compression": 0.7968896599259195,
+        "impact": 0.8939928571428588,
+        "knee": -0.9018368975002142,
+        "pelvis": 0.8293728303883021,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3833000000000012,
+        "compression": 0.7259557360740687,
+        "impact": 0.8939928571428588,
+        "knee": -0.8215612545460611,
+        "pelvis": 0.8416710509451428,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.40000000000000013,
+        "compression": 0.6479999999999996,
+        "impact": 0.8939928571428588,
+        "knee": -0.7333390542857144,
+        "pelvis": 0.8539347619477494,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.4332000000000008,
+        "compression": 0.48400242725925535,
+        "impact": 0.8939928571428588,
+        "knee": -0.5477436454911927,
+        "pelvis": 0.8753650246748568,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.4497000000000008,
+        "compression": 0.402066323925922,
+        "impact": 0.8939928571428588,
+        "knee": -0.4550168792406938,
+        "pelvis": 0.8838111420926159,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.46670000000000084,
+        "compression": 0.32016154540740355,
+        "impact": 0.8939928571428588,
+        "knee": -0.3623255631600591,
+        "pelvis": 0.8907248573063082,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.4833000000000012,
+        "compression": 0.24471625459258756,
+        "impact": 0.8939928571428588,
+        "knee": -0.2769444239371457,
+        "pelvis": 0.8957287761926608,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5001000000000004,
+        "compression": 0.17501645192592433,
+        "impact": 0.8939928571428588,
+        "knee": -0.19806543107993618,
+        "pelvis": 0.899181745052974,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5167000000000008,
+        "compression": 0.1147751379999973,
+        "impact": 0.8939928571428588,
+        "knee": -0.1298905727722692,
+        "pelvis": 0.9012580829230137,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5334000000000015,
+        "compression": 0.06488942992592191,
+        "impact": 0.8939928571428588,
+        "knee": -0.07343511292440547,
+        "pelvis": 0.9023405273276689,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5499000000000016,
+        "compression": 0.028180266592589733,
+        "impact": 0.8939928571428588,
+        "knee": -0.031891496994643644,
+        "pelvis": 0.9027715525118704,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5666000000000004,
+        "compression": 0.005807103407407057,
+        "impact": 0.8939928571428588,
+        "knee": -0.0065718761125420425,
+        "pelvis": 0.9028892661339454,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.0043180302999641694,
+        "pelvis": 0.9029188079553712,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.0018828740306141936,
+        "pelvis": 0.9029591948052054,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.0012464497984924453,
+        "pelvis": 0.9029741786752801,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.0008189758761585572,
+        "pelvis": 0.9029859390078893,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.0005394524416544469,
+        "pelvis": 0.9029941196030846,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.0003562221767490826,
+        "pelvis": 0.9029987738085423,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": 0,
+        "pelvis": 0.9029999487058469,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": 0,
+        "pelvis": 0.9029976149634723,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": 0,
+        "pelvis": 0.9029915354608774,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      }
+    ],
+    "ladder": [
+      {
+        "state": "CLIMB",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.2887107614007442,
+        "pelvis": 0.9027848822606244,
+        "position": [
+          -12,
+          2.6,
+          -1.35
+        ],
+        "ripple": false
+      },
+      {
+        "state": "CLIMB",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.4793581066266847,
+        "pelvis": 0.9027453153928494,
+        "position": [
+          -12,
+          2.6,
+          -1.35
+        ],
+        "ripple": false
+      },
+      {
+        "state": "CLIMB",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.6052502280888409,
+        "pelvis": 0.9027025696443568,
+        "position": [
+          -12,
+          2.6,
+          -1.35
+        ],
+        "ripple": false
+      },
+      {
+        "state": "CLIMB",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.6891879407153094,
+        "pelvis": 0.9026561229339939,
+        "position": [
+          -12,
+          2.6,
+          -1.35
+        ],
+        "ripple": false
+      },
+      {
+        "state": "CLIMB",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.7440744647626143,
+        "pelvis": 0.9026068304967079,
+        "position": [
+          -12,
+          2.6,
+          -1.35
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.6539436031534548,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          2.7008208225000048,
+          -1.4301600000000034
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.5298356766866101,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          2.9804658225000042,
+          -1.6701600000000036
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.51290850473236,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.0663052524999967,
+          -1.7098000059604643
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.501676552076646,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.1490416450000005,
+          -1.7899600059604677
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.49424250960651595,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.2286098049999974,
+          -1.8706000059604644
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.304508845000002,
+          -1.9512400059604695
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.3742538949999976,
+          -2.0290000059604645
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.442945735000002,
+          -2.1096400059604696
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.508339017500001,
+          -2.190760005960468
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.5682744575,
+          -2.269480005960466
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.6263517299999988,
+          -2.3506000059604646
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.67979958,
+          -2.430280005960466
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.7302331800000035,
+          -2.5109200059604713
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.7764733099999996,
+          -2.590600005960464
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.819131160000001,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.857987422500001,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.893897422500003,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.9254346225000023,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.9540937425000013,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.9788186125000022,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          4.000183172500002,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          4.017789565000002,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          4.0317028550000025,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          4.042079817500002,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          4.048806967500003,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          4.051959240000002,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          4.051457090000002,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          4.047453850000002,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          4.039643092500001,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          4.028456505000001,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          4.013519607500002,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.9948296075000003,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.972769037500002,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.9471261875000017,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.9177087200000007,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.884665682500003,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.8484683950000034,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.8087318575000038,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.764898950000002,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.717139910000004,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.666356360000003,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.611646742500001,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.554042355000001,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.4925119649999994,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.426582045000002,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.3569830050000053,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.284619455000004,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.2081998375000005,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.8939928571428588,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -12,
+          3.12914545,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.01679999999999926,
+        "compression": 0.004178499695999637,
+        "impact": 0.2558821428571451,
+        "knee": -0.3165012902561371,
+        "pelvis": 0.898013990583149,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.06669999999999887,
+        "compression": 0.060807386811654304,
+        "impact": 0.2558821428571451,
+        "knee": -0.1247448763911026,
+        "pelvis": 0.8975899895364183,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.08349999999999996,
+        "compression": 0.10448044974999977,
+        "impact": 0.2558821428571451,
+        "knee": -0.10993845112484782,
+        "pelvis": 0.8971197945868121,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.1001000000000003,
+        "compression": 0.21314421470366976,
+        "impact": 0.2558821428571451,
+        "knee": -0.12911928526031247,
+        "pelvis": 0.8951361469334552,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.11669999999999886,
+        "compression": 0.3447538004430049,
+        "impact": 0.2558821428571451,
+        "knee": -0.17668595741917914,
+        "pelvis": 0.8909981030259341,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.13339999999999957,
+        "compression": 0.48915789827530815,
+        "impact": 0.2558821428571451,
+        "knee": -0.381902779059598,
+        "pelvis": 0.8842704428377263,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.1499999999999999,
+        "compression": 0.6335419999999992,
+        "impact": 0.2558821428571451,
+        "knee": -0.4946285265025001,
+        "pelvis": 0.875270474474591,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.16679999999999917,
+        "compression": 0.7692256497919936,
+        "impact": 0.2558821428571451,
+        "knee": -0.6005615250520763,
+        "pelvis": 0.8647622848022741,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.18349999999999989,
+        "compression": 0.8824288714701157,
+        "impact": 0.2558821428571451,
+        "knee": -0.6889432625438061,
+        "pelvis": 0.8544913665020782,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.20019999999999882,
+        "compression": 0.9627713690905614,
+        "impact": 0.2558821428571451,
+        "knee": -0.7516694767703794,
+        "pelvis": 0.8463748399146708,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.21689999999999954,
+        "compression": 0.9990229266502095,
+        "impact": 0.2558821428571451,
+        "knee": -0.7799723430352038,
+        "pelvis": 0.8424700548670366,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.23339999999999955,
+        "compression": 1,
+        "impact": 0.2558821428571451,
+        "knee": -0.7807351785714298,
+        "pelvis": 0.8423227183898477,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.28319999999999884,
+        "compression": 0.9996610939259262,
+        "impact": 0.2558821428571451,
+        "knee": -0.7804705826771688,
+        "pelvis": 0.8422537232602396,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3001000000000003,
+        "compression": 0.9871345259999996,
+        "impact": 0.2558821428571451,
+        "knee": -0.7706906504306335,
+        "pelvis": 0.8435744216622213,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3166000000000003,
+        "compression": 0.9589796959999993,
+        "impact": 0.2558821428571451,
+        "knee": -0.748709184202935,
+        "pelvis": 0.8465241606151105,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3338999999999996,
+        "compression": 0.9147589865925939,
+        "impact": 0.2558821428571451,
+        "knee": -0.714184520747189,
+        "pelvis": 0.8510079752082581,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3498999999999996,
+        "compression": 0.8624316740000016,
+        "impact": 0.2558821428571451,
+        "knee": -0.6733307470060484,
+        "pelvis": 0.8560595662843704,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.36669999999999886,
+        "compression": 0.7977121380000047,
+        "impact": 0.2558821428571451,
+        "knee": -0.6228019285100308,
+        "pelvis": 0.8619163268580742,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3833999999999996,
+        "compression": 0.7255040965925946,
+        "impact": 0.2558821428571451,
+        "knee": -0.5664265704075232,
+        "pelvis": 0.8679324760212906,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.4001000000000003,
+        "compression": 0.6475199334074061,
+        "impact": 0.2558821428571451,
+        "knee": -0.5055415908373916,
+        "pelvis": 0.8738086936741882,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.43339999999999956,
+        "compression": 0.4830029114074096,
+        "impact": 0.2558821428571451,
+        "knee": -0.3770973642881844,
+        "pelvis": 0.8840624847696723,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.46689999999999954,
+        "compression": 0.3192217340000022,
+        "impact": 0.2558821428571451,
+        "knee": -0.24922763749837318,
+        "pelvis": 0.8913478161110152,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.48349999999999993,
+        "compression": 0.24384299074074117,
+        "impact": 0.2558821428571451,
+        "knee": -0.19037680091936407,
+        "pelvis": 0.8937130951487945,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5001999999999989,
+        "compression": 0.17462580800000443,
+        "impact": 0.2558821428571451,
+        "knee": -0.13633651139206368,
+        "pelvis": 0.8953352538832788,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5167999999999993,
+        "compression": 0.11444237274074329,
+        "impact": 0.2558821428571451,
+        "knee": -0.08934918631788234,
+        "pelvis": 0.8963186555472199,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5335,
+        "compression": 0.06462725000000011,
+        "impact": 0.2558821428571451,
+        "knee": -0.05045676756933052,
+        "pelvis": 0.8968345458180209,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5501999999999988,
+        "compression": 0.027641067259261434,
+        "impact": 0.2558821428571451,
+        "knee": -0.02158035358256438,
+        "pelvis": 0.8970476242937081,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5667999999999992,
+        "compression": 0.005637632000000682,
+        "impact": 0.2558821428571451,
+        "knee": -0.004401497626240539,
+        "pelvis": 0.897114867071197,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.002906486178033967,
+        "pelvis": 0.8971464884086516,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.001267371223635096,
+        "pelvis": 0.8972160695778734,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.0008348066420214946,
+        "pelvis": 0.8972559651563512,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.00055263631757055,
+        "pelvis": 0.8972985413911444,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.00036310793497402376,
+        "pelvis": 0.8973450667441034,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.0002385789139242991,
+        "pelvis": 0.8973947408382555,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": 0,
+        "pelvis": 0.8974468586858316,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": 0,
+        "pelvis": 0.8975019328901579,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": 0,
+        "pelvis": 0.8975598996792079,
+        "position": [
+          -12,
+          3.0601999986588955,
+          -2.5998000013411047
+        ],
+        "ripple": false
+      }
+    ],
+    "interrupt": [
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": 0,
+        "pelvis": 0.898457280099603,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": 0,
+        "pelvis": 0.898545713497199,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": 0,
+        "pelvis": 0.8986358308555282,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "IDLE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": 0,
+        "pelvis": 0.8987280847887278,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.1630366652616111,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.8395667113411025,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.3424776975071087,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.649362618007771,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.38941522940857815,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.559396795507777,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.42018322716006457,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.473557365507775,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.4405005754320112,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.391300215507773,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.4539169388930892,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.3126253455077714,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.2366607855077745,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.16436534550777,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.0973090255077715,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.031893773007773,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.9719370130077745,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.9141651730077707,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.8603682105077741,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.810196818007772,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.7639135280077711,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.7212125180077749,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.6818744155077732,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.6461618830077716,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.6140749205077736,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5857677705077728,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.560910238007772,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5396782755077731,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5221611255077727,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.508158593007772,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.497827583007773,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.4910303030077725,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.4879097405077726,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.4883851805077724,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.4924074680077724,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5001556280077728,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5114886655077722,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.526235953007772,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5449041130077734,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5670921505077717,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.5937624705077729,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.6221544180077736,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.6547695555077737,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.6911592455077704,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.7316455655077732,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.7755218930077703,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.82242273050777,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.8738290505077733,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.9282164605077745,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -1.9869173405077718,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.0485124705077733,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.114098798007769,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.1824496355077687,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.255243683007772,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.3316633005077754,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.411212990507768,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.49434496050777,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.5815978680077736,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.6719159780077755,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.766980458007771,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "AIRBORNE",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.2558821428571451,
+        "knee": -0.48,
+        "pelvis": 0.9,
+        "position": [
+          -3,
+          -2.864506288007773,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.016699999999998938,
+        "compression": 0.004129539046030731,
+        "impact": 0.41072142857142857,
+        "knee": -0.31739235155048096,
+        "pelvis": 0.9029931178030014,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.050000000000000044,
+        "compression": 0.03512109375000006,
+        "impact": 0.41072142857142857,
+        "knee": -0.15523669607424745,
+        "pelvis": 0.9029155457317494,
+        "position": [
+          -3,
+          -2.9398000013411045,
+          0
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.06669999999999898,
+        "compression": 0.0608073868116545,
+        "impact": 0.41072142857142857,
+        "knee": -0.1846479834901442,
+        "pelvis": 0.9013199946561815,
+        "position": [
+          -2.937375000000004,
+          -2.9398000013411045,
+          -3.834675289829899e-18
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.08329999999999937,
+        "compression": 0.10335624064619472,
+        "impact": 0.41072142857142857,
+        "knee": -0.2615864205237072,
+        "pelvis": 0.899873685739596,
+        "position": [
+          -2.8751250000000024,
+          -2.9398000013411045,
+          -7.646388452176121e-18
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.09989999999999977,
+        "compression": 0.21167630553656386,
+        "impact": 0.41072142857142857,
+        "knee": -0.362747023935412,
+        "pelvis": 0.8971005799044092,
+        "position": [
+          -2.812875000000001,
+          -2.9398000013411045,
+          -1.1458101614522343e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.11669999999999903,
+        "compression": 0.34475380044300635,
+        "impact": 0.41072142857142857,
+        "knee": -0.46608851946149865,
+        "pelvis": 0.8922141725817092,
+        "position": [
+          -2.749875000000004,
+          -2.9398000013411045,
+          -1.531573903183634e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.13329999999999942,
+        "compression": 0.48827952575698025,
+        "impact": 0.41072142857142857,
+        "knee": -0.7296328950517165,
+        "pelvis": 0.8848792080630612,
+        "position": [
+          -2.6876250000000024,
+          -2.9398000013411045,
+          -1.9127452194182563e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.1498999999999998,
+        "compression": 0.6326917094345231,
+        "impact": 0.41072142857142857,
+        "knee": -0.7697113406422011,
+        "pelvis": 0.8752991250546961,
+        "position": [
+          -2.625375000000001,
+          -2.9398000013411045,
+          -2.2939165356528785e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.16669999999999907,
+        "compression": 0.7684714289940279,
+        "impact": 0.41072142857142857,
+        "knee": -0.797808742732946,
+        "pelvis": 0.8643380601365462,
+        "position": [
+          -2.562375000000004,
+          -2.9398000013411045,
+          -2.679680277384278e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.18329999999999946,
+        "compression": 0.8812451461447371,
+        "impact": 0.41072142857142857,
+        "knee": -0.8231812144577306,
+        "pelvis": 0.8539224636799057,
+        "position": [
+          -2.5001250000000024,
+          -2.9398000013411045,
+          -3.0608515936189e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.20000000000000018,
+        "compression": 0.9620476268221582,
+        "impact": 0.41072142857142857,
+        "knee": -0.8485915628802674,
+        "pelvis": 0.8459644477586529,
+        "position": [
+          -2.4375,
+          -2.9398000013411045,
+          -3.444319122601932e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.2165000000000002,
+        "compression": 0.9987564802500002,
+        "impact": 0.41072142857142857,
+        "knee": -0.8651803887404386,
+        "pelvis": 0.842716597822004,
+        "position": [
+          -2.3756250000000003,
+          -2.9398000013411045,
+          -3.8231942260881446e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.23319999999999907,
+        "compression": 1,
+        "impact": 0.41072142857142857,
+        "knee": -0.8658967857142857,
+        "pelvis": 0.8433953568398986,
+        "position": [
+          -2.313000000000004,
+          -2.9398000013411045,
+          -4.206661755071135e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.2666000000000005,
+        "compression": 1,
+        "impact": 0.41072142857142857,
+        "knee": -0.8658967857142857,
+        "pelvis": 0.8422220886629858,
+        "position": [
+          -2.187749999999999,
+          -2.9398000013411045,
+          -4.9735968130371977e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.28329999999999944,
+        "compression": 0.9924106926260114,
+        "impact": 0.41072142857142857,
+        "knee": -0.8601805428306952,
+        "pelvis": 0.8412105835809816,
+        "position": [
+          -2.125125000000003,
+          -2.9398000013411045,
+          -5.357064342020188e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.29989999999999983,
+        "compression": 0.9438212650732836,
+        "impact": 0.41072142857142857,
+        "knee": -0.8236572079588734,
+        "pelvis": 0.8447532271198903,
+        "position": [
+          -2.0628750000000013,
+          -2.9398000013411045,
+          -5.73823565825481e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.31660000000000055,
+        "compression": 0.8804237984261909,
+        "impact": 0.41072142857142857,
+        "knee": -0.7761199104607042,
+        "pelvis": 0.849361126996646,
+        "position": [
+          -2.000249999999999,
+          -2.9398000013411045,
+          -6.121703187237841e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3331999999999991,
+        "compression": 0.8068091813144792,
+        "impact": 0.41072142857142857,
+        "knee": -0.7210214470122976,
+        "pelvis": 0.8546143595525947,
+        "position": [
+          -1.9380000000000046,
+          -2.9398000013411045,
+          -6.502874503472421e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.34979999999999944,
+        "compression": 0.726118106056584,
+        "impact": 0.41072142857142857,
+        "knee": -0.6607089867855966,
+        "pelvis": 0.8603015091622188,
+        "position": [
+          -1.8757500000000031,
+          -2.9398000013411045,
+          -6.884045819707044e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3666000000000006,
+        "compression": 0.6404596223851587,
+        "impact": 0.41072142857142857,
+        "knee": -0.5967508177698568,
+        "pelvis": 0.8663535166798176,
+        "position": [
+          -1.812749999999999,
+          -2.9398000013411045,
+          -7.269809561438485e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3831999999999991,
+        "compression": 0.5546972024684307,
+        "impact": 0.41072142857142857,
+        "knee": -0.5327665725311849,
+        "pelvis": 0.8725320147023525,
+        "position": [
+          -1.7505000000000046,
+          -2.9398000013411045,
+          -7.650980877673066e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.3998999999999998,
+        "compression": 0.4697806741160754,
+        "impact": 0.41072142857142857,
+        "knee": -0.46945263583464797,
+        "pelvis": 0.8788554824722927,
+        "position": [
+          -1.6878750000000018,
+          -2.9398000013411045,
+          -8.034448406656097e-17
+        ],
+        "ripple": true
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.4166000000000005,
+        "compression": 0.3883766385884515,
+        "impact": 0.41072142857142857,
+        "knee": -0.40878707225877475,
+        "pelvis": 0.8851626733941786,
+        "position": [
+          -1.625249999999999,
+          -2.9398000013411045,
+          -8.417915935639127e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.43329999999999946,
+        "compression": 0.31229290928038334,
+        "impact": 0.41072142857142857,
+        "knee": -0.3521084191107715,
+        "pelvis": 0.8912760229583455,
+        "position": [
+          -1.5626250000000033,
+          -2.9398000013411045,
+          -8.801383464622116e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.4497999999999994,
+        "compression": 0.24378351224135303,
+        "impact": 0.41072142857142857,
+        "knee": -0.30108872722990737,
+        "pelvis": 0.8968997353794865,
+        "position": [
+          -1.5007500000000031,
+          -2.9398000013411045,
+          -9.180258568108329e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.46650000000000014,
+        "compression": 0.1823125159536317,
+        "impact": 0.41072142857142857,
+        "knee": -0.25532385184222645,
+        "pelvis": 0.9019061125971258,
+        "position": [
+          -1.4381250000000003,
+          -2.9398000013411045,
+          -9.56372609709136e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.4831999999999991,
+        "compression": 0.12956016465660744,
+        "impact": 0.41072142857142857,
+        "knee": -0.2160613671921072,
+        "pelvis": 0.9059535759461737,
+        "position": [
+          -1.3755000000000046,
+          -2.9398000013411045,
+          -9.947193626074349e-17
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.4997999999999994,
+        "compression": 0.08623725284954782,
+        "impact": 0.41072142857142857,
+        "knee": -0.18382764967264204,
+        "pelvis": 0.9087950286142702,
+        "position": [
+          -1.3132500000000031,
+          -2.9398000013411045,
+          -1.0328364942308971e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5166000000000005,
+        "compression": 0.051796017277267695,
+        "impact": 0.41072142857142857,
+        "knee": -0.15821338656521838,
+        "pelvis": 0.9103130671605772,
+        "position": [
+          -1.250249999999999,
+          -2.9398000013411045,
+          -1.0714128684040413e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.533199999999999,
+        "compression": 0.02688508086602309,
+        "impact": 0.41072142857142857,
+        "knee": -0.22285690284644522,
+        "pelvis": 0.9104247829757619,
+        "position": [
+          -1.1880000000000046,
+          -2.9398000013411045,
+          -1.1095300000274993e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5497999999999994,
+        "compression": 0.010551192181575856,
+        "impact": 0.41072142857142857,
+        "knee": -0.3957052592244415,
+        "pelvis": 0.9092379313212097,
+        "position": [
+          -1.1257500000000031,
+          -2.9398000013411045,
+          -1.1476471316509613e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "LANDING",
+        "elapsed": 0.5665000000000001,
+        "compression": 0.0019614571730405244,
+        "impact": 0.41072142857142857,
+        "knee": -0.5688235054599015,
+        "pelvis": 0.9069470426710643,
+        "position": [
+          -1.0631250000000003,
+          -2.9398000013411045,
+          -1.1859938845492644e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.41072142857142857,
+        "knee": -0.6233797141058034,
+        "pelvis": 0.9039065145860103,
+        "position": [
+          -1.0008749999999988,
+          -2.9398000013411045,
+          -1.2241110161727263e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.41072142857142857,
+        "knee": -0.828470597206571,
+        "pelvis": 0.8971832853018744,
+        "position": [
+          -0.8756250000000003,
+          -2.9398000013411045,
+          -1.3008045219693286e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.41072142857142857,
+        "knee": -0.9111055939291336,
+        "pelvis": 0.8944217593495049,
+        "position": [
+          -0.8130000000000044,
+          -2.9398000013411045,
+          -1.3391512748676277e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.41072142857142857,
+        "knee": -0.9828051054202314,
+        "pelvis": 0.8925853617566043,
+        "position": [
+          -0.7507500000000029,
+          -2.9398000013411045,
+          -1.3772684064910897e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.41072142857142857,
+        "knee": -1.0362155298108895,
+        "pelvis": 0.8918936780734492,
+        "position": [
+          -0.6881250000000001,
+          -2.9398000013411045,
+          -1.4156151593893928e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.41072142857142857,
+        "knee": -1.0650325673771677,
+        "pelvis": 0.8924368992728905,
+        "position": [
+          -0.6258749999999986,
+          -2.9398000013411045,
+          -1.4537322910128547e-16
+        ],
+        "ripple": false
+      },
+      {
+        "state": "WALK_FORWARD",
+        "elapsed": 0.58,
+        "compression": 0,
+        "impact": 0.41072142857142857,
+        "knee": -1.0678950095021629,
+        "pelvis": 0.8941335261151948,
+        "position": [
+          -0.5632500000000027,
+          -2.9398000013411045,
+          -1.492079043911154e-16
+        ],
+        "ripple": false
+      }
+    ]
+  },
+  "errors": []
+}

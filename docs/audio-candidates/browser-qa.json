@@ -1,0 +1,120 @@
+{
+  "results": [
+    {
+      "src": "home-A.ogg",
+      "duration": 80.002667,
+      "playing": true,
+      "time": 0.009967,
+      "error": null
+    },
+    {
+      "src": "home-B.ogg",
+      "duration": 80.002667,
+      "playing": true,
+      "time": 0.01926,
+      "error": null
+    },
+    {
+      "src": "home-C.ogg",
+      "duration": 80.002667,
+      "playing": true,
+      "time": 0.005798,
+      "error": null
+    },
+    {
+      "src": "gameplay-A.ogg",
+      "duration": 112.002667,
+      "playing": true,
+      "time": 0.011619,
+      "error": null
+    },
+    {
+      "src": "gameplay-B.ogg",
+      "duration": 112.002667,
+      "playing": true,
+      "time": 0.02,
+      "error": null
+    },
+    {
+      "src": "gameplay-C.ogg",
+      "duration": 112.002667,
+      "playing": true,
+      "time": 0.017299,
+      "error": null
+    },
+    {
+      "src": "se-boost-A.ogg",
+      "duration": 1.202667,
+      "playing": true,
+      "time": 0.017939,
+      "error": null
+    },
+    {
+      "src": "se-boost-B.ogg",
+      "duration": 1.202667,
+      "playing": true,
+      "time": 0.000609,
+      "error": null
+    },
+    {
+      "src": "se-cube-place-A.ogg",
+      "duration": 0.222667,
+      "playing": true,
+      "time": 0.000014,
+      "error": null
+    },
+    {
+      "src": "se-cube-place-B.ogg",
+      "duration": 0.222667,
+      "playing": true,
+      "time": 0.016638,
+      "error": null
+    },
+    {
+      "src": "se-correct-A.ogg",
+      "duration": 3.302667,
+      "playing": true,
+      "time": 0.019731,
+      "error": null
+    },
+    {
+      "src": "se-correct-B.ogg",
+      "duration": 3.302667,
+      "playing": true,
+      "time": 0.01884,
+      "error": null
+    },
+    {
+      "src": "se-jump-A.ogg",
+      "duration": 0.322667,
+      "playing": true,
+      "time": 0.005531,
+      "error": null
+    },
+    {
+      "src": "se-land-A.ogg",
+      "duration": 0.482667,
+      "playing": true,
+      "time": 0.009737,
+      "error": null
+    },
+    {
+      "src": "se-answer-select-A.ogg",
+      "duration": 0.132667,
+      "playing": true,
+      "time": 0.00869,
+      "error": null
+    },
+    {
+      "src": "se-incorrect-A.ogg",
+      "duration": 0.552667,
+      "playing": true,
+      "time": 0.008991,
+      "error": null
+    }
+  ],
+  "errors": [],
+  "mobileOverflow": false,
+  "physicalDevice": "NOT TESTED",
+  "subjectiveListening": "USER SELECTION PENDING"
+}

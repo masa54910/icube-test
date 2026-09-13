@@ -1,0 +1,10 @@
+import {it,expect} from 'vitest';
+import * as THREE from 'three';
+import {WorldBuilder} from '../src/game/WorldBuilder';
+import {PlayerController} from '../src/game/PlayerController';
+import {CelebrationScene} from '../src/game/CelebrationScene';
+import {STAGES} from '../src/stages/stage-data';
+import {CONFIG} from '../src/config';
+it('room grid geometry lies only on voxel boundary coordinates',()=>{const w=new WorldBuilder();const {root}=w.build({...STAGES[0]!,rooms:[[0,0,0]],ladders:[]});let count=0;root.traverse(o=>{if(o instanceof THREE.Mesh&&o.material instanceof THREE.MeshStandardMaterial&&o.material.color.getHex()===CONFIG.colors.grid){count++;expect(o.position.toArray().some(n=>Math.abs(Math.abs(n)-3)<.001)).toBe(true);}});expect(count).toBeGreaterThan(0);});
+it.each([60,120,144])('edge rotation stays attached and frame independent at %i Hz',hz=>{const w=new WorldBuilder();w.build({...STAGES[0]!,rooms:[[0,0,0],[0,1,0]],ladders:[{id:'test',from:[0,0,0],to:[0,1,0]}]});const p=new PlayerController();p.reset(new THREE.Vector3(.62,-1,-1.35));p.update(.001,w,{x:0,forward:1,turn:0,jump:false},0,'third-person');const before=p.position.clone();let cameraTurn=0;for(let i=0;i<hz;i++){p.update(1/hz,w,{x:1,forward:0,turn:0,jump:false},0,'third-person');cameraTurn+=p.ladderCameraDelta;}expect(p.yaw).toBeCloseTo(0,6);expect(cameraTurn).toBeCloseTo(CONFIG.player.turnSpeed,6);expect(p.ladder?.id).toBe('test');expect(p.position.distanceTo(before)).toBeLessThan(.001);});
+it('distant buildings are one instanced draw with placements beyond 60 units',()=>{const result=new CelebrationScene(new WorldBuilder(),STAGES[0]!,STAGES);const buildings=result.root.getObjectByName('distant-buildings') as THREE.InstancedMesh;expect(buildings.isInstancedMesh).toBe(true);const m=new THREE.Matrix4(),v=new THREE.Vector3();for(let i=0;i<buildings.count;i++){buildings.getMatrixAt(i,m);v.setFromMatrixPosition(m);expect(v.z).toBeLessThan(-60);}expect(result.root.getObjectByName('earth')!.position.z).toBeLessThan(-40);});

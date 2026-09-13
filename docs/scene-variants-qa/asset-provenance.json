@@ -1,0 +1,126 @@
+{
+  "source_sha256": "363a356ccbdddf021a18fe9200e84908247ddbaefc269b29b4b036c2924a2cc8",
+  "method": "hand-traced alpha only; lossless WebP; no regeneration or RGB edits",
+  "assets": [
+    {
+      "pose": 1,
+      "crop": [
+        0,
+        60,
+        192,
+        418
+      ],
+      "size": [
+        192,
+        358
+      ],
+      "bytes": 83810,
+      "rgb_changed_pixels": 0
+    },
+    {
+      "pose": 2,
+      "crop": [
+        192,
+        60,
+        384,
+        418
+      ],
+      "size": [
+        192,
+        358
+      ],
+      "bytes": 86058,
+      "rgb_changed_pixels": 0
+    },
+    {
+      "pose": 3,
+      "crop": [
+        384,
+        60,
+        576,
+        418
+      ],
+      "size": [
+        192,
+        358
+      ],
+      "bytes": 85992,
+      "rgb_changed_pixels": 0
+    },
+    {
+      "pose": 4,
+      "crop": [
+        576,
+        60,
+        768,
+        418
+      ],
+      "size": [
+        192,
+        358
+      ],
+      "bytes": 82424,
+      "rgb_changed_pixels": 0
+    },
+    {
+      "pose": 5,
+      "crop": [
+        768,
+        60,
+        960,
+        418
+      ],
+      "size": [
+        192,
+        358
+      ],
+      "bytes": 82628,
+      "rgb_changed_pixels": 0
+    },
+    {
+      "pose": 6,
+      "crop": [
+        960,
+        60,
+        1152,
+        418
+      ],
+      "size": [
+        192,
+        358
+      ],
+      "bytes": 85242,
+      "rgb_changed_pixels": 0
+    },
+    {
+      "pose": 7,
+      "crop": [
+        1152,
+        60,
+        1344,
+        418
+      ],
+      "size": [
+        192,
+        358
+      ],
+      "bytes": 76964,
+      "rgb_changed_pixels": 0
+    },
+    {
+      "pose": 8,
+      "crop": [
+        1344,
+        60,
+        1536,
+        418
+      ],
+      "size": [
+        192,
+        358
+      ],
+      "bytes": 82074,
+      "rgb_changed_pixels": 0
+    }
+  ]
+}

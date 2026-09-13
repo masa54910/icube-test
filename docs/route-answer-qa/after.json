@@ -1,0 +1,60 @@
+{
+  "results": [
+    {
+      "stage": "advanced_route_1",
+      "matchCount": 1,
+      "pixelMatch": true,
+      "correctNumber": 4,
+      "counts": [
+        16,
+        15,
+        16,
+        16,
+        15,
+        17,
+        16,
+        15,
+        16,
+        16
+      ]
+    },
+    {
+      "stage": "advanced_route_2",
+      "matchCount": 1,
+      "pixelMatch": true,
+      "correctNumber": 2,
+      "counts": [
+        25,
+        24,
+        24,
+        23,
+        24,
+        23,
+        24,
+        24,
+        23,
+        24
+      ]
+    },
+    {
+      "stage": "advanced_route_3",
+      "matchCount": 1,
+      "pixelMatch": true,
+      "correctNumber": 8,
+      "counts": [
+        34,
+        33,
+        32,
+        32,
+        33,
+        33,
+        33,
+        33,
+        33,
+        33
+      ]
+    }
+  ],
+  "productionCorrectSubmission": "3/3 PASS",
+  "errors": []
+}

@@ -1,0 +1,219 @@
+{
+  "repeated": [
+    {
+      "attempt": 1,
+      "variant": "held",
+      "position": [
+        24,
+        3.0601999986588955,
+        15.400199998658895
+      ],
+      "ladder": false,
+      "airborne": false,
+      "yaw": 0,
+      "mode": "third-person"
+    },
+    {
+      "attempt": 2,
+      "variant": "pause",
+      "position": [
+        24.007826585735792,
+        3.0601999986588955,
+        15.400199998658895
+      ],
+      "ladder": false,
+      "airborne": false,
+      "yaw": 0,
+      "mode": "third-person"
+    },
+    {
+      "attempt": 3,
+      "variant": "side",
+      "position": [
+        24.005569851721827,
+        3.0601999986588955,
+        15.400199998658895
+      ],
+      "ladder": false,
+      "airborne": false,
+      "yaw": 0,
+      "mode": "third-person"
+    },
+    {
+      "attempt": 4,
+      "variant": "pov",
+      "position": [
+        24.013640670875688,
+        3.0601999986588955,
+        15.400199998658895
+      ],
+      "ladder": false,
+      "airborne": false,
+      "yaw": 0,
+      "mode": "pov"
+    },
+    {
+      "attempt": 5,
+      "variant": "pov-pause",
+      "position": [
+        24.02139107896243,
+        3.0601999986588955,
+        15.400199998658895
+      ],
+      "ladder": false,
+      "airborne": false,
+      "yaw": 0,
+      "mode": "pov"
+    },
+    {
+      "attempt": 6,
+      "variant": "pov-side",
+      "position": [
+        24.02906705533808,
+        3.0601999986588955,
+        15.400199998658895
+      ],
+      "ladder": false,
+      "airborne": false,
+      "yaw": 0,
+      "mode": "pov"
+    },
+    {
+      "attempt": 7,
+      "variant": "held",
+      "position": [
+        24.026602581936896,
+        3.0601999986588955,
+        15.400199998658895
+      ],
+      "ladder": false,
+      "airborne": false,
+      "yaw": 0,
+      "mode": "third-person"
+    },
+    {
+      "attempt": 8,
+      "variant": "pause",
+      "position": [
+        24.034652060636667,
+        3.0601999986588955,
+        15.400199998658895
+      ],
+      "ladder": false,
+      "airborne": false,
+      "yaw": 0,
+      "mode": "third-person"
+    },
+    {
+      "attempt": 9,
+      "variant": "side",
+      "position": [
+        24.042195216085748,
+        3.0601999986588955,
+        15.400199998658895
+      ],
+      "ladder": false,
+      "airborne": false,
+      "yaw": 0,
+      "mode": "third-person"
+    },
+    {
+      "attempt": 10,
+      "variant": "pov",
+      "position": [
+        24.04000488275606,
+        3.0601999986588955,
+        15.400199998658895
+      ],
+      "ladder": false,
+      "airborne": false,
+      "yaw": 0,
+      "mode": "pov"
+    }
+  ],
+  "representatives": [
+    {
+      "stage": 105,
+      "ladder": false,
+      "position": [
+        36,
+        3.0601999986588955,
+        15.400199998658895
+      ],
+      "airborne": false,
+      "yaw": 0,
+      "mode": "third-person"
+    },
+    {
+      "stage": 105,
+      "ladder": false,
+      "position": [
+        18,
+        9.060199998658895,
+        39.4001999986589
+      ],
+      "airborne": false,
+      "yaw": 0,
+      "mode": "pov"
+    },
+    {
+      "stage": 110,
+      "ladder": false,
+      "position": [
+        36,
+        3.0601999986588955,
+        15.400199998658895
+      ],
+      "airborne": false,
+      "yaw": 0,
+      "mode": "third-person"
+    },
+    {
+      "stage": 110,
+      "ladder": false,
+      "position": [
+        18,
+        9.060199998658895,
+        33.4001999986589
+      ],
+      "airborne": false,
+      "yaw": 0,
+      "mode": "pov"
+    },
+    {
+      "stage": 110,
+      "ladder": false,
+      "position": [
+        3.8117131623441316e-18,
+        9.060199998658895,
+        51.4001999986589
+      ],
+      "airborne": false,
+      "yaw": 0,
+      "mode": "third-person"
+    },
+    {
+      "stage": 2,
+      "ladder": false,
+      "position": [
+        -12,
+        21.060199998658895,
+        -2.5998000013411047
+      ],
+      "airborne": false,
+      "yaw": 0,
+      "mode": "third-person"
+    }
+  ],
+  "down": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

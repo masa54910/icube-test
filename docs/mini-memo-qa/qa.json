@@ -1,0 +1,142 @@
+[
+  {
+    "size": "desktop",
+    "rect": {
+      "x": 1680,
+      "y": 869.25,
+      "width": 220,
+      "height": 182.75
+    },
+    "collision": [],
+    "metrics": {
+      "drawCalls": 1,
+      "triangles": 432,
+      "memory": {
+        "geometries": 1,
+        "textures": 0
+      },
+      "canvases": 3
+    },
+    "errors": []
+  },
+  {
+    "size": "laptop",
+    "rect": {
+      "x": 1154.765625,
+      "y": 557.25,
+      "width": 191.234375,
+      "height": 182.75
+    },
+    "collision": [],
+    "metrics": {
+      "drawCalls": 1,
+      "triangles": 432,
+      "memory": {
+        "geometries": 1,
+        "textures": 0
+      },
+      "canvases": 3
+    },
+    "errors": []
+  },
+  {
+    "size": "tablet-landscape",
+    "rect": {
+      "x": 906,
+      "y": 458,
+      "width": 104,
+      "height": 136
+    },
+    "collision": [],
+    "metrics": {
+      "drawCalls": 1,
+      "triangles": 432,
+      "memory": {
+        "geometries": 1,
+        "textures": 0
+      },
+      "canvases": 3
+    },
+    "errors": []
+  },
+  {
+    "size": "tablet-portrait",
+    "rect": {
+      "x": 650,
+      "y": 714,
+      "width": 104,
+      "height": 136
+    },
+    "collision": [],
+    "metrics": {
+      "drawCalls": 1,
+      "triangles": 432,
+      "memory": {
+        "geometries": 1,
+        "textures": 0
+      },
+      "canvases": 3
+    },
+    "errors": []
+  },
+  {
+    "size": "mobile-portrait",
+    "rect": {
+      "x": 272,
+      "y": 534,
+      "width": 104,
+      "height": 136
+    },
+    "collision": [],
+    "metrics": {
+      "drawCalls": 1,
+      "triangles": 432,
+      "memory": {
+        "geometries": 1,
+        "textures": 0
+      },
+      "canvases": 3
+    },
+    "errors": []
+  },
+  {
+    "size": "mobile-landscape",
+    "rect": {
+      "x": 734,
+      "y": 84,
+      "width": 96,
+      "height": 92
+    },
+    "collision": [],
+    "metrics": {
+      "drawCalls": 1,
+      "triangles": 432,
+      "memory": {
+        "geometries": 1,
+        "textures": 0
+      },
+      "canvases": 3
+    },
+    "errors": []
+  },
+  {
+    "size": "small-mobile",
+    "rect": {
+      "x": 242,
+      "y": 330,
+      "width": 104,
+      "height": 136
+    },
+    "collision": [],
+    "metrics": {
+      "drawCalls": 1,
+      "triangles": 432,
+      "memory": {
+        "geometries": 1,
+        "textures": 0
+      },
+      "canvases": 3
+    },
+    "errors": []
+  }
+]

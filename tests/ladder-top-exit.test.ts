@@ -1,0 +1,15 @@
+import {atLadderTop} from './ladder-test-input';
+import {it,expect} from 'vitest';
+import * as T from 'three';
+import {PURE_ROUTE_STAGES} from '../src/stages/pure-route';
+import {STAGES} from '../src/stages/stage-data';
+import {WorldBuilder} from '../src/game/WorldBuilder';
+import {PlayerController} from '../src/game/PlayerController';
+import {CameraController} from '../src/game/CameraController';
+import {validateLadderTopExits} from '../src/stages/ladder-exit-validator';
+const input={forward:1,x:0,turn:0,jump:false};
+it.each(PURE_ROUTE_STAGES)('$id all top exits have floor support and no prop interference',s=>{const w=new WorldBuilder();w.build(s);expect(validateLadderTopExits(s,w)).toHaveLength(s.ladders.length);for(const l of s.ladders){const p=new PlayerController();p.reset(new T.Vector3(l.from[0]*6,l.to[1]*6-3.2,l.from[2]*6-1.6),Math.PI);for(let i=0;i<150;i++)p.update(1/60,w,{...input,jump:atLadderTop(p)},Math.PI,'third-person');expect(p.ladder).toBeNull();expect(p.airborne).toBe(false);expect(p.position.y).toBeCloseTo(l.to[1]*6-2.94,2);expect(w.hasSafeFloor(p.position,0)).toBe(true);}w.clear();});
+it('explicit Jump releases the rail and follows a short arc onto supported floor',()=>{const w=new WorldBuilder(),s=PURE_ROUTE_STAGES[0]!;w.build(s);const l=s.ladders[0]!,p=new PlayerController();p.reset(new T.Vector3(l.from[0]*6,2.95,l.from[2]*6-1.6));let frames=0,completed=false;for(let i=0;i<100;i++){const before=p.position.clone();p.update(1/60,w,{...input,jump:atLadderTop(p)},0,'third-person');if(p.exitingLadderTop){frames++;expect(p.ladder).toBeNull();expect(p.position.distanceTo(before)).toBeLessThan(.16);}if(p.justCompletedTopExit){completed=true;expect(w.hasSafeFloor(p.position)).toBe(true);break;}}expect(completed).toBe(true);expect(frames).toBeGreaterThanOrEqual(20);expect(frames).toBeLessThanOrEqual(23);w.clear();});
+it.each(STAGES.filter(s=>s.ladders.length))('$id Standard top exits remain viable',s=>{const w=new WorldBuilder();w.build(s);for(const l of s.ladders){const target=w.ladderTopExitTarget(l,new T.Vector3(l.to[0]*6,l.to[1]*6-2.94,l.to[2]*6-1.35));expect(target).not.toBeNull();expect(w.hasSafeFloor(target!)).toBe(true);}w.clear();});
+it('invalid upper support fails the route validator',()=>{const s=PURE_ROUTE_STAGES[0]!,w=new WorldBuilder();w.build(s);w.colliders.length=0;expect(()=>validateLadderTopExits(s,w)).toThrow('no safe top floor');w.clear();});
+it('top-exit camera follow is gradual and does not overwrite LOOK UP snapshots',()=>{const c=new CameraController(new T.PerspectiveCamera());c.reset(Math.PI);c.beginTopExitFollow();c.followTopExitYaw(0,.05);expect(c.yaw).toBeGreaterThan(0);expect(c.yaw).toBeLessThan(Math.PI);const yaw=c.yaw;c.setLookUp(true);c.followTopExitYaw(0,.3);expect(c.yaw).toBe(yaw);c.setLookUp(false);c.followTopExitYaw(0,.1);expect(c.yaw).toBe(yaw);c.reset(Math.PI);c.beginTopExitFollow();for(let i=0;i<20;i++)c.followTopExitYaw(0,1/60);expect(c.yaw).toBeCloseTo(0);});

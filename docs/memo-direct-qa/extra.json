@@ -1,0 +1,10 @@
+{
+  "ghostCancelled": true,
+  "snapshotPreserved": true,
+  "visibilityPause": true,
+  "saveReload": true,
+  "retry": true,
+  "maxAngle": 720,
+  "maxLight": 0.999813,
+  "nineLocaleHelp": true
+}

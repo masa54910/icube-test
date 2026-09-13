@@ -1,0 +1,16 @@
+{
+  "checks": [
+    "game input / camera / timer frozen",
+    "stock drag / ground placement / Y stacking",
+    "face drag continuous",
+    "+3 / +5 signed face / undo / redo",
+    "color / display modes",
+    "right orbit / wheel zoom",
+    "Esc / resume / preserved notes / clear undo",
+    "first incorrect submitted",
+    "incorrect unlock / hint correct-only / no missing reveal / close explore reopen glow",
+    "nine language runtime cycle",
+    "other stages memo excluded"
+  ],
+  "errors": []
+}

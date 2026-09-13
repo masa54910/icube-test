@@ -1,0 +1,48 @@
+[
+  {
+    "width": 390,
+    "height": 844,
+    "metrics": {
+      "fps": 60.26503296240313,
+      "ratio": 1.25,
+      "shadow": 512,
+      "texture": {
+        "width": 336,
+        "height": 256,
+        "depth": 1
+      },
+      "shadowTexture": {
+        "width": 512,
+        "height": 512,
+        "depth": 1
+      },
+      "calls": 155,
+      "triangles": 25416,
+      "heap": 16372634
+    },
+    "errors": []
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "metrics": {
+      "fps": 60.37285211956484,
+      "ratio": 1.25,
+      "shadow": 512,
+      "texture": {
+        "width": 336,
+        "height": 256,
+        "depth": 1
+      },
+      "shadowTexture": {
+        "width": 512,
+        "height": 512,
+        "depth": 1
+      },
+      "calls": 163,
+      "triangles": 26076,
+      "heap": 19082342
+    },
+    "errors": []
+  }
+]

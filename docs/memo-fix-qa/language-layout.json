@@ -1,0 +1,92 @@
+[
+  {
+    "device": "phone",
+    "locale": "en",
+    "pass": true
+  },
+  {
+    "device": "phone",
+    "locale": "ja",
+    "pass": true
+  },
+  {
+    "device": "phone",
+    "locale": "ko",
+    "pass": true
+  },
+  {
+    "device": "phone",
+    "locale": "zh-CN",
+    "pass": true
+  },
+  {
+    "device": "phone",
+    "locale": "zh-TW",
+    "pass": true
+  },
+  {
+    "device": "phone",
+    "locale": "es",
+    "pass": true
+  },
+  {
+    "device": "phone",
+    "locale": "pt",
+    "pass": true
+  },
+  {
+    "device": "phone",
+    "locale": "de",
+    "pass": true
+  },
+  {
+    "device": "phone",
+    "locale": "fr",
+    "pass": true
+  },
+  {
+    "device": "landscape",
+    "locale": "en",
+    "pass": true
+  },
+  {
+    "device": "landscape",
+    "locale": "ja",
+    "pass": true
+  },
+  {
+    "device": "landscape",
+    "locale": "ko",
+    "pass": true
+  },
+  {
+    "device": "landscape",
+    "locale": "zh-CN",
+    "pass": true
+  },
+  {
+    "device": "landscape",
+    "locale": "zh-TW",
+    "pass": true
+  },
+  {
+    "device": "landscape",
+    "locale": "es",
+    "pass": true
+  },
+  {
+    "device": "landscape",
+    "locale": "pt",
+    "pass": true
+  },
+  {
+    "device": "landscape",
+    "locale": "de",
+    "pass": true
+  },
+  {
+    "device": "landscape",
+    "locale": "fr",
+    "pass": true
+  }
+]

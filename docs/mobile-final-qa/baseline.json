@@ -1,0 +1,625 @@
+[
+  {
+    "name": "desktop",
+    "boxes": [
+      {
+        "s": ".hud-chip",
+        "x": 18,
+        "y": 18,
+        "w": 100.65625,
+        "h": 53
+      },
+      {
+        "s": ".camera-button",
+        "x": 1587.296875,
+        "y": 18,
+        "w": 139.34375,
+        "h": 42
+      },
+      {
+        "s": ".look-button",
+        "x": 1734.640625,
+        "y": 18,
+        "w": 94.015625,
+        "h": 42
+      },
+      {
+        "s": ".hud-button",
+        "x": 1836.65625,
+        "y": 18,
+        "w": 65.34375,
+        "h": 42
+      },
+      {
+        "s": ".touch-jump",
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      }
+    ],
+    "overflow": false,
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "NORMAL",
+      "legAngles": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        0,
+        -2.9398000013411045,
+        0
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 1.5707963267948966,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "IDLE",
+      "speed": 0,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 499.70000000000005,
+      "attempts": 0,
+      "ladder": null,
+      "camera": [
+        -2.75476233980674,
+        -1.1885171957487968,
+        1.6868054409279986e-16
+      ],
+      "quaternion": [
+        -0.06355373162112238,
+        -0.7042449312540562,
+        -0.06355373162112238,
+        0.7042449312540563
+      ]
+    },
+    "safeAreaStyles": "18px",
+    "keyboardLabel": "THIRD PERSON · V",
+    "errors": []
+  },
+  {
+    "name": "laptop",
+    "boxes": [
+      {
+        "s": ".hud-chip",
+        "x": 18,
+        "y": 18,
+        "w": 100.65625,
+        "h": 53
+      },
+      {
+        "s": ".camera-button",
+        "x": 1033.296875,
+        "y": 18,
+        "w": 139.34375,
+        "h": 42
+      },
+      {
+        "s": ".look-button",
+        "x": 1180.640625,
+        "y": 18,
+        "w": 94.015625,
+        "h": 42
+      },
+      {
+        "s": ".hud-button",
+        "x": 1282.65625,
+        "y": 18,
+        "w": 65.34375,
+        "h": 42
+      },
+      {
+        "s": ".touch-jump",
+        "x": 0,
+        "y": 0,
+        "w": 0,
+        "h": 0
+      }
+    ],
+    "overflow": false,
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "NORMAL",
+      "legAngles": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        0,
+        -2.9398000013411045,
+        0
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 1.5707963267948966,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "IDLE",
+      "speed": 0,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 383.0999999999999,
+      "attempts": 0,
+      "ladder": null,
+      "camera": [
+        -2.75476233980674,
+        -1.1885171957487968,
+        1.6868054409279986e-16
+      ],
+      "quaternion": [
+        -0.06355373162112238,
+        -0.7042449312540562,
+        -0.06355373162112238,
+        0.7042449312540563
+      ]
+    },
+    "safeAreaStyles": "18px",
+    "keyboardLabel": "THIRD PERSON · V",
+    "errors": []
+  },
+  {
+    "name": "tablet-landscape",
+    "boxes": [
+      {
+        "s": ".hud-chip",
+        "x": 18,
+        "y": 18,
+        "w": 100.65625,
+        "h": 53
+      },
+      {
+        "s": ".camera-button",
+        "x": 691.296875,
+        "y": 18,
+        "w": 139.34375,
+        "h": 42
+      },
+      {
+        "s": ".look-button",
+        "x": 838.640625,
+        "y": 18,
+        "w": 94.015625,
+        "h": 42
+      },
+      {
+        "s": ".hud-button",
+        "x": 940.65625,
+        "y": 18,
+        "w": 65.34375,
+        "h": 42
+      },
+      {
+        "s": ".touch-jump",
+        "x": 930,
+        "y": 618,
+        "w": 70,
+        "h": 70
+      }
+    ],
+    "overflow": false,
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "NORMAL",
+      "legAngles": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        0,
+        -2.9398000013411045,
+        0
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 1.5707963267948966,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "IDLE",
+      "speed": 0,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 316.5,
+      "attempts": 0,
+      "ladder": null,
+      "camera": [
+        -2.75476233980674,
+        -1.1885171957487968,
+        1.6868054409279986e-16
+      ],
+      "quaternion": [
+        -0.06355373162112238,
+        -0.7042449312540562,
+        -0.06355373162112238,
+        0.7042449312540563
+      ]
+    },
+    "safeAreaStyles": "18px",
+    "keyboardLabel": "THIRD PERSON · V",
+    "errors": []
+  },
+  {
+    "name": "tablet-portrait",
+    "boxes": [
+      {
+        "s": ".hud-chip",
+        "x": 10,
+        "y": 10,
+        "w": 84.65625,
+        "h": 46
+      },
+      {
+        "s": ".camera-button",
+        "x": 522.078125,
+        "y": 10,
+        "w": 109.125,
+        "h": 42
+      },
+      {
+        "s": ".look-button",
+        "x": 635.203125,
+        "y": 10,
+        "w": 71.34375,
+        "h": 42
+      },
+      {
+        "s": ".hud-button",
+        "x": 710.546875,
+        "y": 10,
+        "w": 47.453125,
+        "h": 42
+      },
+      {
+        "s": ".touch-jump",
+        "x": 674,
+        "y": 874,
+        "w": 70,
+        "h": 70
+      }
+    ],
+    "overflow": false,
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "NORMAL",
+      "legAngles": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        0,
+        -2.9398000013411045,
+        0
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 1.5707963267948966,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "IDLE",
+      "speed": 0,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 366.6999999999998,
+      "attempts": 0,
+      "ladder": null,
+      "camera": [
+        -2.75476233980674,
+        -1.1885171957487968,
+        1.6868054409279986e-16
+      ],
+      "quaternion": [
+        -0.06355373162112238,
+        -0.7042449312540562,
+        -0.06355373162112238,
+        0.7042449312540563
+      ]
+    },
+    "safeAreaStyles": "10px",
+    "keyboardLabel": "THIRD PERSON · V",
+    "errors": []
+  },
+  {
+    "name": "mobile-portrait",
+    "boxes": [
+      {
+        "s": ".hud-chip",
+        "x": 10,
+        "y": 10,
+        "w": 84.65625,
+        "h": 46
+      },
+      {
+        "s": ".camera-button",
+        "x": 144.078125,
+        "y": 10,
+        "w": 109.125,
+        "h": 42
+      },
+      {
+        "s": ".look-button",
+        "x": 257.203125,
+        "y": 10,
+        "w": 71.34375,
+        "h": 42
+      },
+      {
+        "s": ".hud-button",
+        "x": 332.546875,
+        "y": 10,
+        "w": 47.453125,
+        "h": 42
+      },
+      {
+        "s": ".touch-jump",
+        "x": 296,
+        "y": 694,
+        "w": 70,
+        "h": 70
+      }
+    ],
+    "overflow": false,
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "NORMAL",
+      "legAngles": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        0,
+        -2.9398000013411045,
+        0
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 1.5707963267948966,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "IDLE",
+      "speed": 0,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 333.0000000000002,
+      "attempts": 0,
+      "ladder": null,
+      "camera": [
+        -2.75476233980674,
+        -1.1885171957487968,
+        1.6868054409279986e-16
+      ],
+      "quaternion": [
+        -0.06355373162112238,
+        -0.7042449312540562,
+        -0.06355373162112238,
+        0.7042449312540563
+      ]
+    },
+    "safeAreaStyles": "10px",
+    "keyboardLabel": "THIRD PERSON · V",
+    "errors": []
+  },
+  {
+    "name": "mobile-landscape",
+    "boxes": [
+      {
+        "s": ".hud-chip",
+        "x": 18,
+        "y": 18,
+        "w": 100.65625,
+        "h": 53
+      },
+      {
+        "s": ".camera-button",
+        "x": 511.296875,
+        "y": 18,
+        "w": 139.34375,
+        "h": 42
+      },
+      {
+        "s": ".look-button",
+        "x": 658.640625,
+        "y": 18,
+        "w": 94.015625,
+        "h": 42
+      },
+      {
+        "s": ".hud-button",
+        "x": 760.65625,
+        "y": 18,
+        "w": 65.34375,
+        "h": 42
+      },
+      {
+        "s": ".touch-jump",
+        "x": 750,
+        "y": 240,
+        "w": 70,
+        "h": 70
+      }
+    ],
+    "overflow": false,
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "NORMAL",
+      "legAngles": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        0,
+        -2.9398000013411045,
+        0
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 1.5707963267948966,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "IDLE",
+      "speed": 0,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 316.70000000000005,
+      "attempts": 0,
+      "ladder": null,
+      "camera": [
+        -2.75476233980674,
+        -1.1885171957487968,
+        1.6868054409279986e-16
+      ],
+      "quaternion": [
+        -0.06355373162112238,
+        -0.7042449312540562,
+        -0.06355373162112238,
+        0.7042449312540563
+      ]
+    },
+    "safeAreaStyles": "18px",
+    "keyboardLabel": "THIRD PERSON · V",
+    "errors": []
+  },
+  {
+    "name": "small-mobile",
+    "boxes": [
+      {
+        "s": ".hud-chip",
+        "x": 10,
+        "y": 10,
+        "w": 84.65625,
+        "h": 46
+      },
+      {
+        "s": ".camera-button",
+        "x": 114.078125,
+        "y": 10,
+        "w": 109.125,
+        "h": 42
+      },
+      {
+        "s": ".look-button",
+        "x": 227.203125,
+        "y": 10,
+        "w": 71.34375,
+        "h": 42
+      },
+      {
+        "s": ".hud-button",
+        "x": 302.546875,
+        "y": 10,
+        "w": 47.453125,
+        "h": 42
+      },
+      {
+        "s": ".touch-jump",
+        "x": 266,
+        "y": 490,
+        "w": 70,
+        "h": 70
+      }
+    ],
+    "overflow": false,
+    "snapshot": {
+      "revealTime": 0,
+      "airborne": false,
+      "movementState": "NORMAL",
+      "legAngles": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "state": "EXPLORATION",
+      "position": [
+        0,
+        -2.9398000013411045,
+        0
+      ],
+      "yaw": 1.5707963267948966,
+      "playerYaw": 1.5707963267948966,
+      "turnRate": 0,
+      "turningAround": false,
+      "animation": "IDLE",
+      "speed": 0,
+      "pitch": -0.18,
+      "mode": "third-person",
+      "lookingUp": false,
+      "characterVisible": true,
+      "elapsed": 299.4999999999998,
+      "attempts": 0,
+      "ladder": null,
+      "camera": [
+        -2.75476233980674,
+        -1.1885171957487968,
+        1.6868054409279986e-16
+      ],
+      "quaternion": [
+        -0.06355373162112238,
+        -0.7042449312540562,
+        -0.06355373162112238,
+        0.7042449312540563
+      ]
+    },
+    "safeAreaStyles": "10px",
+    "keyboardLabel": "THIRD PERSON · V",
+    "errors": []
+  }
+]

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#071529" />
+    <title>i CUBE TEST</title>
+    <style>
+      #loading { position:fixed; inset:0; display:grid; place-items:center; margin:0; background:#050b18; color:#86dcff; font:800 16px system-ui,sans-serif; letter-spacing:.08em; text-align:center; padding:24px; }
+      #loading.file-warning { display:flex; flex-direction:column; gap:14px; }
+      #loading.file-warning small { color:#b6c8d8; font-weight:500; letter-spacing:0; }
+    </style>
+    <script src="https://www.youtube.com/game_api/v1"></script>
+    <script>
+      if (location.protocol === 'file:') {
+        document.addEventListener('DOMContentLoaded', function () {
+          var loading = document.getElementById('loading');
+          if (!loading) return;
+          loading.className = 'file-warning';
+          loading.innerHTML = 'ローカルサーバー経由で起動してください<small>このHTMLを直接開くと、ブラウザのfile://制限でゲームモジュールを読み込めません。<br>同じフォルダーの serve.cmd をダブルクリックし、表示されたURLを開いてください。</small>';
+        });
+      }
+    </script>
+    <script type="module" src="./src/main.ts"></script>
+  </head>
+  <body>
+    <div id="app" aria-live="polite">
+      <canvas id="game-canvas" class="game-canvas" aria-label="i CUBE TEST game canvas"></canvas>
+      <div id="ui-root"></div>
+      <div id="loading" role="status">LOADING i CUBE TEST…</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "metrics": {
+    "fps": 60.34082620539729,
+    "cpuUpdateMs": 0.5,
+    "draw": {
+      "frame": 7,
+      "calls": 1,
+      "triangles": 10800,
+      "points": 0,
+      "lines": 0
+    },
+    "memory": {
+      "geometries": 1,
+      "textures": 0
+    },
+    "extraContexts": 1
+  },
+  "orientation": true,
+  "touch": true,
+  "errors": []
+}

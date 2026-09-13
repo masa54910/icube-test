@@ -1,0 +1,16 @@
+<!doctype html><html lang="ja"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Advanced ROUTE Answer QA</title>
+<style>body{margin:24px;background:#edf3f8;color:#10243b;font:16px system-ui}h1{font-size:28px}section{background:white;padding:24px;margin:24px 0;border-radius:20px}.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}figure{margin:0;border:3px solid #7890aa;border-radius:10px;overflow:hidden;background:#1e3248;color:white}figure.correct{border-color:#27a76d}canvas{width:100%;display:block;aspect-ratio:3/2}figcaption{padding:8px;font-size:13px}.canonical{width:280px;margin-bottom:16px}.pass{color:#087043}@media(max-width:800px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}body{margin:10px}section{padding:12px}}</style>
+<h1>Advanced ROUTE — Canonical / Answer QA</h1><p>開発専用。緑枠は正解候補（ゲーム本番では非表示）。Canonicalは座標の平行移動のみ。同じ視点・同じ縮尺で比較します。</p><p>Root cause: 正解欠落は再現せず、全3問で一致候補1個を確認。旧誤答が単純なCube削除に偏り、低い視点で経路が重なっていました。ROUTE専用の3段階変形と高めの共通視点へ修正。</p><main></main>
+<script type="module">
+import {ADVANCED_STAGES} from '/src/stages/advanced-route.ts';
+import {buildRouteChoices} from '/src/stages/route-choices.ts';
+import {normalizeVoxels,shapeKey,shuffle} from '/src/stages/stage-utils.ts';
+import {drawRouteChoices} from '/src/ui/RouteAnswerPreview.ts';
+window.qaResults=[];
+for(const [index,s] of ADVANCED_STAGES.entries()){
+ const choices=shuffle(buildRouteChoices(s),s.numericId),canonical={id:'canonical',correct:true,voxels:normalizeVoxels(s.memo.canonicalCubes)},all=[canonical,...choices];
+ const section=document.createElement('section');section.id=`a-${index+1}`;section.innerHTML=`<h2>A-${index+1} · ${canonical.voxels.length} Cubes</h2><p>固定Seed: ${s.numericId} / 正解番号: ${choices.findIndex(c=>c.correct)+1} / Easy 3・Medium 4・Hard 2</p><div class="canonical"></div><div class="grid"></div>`;document.querySelector('main').append(section);
+ const canvases=all.map((c,i)=>{const fig=document.createElement('figure');fig.className=c.correct?'correct':'';const canvas=document.createElement('canvas');canvas.width=300;canvas.height=200;fig.append(canvas);const caption=document.createElement('figcaption');caption.textContent=i===0?'CANONICAL':`${i} · ${c.voxels.length} Cubes · ${c.routeDifficulty} · ${c.mutation}`;fig.append(caption);section.querySelector(i===0?'.canonical':'.grid').append(fig);return canvas});drawRouteChoices(all,canvases);
+ const matchCount=choices.filter(c=>shapeKey(c.voxels)===shapeKey(canonical.voxels)).length,ci=choices.findIndex(c=>c.correct),pixelMatch=canvases[0].toDataURL()===canvases[ci+1].toDataURL();window.qaResults.push({stage:s.id,matchCount,pixelMatch,correctNumber:ci+1,counts:choices.map(c=>c.voxels.length)});const status=document.createElement('p');status.className='pass';status.textContent=`Canonical exact match: ${matchCount} / Canonicalと正解候補の描画像一致: ${pixelMatch?'PASS':'FAIL'}`;section.append(status);
+}document.body.dataset.ready='true';
+</script></html>

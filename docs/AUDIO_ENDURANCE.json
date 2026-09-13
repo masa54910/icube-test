@@ -1,0 +1,767 @@
+{
+  "records": [
+    {
+      "phase": "HOME",
+      "elapsed": 30005,
+      "audio": {
+        "unlocked": true,
+        "bgm": "HOME",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 29.76,
+      "heap": 7246634,
+      "state": {}
+    },
+    {
+      "phase": "HOME",
+      "elapsed": 60024,
+      "audio": {
+        "unlocked": true,
+        "bgm": "HOME",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 59.77066666666666,
+      "heap": 7914582,
+      "state": {}
+    },
+    {
+      "phase": "HOME",
+      "elapsed": 90043,
+      "audio": {
+        "unlocked": true,
+        "bgm": "HOME",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 89.792,
+      "heap": 7700870,
+      "state": {}
+    },
+    {
+      "phase": "HOME",
+      "elapsed": 120062,
+      "audio": {
+        "unlocked": true,
+        "bgm": "HOME",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 119.8,
+      "heap": 7671966,
+      "state": {}
+    },
+    {
+      "phase": "HOME",
+      "elapsed": 150073,
+      "audio": {
+        "unlocked": true,
+        "bgm": "HOME",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 149.82133333333334,
+      "heap": 7865998,
+      "state": {}
+    },
+    {
+      "phase": "HOME",
+      "elapsed": 180097,
+      "audio": {
+        "unlocked": true,
+        "bgm": "HOME",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 179.84,
+      "heap": 7813350,
+      "state": {}
+    },
+    {
+      "phase": "HOME",
+      "elapsed": 210113,
+      "audio": {
+        "unlocked": true,
+        "bgm": "HOME",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 209.85066666666665,
+      "heap": 7832926,
+      "state": {}
+    },
+    {
+      "phase": "HOME",
+      "elapsed": 240139,
+      "audio": {
+        "unlocked": true,
+        "bgm": "HOME",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 239.872,
+      "heap": 7110461,
+      "state": {}
+    },
+    {
+      "phase": "HOME",
+      "elapsed": 270145,
+      "audio": {
+        "unlocked": true,
+        "bgm": "HOME",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 269.88,
+      "heap": 7507353,
+      "state": {}
+    },
+    {
+      "phase": "HOME",
+      "elapsed": 300172,
+      "audio": {
+        "unlocked": true,
+        "bgm": "HOME",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 299.90133333333335,
+      "heap": 7250384,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 30003,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 330.9413333333333,
+      "heap": 14308662,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 60024,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 360.96,
+      "heap": 13680850,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 90045,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 390.97066666666666,
+      "heap": 14814074,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 120059,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 420.992,
+      "heap": 14592326,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 150081,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 451.0106666666667,
+      "heap": 13540102,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 180108,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 481.02133333333336,
+      "heap": 17630006,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 210116,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 511.032,
+      "heap": 13211372,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 240143,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 541.0613333333333,
+      "heap": 14532928,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 270157,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 571.072,
+      "heap": 16754144,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 300178,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 601.0906666666667,
+      "heap": 11506532,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 330223,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 631.1306666666667,
+      "heap": 15346632,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 360243,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 661.16,
+      "heap": 18479404,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 390269,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 691.192,
+      "heap": 16214728,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 420286,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 721.2,
+      "heap": 12471920,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 450304,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 751.2213333333333,
+      "heap": 24652132,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 480327,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 781.24,
+      "heap": 19021548,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 510337,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 811.2506666666667,
+      "heap": 22886137,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 540359,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 841.272,
+      "heap": 12279685,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 570384,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 871.2906666666667,
+      "heap": 12860661,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 600403,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 901.3013333333333,
+      "heap": 18111797,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 631150,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 932.0506666666666,
+      "heap": 11630440,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 661171,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 962.072,
+      "heap": 11837828,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 691183,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 992.08,
+      "heap": 12023044,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 721207,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 1022.1013333333333,
+      "heap": 12143712,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 751229,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 1052.12,
+      "heap": 12264464,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 781292,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 1082.192,
+      "heap": 13268154,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 811312,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 1112.2106666666666,
+      "heap": 12672705,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 841327,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 1142.2213333333334,
+      "heap": 15265533,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 871330,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 1172.2213333333334,
+      "heap": 14708789,
+      "state": {}
+    },
+    {
+      "phase": "GAMEPLAY",
+      "elapsed": 901346,
+      "audio": {
+        "unlocked": true,
+        "bgm": "GAMEPLAY",
+        "bgmEnabled": true,
+        "seEnabled": true,
+        "paused": [],
+        "hostEnabled": true,
+        "bgmVoices": 1,
+        "seVoices": 0,
+        "loaded": 13,
+        "approved": 13
+      },
+      "audioTime": 1202.232,
+      "heap": 15143069,
+      "state": {}
+    }
+  ],
+  "errors": [],
+  "subjectiveListening": "NOT VERIFIED — playback endurance is not subjective fatigue evaluation",
+  "physicalMobile": "NOT TESTED"
+}
