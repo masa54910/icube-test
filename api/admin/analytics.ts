@@ -26,8 +26,9 @@ class SupabaseRestError extends Error {
   constructor(public status: number, public bodyKeys: string[]) { super(`Supabase request failed: ${status}`); }
 }
 const rest = async (url: string, key: string, path: string, init: RequestInit = {}) => {
-  // Admin REST calls are deliberately isolated from the incoming user token.
-  const response = await fetch(`${url}${path}`, { ...init, headers: { ...(init.headers ?? {}), apikey: key, Authorization: `Bearer ${key}` } });
+  // Secret keys are not JWTs: use them only as the PostgREST apikey.
+  // No incoming user token (and no Secret Key) is forwarded as Authorization.
+  const response = await fetch(`${url}${path}`, { ...init, headers: { ...(init.headers ?? {}), apikey: key } });
   if (!response.ok) {
     let bodyKeys: string[] = [];
     try { const body = await response.clone().json() as Record<string, unknown>; bodyKeys = Object.keys(body).slice(0, 8); } catch { /* non-JSON response */ }
