@@ -26,7 +26,8 @@ class SupabaseRestError extends Error {
   constructor(public status: number, public bodyKeys: string[]) { super(`Supabase request failed: ${status}`); }
 }
 const rest = async (url: string, key: string, path: string, init: RequestInit = {}) => {
-  const response = await fetch(`${url}${path}`, { ...init, headers: { apikey: key, Authorization: `Bearer ${key}`, ...(init.headers ?? {}) } });
+  // Admin REST calls are deliberately isolated from the incoming user token.
+  const response = await fetch(`${url}${path}`, { ...init, headers: { ...(init.headers ?? {}), apikey: key, Authorization: `Bearer ${key}` } });
   if (!response.ok) {
     let bodyKeys: string[] = [];
     try { const body = await response.clone().json() as Record<string, unknown>; bodyKeys = Object.keys(body).slice(0, 8); } catch { /* non-JSON response */ }
@@ -46,7 +47,15 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
   let phase = 'auth';
   try {
     const projectRef = url.match(/^https?:\/\/([^.]+)\.supabase\.co/i)?.[1] ?? 'unknown';
-    console.info('[admin-analytics] config', { projectRef, servicePresent: Boolean(service), serviceLength: service.length, servicePrefix: service.slice(0, 3), anonPresent: Boolean(anon) });
+    console.info('[admin-analytics] config', {
+      projectRef,
+      servicePresent: Boolean(service),
+      serviceLength: service.length,
+      servicePrefixValid: service.startsWith('sb_secret_'),
+      anonPresent: Boolean(anon),
+      adminAuthHeaderSource: 'service_key',
+      incomingTokenForwardedToAdmin: false,
+    });
     const authResponse = await fetch(`${url}/auth/v1/user`, { headers: { apikey: anon, Authorization: `Bearer ${token}` } });
     if (!authResponse.ok) { res.status(401).json({ error: 'invalid_session' }); return; }
     const user = await authResponse.json() as { id?: string };
