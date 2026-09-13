@@ -22,9 +22,16 @@ const rangeStart = (range: string) => {
   if (range === '30d') return new Date(now - 30 * 86400000).toISOString();
   return '';
 };
+class SupabaseRestError extends Error {
+  constructor(public status: number, public bodyKeys: string[]) { super(`Supabase request failed: ${status}`); }
+}
 const rest = async (url: string, key: string, path: string, init: RequestInit = {}) => {
   const response = await fetch(`${url}${path}`, { ...init, headers: { apikey: key, Authorization: `Bearer ${key}`, ...(init.headers ?? {}) } });
-  if (!response.ok) throw new Error(`Supabase request failed: ${response.status}`);
+  if (!response.ok) {
+    let bodyKeys: string[] = [];
+    try { const body = await response.clone().json() as Record<string, unknown>; bodyKeys = Object.keys(body).slice(0, 8); } catch { /* non-JSON response */ }
+    throw new SupabaseRestError(response.status, bodyKeys);
+  }
   return response.json() as Promise<unknown>;
 };
 
@@ -38,6 +45,8 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
   if (!token) { res.status(401).json({ error: 'unauthenticated' }); return; }
   let phase = 'auth';
   try {
+    const projectRef = url.match(/^https?:\/\/([^.]+)\.supabase\.co/i)?.[1] ?? 'unknown';
+    console.info('[admin-analytics] config', { projectRef, servicePresent: Boolean(service), serviceLength: service.length, servicePrefix: service.slice(0, 3), anonPresent: Boolean(anon) });
     const authResponse = await fetch(`${url}/auth/v1/user`, { headers: { apikey: anon, Authorization: `Bearer ${token}` } });
     if (!authResponse.ok) { res.status(401).json({ error: 'invalid_session' }); return; }
     const user = await authResponse.json() as { id?: string };
@@ -73,7 +82,12 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
     res.status(200).json({ overview: { players: players.size, sessions: sessions.size, gameStarts, completedStages: completed.length, averageActiveSeconds: active.length ? Math.round(active.reduce((a, b) => a + b, 0) / active.length) : 0, medianActiveSeconds: Math.round(median(active)), totalActiveSeconds: active.reduce((a, b) => a + b, 0), testStarts, testCompletes: tests.length }, stages, cubeTest: { starts: testStarts, completes: tests.length, completionRate: testStarts ? Math.round(tests.length / testStarts * 1000) / 10 : 0, averageScore: scoreValues.length ? Math.round(scoreValues.reduce((a, b) => a + b, 0) / scoreValues.length) : 0, medianScore: Math.round(median(scoreValues)), averageTotalTime: tests.length ? Math.round(tests.reduce((a, e) => a + jsonNumber(e.payload.totalEffectiveTime), 0) / tests.length) : 0, rankDistribution, questionFunnel } });
   } catch (error) {
     // Keep diagnostics useful without ever logging credentials or response bodies.
-    console.error('[admin-analytics] backend failure', { phase, errorType: error instanceof Error ? error.name : 'unknown' });
+    console.error('[admin-analytics] backend failure', {
+      phase,
+      errorType: error instanceof Error ? error.name : 'unknown',
+      status: error instanceof SupabaseRestError ? error.status : undefined,
+      responseKeys: error instanceof SupabaseRestError ? error.bodyKeys : undefined,
+    });
     res.status(500).json({ error: 'analytics_backend_failure', phase });
   }
 }

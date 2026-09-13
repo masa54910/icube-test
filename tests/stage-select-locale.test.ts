@@ -2,7 +2,6 @@ import {it,expect,vi} from 'vitest';
 import {t,setLocale,SUPPORTED_LOCALES} from '../src/i18n';
 import {loadLocale} from '../src/i18n/languageStore';
 import ui from '../src/ui/UIController.ts?raw';
-// @ts-expect-error Node builtin used only by Vitest; this browser project excludes Node types.
 import {readFileSync} from 'node:fs';
 const css=readFileSync(new URL('../src/styles.css',import.meta.url),'utf8');
 it('stage labels, statuses, filters and sections resolve in all nine locales',()=>{
