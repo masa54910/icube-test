@@ -22,6 +22,7 @@ export class AnalyticsManager {
  private persist(){try{localStorage.setItem(PENDING_KEY,JSON.stringify(this.queue.slice(-100)));}catch{/* storage optional */}}
  initialize(){if(this.started)return;this.started=true;this.track('session_start',{startedAt:new Date().toISOString(),...this.traffic});if(typeof window!=='undefined'){window.addEventListener('pagehide',()=>{this.endSession();});window.addEventListener('visibilitychange',()=>{if(document.hidden)this.lastActivity=performance.now();});}void this.flush();}
  startSession(){this.initialize();}
+ getActivePlaySeconds(){return Math.round(this.activeMs/1000);}
  startStage(stageId:string,section:string,stageType:string){this.currentStage=stageId;this.track('stage_start',{stageId,section,stageType});}
  completeStage(payload:Record<string,unknown>){this.track('stage_complete',{stageId:this.currentStage,effectivePlaySeconds:Math.round(this.activeMs/1000),...payload});this.currentStage=null;}
  abandon(reason:string){if(this.currentStage){const seconds=Math.round(this.activeMs/1000);this.track('stage_abandon',{stageId:this.currentStage,reason,effectivePlaySeconds:seconds,effectivePlaySecondsAtAbandon:seconds});}this.currentStage=null;}

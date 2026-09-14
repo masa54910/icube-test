@@ -21,6 +21,7 @@ import type {CharacterVisualAdapter} from './CharacterVisualAdapter';
 import { CelebrationScene } from './CelebrationScene';
 import { WorldBuilder } from './WorldBuilder';
 import { PlayablesSDK } from '../platform/PlayablesSDK';
+import type { SaveData } from '../platform/PlayablesSDK';
 import { UIController } from '../ui/UIController';
 import { CorrectPresentation } from '../ui/CorrectPresentation';
 import {loadLocale} from '../i18n/languageStore';
@@ -30,6 +31,8 @@ import {fitCelestialToSky} from './CelestialLayout';
 import {CorrectSceneVariantService,BACKGROUND_PRESETS,type BackgroundPreset} from './CorrectSceneVariants';
 import type { ShapeChoice,StageDefinition } from '../types';
 import {AnalyticsManager} from '../analytics/AnalyticsManager';
+import {FeedbackManager} from '../feedback/FeedbackManager';
+import {FeedbackModal} from '../ui/FeedbackModal';
 export class Game {
   readonly state=new StateMachine();
   readonly platform=new PlayablesSDK();
@@ -79,6 +82,9 @@ export class Game {
   private gameStarted=false;
   private analyticsHintTracked=false;
   readonly analytics=new AnalyticsManager(()=>loadLocale());
+  private readonly feedbackManager=new FeedbackManager(this.analytics.sessionId);
+  private readonly feedbackModal:FeedbackModal;
+  private feedbackTestComplete=false;
   constructor(canvas:HTMLCanvasElement,root:HTMLElement,loading:HTMLElement) {
     this.renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance'});
     this.renderer.setPixelRatio(Math.min(devicePixelRatio,2));this.renderer.setClearColor(0xe9eff6);
@@ -94,6 +100,8 @@ export class Game {
       toggleCamera:()=>this.toggleCamera(),jump:()=>this.input.jump(),openMemo:()=>this.toggleMemo(),answerFromMemo:()=>this.requestAnswer('cube-memo'),confirmMemoAnswer:()=>this.confirmMemoAnswer(),backMemoAnswer:()=>this.backMemoAnswer()
     },this.platform.locale);
     this.testUI=new TestUI(root,()=>this.testSession,fresh=>this.startTest(fresh),()=>this.backToTitle(),()=>({standard:this.platform.save.completed.filter(id=>STAGES.some(s=>s.id===id)).length,advanced:this.platform.save.completed.filter(id=>ALL_STAGES.some(s=>s.section==='advanced'&&s.id===id)).length}),value=>this.ui.setLocale(value));
+    this.feedbackModal=new FeedbackModal({anonymousPlayerId:this.analytics.anonymousPlayerId,sessionId:this.analytics.sessionId},()=>this.feedbackManager.dismiss(),()=>this.feedbackManager.submitted());
+    root.append(this.feedbackModal.root);
     window.addEventListener('pagehide',()=>this.saveTest());
     this.ui.attachAudio(this.audio);this.audio.initialize();
     this.player.onJump=()=>this.audio.emit('JUMP_START');
@@ -215,7 +223,7 @@ export class Game {
     if(this.state.state!==GameState.Exploration)this.state.transition(GameState.Exploration);
     this.input.setEnabled(!this.platform.paused);if(!this.testActive)this.platform.setLastPlayed(stage.id);this.ui.showExploration(stage,0,this.canAnswer());this.ui.updateCamera('third-person');
   }
-  private showHome():void {this.audio.stopSE();this.audio.fadeBGM(1);this.audio.playBGM('HOME');this.input.setEnabled(false);this.character.root.visible=false;this.ui.showTitle(this.platform.save.completed.filter(id=>STAGES.some(s=>s.id===id)).length,STAGES.length,this.platform.save);this.testUI.leave();}
+  private showHome():void {this.audio.stopSE();this.audio.fadeBGM(1);this.audio.playBGM('HOME');this.input.setEnabled(false);this.character.root.visible=false;const clears=this.platform.save.completed.filter(id=>STAGES.some(s=>s.id===id)).length;const savedTest=(this.platform.save as SaveData & {cubeTest?:{best?:unknown}}).cubeTest;this.feedbackTestComplete=this.feedbackTestComplete||Boolean(savedTest?.best);this.ui.showTitle(clears,STAGES.length,this.platform.save);this.testUI.leave();if(this.feedbackManager.shouldShow(clears,this.analytics.getActivePlaySeconds(),this.feedbackTestComplete))this.feedbackModal.show();}
   private backToTitle():void {
     this.analytics.abandon('title');
     this.gameStarted=false;
@@ -396,6 +404,7 @@ export class Game {
     const next=()=>{if(advanced||this.testSession.run!==run)return;advanced=true;
       const result=this.testSession.finish(true);this.testUI.hide();
       this.analytics.track('cube_test_complete',{testSetId:run.setId,completed:true});
+      this.feedbackTestComplete=true;
       if(result){this.testActive=false;this.ui.hideQuizForReveal();this.testUI.analyze(result);}
       else this.startTest(false);
     };
