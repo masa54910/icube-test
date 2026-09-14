@@ -142,7 +142,7 @@ export class Game {
     if(!this.platform.paused&&!document.hidden&&!this.testPaused) {
       if(this.testActive&&!this.testIntro){const phase=this.memoIncorrectRemaining>0?'excluded':this.memoOpen?(this.state.state===GameState.MemoConfirm?'answer':'memo'):this.state.state===GameState.Exploration?'gameplay':this.state.state===GameState.Quiz?'answer':'excluded';this.testSession.tick(wallDelta,phase);this.testSaveClock+=dt;if(this.testSaveClock>=2){this.testSaveClock=0;this.saveTest();}this.testUI.question(this.testSession.run!.currentQuestion,this.testSession.run!.current.effectiveSolveTime);}
       this.analytics.tick(wallDelta,this.state.state===GameState.Exploration||this.memoOpen||this.state.state===GameState.Quiz);
-      if(this.memoOpen){if(this.memoIncorrectRemaining>0){this.memoIncorrectRemaining=Math.max(0,this.memoIncorrectRemaining-dt);if(this.memoIncorrectRemaining===0){this.submittedMemo=null;if(this.attempts>=2){this.memoOpen=false;if(this.testActive)this.finishTestQuestion(false);else this.ui.finishMemoAnswer(true);}else{this.state.transition(GameState.Exploration);this.ui.backMemoAnswer();}}}if(this.ui.memoUsage().hintUsed&&!this.analyticsHintTracked){this.analyticsHintTracked=true;this.analytics.track('hint_used',{stageId:this.stage?.id});}this.ui.renderMemo();requestAnimationFrame(next=>this.frame(next));return;}
+      if(this.memoOpen){if(this.memoIncorrectRemaining>0){this.memoIncorrectRemaining=Math.max(0,this.memoIncorrectRemaining-dt);if(this.memoIncorrectRemaining===0){this.submittedMemo=null;if(this.attempts>=2){this.memoOpen=false;if(this.testActive)this.finishTestQuestion(false);else {if(this.stage?.section!=='test'&&this.stage)this.feedbackManager.noteStageCompleted(this.stage.id);this.ui.finishMemoAnswer(true);}}else{this.state.transition(GameState.Exploration);this.ui.backMemoAnswer();}}}if(this.ui.memoUsage().hintUsed&&!this.analyticsHintTracked){this.analyticsHintTracked=true;this.analytics.track('hint_used',{stageId:this.stage?.id});}this.ui.renderMemo();requestAnimationFrame(next=>this.frame(next));return;}
       if(this.state.state===GameState.Exploration&&!this.memoOpen) {
         const input=this.input.sample(),look=this.input.consumeLook();
         const mode=this.cameraController.mode;
@@ -223,7 +223,7 @@ export class Game {
     if(this.state.state!==GameState.Exploration)this.state.transition(GameState.Exploration);
     this.input.setEnabled(!this.platform.paused);if(!this.testActive)this.platform.setLastPlayed(stage.id);this.ui.showExploration(stage,0,this.canAnswer());this.ui.updateCamera('third-person');
   }
-  private showHome():void {this.audio.stopSE();this.audio.fadeBGM(1);this.audio.playBGM('HOME');this.input.setEnabled(false);this.character.root.visible=false;const clears=this.platform.save.completed.filter(id=>STAGES.some(s=>s.id===id)).length;const savedTest=(this.platform.save as SaveData & {cubeTest?:{best?:unknown}}).cubeTest;this.feedbackTestComplete=this.feedbackTestComplete||Boolean(savedTest?.best);this.ui.showTitle(clears,STAGES.length,this.platform.save);this.testUI.leave();if(this.feedbackManager.shouldShow(clears,this.analytics.getActivePlaySeconds(),this.feedbackTestComplete))this.feedbackModal.show();}
+  private showHome():void {this.audio.stopSE();this.audio.fadeBGM(1);this.audio.playBGM('HOME');this.input.setEnabled(false);this.character.root.visible=false;const clears=this.platform.save.completed.filter(id=>STAGES.some(s=>s.id===id)).length;this.feedbackManager.setCompletedStages(this.platform.save.completed.filter(id=>STAGES.some(s=>s.id===id)));const savedTest=(this.platform.save as SaveData & {cubeTest?:{best?:unknown}}).cubeTest;this.feedbackTestComplete=this.feedbackTestComplete||Boolean(savedTest?.best);this.ui.showTitle(clears,STAGES.length,this.platform.save);this.testUI.leave();if(this.feedbackManager.shouldShow(clears,this.analytics.getActivePlaySeconds(),this.feedbackTestComplete))this.feedbackModal.show();}
   private backToTitle():void {
     this.analytics.abandon('title');
     this.gameStarted=false;
@@ -280,7 +280,7 @@ export class Game {
     this.attempts++;this.used.add(id);this.state.transition(GameState.AnswerResult);
     this.analytics.answer({answerSource:'answer_point',attemptNumber:this.attempts,correct:choice.correct});
     this.saveTest();if(this.testActive)this.testSession.recordJudgment(choice.correct);
-    if(!choice.correct){this.audio.emit('ANSWER_INCORRECT');if(this.stage?.memo?.enabled)this.ui.unlockMemoHint();this.ui.showIncorrect(id,2-this.attempts);if(this.attempts<2)this.state.transition(GameState.Quiz);else if(this.testActive)this.finishTestQuestion(false);else this.ui.showFailed();return;}
+    if(!choice.correct){this.audio.emit('ANSWER_INCORRECT');if(this.stage?.memo?.enabled)this.ui.unlockMemoHint();this.ui.showIncorrect(id,2-this.attempts);if(this.attempts<2)this.state.transition(GameState.Quiz);else if(this.testActive)this.finishTestQuestion(false);else {if(this.stage)this.feedbackManager.noteStageCompleted(this.stage.id);this.ui.showFailed();}return;}
     this.ui.showCorrect();this.beginCorrectReveal();
   }
   private beginCorrectReveal():void {
@@ -306,6 +306,7 @@ export class Game {
     if(!frame.resultReady)return;
     this.state.transition(GameState.StageResult);
     this.analytics.completeStage({answerAttempts:this.attempts,firstTry:this.attempts===1,hintUsed:this.ui.memoUsage().hintUsed,memoUsed:this.memoOpen||!!this.submittedMemo,directSubmission:this.submittedMemo!==null,completed:true});
+    if(this.stage.section!=='test')this.feedbackManager.noteStageCompleted(this.stage.id);
     if(this.testActive){this.showTestCorrectResult();return;}
     void this.platform.completeStage(this.stage.id,this.elapsed,this.attempts).catch(error=>console.warn('保存失敗',error));
     const section=this.stage.section==='advanced'?ALL_STAGES.filter(s=>s.section==='advanced'):STAGES;const complete=section.every(s=>this.platform.save.completed.includes(s.id));if(complete)this.state.transition(GameState.Complete);
