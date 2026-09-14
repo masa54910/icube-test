@@ -8,16 +8,19 @@ const uuid=()=>crypto.randomUUID();
 const deviceClass=():AnalyticsEvent['deviceClass']=>{const w=typeof innerWidth==='number'?innerWidth:1024;return w<600?'mobile':w<1024?'tablet':'desktop';};
 const orientation=():AnalyticsEvent['orientation']=>{const w=typeof innerWidth==='number'?innerWidth:1024,h=typeof innerHeight==='number'?innerHeight:768;return w>=h?'landscape':'portrait';};
 const readId=()=>{try{const old=localStorage.getItem(PLAYER_KEY);if(old)return old;const id=uuid();localStorage.setItem(PLAYER_KEY,id);return id;}catch{return uuid();}};
+type TrafficAttribution={trafficSource:string;trafficMedium:string;trafficCampaign:string;referrer:string;landingPath:string};
+const clean=(value:string,max=128)=>value.trim().slice(0,max);
+export const readTrafficAttribution=():TrafficAttribution=>{if(typeof window==='undefined')return {trafficSource:'direct',trafficMedium:'',trafficCampaign:'',referrer:'',landingPath:'/'};const url=new URL(window.location.href);const source=clean(url.searchParams.get('utm_source')??'').toLowerCase();const medium=clean(url.searchParams.get('utm_medium')??'').toLowerCase();const campaign=clean(url.searchParams.get('utm_campaign')??'');let host='';try{host=document.referrer?new URL(document.referrer).hostname.toLowerCase():'';}catch{/* invalid referrer */}if(source)return {trafficSource:source,trafficMedium:medium,trafficCampaign:campaign,referrer:host,landingPath:url.pathname||'/'};let trafficSource='direct';if(host){if(/(^|\.)google\.|(^|\.)bing\.|(^|\.)yahoo\.|(^|\.)duckduckgo\./.test(host))trafficSource='organic_search';else if(/(^|\.)x\.com$|(^|\.)twitter\.com$|(^|\.)t\.co$/.test(host))trafficSource='x';else if(/(^|\.)note\.com$/.test(host))trafficSource='note';else if(/(^|\.)youtube\.com$|(^|\.)youtu\.be$/.test(host))trafficSource='youtube';else trafficSource='referral';}return {trafficSource,trafficMedium:'',trafficCampaign:'',referrer:host,landingPath:url.pathname||'/'};};
 
 /** Privacy-safe, non-blocking analytics observer. It never participates in gameplay decisions. */
 export class AnalyticsManager {
  readonly anonymousPlayerId=readId(); readonly appVersion='beta-1';
- readonly sessionId=uuid(); private queue:AnalyticsEvent[]=[]; private activeMs=0; private lastActivity=performance.now(); private started=false; private currentStage:string|null=null;
+ readonly sessionId=uuid(); private queue:AnalyticsEvent[]=[]; private activeMs=0; private lastActivity=performance.now(); private started=false; private currentStage:string|null=null; private readonly traffic=readTrafficAttribution();
  private readonly endpoint=import.meta.env.VITE_ANALYTICS_URL as string|undefined; private readonly key=import.meta.env.VITE_ANALYTICS_ANON_KEY as string|undefined;
  constructor(private readonly language:()=>Locale){this.restore();}
  private restore(){try{const raw=JSON.parse(localStorage.getItem(PENDING_KEY)??'[]');if(Array.isArray(raw))this.queue=raw.slice(-100) as AnalyticsEvent[];}catch{/* optional queue */}}
  private persist(){try{localStorage.setItem(PENDING_KEY,JSON.stringify(this.queue.slice(-100)));}catch{/* storage optional */}}
- initialize(){if(this.started)return;this.started=true;this.track('session_start',{startedAt:new Date().toISOString()});if(typeof window!=='undefined'){window.addEventListener('pagehide',()=>{this.endSession();});window.addEventListener('visibilitychange',()=>{if(document.hidden)this.lastActivity=performance.now();});}void this.flush();}
+ initialize(){if(this.started)return;this.started=true;this.track('session_start',{startedAt:new Date().toISOString(),...this.traffic});if(typeof window!=='undefined'){window.addEventListener('pagehide',()=>{this.endSession();});window.addEventListener('visibilitychange',()=>{if(document.hidden)this.lastActivity=performance.now();});}void this.flush();}
  startSession(){this.initialize();}
  startStage(stageId:string,section:string,stageType:string){this.currentStage=stageId;this.track('stage_start',{stageId,section,stageType});}
  completeStage(payload:Record<string,unknown>){this.track('stage_complete',{stageId:this.currentStage,effectivePlaySeconds:Math.round(this.activeMs/1000),...payload});this.currentStage=null;}

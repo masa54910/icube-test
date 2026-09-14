@@ -78,6 +78,16 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
     const tests = events.filter(e => e.event_name === 'cube_test_complete');
     const testStarts = events.filter(e => e.event_name === 'cube_test_start').length;
     const scoreValues = tests.map(e => jsonNumber(e.payload.cubeScore)).filter(v => v >= 0 && v <= 1000);
+    const sessionStarts = events.filter(e => e.event_name === 'session_start');
+    const trafficSources = [...new Set(sessionStarts.map(e => String(e.payload.trafficSource || 'direct')))].map(source => {
+      const sourceSessions = new Set(sessionStarts.filter(e => String(e.payload.trafficSource || 'direct') === source).map(e => e.session_id));
+      const sourceEvents = events.filter(e => sourceSessions.has(e.session_id));
+      const starts = new Set(sourceEvents.filter(e => e.event_name === 'game_start').map(e => e.session_id));
+      const testStartSessions = new Set(sourceEvents.filter(e => e.event_name === 'cube_test_start').map(e => e.session_id));
+      const testCompleteSessions = new Set(sourceEvents.filter(e => e.event_name === 'cube_test_complete').map(e => e.session_id));
+      const activeSeconds = sourceEvents.filter(e => e.event_name === 'session_end').map(e => jsonNumber(e.payload.activePlaySeconds)).filter(v => v >= 0);
+      return { source, players: new Set(sessionStarts.filter(e => String(e.payload.trafficSource || 'direct') === source).map(e => e.anonymous_player_id)).size, sessions: sourceSessions.size, gameStarts: starts.size, gameStartRate: sourceSessions.size ? Math.round(starts.size / sourceSessions.size * 1000) / 10 : 0, cubeTestStarts: testStartSessions.size, cubeTestCompletes: testCompleteSessions.size, cubeTestCompletionRate: testStartSessions.size ? Math.round(testCompleteSessions.size / testStartSessions.size * 1000) / 10 : 0, avgActiveSeconds: activeSeconds.length ? Math.round(activeSeconds.reduce((a, b) => a + b, 0) / activeSeconds.length) : 0 };
+    }).sort((a, b) => b.sessions - a.sessions);
     const stageIds = [...new Set(events.map(e => String(e.payload.stageId ?? '')).filter(Boolean))];
     const stages = stageIds.map(stageId => {
       const starts = events.filter(e => e.event_name === 'stage_start' && e.payload.stageId === stageId);
@@ -94,7 +104,7 @@ export default async function handler(req: ApiRequest, res: ApiResponse) {
     const funnelSteps = [{ step: 'start', count: testStarts }, ...questionFunnel.map(q => ({ step: `q${q.question}`, count: q.completes })), { step: 'complete', count: tests.length }];
     const stepDropOff = funnelSteps.slice(1).map((current, index) => { const previous = funnelSteps[index]?.count ?? 0; return { from: funnelSteps[index]?.step ?? 'start', to: current.step, count: Math.max(0, previous - current.count), rate: previous ? Math.round((previous - current.count) / previous * 1000) / 10 : 0 }; });
     const rankDistribution = Object.fromEntries(['S', 'A', 'B', 'C', 'D', 'E'].map(rank => [rank, tests.filter(e => e.payload.rank === rank).length]));
-    res.status(200).json({ overview: { players: players.size, sessions: sessions.size, gameStarts, completedStages: completed.length, averageActiveSeconds: active.length ? Math.round(active.reduce((a, b) => a + b, 0) / active.length) : 0, medianActiveSeconds: Math.round(median(active)), totalActiveSeconds: active.reduce((a, b) => a + b, 0), testStarts, testCompletes: tests.length }, stages, cubeTest: { starts: testStarts, completes: tests.length, completionRate: testStarts ? Math.round(tests.length / testStarts * 1000) / 10 : 0, averageScore: scoreValues.length ? Math.round(scoreValues.reduce((a, b) => a + b, 0) / scoreValues.length) : 0, medianScore: Math.round(median(scoreValues)), averageTotalTime: tests.length ? Math.round(tests.reduce((a, e) => a + jsonNumber(e.payload.totalEffectiveTime), 0) / tests.length) : 0, rankDistribution, questionFunnel, stepDropOff } });
+    res.status(200).json({ overview: { players: players.size, sessions: sessions.size, gameStarts, completedStages: completed.length, averageActiveSeconds: active.length ? Math.round(active.reduce((a, b) => a + b, 0) / active.length) : 0, medianActiveSeconds: Math.round(median(active)), totalActiveSeconds: active.reduce((a, b) => a + b, 0), testStarts, testCompletes: tests.length }, stages, trafficSources, cubeTest: { starts: testStarts, completes: tests.length, completionRate: testStarts ? Math.round(tests.length / testStarts * 1000) / 10 : 0, averageScore: scoreValues.length ? Math.round(scoreValues.reduce((a, b) => a + b, 0) / scoreValues.length) : 0, medianScore: Math.round(median(scoreValues)), averageTotalTime: tests.length ? Math.round(tests.reduce((a, e) => a + jsonNumber(e.payload.totalEffectiveTime), 0) / tests.length) : 0, rankDistribution, questionFunnel, stepDropOff } });
   } catch (error) {
     // Keep diagnostics useful without ever logging credentials or response bodies.
     console.error('[admin-analytics] backend failure', {
