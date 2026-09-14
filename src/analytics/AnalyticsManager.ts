@@ -21,7 +21,7 @@ export class AnalyticsManager {
  startSession(){this.initialize();}
  startStage(stageId:string,section:string,stageType:string){this.currentStage=stageId;this.track('stage_start',{stageId,section,stageType});}
  completeStage(payload:Record<string,unknown>){this.track('stage_complete',{stageId:this.currentStage,effectivePlaySeconds:Math.round(this.activeMs/1000),...payload});this.currentStage=null;}
- abandon(reason:string){if(this.currentStage)this.track('stage_abandon',{stageId:this.currentStage,reason,effectivePlaySeconds:Math.round(this.activeMs/1000)});this.currentStage=null;}
+ abandon(reason:string){if(this.currentStage){const seconds=Math.round(this.activeMs/1000);this.track('stage_abandon',{stageId:this.currentStage,reason,effectivePlaySeconds:seconds,effectivePlaySecondsAtAbandon:seconds});}this.currentStage=null;}
  answer(payload:Record<string,unknown>){this.track('answer_attempt',{stageId:this.currentStage,...payload});}
  track(name:AnalyticsEventName,payload:Record<string,unknown>={}){const host=typeof location!=='undefined'?location.hostname:'';const event:AnalyticsEvent={eventId:uuid(),eventName:name,anonymousPlayerId:this.anonymousPlayerId,sessionId:this.sessionId,occurredAt:new Date().toISOString(),appVersion:this.appVersion,platform:'web',deviceClass:deviceClass(),orientation:orientation(),language:this.language(),payload,isTest:host==='localhost'||host==='127.0.0.1'};this.queue.push(event);this.persist();if(this.queue.length>=8)void this.flush();}
  tick(ms:number,active:boolean){if(!this.started||document.hidden||!active)return;const now=performance.now();if(now-this.lastActivity<90000)this.activeMs+=Math.max(0,Math.min(ms,100));this.lastActivity=now;}
