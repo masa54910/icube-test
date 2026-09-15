@@ -2,18 +2,14 @@ type FunnelPayload = Record<string, unknown>;
 export type FunnelEvent = { event_name: string; anonymous_player_id: string; payload: FunnelPayload };
 
 const asQuestionNumber = (payload: FunnelPayload): number | null => {
-  const numbered = payload.questionNumber;
-  const numberedValue = Number(numbered);
+  const numberedValue = Number(payload.questionNumber);
   if (Number.isInteger(numberedValue) && numberedValue >= 1 && numberedValue <= 5) return numberedValue;
-  const indexed = payload.questionIndex;
-  const indexedValue = Number(indexed);
+  const indexedValue = Number(payload.questionIndex);
   if (Number.isInteger(indexedValue) && indexedValue >= 0 && indexedValue <= 4) return indexedValue + 1;
   if (Number.isInteger(indexedValue) && indexedValue >= 1 && indexedValue <= 5) return indexedValue;
-  const question = String(payload.question ?? '');
-  const questionMatch = question.match(/^(?:q(?:uestion)?[-_ ]?)?([1-5])$/i);
+  const questionMatch = String(payload.question ?? '').match(/^(?:q(?:uestion)?[-_ ]?)?([1-5])$/i);
   if (questionMatch) return Number(questionMatch[1]);
-  const stageId = String(payload.stageId ?? '');
-  const stageMatch = stageId.match(/(?:^|[-_])q([1-5])(?:@|$|[-_])/i);
+  const stageMatch = String(payload.stageId ?? '').match(/(?:^|[-_])q([1-5])(?:@|$|[-_])/i);
   return stageMatch ? Number(stageMatch[1]) : null;
 };
 

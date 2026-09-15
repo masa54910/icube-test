@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { aggregateCubeTestFunnel } from '../api/admin/funnel';
+import { aggregateCubeTestFunnel } from '../src/lib/admin/funnel';
 
 const event = (event_name: string, anonymous_player_id: string, payload: Record<string, unknown> = {}) => ({ event_name, anonymous_player_id, payload });
 

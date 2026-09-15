@@ -2,7 +2,7 @@ type ApiRequest = { method?: string; headers?: Record<string, string | string[] 
 type ApiResponse = { status(code: number): ApiResponse; json(value: unknown): void; setHeader(name: string, value: string): void };
 type EventRow = { event_id: string; event_name: string; anonymous_player_id: string; session_id: string; occurred_at: string; payload: Record<string, unknown>; is_test: boolean };
 type FeedbackRow = { created_at:string; rating_usability:number; difficulty:string; rating_fun:number; rating_cube_memo:number|null; cube_memo_unused:boolean; rating_replay:number; comment:string|null; traffic_source:string|null };
-import { aggregateCubeTestFunnel } from './funnel';
+import { aggregateCubeTestFunnel } from '../../src/lib/admin/funnel';
 
 const env = (name: string) => process.env[name] ?? '';
 const first = (value: string | string[] | undefined) => Array.isArray(value) ? value[0] ?? '' : value ?? '';
