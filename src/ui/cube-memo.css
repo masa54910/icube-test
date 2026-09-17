@@ -26,6 +26,7 @@
 .memo-plus{display:flex;gap:8px;margin-top:8px}.memo-plus button{flex:1;text-align:center;font-size:22px}
 .memo-palette{margin-top:22px;padding-top:16px;border-top:1px solid #d8e6f2}
 .memo-swatches{display:flex;gap:6px;margin-bottom:12px}
+.cube-memo .memo-swatch.red{background:#e94444}.cube-memo .memo-swatch.yellow{background:#ffce32}.cube-memo .memo-swatch.green{background:#32b86a}.cube-memo .memo-swatch.orange{background:#ff8c29}
 .cube-memo .memo-swatch{flex:1;min-width:0;min-height:44px;padding:0;border:4px solid #eaf6fd;box-shadow:inset 0 2px 3px #ffffff88,0 2px 5px #07274422}
 .cube-memo .memo-swatch.white{background:#f8fbff}.cube-memo .memo-swatch.navy{background:#123653}.cube-memo .memo-swatch.blue{background:#3166ec}.cube-memo .memo-swatch.cyan{background:#20c1e9}.cube-memo .memo-swatch.lightblue{background:#9cecff}.cube-memo .memo-swatch.active{border-color:#13b8ed}
 .memo-palette small{display:block;line-height:1.7;font-size:12px}

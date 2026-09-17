@@ -200,7 +200,7 @@ export class UIController {
   updateCamera(mode:CameraMode):void {const touch=matchMedia('(pointer:coarse)').matches;this.hud.querySelector('[data-camera]')!.textContent=(mode==='pov'?'POV':t('game.thirdPerson'))+(touch?'':' · V');this.lookButton.textContent='↑ '+t('game.lookUp');this.hud.querySelector('[data-menu]')!.textContent=t('game.menu');this.hud.querySelector('.touch-jump')!.textContent='↑ '+t('game.jump');this.hud.querySelector('.touch-stick span')!.textContent=t('game.move');this.hud.classList.toggle('pov',mode==='pov');}
   showQuiz(choices:readonly ShapeChoice[],remaining:number,used:readonly string[]=[]):void {
     this.view='quiz';this.choices=choices;this.used=new Set(used);this.selected=null;
-    const body=this.panel(t('answer.title'),'quiz-panel');if(this.memoStage&&this.mini){this.mini.root.classList.add('mini-quiz');this.mini.root.disabled=true;this.modal.querySelector('.panel-header')!.append(this.mini.root);this.updateMini();}
+    const body=this.panel(t('answer.title'),'quiz-panel');if(this.memoStage&&this.mini){this.mini.root.classList.add('mini-quiz');this.mini.root.disabled=false;this.modal.querySelector('.panel-header')!.append(this.mini.root);this.updateMini();}
     body.innerHTML='<p class="chance-label">'+t('answer.remainingAttempts')+': <b>'+remaining+' / 2</b></p><p class="quiz-message" role="status"></p><div class="choice-grid"></div><div class="quiz-actions"></div>';
     const grid=body.querySelector('.choice-grid')!;
     for(const [index,choice] of choices.entries()) {

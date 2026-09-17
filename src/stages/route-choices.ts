@@ -1,15 +1,13 @@
 import type {ShapeChoice,StageDefinition,Vec3Tuple} from '../types';
 import {normalizeVoxels,isConnected,shapeKey} from './stage-utils';
 import {isPurePath} from './pure-route';
+import {getCanonicalShapeKey} from '../game/ShapeEquivalence';
 const directions:Vec3Tuple[]=[[1,0,0],[-1,0,0],[0,1,0],[0,-1,0],[0,0,1],[0,0,-1]];
 const key=(p:Vec3Tuple)=>p.join(',');
 const plus=(p:Vec3Tuple,d:Vec3Tuple):Vec3Tuple=>[p[0]+d[0],p[1]+d[1],p[2]+d[2]];
 /** Hash the 24 proper cube rotations, not reflections. Only used for duplicate rejection. */
 export function routeRotationKey(cubes:readonly Vec3Tuple[]):string {
- const hashes:string[]=[];
- for(const a of directions)for(const b of directions){if(a.reduce((s,v,i)=>s+v*b[i]!,0)!==0)continue;const c:Vec3Tuple=[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]];
-  hashes.push(shapeKey(cubes.map(p=>[p.reduce((s,v,i)=>s+v*a[i]!,0),p.reduce((s,v,i)=>s+v*b[i]!,0),p.reduce((s,v,i)=>s+v*c[i]!,0)])));
- }return hashes.sort()[0]!;
+ return getCanonicalShapeKey(cubes);
 }
 export interface RouteChoice extends ShapeChoice {readonly routeDifficulty:'correct'|'easy'|'medium'|'hard';readonly mutation:string;}
 export function buildRouteChoices(stage:StageDefinition):RouteChoice[]{

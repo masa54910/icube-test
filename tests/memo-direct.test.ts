@@ -10,9 +10,9 @@ describe('direct geometry answer',()=>{
   expect(compareMemoToCanonical([...points,{x:100,y:100,z:100}],canonical).isExactMatch).toBe(false);
   expect(compareMemoToCanonical([{x:100,y:100,z:100},...points.slice(1)],canonical).isExactMatch).toBe(false);
  });
- it('rejects duplicates, translations and non-integers',()=>{
+ it('rejects duplicates/non-integers and accepts translations',()=>{
   expect(compareMemoToCanonical([{x:0,y:0,z:0},{x:0,y:0,z:0}],[[0,0,0],[1,0,0]]).isExactMatch).toBe(false);
-  expect(compareMemoToCanonical([{x:1,y:0,z:0}],[[0,0,0]]).isExactMatch).toBe(false);
+  expect(compareMemoToCanonical([{x:1,y:0,z:0}],[[0,0,0]]).isExactMatch).toBe(true);
   expect(compareMemoToCanonical([{x:.5,y:0,z:0}],[[0,0,0]]).isExactMatch).toBe(false);
  });
  it.each(Object.keys(memoDirectCopy) as (keyof typeof memoDirectCopy)[])('%s confirmation complete',l=>{

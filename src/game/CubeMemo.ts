@@ -1,7 +1,9 @@
 import type {Vec3Tuple} from '../types';
 import {compareMemoToCanonical} from './MemoComparator';
-export type MemoColor='white'|'navy'|'blue'|'cyan'|'lightblue';
-export const MEMO_COLORS:MemoColor[]=['white','navy','blue','cyan','lightblue'];
+export type MemoColor='white'|'navy'|'blue'|'cyan'|'lightblue'|'red'|'yellow'|'green'|'orange';
+export const MEMO_COLORS:MemoColor[]=['white','red','yellow','green','blue','orange'];
+export const MEMO_COLOR_HEX:Record<MemoColor,number>={white:0xf8fbff,navy:0x123653,blue:0x3166ec,cyan:0x20c1e9,lightblue:0x9cecff,red:0xe94444,yellow:0xffce32,green:0x32b86a,orange:0xff8c29};
+const validColor=(c:unknown):c is MemoColor=>typeof c==='string'&&Object.hasOwn(MEMO_COLOR_HEX,c);
 export const MEMO_LIMIT=256;
 export interface MemoCube {id:string;x:number;y:number;z:number;color:MemoColor;order:number;hintState:'origin'|'unknown'|'correct'}
 export interface MemoData {version:2;stageId:string;cubes:MemoCube[];hintUsed:boolean;hintUnlocked:boolean;lit:string[];hintUses?:number}
@@ -23,7 +25,7 @@ export class CubeMemoStore {
    const raw=JSON.parse(localStorage.getItem('icube-memo:'+stageId)??'null');
    if(raw?.stageId===stageId&&[1,2].includes(raw.version)&&Array.isArray(raw.cubes)){
     // Preserve valid v1 notes, not its unguarded hint flags.
-    for(const p of raw.cubes.slice(0,MEMO_LIMIT))if(p&&p.id!=='origin'&&this.data.cubes.length<MEMO_LIMIT&&this.valid(p.x,p.y,p.z)&&MEMO_COLORS.includes(p.color)&&!this.has(p.x,p.y,p.z)){
+    for(const p of raw.cubes.slice(0,MEMO_LIMIT))if(p&&p.id!=='origin'&&this.data.cubes.length<MEMO_LIMIT&&this.valid(p.x,p.y,p.z)&&validColor(p.color)&&!this.has(p.x,p.y,p.z)){
      this.data.cubes.push({...p,id:'restored-'+this.data.cubes.length,order:this.data.cubes.length,hintState:'unknown'});
     }
     if(raw.version===2){this.data.hintUnlocked=raw.hintUnlocked===true;this.data.hintUsed=this.data.hintUnlocked&&raw.hintUsed===true;this.data.lit=this.data.hintUsed&&Array.isArray(raw.lit)?raw.lit.filter((k:unknown)=>typeof k==='string'&&this.canonical.has(k)):[];}
@@ -47,7 +49,7 @@ export class CubeMemoStore {
  private commit(fn:()=>void){this.undo.push(structuredClone(this.data.cubes));if(this.undo.length>100)this.undo.shift();this.redo=[];fn();this.applyHint();this.save();}
  add(x:number,y:number,z:number,color:MemoColor='white'){return this.addBatch([{x,y,z}],color)>0;}
  addBatch(points:readonly {x:number;y:number;z:number}[],color:MemoColor='white'){
-  if(!MEMO_COLORS.includes(color))return 0;
+  if(!validColor(color))return 0;
   const seen=new Set(this.data.cubes.map(key));const valid=points.filter(p=>{if(!this.valid(p.x,p.y,p.z)||seen.has(key(p)))return false;seen.add(key(p));return true;}).slice(0,MEMO_LIMIT-this.data.cubes.length);
   if(!valid.length)return 0;
   this.commit(()=>valid.forEach(p=>this.data.cubes.push({...p,id:crypto.randomUUID(),color,order:this.data.cubes.length,hintState:'unknown'})));this.onPlacement?.(valid.length);return valid.length;
@@ -57,7 +59,7 @@ export class CubeMemoStore {
   return this.addBatch(Array.from({length:amount},(_,i)=>{const p={x,y,z};p[axis]+=(i+1)*sign;return p;}),color);
  }
  remove(id:string){if(id==='origin'||!this.data.cubes.some(c=>c.id===id))return false;this.commit(()=>this.data.cubes=this.data.cubes.filter(c=>c.id!==id));return true;}
- color(id:string,color:MemoColor){const c=this.data.cubes.find(c=>c.id===id);if(!c||c.id==='origin'||c.color===color||!MEMO_COLORS.includes(color))return false;this.commit(()=>c.color=color);return true;}
+ color(id:string,color:MemoColor){const c=this.data.cubes.find(c=>c.id===id);if(!c||c.id==='origin'||c.color===color||!validColor(color))return false;this.commit(()=>c.color=color);return true;}
  clear(){if(this.data.cubes.length<2)return;this.commit(()=>this.data.cubes=[origin()]);}
  undoOnce(){const s=this.undo.pop();if(!s)return false;this.redo.push(structuredClone(this.data.cubes));this.data.cubes=s;this.applyHint();this.save();return true;}
  redoOnce(){const s=this.redo.pop();if(!s)return false;this.undo.push(structuredClone(this.data.cubes));this.data.cubes=s;this.applyHint();this.save();return true;}

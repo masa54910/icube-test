@@ -5,3 +5,8 @@
 @media(pointer:coarse),(max-width:700px){.mini-memo{width:104px;padding:6px;right:calc(14px + env(safe-area-inset-right));bottom:calc(174px + env(safe-area-inset-bottom))}.mini-memo-viewport{height:76px}.mini-memo strong{font-size:10px}.mini-memo small{font-size:10px}}
 @media(max-height:500px){.mini-memo:not(.mini-quiz){bottom:auto;top:calc(84px + env(safe-area-inset-top));width:96px}.mini-memo-viewport{height:62px}.mini-memo:not(.mini-quiz) small{display:none}}
 @media(prefers-reduced-motion:reduce){.mini-memo{transition:none}.mini-memo:hover{transform:none}}
+.mini-memo.mini-quiz{width:clamp(150px,24vw,280px);max-width:48%;touch-action:none;cursor:grab;transform:none}
+.mini-quiz .mini-memo-viewport{height:clamp(120px,18vw,210px)}
+.mini-quiz:active{cursor:grabbing}
+@media(max-width:700px){.mini-memo.mini-quiz{width:150px}.mini-quiz .mini-memo-viewport{height:120px}}
+@media(max-height:500px){.mini-memo.mini-quiz{width:150px}.mini-quiz .mini-memo-viewport{height:100px}}

@@ -1,11 +1,13 @@
 import {beforeEach,describe,it,expect,vi} from 'vitest';
-import {CubeMemoStore,memoCoordinates,MEMO_LIMIT} from '../src/game/CubeMemo';
+import {CubeMemoStore,memoCoordinates,MEMO_LIMIT,MEMO_COLORS} from '../src/game/CubeMemo';
 import {memoKeys,memoValues,memoTranslation} from '../src/i18n/memo';
 import {STAGES} from '../src/stages/stage-data';
 const canonical=memoCoordinates(STAGES[0]!.rooms,STAGES[0]!.start);
 beforeEach(()=>{const data=new Map<string,string>();vi.stubGlobal('localStorage',{getItem:(k:string)=>data.get(k)??null,setItem:(k:string,v:string)=>data.set(k,v)});});
 const create=()=>new CubeMemoStore('stage_1_1',canonical);
 describe('Stage 1-1 memo model',()=>{
+ it('puts white first and uses white for default placement',()=>{expect(MEMO_COLORS).toEqual(['white','red','yellow','green','blue','orange']);const s=create();s.add(1,0,0);expect(s.cubes[1]!.color).toBe('white');});
+ it.each(['white','red','yellow','green','blue','orange'] as const)('adds, changes, saves and restores %s',color=>{const s=create();s.add(1,0,0,color);expect(s.cubes[1]!.color).toBe(color);s.add(2,0,0);s.color(s.cubes[2]!.id,color);s.flush();expect(create().cubes.slice(1).every(c=>c.color===color)).toBe(true);s.remove(s.cubes[1]!.id);expect(s.cubes).toHaveLength(2);});
  it('protects origin and rejects duplicates, fractions, invalid bounds',()=>{const s=create();expect(s.remove('origin')).toBe(false);expect(s.color('origin','blue')).toBe(false);expect(s.add(0,0,0)).toBe(false);expect(s.add(.5,0,0)).toBe(false);expect(s.add(25,0,0)).toBe(false);expect(s.cubes).toHaveLength(1);});
  it.each(['x','y','z'] as const)('extends signed %s face atomically',axis=>{const s=create();expect(s.addLine(0,0,0,axis,3,'blue',-1)).toBe(3);expect(s.cubes.at(-1)![axis]).toBe(-3);s.undoOnce();expect(s.cubes).toHaveLength(1);s.redoOnce();expect(s.cubes).toHaveLength(4);});
  it('supports +5, skips occupied cells and clears redo after edit',()=>{const s=create();s.addLine(0,0,0,'y',5);expect(s.addLine(0,0,0,'y',5)).toBe(0);s.undoOnce();s.add(1,0,0);expect(s.canRedo).toBe(false);});

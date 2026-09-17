@@ -1,4 +1,5 @@
 import {buildRouteChoices} from './route-choices';
+import {getCanonicalShapeKey} from '../game/ShapeEquivalence';
 import type { ShapeChoice, StageDefinition, Vec3Tuple } from '../types';
 import { DIGIT_SHAPES, LETTER_SHAPES } from './stage-data';
 
@@ -86,7 +87,7 @@ export function buildChoices(stage: StageDefinition, seed = stage.numericId): Sh
     shapes = [stage.rooms, ...decoys(stage.rooms, seed)];
   }
   const correctId = stage.choiceFamily === 'letters' ? `letter-${lettersForStage(stage)}` : stage.choiceFamily === 'digits' ? `digit-${stage.level - 1}` : 'correct';
-  return shapes.map((voxels, index) => ({ id: ids[index]!, voxels: normalizeVoxels(voxels), correct: ids[index] === correctId }));
+  return uniqueChoices(shapes.map((voxels, index) => ({ id: ids[index]!, voxels: normalizeVoxels(voxels), correct: ids[index] === correctId })));
 }
 
 function lettersForStage(stage: StageDefinition): string {
@@ -94,5 +95,31 @@ function lettersForStage(stage: StageDefinition): string {
 }
 
 export function makeDecoyChoices(correct: readonly Vec3Tuple[], seed: number): ShapeChoice[] {
-  return [{ id: 'correct', voxels: normalizeVoxels(correct), correct: true }, ...decoys(correct, seed).map((voxels, index) => ({ id: `decoy-${index + 1}`, voxels, correct: false }))];
+  return uniqueChoices([{ id: 'correct', voxels: normalizeVoxels(correct), correct: true }, ...decoys(correct, seed).map((voxels, index) => ({ id: `decoy-${index + 1}`, voxels, correct: false }))]);
+}
+
+/** Preserve the correct entry and every already-distinct distractor in its original slot. */
+export function uniqueChoices(choices:ShapeChoice[]):ShapeChoice[]{
+ const correct=choices.find(c=>c.correct)!;
+ const seen=new Set([getCanonicalShapeKey(correct.voxels)]);
+ const replace:number[]=[];
+ choices.forEach((c,i)=>{if(c.correct)return;const key=getCanonicalShapeKey(c.voxels);if(seen.has(key))replace.push(i);else seen.add(key);});
+ if(!replace.length)return choices;
+ const result=[...choices];
+ // Connected, bounded edits; growing a connected frontier guarantees finite progress.
+ let frontier=[normalizeVoxels(correct.voxels)];
+ for(let depth=0;replace.length&&depth<4;depth++){
+  const next:Vec3Tuple[][]=[];
+  for(const shape of frontier){
+   for(const p of shape)for(const d of directions){
+    const q=add(p,d);if(shape.some(v=>coordKey(v)===coordKey(q)))continue;
+    const candidate=normalizeVoxels([...shape,q]),key=getCanonicalShapeKey(candidate);
+    if(seen.has(key))continue;seen.add(key);next.push(candidate);
+    const i=replace.shift();if(i!==undefined)result[i]={...choices[i]!,voxels:candidate};
+    if(!replace.length)return result;
+   }
+  }
+  frontier=next;
+ }
+ throw new Error('Unable to generate rotation-distinct choices');
 }

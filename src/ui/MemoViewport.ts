@@ -1,11 +1,11 @@
 import * as T from 'three';
 import {RoundedBoxGeometry} from 'three/addons/geometries/RoundedBoxGeometry.js';
-import {MEMO_LIMIT,type CubeMemoStore,type MemoColor,type MemoCube} from '../game/CubeMemo';
+import {MEMO_LIMIT,MEMO_COLOR_HEX,type CubeMemoStore,type MemoColor,type MemoCube} from '../game/CubeMemo';
 
 export type MemoDisplay='normal'|'wire'|'hide';
 type Point={x:number;y:number;z:number};
 type Face={cube:MemoCube;axis:'x'|'y'|'z';sign:number};
-const COLORS:Record<MemoColor,number>={white:0xf8fbff,navy:0x123653,blue:0x3166ec,cyan:0x20c1e9,lightblue:0x9cecff};
+const COLORS=MEMO_COLOR_HEX;
 /** One isolated renderer, created lazily. No gameplay camera or scene references. */
 export class MemoViewport {
  readonly renderer=new T.WebGLRenderer({antialias:true,alpha:false,preserveDrawingBuffer:true});
@@ -97,7 +97,7 @@ export class MemoViewport {
  sync(){
   this.floorY=Math.min(0,...this.store.cubes.map(c=>c.y))-.5;this.floor.constant=-this.floorY;this.floorObjects.forEach((o,i)=>o.position.y=this.floorY+[-.01,.001,.003][i]!);
   this.edges.clear();this.shadows.clear();this.bodies.count=this.store.cubes.length;this.bodies.visible=this.display!=='wire';
-  const color=new T.Color();this.store.cubes.forEach((c,i)=>{this.matrix.makeTranslation(c.x,c.y,c.z);this.bodies.setMatrixAt(i,this.matrix);color.setHex(this.store.hintUsed?(c.hintState==='correct'||c.id==='origin'?0xb1f4ff:COLORS.white):c.id==='origin'?0xd9f8ff:this.display==='hide'?COLORS.white:COLORS[c.color]);this.bodies.setColorAt(i,color);
+  const color=new T.Color();this.store.cubes.forEach((c,i)=>{this.matrix.makeTranslation(c.x,c.y,c.z);this.bodies.setMatrixAt(i,this.matrix);color.setHex(c.id==='origin'?0xd9f8ff:this.display==='hide'?COLORS.white:COLORS[c.color]);this.bodies.setColorAt(i,color);
    const edge=new T.LineSegments(this.edgeGeometry,c.hintState==='correct'?this.hintMat:this.seam);edge.position.set(c.x,c.y,c.z);this.edges.add(edge);
    if(!this.store.has(c.x,c.y-1,c.z)){const s=new T.Mesh(this.shadowGeometry,this.shadowMaterial);s.rotation.x=-Math.PI/2;s.position.set(c.x,this.floorY+.007,c.z);this.shadows.add(s);}
   });this.bodies.instanceMatrix.needsUpdate=true;if(this.bodies.instanceColor)this.bodies.instanceColor.needsUpdate=true;this.bodies.computeBoundingSphere();
