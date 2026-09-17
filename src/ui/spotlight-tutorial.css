@@ -1,0 +1,19 @@
+.tutorial-help-button{pointer-events:auto;align-self:flex-start;min-height:44px;padding:6px 12px;border:1px solid #7acfe2;border-radius:8px;background:#effcffdd;color:#20516b;font-size:12px;font-weight:600}
+.hud-chip:has(.tutorial-help-button){display:grid;grid-template-columns:auto}
+#ui-root .cube-test-hud{top:calc(var(--tutorial-hud-bottom,120px) + 8px)}
+.spotlight-tutorial{position:fixed;inset:0;z-index:100;isolation:isolate;overflow:hidden;pointer-events:auto;touch-action:pan-y;padding:max(12px,env(safe-area-inset-top)) max(12px,env(safe-area-inset-right)) max(12px,env(safe-area-inset-bottom)) max(12px,env(safe-area-inset-left))}
+.spotlight-hole{position:absolute;pointer-events:none;border:2px solid #c5faff;border-radius:14px;box-shadow:0 0 0 200vmax #020c1bcc,0 0 18px #49dfff;z-index:0}
+.spotlight-card{position:absolute;z-index:1;overflow:auto;padding:20px;border:1px solid #88e5f8;border-radius:16px;background:#f4fcfff7;color:#12334c;box-shadow:0 6px 28px #00162866;overscroll-behavior:contain;overflow-wrap:anywhere}
+.spotlight-card small{color:#28718d;font-weight:bold;letter-spacing:.15em}.spotlight-card h2{font-size:22px;margin:8px 0 12px}.spotlight-card p{line-height:1.65;margin:0 0 18px;font-size:15px}
+.spotlight-actions{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end}.spotlight-actions button{min-height:44px;border:1px solid #b1d6e4;background:white;padding:8px 12px;border-radius:9px;font-size:14px;white-space:normal}.spotlight-actions .spotlight-next{background:#087ca9;color:white;border-color:#087ca9}
+@media(max-width:480px),(max-height:480px){.spotlight-card{padding:14px}.spotlight-card h2{font-size:19px}.spotlight-card p{font-size:14px;margin-bottom:12px}}
+.spotlight-card.has-scene{display:flex;flex-direction:column;overflow:hidden;background:#071d30f5;color:#effbff}
+.has-scene .spotlight-content{min-height:0;overflow:auto;overscroll-behavior:contain}
+.has-scene small{color:#73e3ff}
+.spotlight-scene{display:block;width:100%;height:auto;max-height:42dvh;object-fit:contain;background:#061523;border:1px solid #59d8ed;border-radius:10px;box-shadow:0 0 12px #39d6ff28;margin:0 0 14px}
+.has-scene .spotlight-actions{flex-shrink:0;padding-top:8px}
+.spotlight-actions button{color:#20516b}.spotlight-actions button:disabled{opacity:.5}
+.spotlight-tutorial.without-spotlight{background:#020c1bcc}
+.spotlight-hole[hidden]{display:none}
+.spotlight-card p{white-space:pre-line}
+@media(max-height:500px) and (min-width:600px){.has-scene .spotlight-content{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:0 16px}.has-scene .spotlight-scene{grid-column:1;grid-row:1/4;max-height:58dvh;margin:0}.has-scene small,.has-scene h2,.has-scene p{grid-column:2}}

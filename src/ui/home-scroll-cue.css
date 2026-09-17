@@ -1,0 +1,6 @@
+.home-scroll-cue{position:fixed;bottom:max(16px,env(safe-area-inset-bottom));left:50%;transform:translateX(-50%);z-index:8;display:grid;place-items:center;width:72px;height:72px;min-height:44px;padding:0;border:1px solid #9cecff99;background:#0b1d35b8;color:#d9faff;border-radius:50%;box-shadow:0 0 22px #35d5ff55;cursor:pointer;animation:home-cue-bob 2.2s ease-in-out infinite}
+.home-scroll-cue svg{width:44px;height:44px;filter:drop-shadow(0 0 5px #35d5ff99)}
+.home-scroll-cue[hidden]{display:none}
+.home-scroll-cue:focus-visible{outline:2px solid #9cecff;outline-offset:3px}
+@keyframes home-cue-bob{50%{transform:translate(-50%,5px)}}
+@media(prefers-reduced-motion:reduce){.home-scroll-cue{animation:none}}

@@ -8,6 +8,7 @@ export interface SaveData {
   bestAttempts: Record<string, number>;
   lastPlayed: string;
   memoRunId?:string;
+  tutorialCompleted?:boolean;
 }
 
 const DEFAULT_SAVE: SaveData = { version: 1, completed: [], bestTimesMs: {}, bestAttempts: {}, lastPlayed: 'stage_1_1' };

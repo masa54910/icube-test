@@ -6,7 +6,7 @@ export class CubeMemoSystem {
  get(stage:StageDefinition):CubeMemoStore {
   if(!stage.memo?.enabled)throw Error('Memo disabled: '+stage.id);
   let store=this.stores.get(stage.id);
-  if(!store){store=new CubeMemoStore(stage.id,stage.memo.canonicalCubes,stage.memo.hintLimit);this.stores.set(stage.id,store);}
+  if(!store){store=new CubeMemoStore(stage.id,stage.memo.canonicalCubes,stage.memo.hintLimit,stage.section==='special'?'white':'cyan');this.stores.set(stage.id,store);}
   return store;
  }
 }

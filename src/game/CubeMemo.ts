@@ -8,7 +8,7 @@ export const MEMO_LIMIT=256;
 export interface MemoCube {id:string;x:number;y:number;z:number;color:MemoColor;order:number;hintState:'origin'|'unknown'|'correct'}
 export interface MemoData {version:2;stageId:string;cubes:MemoCube[];hintUsed:boolean;hintUnlocked:boolean;lit:string[];hintUses?:number}
 const key=(p:{x:number;y:number;z:number})=>[p.x,p.y,p.z].join(',');
-const origin=():MemoCube=>({id:'origin',x:0,y:0,z:0,color:'cyan',order:0,hintState:'origin'});
+const origin=(color:MemoColor='cyan'):MemoCube=>({id:'origin',x:0,y:0,z:0,color,order:0,hintState:'origin'});
 export function memoCoordinates(rooms:readonly Vec3Tuple[],start:Vec3Tuple):Vec3Tuple[]{return rooms.map(p=>[p[0]-start[0],p[1]-start[1],p[2]-start[2]]);}
 /** Presentation-only notes; hint consumption is deliberately outside edit history. */
 export class CubeMemoStore {
@@ -17,10 +17,10 @@ export class CubeMemoStore {
  private undo:MemoCube[][]=[];
  private redo:MemoCube[][]=[];
  private canonical:Set<string>;
- constructor(readonly stageId:string,private canonicalCoordinates:readonly Vec3Tuple[],private hintLimit=1){
+ constructor(readonly stageId:string,private canonicalCoordinates:readonly Vec3Tuple[],private hintLimit=1,private originColor:MemoColor='cyan'){
   const canonical=canonicalCoordinates;
   this.canonical=new Set(canonical.map(p=>p.join(',')));
-  this.data={version:2,stageId,cubes:[origin()],hintUsed:false,hintUnlocked:false,lit:[]};
+  this.data={version:2,stageId,cubes:[origin(originColor)],hintUsed:false,hintUnlocked:false,lit:[]};
   try{
    const raw=JSON.parse(localStorage.getItem('icube-memo:'+stageId)??'null');
    if(raw?.stageId===stageId&&[1,2].includes(raw.version)&&Array.isArray(raw.cubes)){
@@ -60,7 +60,7 @@ export class CubeMemoStore {
  }
  remove(id:string){if(id==='origin'||!this.data.cubes.some(c=>c.id===id))return false;this.commit(()=>this.data.cubes=this.data.cubes.filter(c=>c.id!==id));return true;}
  color(id:string,color:MemoColor){const c=this.data.cubes.find(c=>c.id===id);if(!c||c.id==='origin'||c.color===color||!validColor(color))return false;this.commit(()=>c.color=color);return true;}
- clear(){if(this.data.cubes.length<2)return;this.commit(()=>this.data.cubes=[origin()]);}
+ clear(){if(this.data.cubes.length<2)return;this.commit(()=>this.data.cubes=[origin(this.originColor)]);}
  undoOnce(){const s=this.undo.pop();if(!s)return false;this.redo.push(structuredClone(this.data.cubes));this.data.cubes=s;this.applyHint();this.save();return true;}
  redoOnce(){const s=this.redo.pop();if(!s)return false;this.undo.push(structuredClone(this.data.cubes));this.data.cubes=s;this.applyHint();this.save();return true;}
  unlockHint(){if(this.data.hintUnlocked)return;this.data.hintUnlocked=true;this.save();}

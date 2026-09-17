@@ -5,7 +5,7 @@ import {t} from '../i18n';
 import './mini-memo.css';
 
 export function miniColor(c:MemoCube,_hintUsed:boolean):number {
- if(c.hintState==='origin')return 0x69dcf3;
+ if(c.hintState==='origin'&&c.color==='cyan')return 0x69dcf3;
  return MEMO_COLOR_HEX[c.color];
 }
 export function fitMini(cubes:readonly Pick<MemoCube,'x'|'y'|'z'>[],aspect:number,yaw=Math.PI/4,pitch=Math.atan(1.05/Math.sqrt(2))){

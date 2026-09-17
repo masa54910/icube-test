@@ -6,12 +6,14 @@ import {AudioSettings} from './AudioSettings';
 import type {AudioManager} from '../audio/AudioManager';
 import {MemoConfirmation} from './MemoConfirmation';
 import type {MemoCube} from '../game/CubeMemo';
+import {MEMO_COLOR_HEX} from '../game/CubeMemo';
 import type { Locale, ShapeChoice, StageDefinition } from '../types';
 import type { SaveData } from '../platform/PlayablesSDK';
 import type { CameraMode } from '../game/CameraController';
 import { normalizeVoxels } from '../stages/stage-utils';
 import { HomePreview } from './HomePreview';
 import { HomeShowcase } from './HomeShowcase';
+import {HomeScrollCue} from './HomeScrollCue';
 import { HOME_COPY,homeIcon } from './HomeContent';
 import { CUBIE_IMAGE_URL } from './CorrectPresentation';
 import './home.css';
@@ -19,8 +21,11 @@ import './answer-feedback.css';
 import './responsive-qa.css';
 import {CubeMemoPanel} from './CubeMemoPanel';
 import {createHowToMemo} from './HowToMemo';
+import {tutorialCopy} from '../i18n/tutorial';
+import {SpotlightTutorial} from './SpotlightTutorial';
 import {t,LANGUAGE_NAMES,SUPPORTED_LOCALES,locale as currentLocale,setLocale as setI18nLocale} from '../i18n';
 export interface UICallbacks {
+  tutorial():void;
   newGame():void;
   answerFromMemo():void;
   audioEvent?:(event:'MEMO_CUBE_COMMIT'|'ANSWER_SELECT',count?:number)=>void;
@@ -45,6 +50,7 @@ export class UIController {
   private hud:HTMLElement;
   private modal:HTMLElement;
   private view='';
+  private spotlight:SpotlightTutorial|null=null;
   private refreshStageSelect:(()=>void)|null=null;
   private selected:string|null=null;
   private choices:readonly ShapeChoice[]=[];
@@ -68,6 +74,7 @@ export class UIController {
     this.locale=locale;
     this.title=document.createElement('section');this.title.className='home';
     this.title.innerHTML=`<aside class="home-menu"><header><h1>i CUBE <span>TEST</span></h1><p class="home-headline">${HOME_COPY.headline}</p><p class="home-supporting">${HOME_COPY.supporting}</p><p class="home-tagline">${HOME_COPY.tagline}</p></header><nav class="menu-list" aria-label="メインメニュー"></nav><small class="analytics-notice"></small><section class="progress-panel"><h3><span class="progress-emblem" aria-hidden="true">◇</span> PLAYER PROGRESS</h3><div class="progress-track" role="progressbar" aria-label="クリア済みステージ" aria-valuemin="0" aria-valuemax="31" aria-valuenow="0"><i></i></div><div class="progress-grid"><div><small>PROGRESS</small><strong data-progress>0 / 31</strong></div><div><small>NEXT STAGE</small><strong data-next-stage>1-1</strong></div><div><small>BEST TIME</small><strong data-best>—</strong></div><div><small>TOTAL TIME</small><strong data-total>—</strong></div></div></section></aside><section class="home-right"><section class="preview-panel"><div class="preview-surface"><canvas aria-label="白い惑星と宇宙、銀河、遠くの地球、浮遊する7 Cube Cross"></canvas><div class="home-world-label">${HOME_COPY.worldTagline}</div><div class="home-cubie"><img src="${CUBIE_IMAGE_URL}" width="168" height="376" alt="${HOME_COPY.cubieAlt}" draggable="false" decoding="async"></div><div class="home-world-signature"><span class="signature-cubes" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span>i CUBE TEST<small>${HOME_COPY.worldTagline}</small></span></div></div></section><div class="home-game-flow-wrap"><img class="home-game-flow" src="/assets/home-game-flow.png" alt="i CUBE TEST gameplay flow: Explore, Memo, Solve, Cube Score" loading="lazy" draggable="false"></div></section>`;
+    new HomeScrollCue(this.title);
     const rows:[string,string,string,()=>void][]=[
       ['new',t('home.newGame'),t('home.newGameSub'),()=>cb.newGame()],
       ['continue',t('home.continue'),t('home.continueSub'),()=>cb.continueGame()],
@@ -83,6 +90,9 @@ export class UIController {
     }
     this.hud=document.createElement('section');this.hud.className='hud hidden';
     this.hud.innerHTML='<div class="hud-top"><div class="hud-chip"><b data-stage></b><span>TIME <strong data-time>00:00.0</strong></span></div><div class="hud-actions"></div></div><div class="control-hint">WASD / ↑↓←→ MOVE · DRAG TO LOOK · Q / R TURN · SPACE JUMP · V CAMERA · E / F ANSWER</div><div class="touch-stick" aria-hidden="true"><i></i><span>MOVE</span></div><div class="crosshair" aria-hidden="true">+</div>';
+    const tutorialButton=button(t('how.controls.title'),'tutorial-help-button');tutorialButton.onclick=()=>cb.tutorial();this.hud.querySelector('.hud-chip')!.append(tutorialButton);
+    const chip=this.hud.querySelector<HTMLElement>('.hud-chip')!;
+    new ResizeObserver(()=>{if(chip.getBoundingClientRect().height)this.root.style.setProperty('--tutorial-hud-bottom',chip.getBoundingClientRect().bottom-this.root.getBoundingClientRect().top+'px');}).observe(chip);
     const actions=this.hud.querySelector('.hud-actions')!;
     const camera=button('THIRD PERSON · V','camera-button');camera.dataset.camera='';camera.onclick=()=>cb.toggleCamera();
     this.lookButton=button('↑ LOOK UP','look-button');
@@ -104,6 +114,7 @@ export class UIController {
   }
   setLocale(locale:Locale):void {this.locale=locale;setI18nLocale(locale);document.documentElement.lang=locale; if(this.view==='how')this.showHowTo(); this.title.querySelector('.home-headline')!.textContent=t('home.mainCopy1');this.title.querySelector('.home-supporting')!.textContent=t('home.mainCopy2'); this.title.querySelectorAll('.menu-button:not(.test-primary-cta)').forEach((el,i)=>{const keys=[['home.newGame','home.newGameSub'],['home.continue','home.continueSub'],['home.stageSelect','home.stageSelectSub'],['home.howToPlay','home.howToPlaySub']][i];if(keys){el.setAttribute('aria-label',t(keys[0]!));const s=el.querySelectorAll('strong,small');s[0]!.textContent=t(keys[0]!);s[1]!.textContent=t(keys[1]!);}});const lang=this.title.querySelector('.language-selector') as HTMLSelectElement|null;if(lang)lang.value=locale;this.updateStaticLabels();this.memo?.refreshTexts();this.mini?.refreshTexts();}
   private updateStaticLabels():void {
+    this.hud.querySelector('.tutorial-help-button')!.textContent=t('how.controls.title');
     this.audioSettings?.refresh();
     const privacy=this.title.querySelector('.analytics-notice');if(privacy)privacy.textContent='Anonymous gameplay data may be collected to improve i CUBE TEST. No personal information is collected.';
     const heading=this.title.querySelector('.progress-panel h3')!;heading.lastChild!.textContent=' '+t('home.playerProgress');
@@ -138,13 +149,23 @@ export class UIController {
     this.refreshStageSelect=()=>{const scroll=body.scrollTop,focused=document.activeElement===lang;this.showStageSelect(stages,completed,selectedGroup);this.modal.querySelector('.modal-body')!.scrollTop=scroll;if(focused)(this.modal.querySelector('.stage-language') as HTMLElement).focus({preventScroll:true});};
     const standard=document.createElement('h3');standard.textContent=t('advanced.standard');body.append(standard);const tabs=document.createElement('div');tabs.className='filter-tabs';body.append(tabs);
     const list=document.createElement('div');list.className='stage-grid';body.append(list);
-    const render=(group:number)=>{selectedGroup=group;list.replaceChildren();stages.filter(s=>s.section!=='advanced'&&(!group||s.group===group)).forEach(stage=>{
+    const render=(group:number)=>{selectedGroup=group;list.replaceChildren();stages.filter(s=>(!s.section||s.section==='standard')&&(!group||s.group===group)).forEach(stage=>{
       const card=button('','stage-tile');const clear=completed.includes(stage.id);card.setAttribute('aria-label',t('game.stage')+' '+stage.displayName);
       card.innerHTML='<strong>'+t('game.stage')+' '+stage.displayName+'</strong><span class="badge">'+t(clear?'common.clear':'common.play')+'</span><small>'+t('stageSelect.'+['alphabet','digits','shapes'][stage.group-1])+'</small><span class="stage-stars">'+(clear?'★★★':'☆☆☆')+'</span>';
       card.onclick=()=>this.cb.startStage(stage.numericId);list.append(card);
     });};
     ['all','alphabet','digits','shapes'].forEach((name,index)=>{const b=button(t('stageSelect.'+name),'filter '+(index===selectedGroup?'active':''));b.onclick=()=>{tabs.querySelectorAll('button').forEach(e=>e.classList.remove('active'));b.classList.add('active');render(index);};tabs.append(b);});render(selectedGroup);const advanced=stages.filter(s=>s.section==='advanced');if(advanced.length){const heading=document.createElement('h3');heading.textContent=t('advanced.title');const description=document.createElement('p');description.textContent=t('advanced.select');const cards=document.createElement('div');cards.className='stage-grid advanced-stages';for(const stage of advanced){const card=button('','stage-tile');card.dataset.advanced=stage.id;const name=document.createElement('strong');name.textContent=stage.displayName+' · '+stage.subtitle;const badge=document.createElement('span');badge.className='badge';badge.textContent=completed.includes(stage.id)?t('common.clear'):'ROUTE';card.append(name,badge);card.onclick=()=>this.cb.startStage(stage.numericId);cards.append(card);}body.append(heading,description,cards);}
+    const special=stages.filter(s=>s.section==='special');
+    if(special.length){
+      const heading=document.createElement('h3');heading.textContent='SPECIAL';
+      const description=document.createElement('p');description.textContent=t('special.subtitle');
+      const cards=document.createElement('div');cards.className='stage-grid special-stages';
+      for(const stage of special){const card=button('','stage-tile');const name=document.createElement('strong');name.textContent=stage.displayName;const badge=document.createElement('span');badge.className='badge';badge.textContent=completed.includes(stage.id)?t('common.clear'):t('common.play');card.append(name,badge);card.onclick=()=>this.cb.startStage(stage.numericId);cards.append(card);}
+      body.append(heading,description,cards);
+    }
   }
+  showSpotlightTutorial(complete:()=>void):void {this.spotlight??=new SpotlightTutorial(this.root);this.spotlight.open(complete);}
+  closeSpotlightTutorial():void {this.spotlight?.close();}
   showHowTo():void {
     this.view='how';const body=this.panel(t('how.title'),'how-panel');
     const header=this.modal.querySelector('.panel-header')!;
@@ -164,6 +185,7 @@ export class UIController {
         const touch=document.createElement('section');touch.className='touch-help';
         for(const item of ['move','camera','jump','ladder','lookUp','answer']){const p=document.createElement('p');p.textContent=t('how.touch.'+item);touch.append(p);}article.append(touch);
         const keyboard=document.createElement('p');keyboard.className='how-desktop-note';keyboard.textContent=t('how.keyboard');article.append(keyboard);
+        const mouse=document.createElement('p');mouse.textContent=tutorialCopy[this.locale].mouse;article.append(mouse);
         const columns=document.createElement('div');columns.className='how-control-columns';
         for(const group of ['movement','camera']){const column=document.createElement('section');const heading=document.createElement('h4');heading.textContent=t('how.controls.'+group);column.append(heading);
           const rows:[string[],string][]=group==='movement'?[[['W','↑'],'forward'],[['S','↓'],'backward'],[['A','←'],'turnLeft'],[['D','→'],'turnRight'],[['SPACE'],'jump']]:[[['V'],'switchView'],[['LOOK UP','Shift'],'lookUp']];
@@ -206,7 +228,7 @@ export class UIController {
     for(const [index,choice] of choices.entries()) {
       const card=button('','choice-card');card.dataset.choiceId=choice.id;card.setAttribute('aria-label','Choice '+(index+1));
       const label=document.createElement('span');label.textContent=String(index+1);label.className='choice-number';
-      const canvas=document.createElement('canvas');canvas.width=300;canvas.height=200;drawShape(canvas,choice.voxels);card.append(label,canvas);card.disabled=this.used.has(choice.id);card.classList.toggle('wrong',card.disabled);
+      const canvas=document.createElement('canvas');canvas.width=300;canvas.height=200;drawShape(canvas,choice.voxels,choice.colors);card.append(label,canvas);card.disabled=this.used.has(choice.id);card.classList.toggle('wrong',card.disabled);
       card.onclick=()=>{if(this.selected!==choice.id)this.cb.audioEvent?.('ANSWER_SELECT');this.selected=choice.id;grid.querySelectorAll('button').forEach(b=>b.classList.toggle('selected',b===card));(body.querySelector('[data-submit]') as HTMLButtonElement).disabled=false;};grid.append(card);
     }
     if(this.routeStage)drawRouteChoices(choices,[...grid.querySelectorAll('canvas')]);
@@ -247,9 +269,11 @@ export class UIController {
   showPause(paused:boolean):void {this.miniPaused=paused;this.updateMini();this.showcase.setPaused(paused);this.pauseOverlay.querySelector('h2')!.textContent=t('common.paused');this.pauseOverlay.querySelector('p')!.textContent='';this.pauseOverlay.classList.toggle('hidden',!paused);}
   get currentView():string {return this.view;}
 }
-function drawShape(canvas:HTMLCanvasElement,voxels:ShapeChoice['voxels']):void {
+function drawShape(canvas:HTMLCanvasElement,voxels:ShapeChoice['voxels'],colors?:ShapeChoice['colors']):void {
   const ctx=canvas.getContext('2d');if(!ctx)return;
   const cells=normalizeVoxels(voxels);
+  const minimum=[0,1,2].map(a=>Math.min(...voxels.map(p=>p[a]!)));
+  const colorMap=new Map(voxels.map((p,i)=>[p.map((v,a)=>v-minimum[a]!).join(','),colors?.[i]]));
   const p=(x:number,y:number,z:number):[number,number]=>[(x-z)*.866,-y+(x+z)*.5];
   const all=cells.flatMap(([x,y,z])=>[p(x,y,z),p(x+1,y+1,z+1),p(x+1,y,z),p(x,y+1,z+1)]);
   const minX=Math.min(...all.map(p=>p[0])),maxX=Math.max(...all.map(p=>p[0])),minY=Math.min(...all.map(p=>p[1])),maxY=Math.max(...all.map(p=>p[1]));
@@ -257,6 +281,6 @@ function drawShape(canvas:HTMLCanvasElement,voxels:ShapeChoice['voxels']):void {
   const project=(x:number,y:number,z:number)=>{const q=p(x,y,z);return [(q[0]-(minX+maxX)/2)*scale+150,(q[1]-(minY+maxY)/2)*scale+102] as const;};
   cells.sort((a,b)=>a[0]+a[1]+a[2]-b[0]-b[1]-b[2]).forEach(([x,y,z])=>{
     const faces=[{c:'#ffffff',p:[[x,y+1,z],[x+1,y+1,z],[x+1,y+1,z+1],[x,y+1,z+1]]},{c:'#bac6d3',p:[[x+1,y+1,z],[x+1,y,z],[x+1,y,z+1],[x+1,y+1,z+1]]},{c:'#e2e8ef',p:[[x,y+1,z+1],[x+1,y+1,z+1],[x+1,y,z+1],[x,y,z+1]]}];
-    faces.forEach(face=>{ctx.beginPath();face.p.forEach((q,i)=>{const pt=project(q[0]!,q[1]!,q[2]!);if(i===0)ctx.moveTo(...pt);else ctx.lineTo(...pt);});ctx.closePath();ctx.fillStyle=face.c;ctx.fill();ctx.strokeStyle='#8796a7';ctx.lineWidth=.8;ctx.stroke();});
+    faces.forEach((face,index)=>{ctx.beginPath();face.p.forEach((q,i)=>{const pt=project(q[0]!,q[1]!,q[2]!);if(i===0)ctx.moveTo(...pt);else ctx.lineTo(...pt);});ctx.closePath();const color=colorMap.get([x,y,z].join(','));ctx.fillStyle=color?'#'+MEMO_COLOR_HEX[color].toString(16).padStart(6,'0'):face.c;ctx.fill();if(color&&index){ctx.fillStyle=index===1?'#00152d44':'#00152d22';ctx.fill();}ctx.strokeStyle='#8796a7';ctx.lineWidth=.8;ctx.stroke();});
   });
 }

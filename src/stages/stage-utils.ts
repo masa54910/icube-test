@@ -1,4 +1,5 @@
 import {buildRouteChoices} from './route-choices';
+import {buildSpecialChoices} from './special';
 import {getCanonicalShapeKey} from '../game/ShapeEquivalence';
 import type { ShapeChoice, StageDefinition, Vec3Tuple } from '../types';
 import { DIGIT_SHAPES, LETTER_SHAPES } from './stage-data';
@@ -72,6 +73,7 @@ function decoys(correct: readonly Vec3Tuple[], seed: number): Vec3Tuple[][] {
 }
 
 export function buildChoices(stage: StageDefinition, seed = stage.numericId): ShapeChoice[] {
+  if(stage.section==='special')return buildSpecialChoices(stage);
   if(stage.stageType==='route')return buildRouteChoices(stage);
   let shapes: readonly (readonly Vec3Tuple[])[];
   let ids: readonly string[];

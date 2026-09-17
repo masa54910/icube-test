@@ -1,5 +1,7 @@
 import {t} from '../i18n';
 import './how-memo.css';
+import {locale} from '../i18n';
+import {tutorialCopy} from '../i18n/tutorial';
 
 /** Documentation only. Does not create or connect a live editor. */
 export function createHowToMemo():HTMLElement {
@@ -14,5 +16,6 @@ export function createHowToMemo():HTMLElement {
  img.src=import.meta.env.BASE_URL+'assets/howto/cube-memo.png';img.alt=t('howToPlay.memo.imageAlt');img.loading='lazy';img.decoding='async';img.width=1896;img.height=1256;figure.append(img);
  const hint=document.createElement('p');hint.className='how-memo-hint';hint.textContent=t('howToPlay.memo.hint');
  const scope=document.createElement('section');scope.className='how-memo-scope';const heading=document.createElement('h3');heading.textContent=t('advanced.title');const body=document.createElement('p');body.textContent=t('advanced.body');scope.append(heading,body);const boostHeading=document.createElement('h4');boostHeading.textContent='❯❯ BOOST PAD';const boost=document.createElement('p');boost.textContent=t('advanced.boost');const answers=document.createElement('p');answers.textContent=t('advanced.answers');scope.append(boostHeading,boost,answers);
- section.append(title,subtitle,copy,figure,hint,scope);return section;
+ const colors=document.createElement('p');colors.textContent=tutorialCopy[locale()].memo;
+ section.append(title,subtitle,colors,copy,figure,hint,scope);return section;
 }

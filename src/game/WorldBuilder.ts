@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import { CONFIG } from '../config';
+import {MEMO_COLOR_HEX} from './CubeMemo';
 import type { LadderDefinition, StageDefinition, Vec3Tuple } from '../types';
 import { coordKey } from '../stages/stage-utils';
 import {validateLadderTopExits} from '../stages/ladder-exit-validator';
@@ -43,14 +44,36 @@ export class WorldBuilder {
     const root = new THREE.Group(); root.name = `stage-${stage.numericId}`;
     const roomLookup = new Set(stage.rooms.map(coordKey));
     const roomMat = material(CONFIG.colors.room); const gridMat = material(CONFIG.colors.grid, 0.9);
-    stage.rooms.forEach((room, index) => this.buildRoom(root, room, roomLookup, roomMat, gridMat, index));
+    const coloredMats=new Map<string,THREE.MeshStandardMaterial>();
+    const specialMaterial=(color:string)=>{
+      let mat=coloredMats.get(color);
+      if(!mat){const hex=MEMO_COLOR_HEX[color as keyof typeof MEMO_COLOR_HEX];mat=material(hex,.62,hex);mat.emissiveIntensity=.12;mat.name='special-room-'+color;coloredMats.set(color,mat);}
+      return mat;
+    };
+    stage.rooms.forEach((room,index)=>{
+      const color=stage.section==='special'?stage.colors?.[index]:undefined;
+      const mat=color?specialMaterial(color):roomMat,first=root.children.length;
+      this.buildRoom(root,room,roomLookup,mat,gridMat,index);
+      if(!color)return;
+      for(const object of root.children.slice(first))if(object instanceof THREE.Mesh&&object.material===mat){
+        object.userData.roomSurface=true;object.userData.roomColor=color;
+        // Adjacent floors/ceilings share a slab. Both copies must paint each face
+        // identically: top belongs to the upper room, bottom to the lower room.
+        if((object.geometry as THREE.BoxGeometry).parameters.height===CONFIG.wallThickness){
+          const floor=object.position.y<room[1]*CONFIG.roomSize;
+          const neighbor=stage.rooms.findIndex(p=>p[0]===room[0]&&p[2]===room[2]&&p[1]===room[1]+(floor?-1:1));
+          const neighborColor=stage.colors?.[neighbor];
+          if(neighborColor){const faces:THREE.Material[]=Array(6).fill(mat);faces[floor?3:2]=specialMaterial(neighborColor);object.material=faces;}
+        }
+      }
+    });
     stage.ladders.forEach((ladder) => this.buildLadder(root, ladder));
     const answerPositions=(stage.answerPoints??[stage.goal??stage.start]).map(p=>centerFor(p).add(new THREE.Vector3(...CONFIG.answer.pointOffset)));
     const answerPosition=answerPositions[0]!;
     for(const position of answerPositions)this.buildAnswerPad(root, position);
     root.updateMatrixWorld(true);
     root.traverse(object => {
-      if(object instanceof THREE.Mesh && (object.material===roomMat||object.userData.solidTerminal)) this.colliders.push(new THREE.Box3().setFromObject(object));
+      if(object instanceof THREE.Mesh && (object.material===roomMat||object.userData.roomSurface||object.userData.solidTerminal)) this.colliders.push(new THREE.Box3().setFromObject(object));
     });
     this.#world = { root, answerPosition, answerPositions, rooms: stage.rooms, ladders: stage.ladders };
     if(stage.routeChapter!==undefined)validateLadderTopExits(stage,this);
@@ -63,8 +86,9 @@ export class WorldBuilder {
     const edgeMaterial = material(0x71829a, 0.65);
     const bounds = this.bounds(stage.rooms);
     const center = new THREE.Vector3((bounds.min[0] + bounds.max[0]) / 2, (bounds.min[1] + bounds.max[1]) / 2, (bounds.min[2] + bounds.max[2]) / 2);
-    stage.rooms.forEach(([x, y, z]) => {
-      const cube = solid([1.72, 1.72, 1.72], new THREE.Vector3((x - center.x) * 1.9, (y - center.y) * 1.9, (z - center.z) * 1.9), cubeMaterial);
+    stage.rooms.forEach(([x, y, z],index) => {
+      const color=stage.section==='special'?stage.colors?.[index]:undefined;
+      const cube = solid([1.72, 1.72, 1.72], new THREE.Vector3((x - center.x) * 1.9, (y - center.y) * 1.9, (z - center.z) * 1.9), color?material(MEMO_COLOR_HEX[color],.55,MEMO_COLOR_HEX[color]):cubeMaterial);
       root.add(cube);
       const edges = new THREE.LineSegments(new THREE.EdgesGeometry(new THREE.BoxGeometry(1.78, 1.78, 1.78)), new THREE.LineBasicMaterial({ color: edgeMaterial.color }));
       edges.position.copy(cube.position); root.add(edges);

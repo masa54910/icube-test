@@ -6,6 +6,7 @@ import {TestUI} from '../test-mode/TestUI';
 import {AudioManager} from '../audio/AudioManager';
 import {qaAudioManifest} from '../audio/qaManifest';
 import {compareMemoToCanonical,type MemoPoint} from './MemoComparator';
+import {areColoredShapesEquivalent} from './ShapeEquivalence';
 import { STAGES } from '../stages/stage-data';
 import {ALL_STAGES,catalogStage} from '../stages/catalog';
 import {stageWithAutoBoostPads} from '../stages/boost-corridors';
@@ -33,9 +34,11 @@ import type { ShapeChoice,StageDefinition } from '../types';
 import {AnalyticsManager} from '../analytics/AnalyticsManager';
 import {FeedbackManager} from '../feedback/FeedbackManager';
 import {FeedbackModal} from '../ui/FeedbackModal';
+import {FirstPlayTutorial} from './FirstPlayTutorial';
 export class Game {
   readonly state=new StateMachine();
   readonly platform=new PlayablesSDK();
+  private readonly tutorial=new FirstPlayTutorial(()=>this.platform.save,()=>this.platform.persist());
   readonly audio=new AudioManager(qaAudioManifest());
   readonly scene=new THREE.Scene();
   readonly camera=new THREE.PerspectiveCamera(70,1,.05,250);
@@ -91,6 +94,7 @@ export class Game {
     this.input=new InputController(canvas);this.cameraController=new CameraController(this.camera);
     this.ui=new UIController(root,loading,{
       audioEvent:(event,count)=>this.audio.emit(event,{count}),
+      tutorial:()=>this.openTutorial(true),
       newGame:()=>{this.platform.save.memoRunId=crypto.randomUUID();this.startStage(1);},
       startStage:id=>this.startStage(id),continueGame:()=>this.startStage(ALL_STAGES.find(s=>s.id===this.platform.save.lastPlayed)?.numericId??1),
       openStageSelect:()=>this.openStageSelect(),openQuiz:()=>this.openQuiz(),submitAnswer:id=>this.submitAnswer(id),
@@ -118,14 +122,14 @@ export class Game {
     window.addEventListener('resize',()=>this.resize());window.addEventListener('blur',()=>this.clearLookUp());this.resize();
     document.addEventListener('visibilitychange',()=>{
       if(document.hidden){this.clearLookUp();this.saveTest();}
-      this.input.setEnabled(!document.hidden&&!this.memoOpen&&!this.testPaused&&!this.testIntro&&!this.platform.paused&&this.state.state===GameState.Exploration);
+      this.input.setEnabled(!this.tutorial.active&&!document.hidden&&!this.memoOpen&&!this.testPaused&&!this.testIntro&&!this.platform.paused&&this.state.state===GameState.Exploration);
       this.ui.showPause(document.hidden||this.platform.paused);this.lastFrame=performance.now();
     });
   }
   async init():Promise<void> {
     this.state.transition(GameState.Loading);
     await this.platform.initialize(()=>{this.audio.pause('sdk');this.input.setEnabled(false);this.clearLookUp();this.ui.showPause(true);},
-      ()=>{this.audio.resume('sdk');this.ui.showPause(false);this.input.setEnabled(!this.memoOpen&&!this.testPaused&&!this.testIntro&&this.state.state===GameState.Exploration);this.lastFrame=performance.now();},enabled=>this.audio.setHostEnabled(enabled));
+      ()=>{this.audio.resume('sdk');this.ui.showPause(false);this.input.setEnabled(!this.tutorial.active&&!this.memoOpen&&!this.testPaused&&!this.testIntro&&this.state.state===GameState.Exploration);this.lastFrame=performance.now();},enabled=>this.audio.setHostEnabled(enabled));
     this.audio.setHostEnabled(this.platform.audioEnabled);
     const qa=import.meta.env.DEV&&new URLSearchParams(location.search).has('testQA');
     let savedTest=(this.platform.save as typeof this.platform.save&{cubeTest?:TestSave}).cubeTest;
@@ -139,7 +143,12 @@ export class Game {
   }
   private frame(time:number):void {
     const wallDelta=Math.max(0,time-this.lastFrame);const dt=Math.min(.05,wallDelta/1000);this.lastFrame=time;
-    if(!this.platform.paused&&!document.hidden&&!this.testPaused) {
+    if(this.tutorial.active){
+      // Render the real stage, but freeze physics, timers, BOOST and active analytics time.
+      this.renderer.render(this.scene,this.camera);
+      requestAnimationFrame(next=>this.frame(next));return;
+    }
+    if(!this.platform.paused&&!document.hidden&&!this.testPaused&&!this.tutorial.active) {
       if(this.testActive&&!this.testIntro){const phase=this.memoIncorrectRemaining>0?'excluded':this.memoOpen?(this.state.state===GameState.MemoConfirm?'answer':'memo'):this.state.state===GameState.Exploration?'gameplay':this.state.state===GameState.Quiz?'answer':'excluded';this.testSession.tick(wallDelta,phase);this.testSaveClock+=dt;if(this.testSaveClock>=2){this.testSaveClock=0;this.saveTest();}this.testUI.question(this.testSession.run!.currentQuestion,this.testSession.run!.current.effectiveSolveTime);}
       this.analytics.tick(wallDelta,this.state.state===GameState.Exploration||this.memoOpen||this.state.state===GameState.Quiz);
       if(this.memoOpen){if(this.memoIncorrectRemaining>0){this.memoIncorrectRemaining=Math.max(0,this.memoIncorrectRemaining-dt);if(this.memoIncorrectRemaining===0){this.submittedMemo=null;if(this.attempts>=2){this.memoOpen=false;if(this.testActive)this.finishTestQuestion(false);else {if(this.stage?.section!=='test'&&this.stage)this.feedbackManager.noteStageCompleted(this.stage.id);this.ui.finishMemoAnswer(true);}}else{this.state.transition(GameState.Exploration);this.ui.backMemoAnswer();}}}if(this.ui.memoUsage().hintUsed&&!this.analyticsHintTracked){this.analyticsHintTracked=true;this.analytics.track('hint_used',{stageId:this.stage?.id});}this.ui.renderMemo();requestAnimationFrame(next=>this.frame(next));return;}
@@ -201,7 +210,19 @@ export class Game {
     this.overview.traverse(o=>{if(o instanceof THREE.Mesh||o instanceof THREE.LineSegments||o instanceof THREE.Points){o.geometry.dispose();const materials=Array.isArray(o.material)?o.material:[o.material];materials.forEach(m=>m.dispose());}});
     this.overview.removeFromParent();this.overview=null;
   }
-  private startStage(id:number):void {
+  private openTutorial(manual=false):void {
+    if(this.state.state!==GameState.Exploration||this.memoOpen||this.testIntro||this.testPaused||this.platform.paused||document.hidden)return;
+    this.tutorial.open(manual,complete=>{
+      this.input.setEnabled(false);this.clearLookUp();this.audio.stopSE();
+      if(!manual&&this.elapsed===0)this.character.root.visible=true;
+      this.ui.renderPreview(0);this.renderer.render(this.scene,this.camera);
+      this.ui.showSpotlightTutorial(complete);
+    },()=>{
+      this.ui.closeSpotlightTutorial();this.lastFrame=performance.now();
+      this.input.setEnabled(!this.platform.paused&&!document.hidden&&!this.testPaused&&!this.testIntro&&this.state.state===GameState.Exploration);
+    });
+  }
+  private startStage(id:number,tutorialAfter=true):void {
     let stage=catalogStage(id);if(!stage)return;
     if(stage.section==='test'){if(!this.testSession.run)return;this.testActive=true;const base=testStagesForRevision(this.testSession.run.geometryRevision)[this.testSession.run.currentQuestion]!;stage={...base,id:base.id+'@'+this.testSession.run.memoEpoch};}else{this.testActive=false;this.testUI.leave();}
     // BOOST pads are a derived presentation aid; canonical room geometry remains unchanged.
@@ -222,6 +243,7 @@ export class Game {
     this.characterVisibility.reset();this.character.root.scale.setScalar(.7);this.character.update(this.player.position,this.player.yaw,0,1);this.character.root.visible=false;
     if(this.state.state!==GameState.Exploration)this.state.transition(GameState.Exploration);
     this.input.setEnabled(!this.platform.paused);if(!this.testActive)this.platform.setLastPlayed(stage.id);this.ui.showExploration(stage,0,this.canAnswer());this.ui.updateCamera('third-person');
+    if(tutorialAfter)this.openTutorial();
   }
   private showHome():void {this.audio.stopSE();this.audio.fadeBGM(1);this.audio.playBGM('HOME');this.input.setEnabled(false);this.character.root.visible=false;const clears=this.platform.save.completed.filter(id=>STAGES.some(s=>s.id===id)).length;this.feedbackManager.setCompletedStages(this.platform.save.completed.filter(id=>STAGES.some(s=>s.id===id)));const savedTest=(this.platform.save as SaveData & {cubeTest?:{best?:unknown}}).cubeTest;this.feedbackTestComplete=this.feedbackTestComplete||Boolean(savedTest?.best);this.ui.showTitle(clears,STAGES.length,this.platform.save);this.testUI.leave();if(this.feedbackManager.shouldShow(clears,this.analytics.getActivePlaySeconds(),this.feedbackTestComplete))this.feedbackModal.show();}
   private backToTitle():void {
@@ -268,7 +290,7 @@ export class Game {
     if(this.state.state!==GameState.MemoConfirm||!this.submittedMemo||!this.stage?.memo||this.attempts>=2||this.platform.paused||document.hidden)return;
     this.ui.lockMemoAnswer();this.state.transition(GameState.AnswerResult);this.attempts++;
     if(this.testActive){this.testSession.run!.current.directSubmissionUsed=true;this.saveTest();}
-    const correct=compareMemoToCanonical(this.submittedMemo,this.stage.memo.canonicalCubes).isExactMatch;
+    const correct=this.stage.section==='special'&&this.stage.colors?areColoredShapesEquivalent(this.submittedMemo.map(p=>[p.x,p.y,p.z]),this.submittedMemo.map(p=>p.color??''),this.stage.memo.canonicalCubes,this.stage.colors):compareMemoToCanonical(this.submittedMemo,this.stage.memo.canonicalCubes).isExactMatch;
     this.analytics.answer({answerSource:'cube_memo_direct',attemptNumber:this.attempts,correct});
     if(this.testActive)this.testSession.recordJudgment(correct);
     if(!correct){this.audio.emit('ANSWER_INCORRECT');this.ui.unlockMemoHint();this.ui.incorrectMemoAnswer();this.memoIncorrectRemaining=.75;return;}
@@ -309,7 +331,7 @@ export class Game {
     if(this.stage.section!=='test')this.feedbackManager.noteStageCompleted(this.stage.id);
     if(this.testActive){this.showTestCorrectResult();return;}
     void this.platform.completeStage(this.stage.id,this.elapsed,this.attempts).catch(error=>console.warn('保存失敗',error));
-    const section=this.stage.section==='advanced'?ALL_STAGES.filter(s=>s.section==='advanced'):STAGES;const complete=section.every(s=>this.platform.save.completed.includes(s.id));if(complete)this.state.transition(GameState.Complete);
+    const section=this.stage.section==='advanced'||this.stage.section==='special'?ALL_STAGES.filter(s=>s.section===this.stage!.section):STAGES;const complete=section.every(s=>this.platform.save.completed.includes(s.id));if(complete)this.state.transition(GameState.Complete);
     this.ui.showResult(this.stage,this.elapsed,this.attempts,complete);
   }
   private toggleCamera():void {
@@ -346,6 +368,11 @@ export class Game {
     button('QA: Answer Point',()=>{if(this.stage?.section==='test'&&!this.memoOpen&&this.state.state===GameState.Exploration){const p=this.world.world!.answerPositions[0]!.clone().add(new THREE.Vector3(0,-.0798,-1.1));this.player.reset(p,Math.PI);this.cameraController.reset(Math.PI);}});
     const ladderReport=document.createElement('pre');panel.append(ladderReport);
     let ladderQA=false;
+    button('QA: Q5 (new isolated test)',()=>{
+      if(ladderQA)return;this.backToTitle();this.testSession.start();
+      for(let q=0;q<4;q++)this.testSession.finish(false);
+      this.startTest(false);
+    });
     button('QA: Q2 F (new isolated test)',()=>{
       if(ladderQA)return;this.backToTitle();this.testSession.start();this.testSession.finish(false);this.startTest(false);
     });
@@ -387,17 +414,18 @@ export class Game {
     // A reload during the reveal resumes the saved outcome, never a third answer.
     if(typeof run.pendingOutcome==='boolean'){
       if(run.pendingOutcome){
-        this.testActive=true;this.startStage(TEST_STAGES[run.currentQuestion]!.numericId);
+        this.testActive=true;this.startStage(TEST_STAGES[run.currentQuestion]!.numericId,false);
         this.input.setEnabled(false);this.state.transition(GameState.Quiz);this.state.transition(GameState.AnswerResult);this.beginCorrectReveal();
       }else this.finishTestQuestion(false);
       return;
     }
-    this.testActive=true;this.startStage(TEST_STAGES[run.currentQuestion]!.numericId);
+    this.testActive=true;this.startStage(TEST_STAGES[run.currentQuestion]!.numericId,false);
     this.lastFrame=performance.now();
+    this.testUI.question(run.currentQuestion,run.current.effectiveSolveTime);
     if(run.currentQuestion===4&&!run.finalAnnouncementSeen){
       this.testIntro=true;this.input.setEnabled(false);
-      this.testUI.finalChallenge(()=>{run.finalAnnouncementSeen=true;this.testSession.save();this.testIntro=false;this.lastFrame=performance.now();this.input.setEnabled(!this.platform.paused&&!document.hidden);});
-    }
+      this.testUI.finalChallenge(()=>{run.finalAnnouncementSeen=true;this.testSession.save();this.testIntro=false;this.lastFrame=performance.now();this.input.setEnabled(!this.platform.paused&&!document.hidden);this.openTutorial();});
+    }else this.openTutorial();
   }
   private showTestCorrectResult(){
     const run=this.testSession.run;if(!run)return;
@@ -411,6 +439,6 @@ export class Game {
     };
     this.testUI.waitOnCorrect(()=>this.ui.showTestCorrectResult(run.currentQuestion,next));
   }
-  private finishTestQuestion(completed:boolean){this.saveTest();const result=this.testSession.finish(completed);this.testActive=false;this.backToTitle();this.audio.playBGM('CORRECT_SCENE');if(result)this.testUI.analyze(result);else this.testUI.between(completed,()=>this.startTest(false));}
+  private finishTestQuestion(completed:boolean){this.saveTest();const result=this.testSession.finish(completed);this.testActive=false;this.backToTitle();this.audio.playBGM('CORRECT_SCENE');if(result)this.testUI.finalAnswerResult(completed,result);else this.testUI.between(completed,()=>this.startTest(false));}
   snapshot():object {return {revealTime:this.revealTime,airborne:this.player.airborne,movementState:this.player.movementState,legAngles:this.character.legs.map(leg=>[leg.upper.rotation.x,leg.lower.rotation.x]),state:this.state.state,position:this.player.position.toArray(),yaw:this.cameraController.yaw,playerYaw:this.player.yaw,turnRate:this.player.turnRate,turningAround:this.player.turningAround,animation:this.character.state,speed:this.player.speed,pitch:this.cameraController.pitch,mode:this.cameraController.mode,lookingUp:this.cameraController.lookingUp,characterVisible:this.character.root.visible,elapsed:this.elapsed,attempts:this.attempts,ladder:this.player.ladder?.id??null,camera:this.camera.position.toArray(),quaternion:this.camera.quaternion.toArray()};}
 }

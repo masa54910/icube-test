@@ -28,6 +28,23 @@ it('terminal wakes close by, holds during answer, then softly sleeps',()=>{
   w.update(.2,new THREE.Vector3(100,100,100));expect(w.terminalWake).toBeGreaterThan(.99);
   for(let i=0;i<240;i++)w.update(1/60,new THREE.Vector3(100,100,100));expect(w.terminalWake).toBeLessThan(.01);
 });
+it('boundary glow is brighter, then restores the original materials',()=>{
+ const w=new WorldBuilder();w.build({...STAGES[0]!,rooms:[[0,0,0],[1,0,0]],ladders:[]});const p=new PlayerController(),f=new WorldFeedback();f.reset(w);
+ const original=new Map<THREE.Mesh,THREE.Material|THREE.Material[]>();w.world!.root.traverse(o=>{if(o instanceof THREE.Mesh)original.set(o,o.material);});
+ p.position.set(2.99,-2.94,0);f.update(.016,w,p);p.position.x=3.01;f.update(.016,w,p);
+ const lit=[...original.keys()].filter(mesh=>mesh.material!==original.get(mesh));expect(lit.length).toBeGreaterThan(0);
+ expect((lit[0]!.material as THREE.MeshStandardMaterial).emissiveIntensity).toBe(2);
+ f.update(.3,w,p);expect(lit[0]!.material).not.toBe(original.get(lit[0]!));
+ f.update(.2,w,p);for(const mesh of lit)expect(mesh.material).toBe(original.get(mesh));
+});
+it('landing ring is bright and wide without adding effect meshes, and fades out',()=>{
+ const w=new WorldBuilder();w.build({...STAGES[0]!,rooms:[[0,0,0]],ladders:[]});const p=new PlayerController(),f=new WorldFeedback();p.reset(new THREE.Vector3(0,-2.939,0));f.reset(w);
+ const ring=f.root.children.find(o=>o instanceof THREE.Mesh&&o.geometry instanceof THREE.RingGeometry) as THREE.Mesh<THREE.RingGeometry,THREE.MeshBasicMaterial>;
+ let peak=0;const count=f.root.children.length;
+ for(let i=0;i<180;i++){p.update(1/60,w,{...idle,jump:i===10},0,'third-person');f.update(1/60,w,p);peak=Math.max(peak,ring.material.opacity);}
+ expect(peak).toBeGreaterThan(.7);expect(ring.geometry.parameters.outerRadius-ring.geometry.parameters.innerRadius).toBeCloseTo(.1);
+ expect(ring.visible).toBe(false);expect(f.root.children).toHaveLength(count);
+});
 it('landing feedback triggers once after a jump, never from standing',()=>{
   const w=new WorldBuilder();w.build({...STAGES[0]!,rooms:[[0,0,0]],ladders:[]});const p=new PlayerController(),f=new WorldFeedback();p.reset(new THREE.Vector3(0,-2.939,0));f.reset(w);
   for(let i=0;i<60;i++){p.update(1/60,w,idle,0,'third-person');f.update(1/60,w,p);}expect(f.counters.land).toBe(0);

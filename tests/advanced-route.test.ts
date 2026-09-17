@@ -6,7 +6,7 @@ import {buildChoices,isConnected,shapeKey} from '../src/stages/stage-utils';
 import {CubeMemoSystem} from '../src/game/CubeMemoSystem';
 import {WorldBuilder} from '../src/game/WorldBuilder';
 import {advancedCopy} from '../src/i18n/advanced';
-it('isolates standard catalog and advanced ids',()=>{expect(STAGES).toHaveLength(31);expect(ADVANCED_STAGES).toHaveLength(3);expect(new Set(ALL_STAGES.map(s=>s.id)).size).toBe(41);for(const s of ADVANCED_STAGES)expect(catalogStage(s.numericId).id).toBe(s.id);});
+it('isolates standard catalog and advanced ids',()=>{expect(STAGES).toHaveLength(31);expect(ADVANCED_STAGES).toHaveLength(3);expect(new Set(ALL_STAGES.filter(s=>s.section!=='special').map(s=>s.id)).size).toBe(41);for(const s of ADVANCED_STAGES)expect(catalogStage(s.numericId).id).toBe(s.id);});
 it.each(ADVANCED_STAGES)('$displayName connected path, distractors, goal, memo and choices',s=>{
  expect(()=>validateRoute(s)).not.toThrow();expect(isConnected(s.rooms)).toBe(true);expect(s.memo!.canonicalCubes).toHaveLength(s.rooms.length);const choices=buildChoices(s);expect(choices).toHaveLength(10);expect(new Set(choices.map(c=>shapeKey(c.voxels))).size).toBe(10);expect(choices.filter(c=>c.correct)).toHaveLength(1);choices.forEach(c=>expect(isConnected(c.voxels)).toBe(true));
  const world=new WorldBuilder();const built=world.build(s);expect(Math.abs(built.answerPosition.x-s.goal![0]*6)).toBeLessThan(3);expect(world.colliders.every(b=>!b.isEmpty())).toBe(true);world.clear();

@@ -1,6 +1,6 @@
 import type {Vec3Tuple} from '../types';
 import {areShapesRotationEquivalent} from './ShapeEquivalence';
-export type MemoPoint={x:number;y:number;z:number};
+export type MemoPoint={x:number;y:number;z:number;color?:string};
 export const memoCoordinateKey=(p:MemoPoint)=>`${p.x},${p.y},${p.z}`;
 /** Answer matching ignores orientation/color; coordinate diagnostics remain START-relative for hints. */
 export function compareMemoToCanonical(points:readonly MemoPoint[],canonical:readonly Vec3Tuple[]){

@@ -64,8 +64,8 @@ body:has(.how-panel:not(.hidden)) .home .language-selector{visibility:hidden}
 .home-world-label{position:absolute;top:30px;left:32px;color:#a7c5dc;letter-spacing:.22em;font-size:10px;pointer-events:none}
 .home-cubie{position:absolute;left:12%;bottom:6%;height:min(44%,376px);aspect-ratio:168/376;pointer-events:none;z-index:2}
 .home-cubie:before{content:"";position:absolute;bottom:-1%;left:-18%;width:136%;height:6%;border-radius:50%;background:radial-gradient(ellipse,#304c666e 0%,#476b842c 45%,transparent 70%);filter:blur(2px);transform:rotate(-4deg)}
-.home-cubie img{height:100%;width:auto;display:block;position:relative;filter:drop-shadow(1px 0 2px #98eaffaa) drop-shadow(0 0 10px #bee9ff30);transform-origin:50% 98%;animation:home-cubie-idle 12s ease-in-out infinite}
-@keyframes home-cubie-idle{0%,100%{transform:scaleY(1) rotate(0)}25%{transform:scaleY(1.004) rotate(0)}43%{transform:scaleY(1) rotate(.7deg)}58%{transform:scaleY(1.003) rotate(.7deg)}75%{transform:scaleY(1) rotate(-.35deg)}}
+.home-cubie img{height:100%;width:auto;display:block;position:relative;filter:drop-shadow(1px 0 2px #98eaffaa) drop-shadow(0 0 10px #bee9ff30);transform-origin:50% 98%;animation:home-cubie-idle 7s ease-in-out infinite}
+@keyframes home-cubie-idle{0%,100%{transform:translateX(0) scaleY(1) rotate(0)}20%{transform:translateX(.8%) scaleY(1.008) rotate(.8deg)}42%{transform:translateX(1.2%) scaleY(1.002) rotate(1.8deg)}62%{transform:translateX(-.6%) scaleY(1.009) rotate(-.6deg)}80%{transform:translateX(-1%) scaleY(1.002) rotate(-1.4deg)}}
 .home-world-signature{position:absolute;right:28px;bottom:28px;display:flex;align-items:center;gap:10px;color:#314d6b;font-weight:800;font-size:17px;pointer-events:none}
 .home-world-signature small{display:block;font-size:7px;letter-spacing:.17em;font-weight:400;margin-top:4px}
 .signature-cubes{display:grid;grid-template-columns:repeat(2,10px);gap:3px}

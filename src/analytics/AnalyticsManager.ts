@@ -1,5 +1,5 @@
 import type {Locale} from '../types';
-import {isYouTubePlayables} from '../platform/hostEnvironment';
+import {isCrazyGamesBuild,isYouTubePlayables} from '../platform/hostEnvironment';
 
 export type AnalyticsEventName='session_start'|'session_end'|'game_start'|'stage_start'|'stage_complete'|'stage_abandon'|'answer_attempt'|'hint_used'|'cube_memo_open'|'cube_memo_submit'|'cube_test_start'|'cube_test_question_complete'|'cube_test_complete'|'stage_retry'|'language_changed';
 export interface AnalyticsEvent {eventId:string;eventName:AnalyticsEventName;anonymousPlayerId:string;sessionId:string;occurredAt:string;appVersion:string;platform:'web';deviceClass:'desktop'|'mobile'|'tablet';orientation:'portrait'|'landscape';language:Locale;payload:Record<string,unknown>;isTest:boolean;}
@@ -15,7 +15,7 @@ export const readTrafficAttribution=():TrafficAttribution=>{if(typeof window==='
 
 /** Privacy-safe, non-blocking analytics observer. It never participates in gameplay decisions. */
 export class AnalyticsManager {
- private readonly disabled=isYouTubePlayables(); readonly anonymousPlayerId=readId(this.disabled); readonly appVersion='beta-1';
+ private readonly disabled=isYouTubePlayables()||isCrazyGamesBuild(); readonly anonymousPlayerId=readId(this.disabled); readonly appVersion='beta-1';
  readonly sessionId=uuid(); private queue:AnalyticsEvent[]=[]; private activeMs=0; private lastActivity=performance.now(); private started=false; private currentStage:string|null=null; private readonly traffic=readTrafficAttribution();
  private readonly endpoint=import.meta.env.VITE_ANALYTICS_URL as string|undefined; private readonly key=import.meta.env.VITE_ANALYTICS_ANON_KEY as string|undefined;
  constructor(private readonly language:()=>Locale){this.restore();}

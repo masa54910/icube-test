@@ -1,11 +1,14 @@
 export type Vec3Tuple = readonly [number, number, number];
 export interface LadderDefinition { readonly id: string; readonly from: Vec3Tuple; readonly to: Vec3Tuple; readonly facingYaw?:number; }
-export interface ShapeChoice { readonly id: string; readonly voxels: readonly Vec3Tuple[]; readonly correct: boolean; }
+export type CubeColor='white'|'red'|'yellow'|'green'|'blue'|'orange';
+export interface ShapeChoice { readonly id: string; readonly voxels: readonly Vec3Tuple[]; readonly correct: boolean; readonly colors?:readonly CubeColor[]; }
 export interface StageDefinition {
   readonly routeChapter?:number;
   readonly answerPoints?:readonly Vec3Tuple[];
   readonly boostPads?:readonly {position:Vec3Tuple;direction:Vec3Tuple;distance:number}[];
-  readonly section?:'standard'|'advanced'|'test';
+  readonly section?:'standard'|'advanced'|'special'|'test';
+  /** Colors correspond one-to-one with rooms; only SPECIAL uses them for answers. */
+  readonly colors?:readonly CubeColor[];
   readonly stageType?:'shape'|'route';
   readonly goal?:Vec3Tuple;
   readonly route?:{readonly main:readonly Vec3Tuple[];readonly distractors:readonly Vec3Tuple[]};

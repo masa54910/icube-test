@@ -3,6 +3,7 @@ import './home-showcase.css';
 
 const LABELS=['BRAND','EXPLORE','CLIMB','SOLVE','CORRECT'] as const;
 const BASE=import.meta.env.BASE_URL;
+export function swipeStep(dx:number,dy:number,pointerType:string):number{return pointerType!=='mouse'&&Math.abs(dx)>=40&&Math.abs(dx)>Math.abs(dy)*1.3?(dx<0?1:-1):0;}
 /** One live scene plus four captured game images. All lifecycle work stays in the UI. */
 export class HomeShowcase {
   readonly clock=new HomeShowcaseClock();
@@ -38,6 +39,15 @@ export class HomeShowcase {
   start():void {
     this.stop();this.active=true;this.paused=false;this.clock.reset();this.brandFade=0;this.paint();
     this.controller=new AbortController();const {signal}=this.controller;
+    let gesture:{id:number;x:number;y:number;type:string}|null=null;
+    this.surface.addEventListener('pointerdown',e=>{if(e.pointerType==='mouse'||(e.target as Element).closest('button'))return;gesture={id:e.pointerId,x:e.clientX,y:e.clientY,type:e.pointerType};},{signal});
+    this.surface.addEventListener('pointercancel',()=>{gesture=null;},{signal});
+    this.surface.addEventListener('pointerup',e=>{
+      if(!gesture||gesture.id!==e.pointerId)return;
+      const step=swipeStep(e.clientX-gesture.x,e.clientY-gesture.y,gesture.type);gesture=null;if(!step)return;
+      const index=(this.clock.current+step+5)%5;if(this.failed.has(index))return;
+      this.clock.elapsed=0;if(this.ready[index])this.select(index);else {this.pending=index;this.preload();}
+    },{signal});
     this.buttons.forEach((button,i)=>button.addEventListener('click',()=>{
       if(this.failed.has(i))return;
       this.clock.elapsed=0;

@@ -21,3 +21,14 @@ export function areShapesRotationEquivalent(a:readonly Vec3Tuple[],b:readonly Ve
  const valid=(p:readonly Vec3Tuple[])=>p.length>0&&p.every(v=>v.every(Number.isInteger))&&new Set(p.map(v=>v.join(','))).size===p.length;
  return a.length===b.length&&valid(a)&&valid(b)&&getCanonicalShapeKey(a)===getCanonicalShapeKey(b);
 }
+/** Keep labels attached to their coordinates through each proper rotation. */
+export function getColoredShapeKey(points:readonly Vec3Tuple[],colors:readonly string[]):string {
+ if(points.length!==colors.length||!areShapesRotationEquivalent(points,points))throw Error('Invalid colored shape');
+ return getAllRotations(points).map(rotated=>{
+  const min=[0,1,2].map(i=>Math.min(...rotated.map(p=>p[i]!)));
+  return rotated.map((p,i)=>p.map((v,a)=>v-min[a]!).join(':')+':'+colors[i]).sort().join('|');
+ }).sort()[0]!;
+}
+export function areColoredShapesEquivalent(a:readonly Vec3Tuple[],ac:readonly string[],b:readonly Vec3Tuple[],bc:readonly string[]):boolean {
+ return a.length===ac.length&&b.length===bc.length&&areShapesRotationEquivalent(a,b)&&getColoredShapeKey(a,ac)===getColoredShapeKey(b,bc);
+}
