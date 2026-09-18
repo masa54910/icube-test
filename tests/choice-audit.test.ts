@@ -14,7 +14,8 @@ it.each(stages)('audits $id answer set',stage=>{
   expect(choices.length).toBe(10);
   expect(duplicates,stage.id).toEqual([]);
   expect(choices.filter(c=>c.correct)).toHaveLength(1);
-  const correctKey=stage.colors?getColoredShapeKey(stage.memo!.canonicalCubes,stage.colors):routeRotationKey(stage.memo!.canonicalCubes);
+  // WorldBuilder consumes rooms, not memo/answer caches: audit against that source.
+  const correctKey=stage.colors?getColoredShapeKey(stage.rooms,stage.colors):routeRotationKey(stage.rooms);
   expect(keys.filter(k=>k===correctKey)).toHaveLength(1);
   expect(keys[choices.findIndex(c=>c.correct)]).toBe(correctKey);
 });

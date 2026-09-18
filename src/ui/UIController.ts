@@ -231,7 +231,7 @@ export class UIController {
       const canvas=document.createElement('canvas');canvas.width=300;canvas.height=200;drawShape(canvas,choice.voxels,choice.colors);card.append(label,canvas);card.disabled=this.used.has(choice.id);card.classList.toggle('wrong',card.disabled);
       card.onclick=()=>{if(this.selected!==choice.id)this.cb.audioEvent?.('ANSWER_SELECT');this.selected=choice.id;grid.querySelectorAll('button').forEach(b=>b.classList.toggle('selected',b===card));(body.querySelector('[data-submit]') as HTMLButtonElement).disabled=false;};grid.append(card);
     }
-    if(this.routeStage)drawRouteChoices(choices,[...grid.querySelectorAll('canvas')]);
+    if(this.routeStage||choices.some(choice=>choice.colors))drawRouteChoices(choices,[...grid.querySelectorAll('canvas')],choices.some(choice=>choice.colors));
     const submit=button(t('answer.submit'),'primary');submit.dataset.submit='';submit.disabled=true;submit.onclick=()=>{if(this.selected)this.cb.submitAnswer(this.selected);};
     const back=button(t('answer.backToExploration'));back.onclick=()=>this.cb.closeQuiz();body.querySelector('.quiz-actions')!.append(submit,back);
   }

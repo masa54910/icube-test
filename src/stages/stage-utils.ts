@@ -1,4 +1,5 @@
 import {buildRouteChoices} from './route-choices';
+import {bindCorrectChoice} from './answer-canonical';
 import {buildSpecialChoices} from './special';
 import {getCanonicalShapeKey} from '../game/ShapeEquivalence';
 import type { ShapeChoice, StageDefinition, Vec3Tuple } from '../types';
@@ -89,7 +90,7 @@ export function buildChoices(stage: StageDefinition, seed = stage.numericId): Sh
     shapes = [stage.rooms, ...decoys(stage.rooms, seed)];
   }
   const correctId = stage.choiceFamily === 'letters' ? `letter-${lettersForStage(stage)}` : stage.choiceFamily === 'digits' ? `digit-${stage.level - 1}` : 'correct';
-  return uniqueChoices(shapes.map((voxels, index) => ({ id: ids[index]!, voxels: normalizeVoxels(voxels), correct: ids[index] === correctId })));
+  return uniqueChoices(bindCorrectChoice(stage,shapes.map((voxels, index) => ({ id: ids[index]!, voxels: normalizeVoxels(voxels), correct: ids[index] === correctId }))));
 }
 
 function lettersForStage(stage: StageDefinition): string {

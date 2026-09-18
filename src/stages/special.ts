@@ -1,5 +1,6 @@
 import type {CubeColor,ShapeChoice,StageDefinition,Vec3Tuple} from '../types';
 import {extractMemoConfig} from './memo-config';
+import {bindCorrectChoice} from './answer-canonical';
 import {getCanonicalShapeKey,getColoredShapeKey} from '../game/ShapeEquivalence';
 
 const designs:readonly (readonly Vec3Tuple[])[]=[
@@ -22,10 +23,11 @@ function connected(points:readonly Vec3Tuple[]):boolean {
  return seen.size===points.length;
 }
 /** Four similar, connected silhouettes, each made by relocating exactly one cube. */
-function similarShapes(rooms:readonly Vec3Tuple[]):readonly (readonly Vec3Tuple[])[]{
+function similarShapes(rooms:readonly Vec3Tuple[],preserveFloors=false):readonly (readonly Vec3Tuple[])[]{
  const shapes:(readonly Vec3Tuple[])[]=[rooms],seen=new Set([getCanonicalShapeKey(rooms)]);
  for(let moved=rooms.length-1;moved>=0;moved--)for(const anchor of rooms)for(const direction of directions){
   const next=anchor.map((v,i)=>v+direction[i]!) as unknown as Vec3Tuple;
+  if(preserveFloors&&next[1]!==rooms[moved]![1])continue;
   if(rooms.some(p=>p.every((v,i)=>v===next[i])))continue;
   const candidate=rooms.map((p,i)=>i===moved?next:p);
   if(!connected(candidate))continue;
@@ -38,7 +40,7 @@ function similarShapes(rooms:readonly Vec3Tuple[]):readonly (readonly Vec3Tuple[
 export function buildSpecialChoices(stage:StageDefinition):ShapeChoice[]{
  if(!stage.colors)throw Error('SPECIAL requires room colors');
  const choices:ShapeChoice[]=[];
- similarShapes(stage.rooms).forEach((voxels,group)=>{
+ similarShapes(stage.rooms,stage.id==='special-5').forEach((voxels,group)=>{
   const colors=stage.colors!;const key=getColoredShapeKey(voxels,colors);
   let alternate:CubeColor[]|undefined;
   for(let a=0;a<colors.length&&!alternate;a++)for(let b=a+1;b<colors.length;b++){
@@ -48,5 +50,5 @@ export function buildSpecialChoices(stage:StageDefinition):ShapeChoice[]{
   if(!alternate)throw Error('Insufficient distinct SPECIAL color arrangements');
   choices.push({id:group===0?'correct':`shape-${group}-a`,voxels,colors,correct:group===0},{id:`shape-${group}-b`,voxels,colors:alternate,correct:false});
  });
- return choices;
+ return bindCorrectChoice(stage,choices);
 }

@@ -2,6 +2,7 @@ import type {ShapeChoice,StageDefinition,Vec3Tuple} from '../types';
 import {normalizeVoxels,isConnected,shapeKey} from './stage-utils';
 import {isPurePath} from './pure-route';
 import {getCanonicalShapeKey} from '../game/ShapeEquivalence';
+import {getStageCanonicalShape} from './answer-canonical';
 const directions:Vec3Tuple[]=[[1,0,0],[-1,0,0],[0,1,0],[0,-1,0],[0,0,1],[0,0,-1]];
 const key=(p:Vec3Tuple)=>p.join(',');
 const plus=(p:Vec3Tuple,d:Vec3Tuple):Vec3Tuple=>[p[0]+d[0],p[1]+d[1],p[2]+d[2]];
@@ -13,7 +14,7 @@ export interface RouteChoice extends ShapeChoice {readonly routeDifficulty:'corr
 export function buildRouteChoices(stage:StageDefinition):RouteChoice[]{
  if(stage.routeChapter===1)return buildPureChoices(stage);
  if(!stage.route||!stage.memo)throw Error('Missing route canonical: '+stage.id);
- const canonical=normalizeVoxels(stage.memo.canonicalCubes),main=stage.route.main,distractors=stage.route.distractors;
+ const canonical=normalizeVoxels(getStageCanonicalShape(stage).voxels),main=stage.route.main,distractors=stage.route.distractors;
  const result:RouteChoice[]=[{id:'correct',correct:true,voxels:canonical,routeDifficulty:'correct',mutation:'canonical-normalize-only'}];
  const seen=new Set([routeRotationKey(canonical)]);
  const accept=(cubes:readonly Vec3Tuple[],tier:RouteChoice['routeDifficulty'],mutation:string)=>{
@@ -43,7 +44,7 @@ export function buildRouteChoices(stage:StageDefinition):RouteChoice[]{
  return result;
 }
 function buildPureChoices(stage:StageDefinition):RouteChoice[]{
- const main=stage.route!.main,canonical=normalizeVoxels(stage.memo!.canonicalCubes),seen=new Set([routeRotationKey(canonical)]),result:RouteChoice[]=[{id:'correct',correct:true,voxels:canonical,routeDifficulty:'correct',mutation:'canonical-normalize-only'}];
+ const main=stage.route!.main,canonical=normalizeVoxels(getStageCanonicalShape(stage).voxels),seen=new Set([routeRotationKey(canonical)]),result:RouteChoice[]=[{id:'correct',correct:true,voxels:canonical,routeDifficulty:'correct',mutation:'canonical-normalize-only'}];
  const add=(path:readonly Vec3Tuple[],tier:RouteChoice['routeDifficulty'],mutation:string)=>{if(!isPurePath(path)||Math.abs(path.length-main.length)>3)return false;const hash=routeRotationKey(path);if(seen.has(hash))return false;seen.add(hash);result.push({id:'pure-'+result.length,voxels:normalizeVoxels(path),correct:false,routeDifficulty:tier,mutation});return true;};
  // Reserve the one-cube endpoint omission as the most similar answer.
  add(main.slice(0,-1),'hard','shorten-goal-1');
